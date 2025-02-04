@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: New Testimony
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: f883d697a7495e54b9237d5bbafd0123, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 8a36a07538f70d9419d9ec866eae98f9, type: 2}
+  PreviewInteraction: {fileID: 11400000, guid: 05b86b17ab45fc243934dd1cac648783, type: 2}
+  Lines:
+  - Line:
+      TalkingCharacter: 5
+      Text: Statement 1
+      GainedClues: []
+      Movements: []
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: a9f9dc37087ce4647b75b6ed9954beca, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 5
+      Text: S<think>tate<important>me<>nt<> 2
+      GainedClues: []
+      Movements: []
+    Condition: {fileID: 11400000, guid: a9f9dc37087ce4647b75b6ed9954beca, type: 2}
+    PressResult: {fileID: 11400000, guid: ec4567fe0ce025349ae65286bd11cba8, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 5
+      Text: Statement 3
+      GainedClues: []
+      Movements: []
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 5d75c78a6d0301e4b85cd03ac30138ac, type: 2}
+    CorrectAnswers:
+    - CorrectClue: {fileID: 11400000, guid: 9e6529f835623004ebd787fd64b72687, type: 2}
+      Result: {fileID: 11400000, guid: f883d697a7495e54b9237d5bbafd0123, type: 2}
+  - Line:
+      TalkingCharacter: 5
+      Text: Statement 4
+      GainedClues: []
+      Movements: []
+    Condition: {fileID: 11400000, guid: ec4567fe0ce025349ae65286bd11cba8, type: 2}
+    PressResult: {fileID: 11400000, guid: 5d75c78a6d0301e4b85cd03ac30138ac, type: 2}
+    CorrectAnswers:
+    - CorrectClue: {fileID: 11400000, guid: 9e6529f835623004ebd787fd64b72687, type: 2}
+      Result: {fileID: 11400000, guid: f883d697a7495e54b9237d5bbafd0123, type: 2}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5925155aa1b0f4ab43cbc6dc83e3a7, type: 3}
+  m_Name: How Vase Outside Display
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 15162a74c0013c64690333ee6af8cfdf, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: be5d7188975eed442badc7ded981bd0f, type: 2}
+  Question: How did the vase end up outside the display?
+  Options:
+  - Options:
+    - The security guard
+    - Ramsey Paige
+    - The Catalyst
+  - Options:
+    - opened
+    - broke
+    - replaced
+  - Options:
+    - the display
+    - the glass
+    - the vase
+  - Options:
+    - with the key
+    - with the vase
+    - with the glass
+  Answers:
+  - Answer: 00000000000000000000000000000000

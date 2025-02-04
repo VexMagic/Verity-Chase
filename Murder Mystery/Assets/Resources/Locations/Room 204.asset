@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2640b0f533d9c6e40a3bccbebfe95f6e, type: 3}
+  m_Name: Room 204
+  m_EditorClassIdentifier: 
+  Title: Room 204
+  Preview: {fileID: 21300000, guid: 221e256d0211dac4ab4ba0d902a84974, type: 3}
+  PeopleAtLocations:
+  - LocationName: Room 204
+    EnterInteraction: {fileID: 11400000, guid: a56f6d23878e75148aeb1456632a5254, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People:
+    - {fileID: 11400000, guid: 101f5368d30422a44b08aadf5d39765e, type: 2}
+    - {fileID: 11400000, guid: 4adb83f13a7eb044484d45ac80205ba6, type: 2}
+    - {fileID: 11400000, guid: 90612d2013e6124448cf116e03b4600b, type: 2}
+    Conditions: []
+  - LocationName: Room 204
+    EnterInteraction: {fileID: 11400000, guid: b254309f368f3834781b53d60c51ca50, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People: []
+    Conditions:
+    - {fileID: 11400000, guid: 143445f517226824da38ad3e9fe13501, type: 2}
+    - {fileID: 11400000, guid: fe35e18f8182e8a499d0837dac4338a0, type: 2}
+    - {fileID: 11400000, guid: 0d0f9e9f08c37eb49a4550b09b7b5382, type: 2}
+    - {fileID: 11400000, guid: 9830e532f505bc942bf82b278662fd97, type: 2}
+    - {fileID: 11400000, guid: 481f20a602cd7b64e868a375cbe99e06, type: 2}
+    - {fileID: 11400000, guid: ba6e0f1eec3627f42816ef28af79c683, type: 2}
+    - {fileID: 11400000, guid: 3e0b4df8200ee56479e02f02b0132b72, type: 2}
+    - {fileID: 11400000, guid: 32745cbd0c056e64896865f2f65a8447, type: 2}

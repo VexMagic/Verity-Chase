@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: Summary Of The Case
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 76abb240fad56734f90c5f4d66651794, type: 2}
+  PreviewInteraction: {fileID: 11400000, guid: 5cb7a7527b8c0c04f9e749617dc8bac8, type: 2}
+  Music: {fileID: 8300000, guid: ae5d60026e90cef41a10502037f91c78, type: 3}
+  Title: Summary Of The Case.
+  Lines:
+  - Line:
+      TalkingCharacter: 6
+      Text: Claire and Ramsey were on the ceiling when they broke the window, shattering
+        glass everywhere inside.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: b0d46a02082acd7458e48b8604c23c50, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: fc4ebab7d91fe934091de6bfc8e6cbc0, type: 2}
+      Result: {fileID: 11400000, guid: a218891011cc69c4c88a0c28d280fef3, type: 2}
+  - Line:
+      TalkingCharacter: 6
+      Text: After that they both entered the museum, Claire opened the display with
+        the key, and stole the vase.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 4824df28096b1084cb380e61542cbf25, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 6
+      Text: After that the argument ensued and Claire killed Ramsey.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 3d12de4423c20b04c9ee181c63d087da, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 6
+      Text: Then she hid The Catalyst outfit under her clothes and deleted the footage
+        of the crime.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: c90d7bde78dd30c4aa46a06f9ab86414, type: 2}
+    CorrectAnswers: []

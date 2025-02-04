@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2640b0f533d9c6e40a3bccbebfe95f6e, type: 3}
+  m_Name: Main Hall
+  m_EditorClassIdentifier: 
+  Title: "Arthur\u2019s Hall of Oddities"
+  Preview: {fileID: 21300000, guid: 57c1b994cf99cae45abae43b3b50469d, type: 3}
+  PeopleAtLocations:
+  - LocationName: Main Hall
+    EnterInteraction: {fileID: 0}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    People:
+    - {fileID: 11400000, guid: 6927f383befa8694ea04a1d840e18167, type: 2}
+    Conditions: []
+  - LocationName: Main Hall
+    EnterInteraction: {fileID: 11400000, guid: 5bf441e3e8e803043930a42edad2e47d, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    People: []
+    Conditions:
+    - {fileID: 11400000, guid: 61d6cfc8210327a49951ceee2db8975a, type: 2}
+    - {fileID: 11400000, guid: 62e74ebf6f935d248bc1169f43909d02, type: 2}
+    - {fileID: 11400000, guid: db2f337985e50f34492e8275506cd9e8, type: 2}
+    - {fileID: 11400000, guid: 19a1e2bd6af8be0448dbb2757cd07431, type: 2}
+    - {fileID: 11400000, guid: ffddcae6f8ba79042beac86bc66eef23, type: 2}
+    - {fileID: 11400000, guid: 0c5f7fc7509a0fc4289192420d62d6ae, type: 2}

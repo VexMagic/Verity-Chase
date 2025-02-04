@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: Sleeping On Duty
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: b4d5847e10144964ab7bf556d6f57f8c, type: 2}
+  PreviewInteraction: {fileID: 11400000, guid: 107bc7adc138cfe45b2ece62e6d91ead, type: 2}
+  Music: {fileID: 8300000, guid: ae5d60026e90cef41a10502037f91c78, type: 3}
+  Title: Sleeping On Duty.
+  Lines:
+  - Line:
+      TalkingCharacter: 4
+      Text: "The walls of the security room are soundproof and the cameras don\u2019t
+        pick up on audio."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 0a7b48b844a9de14baac5510337feb60, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: So there was no way the ceiling glass breaking would have woken me up.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 695658ef7feac0048ba11531ee8f2d8c, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: c0ff9cd77912e8b4d9897d184a68d7ac, type: 2}
+      Result: {fileID: 11400000, guid: 44b897fcb580c9443acf558aa44a8425, type: 2}
+  - Line:
+      TalkingCharacter: 4
+      Text: "And I couldn\u2019t see the screen because I was too busy sleeping."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: a7a073fe4b6fe55438be1434120ec245, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: "I feel really bad about it. I just let them do whatever they wanted.
+        Now someone is dead and it\u2019s all my fault!"
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: df0bc2901319d5248ad56b61e7bbebab, type: 2}
+    CorrectAnswers: []

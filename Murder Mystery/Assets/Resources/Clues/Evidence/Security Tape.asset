@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c850aa41c7164e87dd33d24e56f0c, type: 3}
+  m_Name: Security Tape
+  m_EditorClassIdentifier: 
+  Title: Security Tape
+  Versions:
+  - Description: Footage of the crime scene. All the footage from the break in to
+      the murder has been deleted. No other movement for the entire night.
+    Sprite: {fileID: 21300000, guid: dfc655d8127837b4b95e6813f0f2b01c, type: 3}
+    Check:
+    - CheckType: 2
+      Description: 
+      Image: {fileID: 0}
+      Clip: {fileID: 7400000, guid: 560cac054b7d28f46938f79dbfc9f202, type: 2}

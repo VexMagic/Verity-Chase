@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46384ce4766904b46acc66394979c2a5, type: 3}
+  m_Name: Ace Chat
+  m_EditorClassIdentifier: 
+  CharacterName: 6
+  Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+  Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+  Music: {fileID: 8300000, guid: 5645e41ff60f9a440bcbe60367c85f29, type: 3}
+  Questions:
+  - Response:
+      Text: Interpol
+      Result: {fileID: 11400000, guid: 61d6cfc8210327a49951ceee2db8975a, type: 2}
+    Condition: {fileID: 0}
+  - Response:
+      Text: The Catalyst
+      Result: {fileID: 11400000, guid: 8957ef3afd82df34bb79d436c2aed14a, type: 2}
+    Condition: {fileID: 0}
+  - Response:
+      Text: The Victim
+      Result: {fileID: 11400000, guid: ffddcae6f8ba79042beac86bc66eef23, type: 2}
+    Condition: {fileID: 11400000, guid: 8957ef3afd82df34bb79d436c2aed14a, type: 2}

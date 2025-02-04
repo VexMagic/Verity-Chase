@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46384ce4766904b46acc66394979c2a5, type: 3}
+  m_Name: Minerva
+  m_EditorClassIdentifier: 
+  CharacterName: 12
+  Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+  Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+  Music: {fileID: 8300000, guid: 8e36be8eecad9464cabae0f6541c9ece, type: 3}
+  Questions:
+  - Response:
+      Text: Dr. Minerva Hall
+      Result: {fileID: 11400000, guid: 2dc568244ddeaf14398c3f6a0868b730, type: 2}
+    Condition: {fileID: 0}
+  - Response:
+      Text: Autopsy Report
+      Result: {fileID: 11400000, guid: 1c873b61d96cfe44ca5e4587dba307a3, type: 2}
+    Condition: {fileID: 11400000, guid: 2dc568244ddeaf14398c3f6a0868b730, type: 2}
+  - Response:
+      Text: The Weather
+      Result: {fileID: 11400000, guid: 3de98caa48f635a4abafb880fcab6625, type: 2}
+    Condition: {fileID: 11400000, guid: 1c873b61d96cfe44ca5e4587dba307a3, type: 2}

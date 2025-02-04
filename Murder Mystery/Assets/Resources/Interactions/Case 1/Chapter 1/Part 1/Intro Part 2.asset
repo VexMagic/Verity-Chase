@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Intro Part 2
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: Heads
+    Result: {fileID: 11400000, guid: 7a771635e5076084db65b49265b9ee2b, type: 2}
+  - Text: Tails
+    Result: {fileID: 11400000, guid: b8c0cc64c2e47184c9259d345f05b0e0, type: 2}
+  Lines:
+  - TalkingCharacter: 2
+    Text: "A vigilante known as <important>\u201CThe Catalyst\u201D was seen on the
+      roof of this building<> last night. I am here to capture him once and for all."
+    Backgrounds: []
+    GainedClues:
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: e1e422b41782f84448c3236e2eb7a338, type: 2}
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 8300000, guid: e822d0a1861e0d54196f67b9685caf20, type: 3}
+  - TalkingCharacter: 6
+    Text: "The Catalyst, huh\u2026 Aiming pretty high aren\u2019t we? You got your
+      work cut out for you."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: 'Side question: Heads or Tails?'
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Um\u2026 "
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

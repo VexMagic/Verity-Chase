@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c850aa41c7164e87dd33d24e56f0c, type: 3}
+  m_Name: Tool Cart
+  m_EditorClassIdentifier: 
+  Title: Tool Cart
+  Versions:
+  - Description: A tool cart for medical equipment with some blood on the wheels.
+      Has blood vials, syringes, and patches inside.
+    Sprite: {fileID: 21300000, guid: 6304eedd4a0c4474e9a28bcff7821aef, type: 3}
+    Check: []

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2640b0f533d9c6e40a3bccbebfe95f6e, type: 3}
+  m_Name: Room 216
+  m_EditorClassIdentifier: 
+  Title: Room 216
+  Preview: {fileID: 21300000, guid: 03df1d26e17c11244a0eb953e6776b4a, type: 3}
+  PeopleAtLocations:
+  - LocationName: Room 216 (1)
+    EnterInteraction: {fileID: 0}
+    AreaMusic: {fileID: 8300000, guid: 20b1f87951a6cbe48928840eede0dd05, type: 3}
+    People: []
+    Conditions: []
+  - LocationName: Room 216 (2)
+    EnterInteraction: {fileID: 0}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People:
+    - {fileID: 11400000, guid: 4adb83f13a7eb044484d45ac80205ba6, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: a56f6d23878e75148aeb1456632a5254, type: 2}

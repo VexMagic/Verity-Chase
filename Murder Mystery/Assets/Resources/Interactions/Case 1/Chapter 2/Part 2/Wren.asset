@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46384ce4766904b46acc66394979c2a5, type: 3}
+  m_Name: Wren
+  m_EditorClassIdentifier: 
+  CharacterName: 9
+  Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+  Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+  Music: {fileID: 8300000, guid: 9bd7429f0264e544ca378c86c8687dd1, type: 3}
+  Questions:
+  - Response:
+      Text: 'Headaches '
+      Result: {fileID: 11400000, guid: df1999b84bab44e4b842ac64f81c5eab, type: 2}
+    Condition: {fileID: 0}
+  - Response:
+      Text: Predictions
+      Result: {fileID: 11400000, guid: 6f57b333cc635c44889baa2e52fbd0ee, type: 2}
+    Condition: {fileID: 0}

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: Yes
+    Result: {fileID: 11400000, guid: ff1fde23a537b314284d62ae403049a1, type: 2}
+  - Text: No
+    Result: {fileID: 11400000, guid: b9f42bd5f20495e4bab8e47b1e799e09, type: 2}
+  Lines:
+  - TalkingCharacter: 0
+    Text: '*Thud*'
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 0}
+      XPos: -100
+      FacingLeft: 1
+      Delay: 0
+  - TalkingCharacter: 2
+    Text: <think>(Who's there?)<>
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 0}
+      Animation: {fileID: 0}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+  - TalkingCharacter: 1
+    Text: It's <important>me...
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 0}
+      Animation: {fileID: 0}
+      XPos: -400
+      FacingLeft: 0
+      Delay: 0
+  - TalkingCharacter: 3
+    Text: 'The baby :D
+
+      Hi'
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 793bec750e2340849ab80af41cd8a64e, type: 2}
+      Animation: {fileID: 0}
+      XPos: 200
+      FacingLeft: 1
+      Delay: 11
+  - TalkingCharacter: 3
+    Text: Do you want a present?
+    GainedClues: []
+    GainedLocations: []
+    Movements: []

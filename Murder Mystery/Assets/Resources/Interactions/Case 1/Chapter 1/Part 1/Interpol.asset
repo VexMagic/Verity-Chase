@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Interpol
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 6927f383befa8694ea04a1d840e18167, type: 2}
+  Lines:
+  - TalkingCharacter: 2
+    Text: "Why is Interpol working on a murder case? You\u2019d think the local police
+      would handle it."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+  - TalkingCharacter: 6
+    Text: "Sadly I can\u2019t tell you the reason."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: So there is a reason!
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: Ya got me.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "I can\u2019t tell you what the reason is but I\u2019ll make you a deal."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "If you can guess the reason correctly, I\u2019ll give you a clear \"yes\"
+      answer. How does that sound?"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: Fine by me. Is it because of the Catalyst sighting?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "<float>Maybe\u2026<>"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: "<think>(He didn\u2019t give me a clear \u201Cyes\u201D so that must not
+      be it.)<>"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: <think><shake> (Then what could it be!?)<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: What makes you want to investigate anyways?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: "Didn\u2019t I already answer, I\u2019m trying to find the Catalyst."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: Yes I know. I meant in a more <float>philosophical<> sense. What drives
+      you to investigate? What is that core belief that motivates your actions?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: "I guess\u2026 to find the truth."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "\u2026"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "Oh, that\u2019s it."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: Did you want something more?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "No no no\u2026 Finding the truth is a perfectly fine reason on its own."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: Then why are you being so judgemental?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 6
+    Text: "\u2026...........\nI\u2019ll explain later."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+  - TalkingCharacter: 2
+    Text: "<think>(Great\u2026)<>"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []

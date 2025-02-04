@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: Amara - When the victim died
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 17e0f12421f63ba4c8d27e200e2dbe1e, type: 2}
+  PreviewInteraction: {fileID: 11400000, guid: b6e101a9470084e4fb3ee80cdc49fc5d, type: 2}
+  Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
+  Title: When the victim died.
+  Lines:
+  - Line:
+      TalkingCharacter: 10
+      Text: "It doesn\u2019t take an expert to figure out when the victim died. You
+        only need to check the logs for the heart rate monitor."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: fda9cd209c8530842a8b9f83fdddd833, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 10
+      Text: At 1:34 we see a sudden spike in heart rate. This is when the victim
+        was attacked!
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: d94085c20f0f88b4f9e43d2c8265eee8, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 10
+      Text: Then shortly after we see the log abruptly ending and the machine turning
+        itself off. This means that his heartbeat must have stopped.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 0011e279dd9c7364288a2cf9f8fbc0f5, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: b86148c0c23dd3b48aba3413998b7d3d, type: 2}
+      Result: {fileID: 11400000, guid: a8b17e8fa20628948a87a921ccee2e14, type: 2}
+  - Line:
+      TalkingCharacter: 10
+      Text: This proves that the victim died at 1:34 am. How's that for deductive
+        reasoning?
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 55fa094388d08984bbf090e2c30d52d9, type: 2}
+    CorrectAnswers: []
