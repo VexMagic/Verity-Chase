@@ -19,7 +19,7 @@ public class PersonSelectorSpawner : MonoBehaviour
 
     private void Start()
     {
-        talkSelected.gameObject.SetActive(false);
+        SetSelectedPersonActive(false);
         selectedPersonStart = talkSelected.transform.position;
     }
 
@@ -48,7 +48,7 @@ public class PersonSelectorSpawner : MonoBehaviour
     public void SelectPerson(Interview person)
     {
         talkSelected.SetCharacter(person.character, person.animation);
-        talkSelected.gameObject.SetActive(true);
+        SetSelectedPersonActive(true);
     }
 
     public void SetSelectedPersonActive(bool active)

@@ -183,8 +183,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "So long as you have an actual reason to be here, I suppose you can remain
-      here.\r"
+    Text: "So long as you have an actual reason to be here, I suppose you can remain.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

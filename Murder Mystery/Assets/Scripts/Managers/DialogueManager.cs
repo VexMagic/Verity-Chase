@@ -4,8 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using System.Linq;
-using static UnityEditor.Progress;
+using System.IO;
+using UnityEditor;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI topTestimonyText;
     [SerializeField] private TextMeshProUGUI bottomTestimonyText;
     [SerializeField] private List<PartStartData> chapterStart;
-    [SerializeField] private bool debugActive;
+    //[SerializeField] private bool debugActive;
 
     private Dialogue currentDialogue;
     private int currentLine;
@@ -539,7 +539,11 @@ public class DialogueManager : MonoBehaviour
 
     public bool Progress()
     {
-        return (Input.GetMouseButtonDown(0) || (Input.GetKey(KeyCode.Space) && debugActive)) && isHovering;
+#if (UNITY_EDITOR)
+        if (Input.GetKey(KeyCode.Space) && isHovering)
+            return true;
+#endif
+        return Input.GetMouseButtonDown(0) && isHovering;
     }
 
     public bool TestimonyProgress(Testimony testimony)

@@ -64,7 +64,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 11
     Text: "This one here is for mostly stuff we need for life threatening medical
-      conditions\r."
+      conditions.\r."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

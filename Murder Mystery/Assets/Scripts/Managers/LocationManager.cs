@@ -272,6 +272,7 @@ public class LocationManager : MonoBehaviour
             personSpawner.SetActive(false);
             ResponseManager.instance.IgnoreNextResponse = true;
             ResponseManager.instance.ResponseResult(unlockedLocations[currentLocation].CurrentLocationState().enterInteraction);
+            personSpawner.SetSelectedPersonActive(false);
             SetCurrentLocationDisplay();
         }
     }

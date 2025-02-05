@@ -35,7 +35,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 8
     Text: "I would assume it is for hygienic purposes. It is easily disposed of so
-      you don't need to do a bunch of cleaning\r"
+      you don't need to do a bunch of cleaning.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

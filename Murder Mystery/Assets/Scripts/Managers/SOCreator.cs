@@ -7,11 +7,17 @@ public class SOCreator : MonoBehaviour
 {
     public static SOCreator instance;
 
+    [SerializeField] private GameObject SOButton;
+
     const string path = "Assets/Resources/lol.asset";
 
     private void Awake()
     {
         instance = this;
+
+#if (!UNITY_EDITOR)
+        SOButton.SetActive(false);
+#endif
     }
 
     public void CreateSO()
@@ -48,7 +54,9 @@ public class SOCreator : MonoBehaviour
 
         Dialogue tempSO = new Dialogue(tempLines);
 
+        #if (UNITY_EDITOR)
         AssetDatabase.CreateAsset(tempSO, path);
         AssetDatabase.SaveAssets();
+        #endif
     }
 }

@@ -129,10 +129,10 @@ public class ResponseManager : MonoBehaviour
         else if (result is Interview)
         {
             LocationManager.instance.SetMultiplePeople();
-            DialogueManager.instance.EndDialogue(true);
             ShowResponses((result as Interview).responses(), true);
             storedMusic = (result as Interview).music;
             LocationManager.instance.personSpawner.SelectPerson((result as Interview));
+            DialogueManager.instance.EndDialogue(true);
             Invoke(nameof(StartMusic), 0.01f);
         }
         else if (result is Cutscene) 

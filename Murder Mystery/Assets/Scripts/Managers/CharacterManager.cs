@@ -1,11 +1,5 @@
-using JetBrains.Annotations;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.DebugUI;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -61,7 +55,7 @@ public class CharacterManager : MonoBehaviour
         characterDisplays.Add(displayData);
     }
 
-    public CharacterDisplay GetCharacterDisplay(AnimatorController controller)
+    public CharacterDisplay GetCharacterDisplay(RuntimeAnimatorController controller)
     {
         foreach (var item in characterDisplays)
         {
@@ -74,13 +68,13 @@ public class CharacterManager : MonoBehaviour
         return null;
     }
 
-    public AnimatorController GetCharacterController(Character character)
+    public RuntimeAnimatorController GetCharacterController(Character character)
     {
         if (character == Character.UnknownMale || character == Character.UnknownFemale)
         {
             foreach (var item in characterDisplays)
             {
-                CharacterData tempData = GetCharacterData((AnimatorController)item.Animator.runtimeAnimatorController);
+                CharacterData tempData = GetCharacterData(item.Animator.runtimeAnimatorController);
                 if (!tempData.HasBeenUsed)
                 {
                     if ((tempData.IsMale && character == Character.UnknownMale) || (!tempData.IsMale && character == Character.UnknownFemale))
@@ -105,7 +99,7 @@ public class CharacterManager : MonoBehaviour
         return null;
     }
 
-    private CharacterData GetCharacterData(AnimatorController controller)
+    private CharacterData GetCharacterData(RuntimeAnimatorController controller)
     {
         foreach (var item in characterDatas)
         {

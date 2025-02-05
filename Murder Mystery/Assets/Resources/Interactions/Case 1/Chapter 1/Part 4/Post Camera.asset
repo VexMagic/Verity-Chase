@@ -20,7 +20,6 @@ MonoBehaviour:
     Text: <shake>What the heck happened there?!<>
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 8300000, guid: e822d0a1861e0d54196f67b9685caf20, type: 3}
@@ -28,7 +27,6 @@ MonoBehaviour:
     Text: 'Someone must have deleted part of the recording while I was sleeping. '
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -36,7 +34,6 @@ MonoBehaviour:
     Text: That would explain the static.
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -44,7 +41,6 @@ MonoBehaviour:
     Text: You can hold onto the tape if you want.
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -52,10 +48,8 @@ MonoBehaviour:
     Text: Thank you, that would be great.
     Backgrounds: []
     GainedClues:
-    - {fileID: 11400000, guid: 7b0439bc18c2aac4b869e81c6f2be2c5, type: 2}
-    GainedClues2:
-    - GainedClue: {fileID: 11400000, guid: c0ff9cd77912e8b4d9897d184a68d7ac, type: 2}
-      Version: 0
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: c0ff9cd77912e8b4d9897d184a68d7ac, type: 2}
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -63,7 +57,6 @@ MonoBehaviour:
     Text: So you really have no idea what happened?
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -71,7 +64,6 @@ MonoBehaviour:
     Text: No, except for what I can piece together.
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -79,7 +71,6 @@ MonoBehaviour:
     Text: "That does explain your\u2026 less than credible testimonies."
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
@@ -88,7 +79,6 @@ MonoBehaviour:
       lying.)<>"
     Backgrounds: []
     GainedClues: []
-    GainedClues2: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}

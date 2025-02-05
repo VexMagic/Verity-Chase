@@ -2574,7 +2574,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 11400000, guid: b254309f368f3834781b53d60c51ca50, type: 2}
     - {fileID: 11400000, guid: 1925ce0edf788004982f3ecdf19549a7, type: 2}
-  debugActive: 1
+  debugActive: 0
   newInteractionFinished: 0
   interactionActive: 0
 --- !u!4 &334001567
