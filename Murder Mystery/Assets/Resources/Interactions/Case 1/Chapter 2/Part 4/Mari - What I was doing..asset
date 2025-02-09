@@ -13,8 +13,48 @@ MonoBehaviour:
   m_Name: Mari - What I was doing.
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 0}
-  WrongAnswer: {fileID: 0}
-  PreviewInteraction: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 863e983e6cf129a4d82a75cc20cd7791, type: 2}
+  PreviewInteraction: {fileID: 11400000, guid: d449b273a45ab45458cd4e65456ef289, type: 2}
   Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
   Title: What I was doing.
-  Lines: []
+  Lines:
+  - Line:
+      TalkingCharacter: 11
+      Text: During the night I went around and checked on all my patients and I entered
+        this room a bit before 3 am.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 11
+      Text: I made sure Wilma was doing ok and made sure all her vital signs were
+        good. This only took a few moments.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 11
+      Text: "During this time I didn\u2019t see anything out of the ordinary. I had
+        no idea mr. Murphy was dead, I promise."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    PressResult: {fileID: 0}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      Result: {fileID: 11400000, guid: a217a098cb4b55740a2c0dfb04caf807, type: 2}

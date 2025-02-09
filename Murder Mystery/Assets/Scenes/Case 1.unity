@@ -2574,7 +2574,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 11400000, guid: b254309f368f3834781b53d60c51ca50, type: 2}
     - {fileID: 11400000, guid: 1925ce0edf788004982f3ecdf19549a7, type: 2}
-  debugActive: 0
+    - {fileID: 11400000, guid: 740da3293a01903439a1793abbe7c588, type: 2}
   newInteractionFinished: 0
   interactionActive: 0
 --- !u!4 &334001567
@@ -7561,6 +7561,36 @@ MonoBehaviour:
         GainedEvidence: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
       - Version: 0
         GainedEvidence: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+      AllProfiles:
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 87634f6f5818f9d4f8e861af167ea9da, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 37f6fc7788d5f664ba205caa843d01a4, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 26e30e6df51c19a43a92061954b1b01e, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 505ffc83aa31fdd4cb9389fd54f5b651, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 0681eb1f3a14dba4ca717e31f18d59c6, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: b44e16135a87a6b4ab9f8e4d84f7d0c4, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: d95c28daf2c7a6343bade297a199bf64, type: 2}
+    - AllEvidence:
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: d28fc7d2759a3f14eb87c023243836f9, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: b86148c0c23dd3b48aba3413998b7d3d, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: f840b2f1bf480cd4b9378dcb7460d0cb, type: 2}
       AllProfiles:
       - Version: 0
         GainedProfile: {fileID: 11400000, guid: 87634f6f5818f9d4f8e861af167ea9da, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Responses:
   - Text: 
-    Result: {fileID: 11400000, guid: f764fd7284b603d4ba0e756011d488c0, type: 2}
+    Result: {fileID: 11400000, guid: 1925ce0edf788004982f3ecdf19549a7, type: 2}
   Lines:
   - TalkingCharacter: 8
     Text: "Seems you were too hasty in your assessment, amiga. \r"

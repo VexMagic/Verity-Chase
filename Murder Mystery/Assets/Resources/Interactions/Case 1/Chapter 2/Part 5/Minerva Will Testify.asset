@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
-  m_Name: Mari! Testify!
+  m_Name: Minerva Will Testify
   m_EditorClassIdentifier: 
-  Responses:
-  - Text: 
-    Result: {fileID: 11400000, guid: fc5d1a66483c9ba409eebfbecaf41950, type: 2}
+  Responses: []
   Lines:
-  - TalkingCharacter: 8
-    Text: "If you tell me what you were doing in here, we might get closer to finding
-      the true culprit.\r"
+  - TalkingCharacter: 12
+    Text: "You know I can hear you talking about me behind my back.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -44,12 +41,39 @@ MonoBehaviour:
     - DisplayID: 3
       Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
       Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: 800
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
       XPos: 200
       FacingLeft: 1
       Delay: 0
+    Music: {fileID: 8300000, guid: 8e36be8eecad9464cabae0f6541c9ece, type: 3}
+  - TalkingCharacter: 8
+    Text: "Dr. Hall, right on cue. We'd like to ask you about-\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
     Music: {fileID: 0}
-  - TalkingCharacter: 11
-    Text: Okay.
+  - TalkingCharacter: 12
+    Text: "What I was doing here before the murder? As I said, I could hear you.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Thank you for cooperating.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: This better not take long, I got a job to do.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

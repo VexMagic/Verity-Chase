@@ -86,15 +86,15 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "What was Minerva doing here?\r"
+    Text: "What was Dr. Hall doing here?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 11
-    Text: "She told me that she had to tend to a medical emergency. This was before
-      I even went here.\r"
+    Text: "She told me that she had to tend to a medical emergency maybe <important>an
+      hour before I even went here.<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -22,7 +22,7 @@ MonoBehaviour:
       unplugged at some point during the night.
     Sprite: {fileID: 21300000, guid: 665ab5fe566c47b4f90d2c979dbb7761, type: 3}
     Check:
-    - CheckType: 0
+    - CheckType: 2
       Description: 
       Image: {fileID: 0}
-      Clip: {fileID: 0}
+      Clip: {fileID: 7400000, guid: 2c2ffa205ecdad34b9136bfb4ebae776, type: 2}

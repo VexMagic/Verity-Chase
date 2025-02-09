@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f860335bdcb37f4cb344c04a4989ea7, type: 3}
+  m_Name: Why she didn't see blood
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 99fc951598e40eb43a8c025ba45d72cf, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 15ce307900568b94d8a474191e2d7dcc, type: 2}
+  Line:
+    TalkingCharacter: 8
+    Text: This piece of evidence explains how Ms. Infer would not have noticed the
+      blood!
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  CorrectAnswers:
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
