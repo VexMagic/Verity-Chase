@@ -18,17 +18,20 @@ public class Testimony : QuestionInteraction
 
 [Serializable]
 public class TestimonyLine
-{
+{ 
     [SerializeField] private DialogueLine Line;
     [SerializeField] private Interaction Condition;
+    [SerializeField] private Interaction RemoveCondition;
     [SerializeField] private Interaction PressResult;
     [SerializeField] private List<TestimonyPresent> CorrectAnswers;
     public DialogueLine line => Line;
     public Interaction condition => Condition;
+    public Interaction removeCondition => RemoveCondition;
     public Interaction pressResult => PressResult;
     public List<TestimonyPresent> correctAnswers => CorrectAnswers;
 
-    public bool IsAvailable() => LogManager.instance.HasFinishedInteraction(Condition) || Condition == null;
+    public bool IsAvailable() => (LogManager.instance.HasFinishedInteraction(Condition) || Condition == null) 
+        && (!LogManager.instance.HasFinishedInteraction(removeCondition) || removeCondition == null);
 }
 
 [Serializable]
