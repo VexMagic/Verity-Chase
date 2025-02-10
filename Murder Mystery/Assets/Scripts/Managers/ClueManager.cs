@@ -16,6 +16,8 @@ public class ClueManager : MonoBehaviour
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject testimonyPresentButton;
     [SerializeField] private GameObject pressButton;
+    [SerializeField] private GameObject exitMemoryButton;
+    [SerializeField] private GameObject deduceMemoryButton;
     [SerializeField] private GameObject checkButton;
     [SerializeField] private Image background;
     [SerializeField] private Vector2 presentingOffset;
@@ -43,6 +45,7 @@ public class ClueManager : MonoBehaviour
 
     public bool isOpen;
     public bool isTestimonyPresenting;
+    public bool isMemoryDeduction;
     public Clue.Type currentMenuType;
 
     private void Awake()
@@ -140,11 +143,16 @@ public class ClueManager : MonoBehaviour
             button.SetActive(false);
         }
 
-        openButton.SetActive(!isTestimonyPresenting);
+        openButton.SetActive(!isTestimonyPresenting && !isMemoryDeduction);
         testimonyPresentButton.SetActive(isTestimonyPresenting);
         pressButton.SetActive(isTestimonyPresenting);
         DialogueManager.instance.TestimonyArrowsActive(isTestimonyPresenting);
+
+        deduceMemoryButton.SetActive(isMemoryDeduction);
+        exitMemoryButton.SetActive(isMemoryDeduction);
+
         isTestimonyPresenting = false;
+        isMemoryDeduction = false;
 
         closeButton.SetActive(false);
         presentButton.SetActive(false);
@@ -235,12 +243,29 @@ public class ClueManager : MonoBehaviour
         }
     }
 
+    public void DeduceButton()
+    {
+        isOpen = !isOpen;
+        if (isOpen)
+        {
+            exitMemoryButton.SetActive(false);
+            isMemoryDeduction = true;
+            OpenMenu(true, true);
+        }
+        else
+        {
+            CloseMenu();
+        }
+    }
+
     public void OpenMenu(bool isPresenting, bool canGoBack)
     {
         clueMenu.SetActive(true);
         openButton.SetActive(false);
         testimonyPresentButton.SetActive(false);
         pressButton.SetActive(false);
+        deduceMemoryButton.SetActive(false);
+        exitMemoryButton.SetActive(false);
         SwapMenuButton(currentMenuType == Clue.Type.Evidence);
         closeButton.SetActive(canGoBack);
 

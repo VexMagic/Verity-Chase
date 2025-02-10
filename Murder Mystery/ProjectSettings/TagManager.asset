@@ -44,6 +44,9 @@ TagManager:
   - name: Examinable
     uniqueID: 2389653471
     locked: 0
+  - name: Memory
+    uniqueID: 1961293303
+    locked: 0
   - name: Character
     uniqueID: 3969236053
     locked: 0

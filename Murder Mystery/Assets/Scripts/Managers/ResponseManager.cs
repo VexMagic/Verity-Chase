@@ -146,6 +146,10 @@ public class ResponseManager : MonoBehaviour
             ChapterManager.instance.currentPart = 0;
             SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         }
+        else if (result is Memory)
+        {
+            DialogueManager.instance.StartMemory(result as Memory);
+        }
     }
 
     private void StartMusic()

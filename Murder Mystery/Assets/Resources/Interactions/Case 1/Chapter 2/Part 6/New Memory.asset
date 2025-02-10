@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9807de7585e31419e23fadd13e21d3, type: 3}
+  m_Name: New Memory
+  m_EditorClassIdentifier: 
+  MemoryName: Mari
+  Exitable: 0
+  Complete: {fileID: 11400000, guid: 47b9e5011e8924046ac85d63fa518008, type: 2}
+  GiveUp: {fileID: 11400000, guid: cdb44d9bb75fa904492dda0d924e3a16, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 0168be2e6c6886b4199e697d5d08e8f8, type: 2}
+  Conditions:
+  - {fileID: 11400000, guid: 4b8db88d503ddbf4690372f02620708b, type: 2}

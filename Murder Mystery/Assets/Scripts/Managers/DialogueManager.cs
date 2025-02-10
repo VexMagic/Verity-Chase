@@ -122,6 +122,12 @@ public class DialogueManager : MonoBehaviour
         CutsceneManager.instance.StartCutscene(cutscene);
     }
 
+    public void StartMemory(Memory memory)
+    {
+        textBox.SetActive(false);
+        MemoryManager.instance.SetCurrentMemory(memory);
+    }
+
     private IEnumerator StepThroughDialogue(Dialogue dialogue)
     {
         dialogueText.text = string.Empty;
@@ -537,13 +543,16 @@ public class DialogueManager : MonoBehaviour
         }
     } 
 
-    public bool Progress()
+    public bool Progress(bool drag = false)
     {
 #if (UNITY_EDITOR)
         if (Input.GetKey(KeyCode.Space) && isHovering)
             return true;
 #endif
-        return Input.GetMouseButtonDown(0) && isHovering;
+        if (drag)
+            return Input.GetMouseButton(0) && isHovering;
+        else
+            return Input.GetMouseButtonDown(0) && isHovering;
     }
 
     public bool TestimonyProgress(Testimony testimony)
@@ -649,6 +658,11 @@ public class DialogueManager : MonoBehaviour
         return hasPresented;
     }
 
+    public void SetPresented(bool hasPresented)
+    {
+        this.hasPresented = hasPresented;
+    }
+
     public bool HasPressed()
     {
         return hasPressed;
@@ -658,6 +672,12 @@ public class DialogueManager : MonoBehaviour
 
     public void Exit() { isHovering = false; }
 
-    public void Present(bool present) { hasPresented = present; ClueManager.instance.isTestimonyPresenting = false; }
+    public void Present(bool present) 
+    { 
+        hasPresented = present; 
+        ClueManager.instance.isTestimonyPresenting = false; 
+        ClueManager.instance.isMemoryDeduction = false; 
+    }
+
     public void Press(bool press) { hasPressed = press; }
 }
