@@ -17022,6 +17022,7 @@ MonoBehaviour:
   exitButton: {fileID: 819147704}
   deduceButton: {fileID: 549841884}
   worldMaxSize: {x: 3.2, y: 1.8}
+  music: {fileID: 8300000, guid: 5d4bbed541dd1a247a6b98f00a2efab9, type: 3}
 --- !u!1 &1886139542
 GameObject:
   m_ObjectHideFlags: 0

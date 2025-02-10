@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd9807de7585e31419e23fadd13e21d3, type: 3}
-  m_Name: New Memory
+  m_Name: Memory of Murder
   m_EditorClassIdentifier: 
   MemoryName: Mari
   Exitable: 0

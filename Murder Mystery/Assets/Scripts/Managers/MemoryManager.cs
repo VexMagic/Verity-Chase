@@ -13,6 +13,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private GameObject exitButton;
     [SerializeField] private GameObject deduceButton;
     [SerializeField] private Vector2 worldMaxSize;
+    [SerializeField] private AudioClip music;
 
     private Memory currentMemory;
     private MemoryObject[] MemoryObjects;
@@ -143,6 +144,7 @@ public class MemoryManager : MonoBehaviour
             return;
         }
 
+        AudioManager.instance.PlayMusic(music);
         exitButton.SetActive(newMemory.exitable);
         deduceButton.SetActive(true);
         EndCoroutine();
