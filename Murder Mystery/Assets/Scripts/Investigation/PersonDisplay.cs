@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PersonDisplay : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private RectTransform display;
+    [SerializeField] private GameObject checkmark;
+    [SerializeField] private Button Button;
     [SerializeField] private float basePos, hoverPos;
+
+    public Button button => Button;
+    public Interview interview;
 
     private Coroutine movementCoroutine;
 
     private void Start()
     {
         SetBasePosition();
+        checkmark.SetActive(interview.DoneTalking());
     }
 
     public void SetBasePosition()
@@ -32,6 +39,15 @@ public class PersonDisplay : MonoBehaviour
         if (movementCoroutine != null)
             StopCoroutine(movementCoroutine);
         movementCoroutine = StartCoroutine(SmoothMovement(display.localPosition.y, basePos));
+    }
+
+    public void SetButtonActive(bool isActive)
+    {
+        Button.gameObject.SetActive(isActive);
+        if (isActive)
+        {
+            checkmark.SetActive(interview.DoneTalking());
+        }
     }
 
     private IEnumerator SmoothMovement(float start, float end)

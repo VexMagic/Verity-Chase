@@ -12,7 +12,7 @@ public class PersonSelectorSpawner : MonoBehaviour
     [SerializeField] private float moveSpeed;
 
     private List<GameObject> selectorObjects = new List<GameObject>();
-    private List<Button> selectorButtons = new List<Button>();
+    private List<PersonDisplay> displays = new List<PersonDisplay>();
 
     private Coroutine movementCoroutine;
     private Vector2 selectedPersonStart;
@@ -32,14 +32,17 @@ public class PersonSelectorSpawner : MonoBehaviour
             GameObject buttonObject = Instantiate(selector, spawnParent);
             buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = DialogueManager.instance.GetCharacterData(person.characterName).title;
             buttonObject.GetComponentInChildren<CharacterDisplay>().SetCharacter(person.character, person.animation);
-            Button tempButton = buttonObject.GetComponentInChildren<Button>();
+            PersonDisplay tempDisplay = buttonObject.GetComponent<PersonDisplay>();
+            tempDisplay.interview = person;
+
+            Button tempButton = tempDisplay.button;
 
             tempButton.onClick.AddListener(() => LocationManager.instance.SetMultiplePeople(true));
             tempButton.onClick.AddListener(() => ResponseManager.instance.ResponseResult(person));
             tempButton.onClick.AddListener(() => SetActive(false));
 
             selectorObjects.Add(buttonObject);
-            selectorButtons.Add(tempButton);
+            displays.Add(tempDisplay);
         }
 
         gameObject.SetActive(true);
@@ -63,7 +66,7 @@ public class PersonSelectorSpawner : MonoBehaviour
             Destroy(item);
         }
         selectorObjects.Clear();
-        selectorButtons.Clear();
+        displays.Clear();
     }
 
     public void SetActive(bool isActive)
@@ -76,9 +79,9 @@ public class PersonSelectorSpawner : MonoBehaviour
 
     public void SetButtonActive(bool isActive)
     {
-        foreach (var item in selectorButtons)
+        foreach (var item in displays)
         {
-            item.gameObject.SetActive(isActive);
+            item.SetButtonActive(isActive);
         }
     }
 }

@@ -32,6 +32,18 @@ public class Interview : Interaction
 
         return responses.ToArray();
     }
+
+    public bool DoneTalking()
+    {
+        foreach (var item in Questions)
+        {
+            if (item.IsAvailable() && !LogManager.instance.HasFinishedInteraction(item.response.result))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 [Serializable]
