@@ -149,7 +149,7 @@ public class ClueManager : MonoBehaviour
         DialogueManager.instance.TestimonyArrowsActive(isTestimonyPresenting);
 
         deduceMemoryButton.SetActive(isMemoryDeduction);
-        exitMemoryButton.SetActive(isMemoryDeduction);
+        exitMemoryButton.SetActive(isMemoryDeduction && MemoryManager.instance.currentMemory.exitable);
 
         isTestimonyPresenting = false;
         isMemoryDeduction = false;

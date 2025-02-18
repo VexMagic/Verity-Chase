@@ -59,6 +59,10 @@ public class LocationManager : MonoBehaviour
     {
         unlockedLocations = chapterLocations[ChapterManager.instance.currentChapter].partLocations[ChapterManager.instance.currentPart].locations;
         selectedLocation = chapterLocations[ChapterManager.instance.currentChapter].partLocations[ChapterManager.instance.currentPart].currentLocation;
+
+        foreach (var item in unlockedLocations)
+            enteredLocations.Add(item);
+
         SpawnLocationButtons();
         SetOptionsValues();
         ChangeLocation(true);

@@ -16,7 +16,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private AudioClip music;
     [SerializeField] private Animator fadeEffect;
 
-    private Memory currentMemory;
+    public Memory currentMemory;
     private MemoryObject[] MemoryObjects;
     private Coroutine coroutine;
     private List<MemoryObject> selectedMemoryObjects = new List<MemoryObject>();
@@ -67,7 +67,7 @@ public class MemoryManager : MonoBehaviour
         SetAimPosition(Vector2.zero);
         while (IsMemoryActive)
         {
-            if (Draging())
+            if (Draging() && !ClueManager.instance.isOpen)
             {
                 clickPosition.SetActive(true);
                 Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);

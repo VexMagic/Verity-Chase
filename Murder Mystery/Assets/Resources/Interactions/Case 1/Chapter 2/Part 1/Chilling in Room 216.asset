@@ -563,6 +563,7 @@ MonoBehaviour:
     Text: <think>(Room 204... Shouldn't be far from here.)<>
     Backgrounds: []
     GainedClues: []
-    GainedLocations: []
+    GainedLocations:
+    - {fileID: 11400000, guid: 491746c4f2107814f92f969b7425b1fa, type: 2}
     Movements: []
     Music: {fileID: 0}
