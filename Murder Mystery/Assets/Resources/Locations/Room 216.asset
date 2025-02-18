@@ -27,3 +27,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4adb83f13a7eb044484d45ac80205ba6, type: 2}
     Conditions:
     - {fileID: 11400000, guid: a56f6d23878e75148aeb1456632a5254, type: 2}
+  - LocationName: Room 216 (2)
+    EnterInteraction: {fileID: 11400000, guid: a7ca8ffdc3f64ae4690ff064ab82898f, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People:
+    - {fileID: 11400000, guid: 4adb83f13a7eb044484d45ac80205ba6, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 539e84727de424c4bb6f22e60ee9c9f4, type: 2}

@@ -148,6 +148,8 @@ public class ResponseManager : MonoBehaviour
         }
         else if (result is Memory)
         {
+            DialogueManager.instance.SetClickDetectionActive(false);
+            CharacterManager.instance.DeleteCharacters();
             DialogueManager.instance.StartMemory(result as Memory);
         }
     }

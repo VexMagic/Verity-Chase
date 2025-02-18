@@ -225,6 +225,14 @@ public class LocationManager : MonoBehaviour
         ChangeLocation(false);
     }
 
+    public void TurnOffLocations()
+    {
+        foreach (Transform location in locationDisplayParent.transform)
+        {
+            location.gameObject.SetActive(false);
+        }
+    }
+
     public void ChangeLocation(bool isStart)
     {
         preview.sprite = null;
@@ -248,7 +256,7 @@ public class LocationManager : MonoBehaviour
         screenTransition.SetTrigger("End");
     }
 
-    private void SetCurrentLocationDisplay()
+    public void SetCurrentLocationDisplay()
     {
         foreach (Transform location in locationDisplayParent.transform)
         {

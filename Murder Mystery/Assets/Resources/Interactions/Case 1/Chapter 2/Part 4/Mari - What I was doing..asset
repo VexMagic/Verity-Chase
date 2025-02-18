@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 0}
   WrongAnswer: {fileID: 11400000, guid: 863e983e6cf129a4d82a75cc20cd7791, type: 2}
+  UniqueWrongs: []
   PreviewInteraction: {fileID: 11400000, guid: d449b273a45ab45458cd4e65456ef289, type: 2}
   Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
   Title: What I was doing.
@@ -28,7 +29,8 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
-    PressResult: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: f8fed8f218c31f043b4a2c8746f571e4, type: 2}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 11
@@ -40,21 +42,29 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
-    PressResult: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 8e53703c43653b3429e9dd2d114f0c9a, type: 2}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 11
       Text: "During this time I didn\u2019t see anything out of the ordinary. I had
-        no idea mr. Murphy was dead, I promise."
+        no idea Mr. Murphy was dead, I promise."
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
-    PressResult: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: f899e0df8a27db64989d6c337cc0297a, type: 2}
     CorrectAnswers:
     - CorrectClue:
         Version: 0
         GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
       Result: {fileID: 11400000, guid: a217a098cb4b55740a2c0dfb04caf807, type: 2}
+      ContinueTestimony: 0
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: f840b2f1bf480cd4b9378dcb7460d0cb, type: 2}
+      Result: {fileID: 11400000, guid: a217a098cb4b55740a2c0dfb04caf807, type: 2}
+      ContinueTestimony: 0

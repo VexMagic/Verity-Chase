@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Present Correct 3
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 09f3914f2f7243b4e8e814d7ad56f066, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: "They only needed to hide behind the curtain while Ms. Infer was in the
+      room and would be completely unnoticeable.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Wouldn't that be incredibly risky?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "As opposed to potentially being spotted entering and exiting the room
+      multiple times, hiding was the safest option.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I guess you've got a point...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Oh, it seems forensics is done with the blood analysis.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "<think>(So that is what she did after Dr. Hall's outburst.)\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "There seems to be something strange about it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "But the DNA analysis on the blood is clear. The pool of blood contains
+      blood from both the victim and another person called Claire Steele.\r"
+    Backgrounds: []
+    GainedClues:
+    - Version: 1
+      GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: And there we have our killer.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

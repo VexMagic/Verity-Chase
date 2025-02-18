@@ -1,5 +1,8 @@
-Minerva - You know I can hear you talking about me behind my back.
-Rook - Dr. Hall, right on cue. We’d like to ask you about-
-Minerva - What I was doing here before the murder? As I said, I could hear you.
-Rook - Thank you for cooperating.
-Minerva - This better not take long, I got a job to do.
+Rook - If you went to check up on Ms. Steele, why didn’t you do the same for the victim?
+Mari - I didn’t realize he was there.
+Wren - What?
+Mari - I only heard the sound of one heart rate monitor so I thought there only was one patient in here. I really didn’t see anything!
+Rook - Are you sure you didn’t see anything?
+Mari - Well, now I’m not so sure myself...
+Rook - <think>(That’s all it takes to shake her confidence?)
+Rook - <think>(I should watch what I say around her.) 

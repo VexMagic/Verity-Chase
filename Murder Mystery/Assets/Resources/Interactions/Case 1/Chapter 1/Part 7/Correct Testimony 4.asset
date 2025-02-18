@@ -134,7 +134,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(You can\u2019t just appoint yourself as my mentor, mr. Wise guy.)<>"
+    Text: "<think>(You can\u2019t just appoint yourself as my mentor, Mr. Wise guy.)<>"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -18,3 +18,8 @@ MonoBehaviour:
       blood must be mixed in.
     Sprite: {fileID: 21300000, guid: c75b8c6383807524093f339c5bdfcf2d, type: 3}
     Check: []
+  - Description: A large pool of blood. There is something weird about the DNA in
+      the blood but it has been identified to belong to both Matthew Murphy and Claire
+      Steele.
+    Sprite: {fileID: 21300000, guid: c75b8c6383807524093f339c5bdfcf2d, type: 3}
+    Check: []

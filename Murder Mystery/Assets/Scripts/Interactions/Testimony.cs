@@ -39,6 +39,8 @@ public class TestimonyPresent
 {
     [SerializeField] private GainAnyClueType CorrectClue;
     [SerializeField] private Interaction Result;
+    [SerializeField] private bool ContinueTestimony;
     public GainAnyClueType correctClue => CorrectClue;
     public Interaction result => Result;
+    public bool continueTestimony => ContinueTestimony;
 }

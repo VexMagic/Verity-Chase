@@ -1,0 +1,340 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Present Correct 5
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: f764fd7284b603d4ba0e756011d488c0, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: "The window was open at the time and we are only on the 2nd floor so it
+      would be easy to climb in.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Claire would also be the only one who could have closed the window.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Welp, I'm convinced.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I spoke with her earlier today so I know where she is.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I can have her here in a few minutes so you can ask her your questions.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "You're... being quite cooperative.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I won't be satisfied if I beat you by underhanded tactics. I will beat
+      you fair and square.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "So long as you are aiding the investigation, I'm happy.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Alright, I'll just make a quick phone call.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: -1
+    Text: "*beep* *boop* *beep* \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Hello, are you free at the moment?... Good, Claire might be the culprit
+      in my current case... \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "...Her blood was mixed into a pool of the victim's blood... We'd like
+      to ask her some questions... Thanks.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: -1
+    Text: "*click* \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "That was my partner. He should be bringing Claire Steele over in a few
+      minutes.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Partner? As in a romantic partner or business partner?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Interpol partner.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "<think>(Let's hope it isn't who I think it is.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "How did this whole interpol thing begin?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "An agent saw potential in me and took me under his wing. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "He taught me everything I know and I am honored that I can now call him
+      my partner.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "<think>(At this point, it has to be <important>him<>.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "<float>Sooooooo,<> who is this partner of yours?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "You're a clever guy. You must have put the pieces together by now.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I just wanted to confirm my suspicions.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I thought as much.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I'd like to ask, what is with this grudge you have against me?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Are you confirming your suspicions again?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "No, I have been trying to figure that part out since you arrived.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "You're... serious? You genuinely don't know?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I can't think of what I did to earn such animosity.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Rook?! What are you doing here?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 600
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 8300000, guid: 0ee7ce7ad8af848499c19bd26519c23a, type: 3}
+  - TalkingCharacter: 8
+    Text: "Verity? I could ask you the same thing.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Oh great, now <shake>Chase<> is here too.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "A-Amara... I... i-it's been a while...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "And whose fault is that.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "Ms. Phoenix! I brought Ms. Steele here for... well, well, well. If it
+      isn't the man himself.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: -600
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Agent Decker, it's been a while.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "Not long enough.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 4
+    Text: And don't forget about me! The one, the only, <shake>THE GREAT CATALYST!!!<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
+      XPos: 0
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 8300000, guid: 3760024119bec6c4397ed5cbe866cc4a, type: 3}

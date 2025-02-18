@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Deduction Wrong 1
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 81ca3943f2b7f4f458453b22487a103e, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: <think>(Not sure how <float>that<> would be affected if Ms. Infer closed
+      the window.)
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

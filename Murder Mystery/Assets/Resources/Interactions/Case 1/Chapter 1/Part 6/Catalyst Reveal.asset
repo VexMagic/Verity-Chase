@@ -157,7 +157,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: Hey Miss Chase, <float>guess what.<>
+    Text: Hey Ms. Chase, <float>guess what.<>
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

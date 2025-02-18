@@ -42,6 +42,7 @@ public class Examinable : MonoBehaviour
 
     public void Examine()
     {
-        ResponseManager.instance.ResponseResult(examineResult);
+        if (!MemoryManager.instance.isMemoryActive)
+            ResponseManager.instance.ResponseResult(examineResult);
     }
 }

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Press 2-1
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: fc5d1a66483c9ba409eebfbecaf41950, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: "How many patients do you need to check up on, amiga?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "A lot. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "I don't need to spend that much time on each one. It's just to make sure
+      the vital signs are good.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "What counts as vital signs?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Heart rate, body temperature, blood pressure. Stuff like that.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "Those all sound <float>pretty<> vital.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: Can you explain what you did in this room?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

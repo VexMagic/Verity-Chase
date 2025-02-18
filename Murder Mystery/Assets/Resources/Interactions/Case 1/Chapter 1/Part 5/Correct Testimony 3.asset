@@ -250,7 +250,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: Miss Steele, let me ask you something. Did you or did you not ditch work
+    Text: Ms. Steele, let me ask you something. Did you or did you not ditch work
       on the day of the murder?
     Backgrounds: []
     GainedClues: []
@@ -294,7 +294,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: <shake>Miss Chase!<>
+    Text: <shake>Ms. Chase!<>
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -365,8 +365,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: Seems like the <float>deck is stacked<> against you Miss Chase. Are you
-      ready to give up on your pursuit of Miss Steele?
+    Text: Seems like the <float>deck is stacked<> against you Ms. Chase. Are you
+      ready to give up on your pursuit of Ms. Steele?
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Deduction Correct 4
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 9f0d31e9419c4c743b3506505affe03a, type: 2}
+  Lines:
+  - TalkingCharacter: 10
+    Text: "So there is a high chance that there was someone else on the scene during
+      the murder...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Exactly. We now know someone else could have done it instead of Ms. Infer.
+      So now we can focus our attention on who else could be the culprit.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Don't tell me you're just going to go around accusing everyone <float>again.<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Not without a good reason.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "If I understand this correctly, what you're saying is...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "...someone went in, killed Matthew Murphy, extended the curtain, left
+      and waited for Infer to go in, then went in again and closed the curtain?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: That might be the case but there is another way they could have done it
+      that would reduce the chance of being noticed.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Deduction Correct 1
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 539e84727de424c4bb6f22e60ee9c9f4, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: "Ms. Infer would need to walk up to the window to be able to close it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "And then the curtain wouldn't have stopped her from seeing the victim.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "That is if the curtain was even covering it when she was in the room.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "I'm not sure if the window was open or not but I definitely didn't close
+      it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
+      Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: 500
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "And I didn't see anyone who could have closed it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "We need to learn more about the state of this room when you entered it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: <think>(I think now is a good opportunity to use my <important>secret weapon<>.)<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

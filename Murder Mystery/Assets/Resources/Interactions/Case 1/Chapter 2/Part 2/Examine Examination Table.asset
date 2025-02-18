@@ -64,7 +64,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: Hmmm... good point. We will have to discuss this with ms. Infer once we
+    Text: Hmmm... good point. We will have to discuss this with Ms. Infer once we
       get back to the crime scene.
     Backgrounds: []
     GainedClues: []

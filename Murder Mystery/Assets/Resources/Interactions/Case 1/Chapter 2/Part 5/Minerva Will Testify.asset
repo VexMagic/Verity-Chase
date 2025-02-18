@@ -43,7 +43,7 @@ MonoBehaviour:
     - DisplayID: 3
       Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
       Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
-      XPos: 800
+      XPos: 2000
       FacingLeft: 1
       Delay: 0
     - DisplayID: 4
@@ -75,7 +75,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 12
-    Text: This better not take long, I got a job to do.
+    Text: This better not take long, I've got a job to do.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

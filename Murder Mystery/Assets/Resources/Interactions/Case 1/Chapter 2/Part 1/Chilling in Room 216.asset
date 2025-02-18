@@ -136,7 +136,7 @@ MonoBehaviour:
       Delay: 15
     Music: {fileID: 8300000, guid: d7a9d9b698f157d429e92f12a49fda96, type: 3}
   - TalkingCharacter: 8
-    Text: "Morning, ms. Infer. I'm private detective Rook Aguilar and this is my
+    Text: "Morning, Ms. Infer. I'm private detective Rook Aguilar and this is my
       son.\r"
     Backgrounds: []
     GainedClues: []

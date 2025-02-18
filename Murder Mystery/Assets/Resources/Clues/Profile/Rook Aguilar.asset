@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b7668af4e3aa0441a7fab98a5d33cb4, type: 3}
-  m_Name: Verity Chase (Verity)
+  m_Name: Rook Aguilar
   m_EditorClassIdentifier: 
-  Title: Verity Chase
+  Title: Rook Aguilar
   Versions:
-  - Description: It's me! Finally got my first solo case as a private detective.
-    Sprite: {fileID: 21300000, guid: fdff75279008c944cb33ba269f9c997f, type: 3}
-    Gender: Female
-    Age: 23
+  - Description: Look at this handsome devil.
+    Sprite: {fileID: 21300000, guid: bd61aeb520f642a49b73771f01a25432, type: 3}
+    Gender: Male
+    Age: 42

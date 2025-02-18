@@ -18,3 +18,11 @@ MonoBehaviour:
       the button and it slowly moves.
     Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
     Check: []
+  - Description: A curtain that is used to give patients some privacy. You hold down
+      the button and it slowly moves. Was closed both before and after the crime.
+    Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
+    Check: []
+  - Description: A curtain that is used to give patients some privacy. You hold down
+      the button and it slowly moves. Was only open around the time Ms. Infer entered.
+    Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
+    Check: []

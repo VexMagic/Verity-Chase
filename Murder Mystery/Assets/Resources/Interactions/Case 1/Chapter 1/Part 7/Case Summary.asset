@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: d2130fe87b7cc3d43b9c6f56249433ce, type: 2}
   Lines:
   - TalkingCharacter: 6
-    Text: I believe there is a problem with your reasoning, miss Chase.
+    Text: I believe there is a problem with your reasoning, Ms. Chase.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

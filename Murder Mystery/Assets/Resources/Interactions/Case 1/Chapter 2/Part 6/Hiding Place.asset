@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f860335bdcb37f4cb344c04a4989ea7, type: 3}
+  m_Name: Hiding Place
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: d45cd4adea5162a48b90816aac83927f, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 97fd47edd58ac454981d7f2d59c56111, type: 2}
+  UniqueWrongs: []
+  Line:
+    TalkingCharacter: 8
+    Text: The culprit simply used this!
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  CorrectAnswers:
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}

@@ -15,7 +15,50 @@ MonoBehaviour:
   Responses: []
   Lines:
   - TalkingCharacter: 8
-    Text: Complete
+    Text: "I think that about does it. We've gotten quite a bit of information out
+      of this and I don't see us getting anymore at the moment.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 0}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
+  - TalkingCharacter: 9
+    Text: "What is the plan now?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "We should head back to the crime scene. I now have some stuff I'd like
+      to discuss with Ms. Phoenix.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "I don't think Ams is very open to talking at the moment.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: That's fine. She is still technically in charge of this case so we should
+      tell her all we've figured out here.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

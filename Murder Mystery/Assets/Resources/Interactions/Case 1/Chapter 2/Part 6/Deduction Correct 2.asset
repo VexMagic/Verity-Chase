@@ -10,12 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
-  m_Name: Memory Exit
+  m_Name: Deduction Correct 2
   m_EditorClassIdentifier: 
-  Responses: []
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: d83e00aad53422a4f9bee27f8f2f0811, type: 2}
   Lines:
+  - TalkingCharacter: 10
+    Text: "The culprit?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: time to leave
+    Text: The culprit.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

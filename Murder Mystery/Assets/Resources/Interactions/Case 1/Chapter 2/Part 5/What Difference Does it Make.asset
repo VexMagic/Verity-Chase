@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5925155aa1b0f4ab43cbc6dc83e3a7, type: 3}
+  m_Name: What Difference Does it Make
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 7846446d9a5376a469c95910fcc1719d, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 0ceafcb2bef16ba4ea8501ace19ea11d, type: 2}
+  UniqueWrongs: []
+  Question: What difference would it make if Mari closed the window?
+  Options:
+  - Options:
+    - Mari
+    - Minerva
+    - Wilma
+  - Options:
+    - would see
+    - would contaminate
+    - would drop
+  - Options:
+    - the body
+    - the window
+    - the defibrillator
+  Answers:
+  - Answer: 000000000000000000000000

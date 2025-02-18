@@ -97,7 +97,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 12
-    Text: "Mr. Aguilar, I have finished the autopsy report.\r"
+    Text: "Aguilar, I have finished the autopsy report.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

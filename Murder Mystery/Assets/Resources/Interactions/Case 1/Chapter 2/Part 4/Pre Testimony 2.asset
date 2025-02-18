@@ -31,7 +31,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "<think>(If the time of death is to be believed, mr. Murphy must have been
+    Text: "<think>(If the time of death is to be believed, Mr. Murphy must have been
       dead while Mari was in this room.)\r"
     Backgrounds: []
     GainedClues: []

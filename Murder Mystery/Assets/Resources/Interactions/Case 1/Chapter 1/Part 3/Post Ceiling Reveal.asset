@@ -59,7 +59,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "But that doesn\u2019t excuse your little blunder, miss Steele."
+    Text: "But that doesn\u2019t excuse your little blunder, Ms. Steele."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

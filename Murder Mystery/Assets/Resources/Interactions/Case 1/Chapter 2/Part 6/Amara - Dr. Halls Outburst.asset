@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Amara - Dr. Halls Outburst
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: bbf641a85ce250f459c44b259fcb4f56, type: 2}
+  Lines:
+  - TalkingCharacter: 8
+    Text: "About what Dr. Hall said...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Save it. I'm busy.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "It seems like the forensics team are the ones that are actually busy.
+      How time consuming could supervising them be?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Don't you have a date with the nurse you need to get to?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Alright, alright. I won't bother you.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "I don't think she's takin' it well.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -600
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 2000
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: Me neither.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

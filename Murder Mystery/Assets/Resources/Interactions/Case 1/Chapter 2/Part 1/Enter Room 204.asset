@@ -128,7 +128,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 12
-    Text: "We are not on a first name basis. Call me dr. Hall.\r"
+    Text: "We are not on a first name basis, Aguilar. Call me Dr. Hall.\r"
     Backgrounds: []
     GainedClues:
     - Version: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 12
-    Text: "I know as much as ms. Infer knows. We found that this patient had been
-      murdered and then you showed up.\r"
+    Text: "I know as much as Infer knows. We found that this patient had been murdered
+      and then you showed up.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

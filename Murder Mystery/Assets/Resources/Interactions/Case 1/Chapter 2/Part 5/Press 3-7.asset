@@ -10,14 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
-  m_Name: press 1
+  m_Name: Press 3-7
   m_EditorClassIdentifier: 
   Responses:
   - Text: 
     Result: {fileID: 11400000, guid: 31c672595c50f88459f44cb5f1592f84, type: 2}
   Lines:
-  - TalkingCharacter: 0
-    Text: pressing
+  - TalkingCharacter: 8
+    Text: "This all tracks with what we've heard from Ms. Infer.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Does that mean we are done here.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "No.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: <float>Lovely.<>
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

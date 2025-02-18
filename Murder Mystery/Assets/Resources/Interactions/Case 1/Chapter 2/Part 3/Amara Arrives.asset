@@ -76,7 +76,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 1
-    Text: "Ahem... apologies. I did not expect you to be here mr. Aguilar.\r"
+    Text: "Ahem... apologies. I did not expect you to be here Mr. Aguilar.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -99,7 +99,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "Miss Infer here hired me to investigate this incident.\r"
+    Text: "Ms. Infer here hired me to investigate this incident.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -168,7 +168,14 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "Don't tell her that it's a joke. Let her figure it out.\r"
+    Text: "Don\u2019t tell Ams that it\u2019s a joke. Let her figure it out.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: Ams?
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

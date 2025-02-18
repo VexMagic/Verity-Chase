@@ -60,6 +60,13 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
+    Text: "That way we will know if the curtain was extended prior to the crime.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
     Text: "And I know the perfect person to ask! The only other person we know was
       in here on the night of the murder.\r"
     Backgrounds: []

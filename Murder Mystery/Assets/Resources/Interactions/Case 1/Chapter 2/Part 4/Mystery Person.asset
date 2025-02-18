@@ -13,10 +13,27 @@ MonoBehaviour:
   m_Name: Mystery Person
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 11400000, guid: 97a675f0bcf1cbc45b1d0aa00aa7cbab, type: 2}
-  WrongAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 1ad04f0ab00e0d34181524831d410204, type: 2}
+  UniqueWrongs:
+  - Result: {fileID: 11400000, guid: 9ff9320b183dd57488a3aac2eb53de7f, type: 2}
+    Conditions:
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: caf9e3fd9bb622940a99f97b18469c99, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 505ffc83aa31fdd4cb9389fd54f5b651, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: b44e16135a87a6b4ab9f8e4d84f7d0c4, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 87634f6f5818f9d4f8e861af167ea9da, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 37f6fc7788d5f664ba205caa843d01a4, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: d95c28daf2c7a6343bade297a199bf64, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 26e30e6df51c19a43a92061954b1b01e, type: 2}
   Line:
     TalkingCharacter: 10
-    Text: And who would this <float>mystery person<> be?
+    Text: Then who would this <float>mystery person<> be?
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

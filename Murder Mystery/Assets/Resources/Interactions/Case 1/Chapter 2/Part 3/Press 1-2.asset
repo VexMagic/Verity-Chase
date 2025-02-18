@@ -38,7 +38,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "You... didn't notice?\r"
+    Text: "Ams, you... didn\u2019t notice?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

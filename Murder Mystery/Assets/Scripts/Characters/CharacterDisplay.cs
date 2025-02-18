@@ -52,8 +52,9 @@ public class CharacterDisplay : MonoBehaviour
 
     private IEnumerator AnimateDisplay(CharacterMovement values, bool spawn)
     {
+        endPos = values.xPos;
         //wait until textbox is reset
-        yield return new WaitUntil(() => Typewriter.instance.currentChar > 1);
+        yield return new WaitUntil(() => Typewriter.instance.currentChar <= 1);
 
         //wait until the delay has been reached
         yield return new WaitUntil(() => Typewriter.instance.currentChar >= values.delay || !Typewriter.instance.isRunning);
@@ -95,7 +96,6 @@ public class CharacterDisplay : MonoBehaviour
 
     private IEnumerator SmoothMovement(float start, float end)
     {
-        endPos = end;
         bool active = true;
         float sinTime = 0;
         while (active)

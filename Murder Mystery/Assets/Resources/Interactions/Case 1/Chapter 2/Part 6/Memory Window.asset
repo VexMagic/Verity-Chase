@@ -17,9 +17,59 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: 7b22291e58fe6f14291634358e771687, type: 2}
   Lines:
   - TalkingCharacter: 8
-    Text: Window lmao
+    Text: "The window is currently closed but you remember it being open, correct?\r"
     Backgrounds: []
     GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 0}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
+      Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Yes, that's right.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "And just to confirm, you didn't close it?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "No, I didn't close it last night.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Which means that someone else was in that room between you leaving and
+      Dr. Hall and you finding the body.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: Oh! I never realized that but it makes so much sense.
+    Backgrounds: []
+    GainedClues:
+    - Version: 1
+      GainedClue: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}

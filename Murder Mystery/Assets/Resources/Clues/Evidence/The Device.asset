@@ -17,3 +17,7 @@ MonoBehaviour:
   - Description: My "secret weapon" for investigations.
     Sprite: {fileID: 21300000, guid: 849c7dd2cf3f53d47988ea52101f5c58, type: 3}
     Check: []
+  - Description: 'My "secret weapon" for investigations. It allows me to display
+      a person''s memories and examine them for any inconsistencies. '
+    Sprite: {fileID: 21300000, guid: 849c7dd2cf3f53d47988ea52101f5c58, type: 3}
+    Check: []

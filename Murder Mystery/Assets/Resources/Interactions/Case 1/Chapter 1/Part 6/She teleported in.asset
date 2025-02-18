@@ -46,7 +46,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "I think it is you, Miss Chase, who\u2019s not very smart. Shame on <float>you<>."
+    Text: "I think it is you, Ms. Chase, who\u2019s not very smart. Shame on <float>you<>."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: Minerva - Before the Crime
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 891bcbe672d4a94488e214a02fdd581a, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: d510c714781c89a4286f131106ef3c89, type: 2}
+  Music: {fileID: 8300000, guid: ae5d60026e90cef41a10502037f91c78, type: 3}
+  Title: Before the Crime.
+  Lines:
+  - Line:
+      TalkingCharacter: 12
+      Text: 'I was alerted to the fact that the victim''s heart rate had spiked at
+        around 1:30 am and rushed over. '
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: d9ea20360af0c1f4db21e1622d034a18, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: After arriving, I realized Murphy was going into cardiac arrest and dealt
+        with it, as is my job.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 11400000, guid: bc0d8ac97908889459354a4851661847, type: 2}
+    PressResult: {fileID: 11400000, guid: bc0d8ac97908889459354a4851661847, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: After arriving, I realized he was going into cardiac arrest so I used
+        the defibrillator from the tool cart to aid him.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 11400000, guid: bc0d8ac97908889459354a4851661847, type: 2}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 6047e9b285f1ca64a94a8a7415a7a63c, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+      Result: {fileID: 11400000, guid: 9355daede1f011342976019b9d8b6a45, type: 2}
+      ContinueTestimony: 1
+  - Line:
+      TalkingCharacter: 12
+      Text: "I was quite stressed so I might have accidentally brought the defibrillator
+        with me. I also didn\u2019t notice that Murphy had unplugged his monitor."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 11400000, guid: 9355daede1f011342976019b9d8b6a45, type: 2}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 0831b4fcabfaea348963c3edb37e4fa7, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: I remember that Steele was sleeping, I could hear the sound of cars,
+        and I recall the curtain being in its current state.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 11400000, guid: 0831b4fcabfaea348963c3edb37e4fa7, type: 2}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: a5fdfa32c1383dd4cb5cc094bbb97f74, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
+      Result: {fileID: 11400000, guid: cf67607c58c8dc240b67f96f4830e530, type: 2}
+      ContinueTestimony: 0
+  - Line:
+      TalkingCharacter: 12
+      Text: After I made sure he was alive, I was called to another room in order
+        to perform surgery. I remained there for 6 hours.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: cacd5e48dfaa6e947975257f41aeea8e, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: Once I was done, Ms. Infer bumped into me in the hallway before we ended
+        up discovering the body at around 8 am. Then you arrived.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: ac96e9c6010ec9742b181cbea3c77de8, type: 2}
+    CorrectAnswers: []

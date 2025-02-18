@@ -17,7 +17,21 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: 7b22291e58fe6f14291634358e771687, type: 2}
   Lines:
   - TalkingCharacter: 8
-    Text: Wrong
+    Text: "<think>(I don't think this has anything to do with this part of the memory.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 0}
+      XPos: 0
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: <think>(I should look for something in the memory that doesn't match a
+      specific piece of evidence.)<>
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

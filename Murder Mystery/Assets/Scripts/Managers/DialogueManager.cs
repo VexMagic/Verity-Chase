@@ -200,7 +200,7 @@ public class DialogueManager : MonoBehaviour
             LogManager.instance.FinishInteraction(present);
         }
         else
-            ResponseManager.instance.ResponseResult(present.wrongAnswer);
+            ResponseManager.instance.ResponseResult(present.GetWrongAnswerResult(selectedClue));
     }
 
     public IEnumerator RunDeduction(Deduction deduction)
@@ -282,6 +282,26 @@ public class DialogueManager : MonoBehaviour
             yield return null;
             yield return new WaitUntil(() => Progress());
         }
+    }
+
+    public IEnumerator MemoryAnimation(bool isStart)
+    {
+        textBox.SetActive(false);
+        AudioManager.instance.PlayMusic(null);
+        AudioManager.instance.PlaySFX("Testimony");
+        if (isStart)
+        {
+            topTestimonyText.text = "Begin";
+            bottomTestimonyText.text = "Memory";
+        }
+        else
+        {
+            topTestimonyText.text = "Memory";
+            bottomTestimonyText.text = "Complete";
+        }
+        testimonyAnimatior.SetTrigger("Start");
+        yield return new WaitForSeconds(2.5f);
+
     }
 
     private IEnumerator RunTestimony(Testimony testimony)
@@ -388,11 +408,19 @@ public class DialogueManager : MonoBehaviour
 
             if (isCorrect)
             {
-                currentTestimonyLine = 0;
-                inTestimony = false;
+                if (!tempPresent.continueTestimony)
+                {
+                    currentTestimonyLine = 0;
+                    inTestimony = false;
+                }
+
                 AudioManager.instance.PlaySFX("Correct");
                 ResponseManager.instance.ResponseResult(tempPresent.result);
-                LogManager.instance.FinishInteraction(testimony);
+
+                if (!tempPresent.continueTestimony)
+                    LogManager.instance.FinishInteraction(testimony);
+                else
+                    isPressing = true;
             }
             else
                 ResponseManager.instance.ResponseResult(testimony.wrongAnswer);
@@ -676,8 +704,13 @@ public class DialogueManager : MonoBehaviour
     { 
         hasPresented = present; 
         ClueManager.instance.isTestimonyPresenting = false; 
-        ClueManager.instance.isMemoryDeduction = false; 
+        ClueManager.instance.isMemoryDeduction = false;
+        Typewriter.instance.Stop();
     }
 
-    public void Press(bool press) { hasPressed = press; }
+    public void Press(bool press) 
+    { 
+        hasPressed = press;
+        Typewriter.instance.Stop();
+    }
 }

@@ -14,24 +14,60 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private GameObject deduceButton;
     [SerializeField] private Vector2 worldMaxSize;
     [SerializeField] private AudioClip music;
+    [SerializeField] private Animator fadeEffect;
 
     private Memory currentMemory;
     private MemoryObject[] MemoryObjects;
     private Coroutine coroutine;
-    private MemoryObject selectedObject;
+    private List<MemoryObject> selectedMemoryObjects = new List<MemoryObject>();
+    private bool IsMemoryActive;
+    private bool isHovering;
+
+    public bool isMemoryActive => IsMemoryActive;
 
     private void Awake()
     {
         instance = this;
-        EndMemorySequence();
+        EndMemorySequence(true);
     }
 
     IEnumerator ClickDetection()
     {
-        SetAimPosition(Vector2.zero);
-        while (true)
+        deduceButton.SetActive(true);
+        if (!IsMemoryActive)
         {
-            if (DialogueManager.instance.Progress(true))
+            fadeEffect.SetTrigger("Start");
+            yield return new WaitForSeconds(0.16f);
+            foreach (Transform memory in memoryDisplayParent.transform)
+            {
+                if (memory.name == currentMemory.memoryName)
+                {
+                    memory.gameObject.SetActive(true);
+                    MemoryObjects = memory.GetComponentsInChildren<MemoryObject>();
+                }
+                else if (memory.gameObject == clickPosition)
+                {
+                    memory.gameObject.SetActive(true);
+                }
+                else
+                    memory.gameObject.SetActive(false);
+            }
+            fadeEffect.SetTrigger("End");
+            yield return new WaitForSeconds(0.16f);
+
+            yield return DialogueManager.instance.MemoryAnimation(true);
+            IsMemoryActive = true;
+        }
+
+        AudioManager.instance.PlayMusic(music);
+        exitButton.SetActive(currentMemory.exitable);
+
+        CameraManager.instance.EndDialogue();
+        LocationManager.instance.TurnOffLocations();
+        SetAimPosition(Vector2.zero);
+        while (IsMemoryActive)
+        {
+            if (Draging())
             {
                 clickPosition.SetActive(true);
                 Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);
@@ -45,25 +81,25 @@ public class MemoryManager : MonoBehaviour
             {
                 DialogueManager.instance.SetPresented(false);
 
-                bool isCorrect = false;
+                MemoryObject tempObject = null;
 
-                if (selectedObject != null)
+                foreach (var item in selectedMemoryObjects)
                 {
-                    foreach (var answer in selectedObject.correctClues)
+                    foreach (var answer in item.correctClues)
                     {
                         var selectedClue = ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType);
                         if (selectedClue is GainEvidence)
                         {
                             if ((selectedClue as GainEvidence).gainedEvidence == answer.gainedClue)
                             {
-                                isCorrect = true;
+                                tempObject = item;
                             }
                         }
                         else if (selectedClue is GainProfile)
                         {
                             if ((selectedClue as GainProfile).gainedProfile == answer.gainedClue)
                             {
-                                isCorrect = true;
+                                tempObject = item;
                             }
                         }
                     }
@@ -71,10 +107,10 @@ public class MemoryManager : MonoBehaviour
 
                 ClueManager.instance.CloseMenu();
 
-                if (isCorrect)
+                if (tempObject != null)
                 {
                     AudioManager.instance.PlaySFX("Correct");
-                    ResponseManager.instance.ResponseResult(selectedObject.result);
+                    ResponseManager.instance.ResponseResult(tempObject.result);
                 }
                 else
                     ResponseManager.instance.ResponseResult(currentMemory.wrongAnswer);
@@ -82,28 +118,33 @@ public class MemoryManager : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        yield return DialogueManager.instance.MemoryAnimation(false);
+
+        fadeEffect.SetTrigger("Start");
+        yield return new WaitForSeconds(0.16f);
+
+        ResponseManager.instance.ResponseResult(currentMemory.complete);
+        EndMemorySequence(false);
+
+        fadeEffect.SetTrigger("End");
+        yield return new WaitForSeconds(0.16f);
     }
 
     private void SetAimPosition(Vector2 position)
     {
         clickPosition.transform.localPosition = position;
-        selectedObject = GetSelectedMemoryObject(position);
-    }
-
-    private MemoryObject GetSelectedMemoryObject(Vector2 point)
-    {
+        selectedMemoryObjects.Clear();
         if (MemoryObjects == null)
-            return null;
+            return;
 
         foreach (var item in MemoryObjects)
         {
-            if (item.IsPointInsideCollider(point))
+            if (item.isHovering)
             {
-                return item;
+                selectedMemoryObjects.Add(item);
             }
         }
-
-        return null;
     }
 
     public void Deduce()
@@ -114,15 +155,14 @@ public class MemoryManager : MonoBehaviour
     public void Exit()
     {
         ResponseManager.instance.ResponseResult(currentMemory.giveUp);
-        EndMemorySequence();
+        StopMemory();
     }
 
     public bool CheckMemoryComplete()
     {
         if (currentMemory.IsFinished())
         {
-            ResponseManager.instance.ResponseResult(currentMemory.complete);
-            EndMemorySequence();
+            StopMemory();
             return true;
         }
         return false;
@@ -144,28 +184,16 @@ public class MemoryManager : MonoBehaviour
             return;
         }
 
-        AudioManager.instance.PlayMusic(music);
-        exitButton.SetActive(newMemory.exitable);
-        deduceButton.SetActive(true);
         EndCoroutine();
         coroutine = StartCoroutine(ClickDetection());
-        foreach (Transform memory in memoryDisplayParent.transform)
-        {
-            if (memory.name == currentMemory.memoryName)
-            {
-                memory.gameObject.SetActive(true);
-                MemoryObjects = memory.GetComponentsInChildren<MemoryObject>();
-            }
-            else if (memory.gameObject == clickPosition)
-            {
-                memory.gameObject.SetActive(true);
-            }
-            else
-                memory.gameObject.SetActive(false);
-        }
     }
 
-    private void EndMemorySequence()
+    private void StopMemory()
+    {
+        IsMemoryActive = false;
+    }
+
+    private void EndMemorySequence(bool isStart)
     {
         exitButton.SetActive(false);
         deduceButton.SetActive(false);
@@ -174,5 +202,19 @@ public class MemoryManager : MonoBehaviour
         {
             memory.gameObject.SetActive(false);
         }
+        DialogueManager.instance.SetClickDetectionActive(true);
+        if (!isStart)
+        {
+            LocationManager.instance.SetCurrentLocationDisplay();
+        }
     }
+
+    public bool Draging()
+    {
+        return Input.GetMouseButton(0) && isHovering;
+    }
+
+    public void StartMemoryHover() { isHovering = true; }
+
+    public void EndMemoryHover() { isHovering = false; }
 }

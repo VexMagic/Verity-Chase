@@ -18,3 +18,8 @@ MonoBehaviour:
       of cars when patients try to sleep.
     Sprite: {fileID: 21300000, guid: 277245dfeab98c34c914f1a33e3401b3, type: 3}
     Check: []
+  - Description: This window is normally closed during the night because of the loud
+      noices of cars when patients try to sleep. However, it was open during the
+      time of death.
+    Sprite: {fileID: 21300000, guid: 277245dfeab98c34c914f1a33e3401b3, type: 3}
+    Check: []

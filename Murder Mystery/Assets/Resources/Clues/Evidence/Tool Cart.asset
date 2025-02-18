@@ -18,3 +18,8 @@ MonoBehaviour:
       Has blood vials, syringes, and patches inside.
     Sprite: {fileID: 21300000, guid: 6304eedd4a0c4474e9a28bcff7821aef, type: 3}
     Check: []
+  - Description: A tool cart for medical equipment with some blood on the wheels.
+      Has blood vials, syringes, and patches inside. I was moved sometime after the
+      murder.
+    Sprite: {fileID: 21300000, guid: 6304eedd4a0c4474e9a28bcff7821aef, type: 3}
+    Check: []
