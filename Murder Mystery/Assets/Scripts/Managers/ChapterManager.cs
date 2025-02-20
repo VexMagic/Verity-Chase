@@ -7,7 +7,7 @@ public class ChapterManager : MonoBehaviour
 {
     public static ChapterManager instance;
 
-    [SerializeField] private Button startButton;
+    public Button startButton;
     public int caseNumber = -1;
     public int currentChapter = -1;
     public int currentPart = -1;
@@ -30,6 +30,8 @@ public class ChapterManager : MonoBehaviour
         }
         else
         {
+            instance.startButton = startButton;
+            UpdateStartButton();
             instance.ReadInteractions();
             Destroy(this);
         }

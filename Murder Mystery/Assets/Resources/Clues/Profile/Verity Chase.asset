@@ -19,7 +19,7 @@ MonoBehaviour:
     Gender: Female
     Age: 23
   - Description: My faithful apprentice. I've given her an important case for today.
-      I Believe in her abilities.
+      I believe in her abilities.
     Sprite: {fileID: 21300000, guid: fdff75279008c944cb33ba269f9c997f, type: 3}
     Gender: Female
     Age: 23

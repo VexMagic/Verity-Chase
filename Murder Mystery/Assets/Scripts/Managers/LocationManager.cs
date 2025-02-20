@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using static UnityEditor.FilePathAttribute;
 
 public class LocationManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Button moveButton;
     [SerializeField] private Button confirmMoveButton;
 
+    [SerializeField] private GameObject talkCheckmark;
+    [SerializeField] private GameObject examineCheckmark;
+
     [SerializeField] private Image preview;
     [SerializeField] private Sprite unknownLocation;
 
@@ -27,6 +31,8 @@ public class LocationManager : MonoBehaviour
     public PersonSelectorSpawner personSpawner;
 
     [SerializeField] private Animator screenTransition;
+    [SerializeField] private Animator gainLocationAnimator;
+    [SerializeField] private TextMeshProUGUI gainedLocationName;
 
     [SerializeField] private GameObject buttons;
     [SerializeField] private GameObject moveScreen;
@@ -41,6 +47,7 @@ public class LocationManager : MonoBehaviour
 
     private List<GameObject> buttonObjects = new List<GameObject>();
     private bool isMultiplePeople;
+    private bool isAnimationFinished;
 
     public bool isExamining;
     public SpriteRenderer locationSprite;
@@ -120,7 +127,10 @@ public class LocationManager : MonoBehaviour
         buttons.SetActive(isActive);
 
         if (isActive)
+        {
+            SetCheckmarks();
             Invoke(nameof(StartMusic), 0.01f);
+        }
     }
 
     private void StartMusic()
@@ -165,12 +175,38 @@ public class LocationManager : MonoBehaviour
 
     public IEnumerator GainLocation(Location location)
     {
-        unlockedLocations.Add(location);
-        UpdateLocationButtons();
-        SetOptionsValues();
+        if (!unlockedLocations.Contains(location))
+        {
+            unlockedLocations.Add(location);
+            UpdateLocationButtons();
+            SetOptionsValues();
 
-        yield return null;
+            isAnimationFinished = false;
+            UpdateGainLocationDisplay(location);
+        }
+
+        if (!isAnimationFinished)
+        {
+            yield return new WaitUntil(() => isAnimationFinished);
+            yield return new WaitForSeconds(0.4f);
+        }
     }
+
+    private void UpdateGainLocationDisplay(Location location)
+    {
+        if (location != null)
+        {
+            gainedLocationName.text = location.title;
+            gainLocationAnimator.SetBool("Open", true);
+        }
+    }
+
+    public void CloseGainLocationDisplay()
+    {
+        gainLocationAnimator.SetBool("Open", false);
+        isAnimationFinished = true;
+    }
+
 
     private void UpdateLocationButtons()
     {
@@ -262,16 +298,28 @@ public class LocationManager : MonoBehaviour
 
     public void SetCurrentLocationDisplay()
     {
+        TurnOffLocations();
+
+        Transform tempLocation = GetCurrentLocationDisplay();
+
+        locationSprite = tempLocation.GetComponent<SpriteRenderer>();
+        tempLocation.gameObject.SetActive(true);
+        foreach (var examinable in tempLocation.GetComponentsInChildren<Examinable>())
+        {
+            examinable.EndHover();
+        }
+    }
+
+    private Transform GetCurrentLocationDisplay()
+    {
         foreach (Transform location in locationDisplayParent.transform)
         {
             if (location.name == unlockedLocations[currentLocation].CurrentLocationState().locationName)
             {
-                locationSprite = location.GetComponent<SpriteRenderer>();
-                location.gameObject.SetActive(true);
+                return location;
             }
-            else
-                location.gameObject.SetActive(false);
         }
+        return null;
     }
 
     public void CheckEnterInteraction()
@@ -301,14 +349,64 @@ public class LocationManager : MonoBehaviour
     private void SetOptionsValues()
     {
         if (unlockedLocations[currentLocation].CurrentLocationState() == null)
+        {
             talkButton.interactable = false;
+        }
         else
         {
             talkButton.interactable = unlockedLocations[currentLocation].CurrentLocationState().people.Length != 0;
             personSpawner.SpawnPeople(unlockedLocations[currentLocation].CurrentLocationState());
+
             personSpawner.SetButtonActive(false);
         }
 
+        SetCheckmarks();
         moveButton.interactable = unlockedLocations.Count > 1;
+    }
+
+    private void SetCheckmarks()
+    {
+        talkCheckmark.SetActive(false);
+        examineCheckmark.SetActive(false);
+
+        if (unlockedLocations == null)
+            return;
+        if (currentLocation >= unlockedLocations.Count)
+            return;
+        if (unlockedLocations[currentLocation] == null)
+            return;
+
+        if (talkButton.interactable)
+            SetTalkCheckmark();
+        if (examineButton.interactable)
+            SetExamineCheckmark();
+    }
+
+    private void SetTalkCheckmark()
+    {
+        talkCheckmark.SetActive(true);
+        foreach (var interview in unlockedLocations[currentLocation].CurrentLocationState().people)
+        {
+            if (!interview.DoneTalking())
+            {
+                talkCheckmark.SetActive(false);
+                break;
+            }
+        }
+    }
+
+    private void SetExamineCheckmark()
+    {
+        Transform tempLocation = GetCurrentLocationDisplay();
+
+        examineCheckmark.SetActive(true);
+        foreach (var examinable in tempLocation.GetComponentsInChildren<Examinable>())
+        {
+            if (!examinable.HasBeenExamined())
+            {
+                examineCheckmark.SetActive(false);
+                break;
+            }
+        }
     }
 }

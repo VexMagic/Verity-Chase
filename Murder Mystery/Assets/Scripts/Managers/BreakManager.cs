@@ -44,6 +44,9 @@ public class BreakManager : MonoBehaviour
 
     public void Menu()
     {
+        ChapterManager.instance.caseNumber = -1;
+        ChapterManager.instance.currentChapter = -1;
+        ChapterManager.instance.currentPart = -1;
         SceneManager.LoadScene(0);
     }
 }

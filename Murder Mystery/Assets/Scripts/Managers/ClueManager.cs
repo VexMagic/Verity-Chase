@@ -48,6 +48,8 @@ public class ClueManager : MonoBehaviour
     public bool isMemoryDeduction;
     public Clue.Type currentMenuType;
 
+    private bool isAnimationFinished;
+
     private void Awake()
     {
         if (instance == null)
@@ -127,11 +129,16 @@ public class ClueManager : MonoBehaviour
 
         if (isNew || isUpdated)
         {
+            isAnimationFinished = false;
             ClueDisplaySpawner.instance.CreateClueDisplays();
             UpdateGainClueDisplay(clue);
         }
 
-        yield return null;
+        if (!isAnimationFinished)
+        {
+            yield return new WaitUntil(() => isAnimationFinished);
+            yield return new WaitForSeconds(0.4f); 
+        }
     }
 
     public void CloseMenu()
@@ -213,6 +220,7 @@ public class ClueManager : MonoBehaviour
     public void CloseGainClueDisplay()
     {
         gainClueAnimator.SetBool("Open", false);
+        isAnimationFinished = true;
     }
 
     public void ClueMenuButton()

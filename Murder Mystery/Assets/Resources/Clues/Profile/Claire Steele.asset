@@ -19,3 +19,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: cd95638efb19bd54da78fd555d379a49, type: 3}
     Gender: Female
     Age: 20
+  - Description: Her blood was found mixed with that of the victim, Matthew Murphy.
+      She is our prime suspect at the moment.
+    Sprite: {fileID: 21300000, guid: cd95638efb19bd54da78fd555d379a49, type: 3}
+    Gender: Female
+    Age: 20

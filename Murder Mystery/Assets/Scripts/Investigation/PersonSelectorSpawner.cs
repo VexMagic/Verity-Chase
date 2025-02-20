@@ -49,7 +49,8 @@ public class PersonSelectorSpawner : MonoBehaviour
     }
 
     public void SelectPerson(Interview person)
-    {
+    {   
+        Debug.Log("Select " + person.name);
         talkSelected.SetCharacter(person.character, person.animation);
         SetSelectedPersonActive(true);
     }

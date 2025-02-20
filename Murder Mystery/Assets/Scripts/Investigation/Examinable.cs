@@ -24,7 +24,7 @@ public class Examinable : MonoBehaviour
 
         renderer.sortingOrder += 100;
 
-        if (LogManager.instance.HasFinishedInteraction(examineResult))
+        if (HasBeenExamined())
         {
             renderer.material = ExamineManager.instance.examined;
         }
@@ -32,6 +32,11 @@ public class Examinable : MonoBehaviour
         {
             renderer.material = ExamineManager.instance.unExamined;
         }
+    }
+
+    public bool HasBeenExamined()
+    {
+        return LogManager.instance.HasFinishedInteraction(examineResult);
     }
 
     public void EndHover()

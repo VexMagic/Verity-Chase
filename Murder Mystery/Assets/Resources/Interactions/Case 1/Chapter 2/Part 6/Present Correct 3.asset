@@ -86,6 +86,8 @@ MonoBehaviour:
     GainedClues:
     - Version: 1
       GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+    - Version: 1
+      GainedClue: {fileID: 11400000, guid: baf6bc5bd1495b548ae0fc3af1e5f6e5, type: 2}
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}

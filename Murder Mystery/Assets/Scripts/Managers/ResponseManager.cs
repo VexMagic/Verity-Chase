@@ -128,6 +128,7 @@ public class ResponseManager : MonoBehaviour
         }
         else if (result is Interview)
         {
+            IgnoreNextResponse = false;
             LocationManager.instance.SetMultiplePeople();
             ShowResponses((result as Interview).responses(), true);
             storedMusic = (result as Interview).music;
