@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
-  m_Name: Why Investigate Wrong
+  m_Name: Why Investigate Verity
   m_EditorClassIdentifier: 
   Responses:
   - Text: 
-    Result: {fileID: 11400000, guid: efe49ee3f23662a4a90f1aefb09cb2af, type: 2}
+    Result: {fileID: 11400000, guid: cef9fc5398cd2aa48a58bb7f90f5a1b5, type: 2}
   Lines:
-  - TalkingCharacter: 2
-    Text: Wait! I got things mixed up. Hang on a second...
+  - TalkingCharacter: 6
+    Text: That's just a picture of you.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
-    Movements:
-    - DisplayID: 0
-      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
-      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
-      XPos: 400
-      FacingLeft: 0
-      Delay: 0
+    Movements: []
     Music: {fileID: 0}

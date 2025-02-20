@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Why Investigate
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 11400000, guid: eeb77561f1c764f4495126553ae71051, type: 2}
-  WrongAnswer: {fileID: 11400000, guid: cef9fc5398cd2aa48a58bb7f90f5a1b5, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: eac1029d3917b704d82256aeb2a999e6, type: 2}
+  UniqueWrongs:
+  - Result: {fileID: 11400000, guid: 556e90a6fd1984c43814db4fba03282a, type: 2}
+    Conditions:
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 27daf9a0e988e9e47b69501dba56ecf6, type: 2}
   Line:
     TalkingCharacter: 2
     Text: I got the case files right here.

@@ -30,7 +30,7 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
   - TalkingCharacter: 6
-    Text: "Well miss Chase, you think you\u2019ve solved the case?"
+    Text: "Well Ms. Chase, you think you\u2019ve solved the case?"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -82,7 +82,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: What did you do after they grabbed the vase?
+    Text: What did they do after they grabbed the vase?
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

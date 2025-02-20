@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using static UnityEditor.FilePathAttribute;
 
 public class LocationManager : MonoBehaviour
 {

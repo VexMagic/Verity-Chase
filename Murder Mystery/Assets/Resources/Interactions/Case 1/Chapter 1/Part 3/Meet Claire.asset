@@ -50,7 +50,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(\u201CLittle lady\u201D? I\u2019ll have you know I\u2019m slightly
+    Text: "<think>(\u201CLittle lady\u201D? I\u2019ll have you know I\u2019m <float>way<>
       above average height for a woman.)<>"
     Backgrounds: []
     GainedClues: []

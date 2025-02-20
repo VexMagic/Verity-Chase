@@ -8,6 +8,8 @@ public class Examinable : MonoBehaviour
     [SerializeField] private new Collider2D collider;
     [SerializeField] private Interaction examineResult;
 
+    private bool isHighlighted;
+
     private void Start()
     {
         renderer.material = ExamineManager.instance.normal;
@@ -23,6 +25,7 @@ public class Examinable : MonoBehaviour
             return;
 
         renderer.sortingOrder += 100;
+        isHighlighted = true;
 
         if (HasBeenExamined())
         {
@@ -41,7 +44,11 @@ public class Examinable : MonoBehaviour
 
     public void EndHover()
     {
-        renderer.sortingOrder -= 100;
+        if (isHighlighted)
+        {
+            renderer.sortingOrder -= 100;
+            isHighlighted = false;
+        }
         renderer.material = ExamineManager.instance.normal;
     }
 

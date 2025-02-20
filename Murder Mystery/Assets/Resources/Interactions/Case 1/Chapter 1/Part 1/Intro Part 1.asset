@@ -79,7 +79,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 0
-    Text: "Hey there miss. I see you\u2019ve noticed you\u2019re at a crime scene."
+    Text: "Hey there Miss. I see you\u2019ve noticed you\u2019re at a crime scene."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

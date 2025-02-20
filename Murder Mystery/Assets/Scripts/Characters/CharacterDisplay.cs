@@ -53,11 +53,15 @@ public class CharacterDisplay : MonoBehaviour
     private IEnumerator AnimateDisplay(CharacterMovement values, bool spawn)
     {
         endPos = values.xPos;
-        //wait until textbox is reset
-        yield return new WaitUntil(() => Typewriter.instance.currentChar <= 1);
 
-        //wait until the delay has been reached
-        yield return new WaitUntil(() => Typewriter.instance.currentChar >= values.delay || !Typewriter.instance.isRunning);
+        if (values.delay > 0)
+        {
+            //wait until textbox is reset
+            yield return new WaitUntil(() => Typewriter.instance.currentChar <= 1);
+
+            //wait until the delay has been reached
+            yield return new WaitUntil(() => Typewriter.instance.currentChar >= values.delay || !Typewriter.instance.isRunning);
+        }
 
         SetCharacter(values.character, values.animation);
 
