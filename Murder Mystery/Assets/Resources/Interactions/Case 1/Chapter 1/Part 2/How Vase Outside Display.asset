@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 11400000, guid: 15162a74c0013c64690333ee6af8cfdf, type: 2}
   WrongAnswer: {fileID: 11400000, guid: be5d7188975eed442badc7ded981bd0f, type: 2}
+  UniqueWrongs: []
   Question: How did the vase end up outside the display?
   Options:
   - Options:
@@ -29,8 +30,8 @@ MonoBehaviour:
     - the glass
     - the vase
   - Options:
-    - with the key
-    - with the vase
-    - with the glass
+    - using the key
+    - using the vase
+    - using the glass
   Answers:
   - Answer: 00000000000000000000000000000000

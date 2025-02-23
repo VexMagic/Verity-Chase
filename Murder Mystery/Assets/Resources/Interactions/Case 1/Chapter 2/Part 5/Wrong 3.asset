@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
   m_Name: Wrong 3
   m_EditorClassIdentifier: 
-  Responses: []
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 31c672595c50f88459f44cb5f1592f84, type: 2}
   Lines:
   - TalkingCharacter: 8
     Text: "Take that!\r"

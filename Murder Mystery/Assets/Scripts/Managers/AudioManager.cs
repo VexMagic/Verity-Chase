@@ -19,6 +19,10 @@ public class AudioManager : MonoBehaviour
 
     public BlipSound currentBlipSound;
 
+    private float masterVolume;
+    private float musicVolume;
+    private float SFXVolume;
+
     private void Awake()
     {
         instance = this;
@@ -35,6 +39,28 @@ public class AudioManager : MonoBehaviour
         foreach (var effect in effects)
         {
             effectsMap.Add(effect.code, effect);
+        }
+    }
+
+    public void ChangeVolume(float value, VolumeSlider.VolumeType type)
+    {
+        switch (type)
+        {
+            case VolumeSlider.VolumeType.Master:
+                masterVolume = value;
+                musicSource.volume = masterVolume * musicVolume;
+                sFXSource.volume = masterVolume * SFXVolume;
+                blipSource.volume = masterVolume * SFXVolume;
+                break;
+            case VolumeSlider.VolumeType.Music:
+                musicVolume = value;
+                musicSource.volume = masterVolume * musicVolume;
+                break;
+            case VolumeSlider.VolumeType.SFX:
+                SFXVolume = value;
+                sFXSource.volume = masterVolume * SFXVolume;
+                blipSource.volume = masterVolume * SFXVolume;
+                break;
         }
     }
 

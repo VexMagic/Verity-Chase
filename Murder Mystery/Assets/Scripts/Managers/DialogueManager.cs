@@ -138,6 +138,7 @@ public class DialogueManager : MonoBehaviour
 
             if (i == dialogue.lines.Length - 1 && dialogue.HasResponses())
             {
+                Debug.Log("has response");
                 break;
             }
 
@@ -149,6 +150,8 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogue.HasResponses())
         {
+            Debug.Log("show response");
+            ResponseManager.instance.IgnoreNextResponse = false;
             ResponseManager.instance.ShowResponses(dialogue.responses);
         }
         else if (dialogue.AutoPickResponse())

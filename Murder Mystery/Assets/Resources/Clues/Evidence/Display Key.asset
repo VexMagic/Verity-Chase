@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Key to the Displays
   Versions:
-  - Description: A one of a kind key that opens the display cases. Wasn't reported
-      missing so it couldn't have been stolen.
+  - Description: A one of a kind key that opens the display cases. It was in the
+      possession of the security guard. Wasn't reported missing so it couldn't have
+      been stolen.
     Sprite: {fileID: 21300000, guid: 27ea3de6f2a14de40815e79586acecda, type: 3}
     Check: []
