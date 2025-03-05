@@ -1,26 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class SocialMediaManager : MonoBehaviour
 {
-    public void Discord()
+    public static void OpenURL(string url)
     {
-        LoadURL("https://discord.gg/TucG8cWX4s");
-    }
-
-    public void Bluesky()
-    {
-        LoadURL("https://bsky.app/profile/veritychase.bsky.social");
-    }
-
-    public void Twitter()
-    {
-        LoadURL("https://x.com/VerityChaseGame");
-    }
-
-    private void LoadURL(string url)
-    {
+#if !UNITY_EDITOR && UNITY_WEBGL
+        OpenTab(url);
+        return;
+#endif
         Application.OpenURL(url);
     }
+
+    [DllImport("__Internal")]
+    private static extern void OpenTab(string url);
 }

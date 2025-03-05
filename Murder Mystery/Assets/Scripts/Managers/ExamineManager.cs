@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExamineManager : MonoBehaviour
@@ -13,8 +12,16 @@ public class ExamineManager : MonoBehaviour
     [SerializeField] private float verticalEdge;
     [SerializeField] private float horizontalEdge;
     [SerializeField] private Vector2 screenPixelSize;
+    [SerializeField] private GameObject mouseObject;
+    [SerializeField] private float moveSpeed;
 
     private Vector2 edgeDistance;
+    private Vector2 previousMousePos;
+    private Vector2 screenMaxSize = new Vector2(960, 540);
+    private Vector2 locationMaxSize = new Vector2(3.2f, 1.8f);
+    private Examinable[] Examinables;
+    private Examinable selectedExaminable;
+    private Coroutine coroutine;
 
     private void Awake()
     {
@@ -35,7 +42,10 @@ public class ExamineManager : MonoBehaviour
             LogManager.instance.isCheckingLogs || 
             DialogueManager.instance.interactionActive ||
             ClueManager.instance.isOpen)
+        {
+            mouseObject.SetActive(false);
             return;
+        }
 
         if (Input.mousePosition.x > Screen.width - horizontalEdge && cameraObject.transform.position.x < edgeDistance.x) //move camera right
         {
@@ -67,6 +77,104 @@ public class ExamineManager : MonoBehaviour
                 cameraObject.transform.position = new Vector3(cameraObject.transform.position.x, -edgeDistance.y, cameraObject.transform.position.z);
         }
         characterCanvas.transform.position = new Vector3(characterCanvas.transform.position.x, cameraObject.transform.position.y);
+
+        mouseObject.SetActive(true);
+        if (previousMousePos != (Vector2)Input.mousePosition)
+        {
+            previousMousePos = (Vector2)Input.mousePosition;
+
+            Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);
+            Vector2 mousePos = (Vector2)Input.mousePosition - screenSize;
+
+            Vector2 posPercentage = mousePos / screenSize;
+            SetAimPosition(posPercentage * screenMaxSize, true);
+        }
+        else if (ControlManager.instance.Movement != Vector2.zero)
+        {
+            Vector2 newPos = (Vector2)mouseObject.transform.localPosition + (ControlManager.instance.Movement * moveSpeed);
+            newPos = new Vector2(Mathf.Clamp(newPos.x, -screenMaxSize.x, screenMaxSize.x), Mathf.Clamp(newPos.y, -screenMaxSize.y, screenMaxSize.y));
+            SetAimPosition(newPos, true);
+        }
+    }
+
+    public void StartExamine()
+    {
+        coroutine = StartCoroutine(ExamineDetection());
+    }
+
+    public void StopExamine()
+    {
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+            coroutine = null;
+        }
+    }
+
+    private IEnumerator ExamineDetection()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) || ControlManager.instance.Progress());
+
+            if (selectedExaminable != null)
+            {
+                Debug.Log(ControlManager.instance.Progress());
+                selectedExaminable.Examine();
+                DeselectExaminable();
+            }
+        }
+    }
+
+    public void GetExaminables(Transform location)
+    {
+        Examinables = location.GetComponentsInChildren<Examinable>();
+    }
+
+    public void ClearExaminables()
+    {
+        Examinables = null;
+    }
+
+    public void DeselectExaminable()
+    {
+        if (selectedExaminable == null)
+            return;
+
+        selectedExaminable.EndHover();
+        selectedExaminable = null;
+    }
+
+    public void SetAimPosition(Vector2 position, bool select)
+    {
+        ControlManager.instance.DeselectButton();
+        mouseObject.transform.localPosition = position;
+        if (Examinables == null)
+            return;
+
+        Vector2 tempPos = position / screenMaxSize * locationMaxSize;
+
+        if (selectedExaminable != null)
+        {
+            if (!selectedExaminable.IsPointInsideCollider(tempPos))
+            {
+                selectedExaminable.EndHover();
+                selectedExaminable = null;
+            }
+        }
+
+        if (selectedExaminable == null && select)
+        {
+            foreach (var item in Examinables)
+            {
+                if (item.IsPointInsideCollider(tempPos))
+                {
+                    selectedExaminable = item;
+                    selectedExaminable.StartHover();
+                    break;
+                }
+            }
+        }
     }
 
     public void CalculateEdgeDistance()

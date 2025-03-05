@@ -16,6 +16,7 @@ public class ResponseManager : MonoBehaviour
     [SerializeField] private Vector2 interviewPos;
 
     private List<GameObject> buttonObjects = new List<GameObject>();
+    private List<UIButton> UIButtons = new List<UIButton>();
 
     public bool IgnoreNextResponse;
     private AudioClip storedMusic;
@@ -55,13 +56,43 @@ public class ResponseManager : MonoBehaviour
             //set check mark to active if you have read the response and is part of interview
             buttonObject.transform.GetChild(1).gameObject.SetActive(isInterview && LogManager.instance.HasFinishedInteraction(response.result));
 
+            UIButton tempButton = buttonObject.GetComponent<UIButton>();
+
             buttonObjects.Add(buttonObject);
+            UIButtons.Add(tempButton);
 
             boxHeight += buttonObject.GetComponent<RectTransform>().sizeDelta.y + layoutGroup.spacing;
         }
 
+        SetUIButtonValues();
+        UIButtons[0].SelectButton();
+
         responseBox.sizeDelta = new Vector2(responseBox.sizeDelta.x, boxHeight);
         responseBox.gameObject.SetActive(true);
+    }
+
+    private void SetUIButtonValues()
+    {
+        if (UIButtons.Count == 1)
+            return;
+
+        for (int i = 0; i < UIButtons.Count; i++)
+        {
+            UIButton tempAbove = null;
+            UIButton tempBelow = null;
+
+            if (i == 0)
+                tempAbove = UIButtons[^1];
+            else
+                tempAbove = UIButtons[i - 1];
+
+            if (i == UIButtons.Count - 1)
+                tempBelow = UIButtons[0];
+            else
+                tempBelow = UIButtons[i + 1];
+
+            UIButtons[i].SetAdjacent(tempAbove, tempBelow, null, null);
+        }
     }
 
     public void OnPickedResponse(Response response)
@@ -79,12 +110,14 @@ public class ResponseManager : MonoBehaviour
         LocationManager.instance.SetBackActive(false);
         LocationManager.instance.personSpawner.SetSelectedPersonActive(false);
         responseBox.gameObject.SetActive(false);
+        ControlManager.instance.DeselectButton();
 
         foreach (GameObject button in buttonObjects)
         {
             Destroy(button);
         }
         buttonObjects.Clear();
+        UIButtons.Clear();
     }
 
     public DialogueLine GetDialogueLine(Interaction result)
@@ -142,7 +175,7 @@ public class ResponseManager : MonoBehaviour
         }
         else if (result is ChapterTransition)
         {
-            ChapterManager.instance.caseNumber = (result as ChapterTransition).caseIndex;
+            ChapterManager.instance.currentCase = (result as ChapterTransition).caseIndex;
             ChapterManager.instance.currentChapter = (result as ChapterTransition).chapterIndex;
             ChapterManager.instance.currentPart = 0;
             SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);

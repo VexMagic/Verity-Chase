@@ -30,3 +30,17 @@ MonoBehaviour:
     GainedLocations: []
     Movements: []
     Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: The security guard wouldn't have known about the break in before it happened.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: That's a good point. So why did they do it?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}

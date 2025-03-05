@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DeductionManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class DeductionManager : MonoBehaviour
     private List<DeductionDisplay> displays = new List<DeductionDisplay>();
 
     private Deduction currentDeduction;
+    private DeductionDisplay selectedDeduction;
+
+    public bool deductionMenuActive => deductionMenu.activeSelf;
+    public bool confirmButtonActive => button.activeSelf;
 
     private void Awake()
     {
@@ -25,6 +30,63 @@ public class DeductionManager : MonoBehaviour
             instance = this;
             SetMenuActive(false);
         }
+    }
+
+    public void SetSelectedButton(DeductionDisplay display)
+    {
+        if (display == null)
+            return;
+
+        if (selectedDeduction == display)
+            return;
+
+        if (selectedDeduction != null)
+            selectedDeduction.SetOutline(false);
+
+        selectedDeduction = display;
+        selectedDeduction.SetOutline(true);
+    }
+
+    public void GoToAdjacentDisplay()
+    {
+        int index = GetSelectedDisplayIndex();
+
+        if (ControlManager.instance.Navigate().x > 0)
+        {
+            index++;
+            if (index >= displays.Count)
+                index = 0;
+        }
+        else if (ControlManager.instance.Navigate().x < 0)
+        {
+            index--;
+            if (index < 0)
+                index = displays.Count - 1;
+        }
+
+        SetSelectedButton(displays[index]);
+    }
+
+    public void ChangeDisplay()
+    {
+        if (ControlManager.instance.Navigate().y > 0)
+        {
+            selectedDeduction.ClickUp();
+        }
+        else if (ControlManager.instance.Navigate().y < 0)
+        {
+            selectedDeduction.ClickDown();
+        }
+    }
+
+    private int GetSelectedDisplayIndex()
+    {
+        for (int i = 0; i < displays.Count; i++)
+        {
+            if (displays[i] == selectedDeduction)
+                return i;
+        }
+        return 0;
     }
 
     public void CreateDeductionDisplays(Deduction deduction)
@@ -44,6 +106,9 @@ public class DeductionManager : MonoBehaviour
         }
 
         question.text = deduction.question;
+
+        ControlManager.instance.DeselectButton();
+        SetSelectedButton(displays[0]);
 
         SetMenuActive(true);
     }

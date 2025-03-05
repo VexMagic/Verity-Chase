@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Newspaper Clippings
   Versions:
-  - Description: The masked vigilante known as "The Catalyst" was sighted after 5
-      years. I have to investigate further.
+  - Description: The masked vigilante known as "The Catalyst" was sighted on the
+      roof of a museum after 5 years. I have to investigate further.
     Sprite: {fileID: 21300000, guid: 7aa617387edc09844ba211f45235e94a, type: 3}
     Check: []

@@ -18,6 +18,7 @@ public class LogManager : MonoBehaviour
     [SerializeField] private Scrollbar bar;
     [SerializeField] private float displayDistance;
     [SerializeField] private int duplicateLimit;
+    [SerializeField] private int totalLimit;
 
     private List<DialogueLine> readLines = new List<DialogueLine>();
     private List<Interaction> finishedInteractions = new List<Interaction>();
@@ -93,6 +94,13 @@ public class LogManager : MonoBehaviour
     private void UpdateDisplayArea()
     {
         float height = 0;
+
+        while (displayComponents.Count > totalLimit) 
+        {
+            Destroy(displayObjects[0].gameObject);
+            displayObjects.RemoveAt(0);
+            displayComponents.RemoveAt(0);
+        }
 
         foreach (var display in displayComponents)
             height += display.GetHeight();

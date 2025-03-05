@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class ClueDisplaySpawner : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ClueDisplaySpawner : MonoBehaviour
     public int profileSectionAmount = 0;
     public int currentEvidenceSection = 0;
     public int currentProfileSection = 0;
+    public bool isScrolling = false;
 
     private void Awake()
     {
@@ -127,6 +129,77 @@ public class ClueDisplaySpawner : MonoBehaviour
         }
     }
 
+    public ClueDisplay GetAdjacentDisplay(int index, Clue.Type type, bool left)
+    {
+        int tempIndex = index;
+        ClueDisplay tempDisplay = null;
+
+        switch (type)
+        {
+            case Clue.Type.Evidence:
+                if (tempIndex == 0 && left)
+                    tempIndex = evidenceDisplays.Count - 1;
+                else if (tempIndex == evidenceDisplays.Count - 1 && !left)
+                    tempIndex = 0;
+                else if (left)
+                    tempIndex--;
+                else
+                    tempIndex++;
+
+                tempDisplay = evidenceDisplays[tempIndex];
+                break;
+            case Clue.Type.Profile:
+                if (tempIndex == 0 && left)
+                    tempIndex = profileDisplays.Count - 1;
+                else if (tempIndex == profileDisplays.Count - 1 && !left)
+                    tempIndex = 0;
+                else if (left)
+                    tempIndex--;
+                else
+                    tempIndex++;
+
+                tempDisplay = profileDisplays[tempIndex];
+                break;
+        }
+
+        if (tempDisplay == null)
+            return null;
+        else
+        {
+            if (tempDisplay.IsEmpty())
+            {
+                return GetAdjacentDisplay(tempIndex, type, left);
+            }
+            return tempDisplay;
+        }
+    }
+
+    public int GetSelectedDisplayIndex(Clue.Type type)
+    {
+        switch (type)
+        {
+            case Clue.Type.Evidence:
+                for (int i = 0; i < evidenceDisplays.Count; i++)
+                {
+                    if (evidenceDisplays[i].isSelected)
+                    {
+                        return i;
+                    }
+                }
+                break;
+            case Clue.Type.Profile:
+                for (int i = 0; i < profileDisplays.Count; i++)
+                {
+                    if (profileDisplays[i].isSelected)
+                    {
+                        return i;
+                    }
+                }
+                break;
+        }
+        return 0;
+    }
+
     public void SetCurrentMenu(bool type)
     {
         for (int i = 0; i < displayParents.Length; i++)
@@ -159,7 +232,7 @@ public class ClueDisplaySpawner : MonoBehaviour
                     currentSection = 0;
                 MoveDisplay(true);
             }
-            else if (IsScrollBackward(index))
+            else
             {
                 currentSection--;
                 if (currentSection < 0)
@@ -181,6 +254,7 @@ public class ClueDisplaySpawner : MonoBehaviour
 
     private void MoveDisplay(bool moveForward)
     {
+        isScrolling = true;
         //StartCoroutine(MoveToPosition(moveForward, ClueManager.instance.currentMenuType));
         switch (ClueManager.instance.currentMenuType)
         {
@@ -197,6 +271,12 @@ public class ClueDisplaySpawner : MonoBehaviour
                 }
                 break;
         }
+        Invoke(nameof(StopScroll), scrollSpeed);
+    }
+
+    private void StopScroll()
+    {
+        isScrolling = false;
     }
 
     public float MaxDispayDistance()

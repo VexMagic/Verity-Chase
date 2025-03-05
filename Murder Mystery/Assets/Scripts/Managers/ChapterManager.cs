@@ -8,7 +8,8 @@ public class ChapterManager : MonoBehaviour
     public static ChapterManager instance;
 
     public Button startButton;
-    public int caseNumber = -1;
+    public Button chapterButton;
+    public int currentCase = -1;
     public int currentChapter = -1;
     public int currentPart = -1;
 
@@ -31,6 +32,7 @@ public class ChapterManager : MonoBehaviour
         else
         {
             instance.startButton = startButton;
+            instance.chapterButton = chapterButton;
             UpdateStartButton();
             instance.ReadInteractions();
             Destroy(this);
@@ -39,15 +41,16 @@ public class ChapterManager : MonoBehaviour
 
     private void UpdateStartButton()
     {
-        if (startButton == null)
-            return;
+        if (startButton != null)
+            startButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
 
-        startButton.interactable = caseNumber != -1 && currentChapter != -1 && currentPart != -1;
+        if (chapterButton != null)
+            chapterButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
     }
 
     public void SelectCase(int Case)
     {
-        caseNumber = Case;
+        currentCase = Case;
         UpdateStartButton();
     }
 
@@ -65,12 +68,12 @@ public class ChapterManager : MonoBehaviour
 
     public void ReadInteractions()
     {
-        if (caseNumber == -1 || LogManager.instance == null)
+        if (currentCase == -1 || LogManager.instance == null)
             return;
         
         for (int i = 1; i <= currentPart; i++)
         {
-            Interaction[] interactions = Resources.LoadAll<Interaction>("Interactions/Case " + (caseNumber + 1) + "/Chapter " + (currentChapter + 1) + "/Part " + i);
+            Interaction[] interactions = Resources.LoadAll<Interaction>("Interactions/Case " + (currentCase + 1) + "/Chapter " + (currentChapter + 1) + "/Part " + i);
             foreach (Interaction interaction in interactions)
             {
                 LogManager.instance.FinishInteraction(interaction);

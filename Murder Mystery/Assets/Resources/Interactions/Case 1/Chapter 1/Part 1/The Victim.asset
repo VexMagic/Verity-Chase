@@ -71,7 +71,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "\u201CA security guard, the museum's curator, and the curators family.\u201D"
+    Text: "\u201CA security guard, the museum's curator, and most of the curator's
+      family.\u201D"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

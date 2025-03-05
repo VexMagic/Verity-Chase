@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using UnityEditor;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     private bool isHovering;
     private bool hasPresented;
     private bool hasPressed;
-    private bool inTestimony;
+    public bool inTestimony;
     private bool isPressing;
 
     public bool newInteractionFinished;
@@ -143,7 +144,7 @@ public class DialogueManager : MonoBehaviour
             }
 
             yield return null;
-            yield return new WaitUntil(() => Progress());
+            yield return new WaitUntil(() => Progress(false));
         }
 
         LogManager.instance.FinishInteraction(dialogue);
@@ -245,7 +246,7 @@ public class DialogueManager : MonoBehaviour
             {
                 yield return RunDialogueLine(testimony.lines[i].line);
                 yield return null;
-                yield return new WaitUntil(() => Progress());
+                yield return new WaitUntil(() => Progress(false));
             }
         }
 
@@ -283,7 +284,7 @@ public class DialogueManager : MonoBehaviour
         {
             yield return RunDialogueLine(new DialogueLine(Character.None, testimonyTitle));
             yield return null;
-            yield return new WaitUntil(() => Progress());
+            yield return new WaitUntil(() => Progress(false));
         }
     }
 
@@ -336,45 +337,29 @@ public class DialogueManager : MonoBehaviour
         testimonyDisplay.gameObject.SetActive(true);
         hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
 
+        bool newStatement = true;
+
         while (!HasPresented() && !HasPressed())
         {
-            dialogueText.text = string.Empty;
-            yield return RunDialogueLine(testimony.lines[currentTestimonyLine].line, true);
-            SetTestimonyArrows(testimony);
-            TestimonyArrowsActive(true);
+            if (newStatement)
+            {
+                dialogueText.text = string.Empty;
+                yield return RunDialogueLine(testimony.lines[currentTestimonyLine].line, true);
+                SetTestimonyArrows(testimony);
+                TestimonyArrowsActive(true);
+            }
             yield return null;
-            yield return new WaitUntil(() => TestimonyProgress(testimony) || HasPresented() || HasPressed());
+            yield return new WaitUntil(() => Progress(true) || ControlManager.instance.TestimonyNavigate() || HasPresented() || HasPressed());
 
-            if (TestimonyProgress(testimony))
+            if (Progress(true))
             {
                 Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
 
-                if (mouse.x < Screen.width / 2 && currentTestimonyLine > 0) //Click Left side
-                {
-                    for (int i = currentTestimonyLine - 1; i >= 0; i--)
-                    {
-                        if (testimony.lines[i].IsAvailable())
-                        {
-                            currentTestimonyLine = i;
-                            testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
-                            hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
-                            break;
-                        }
-                    }
-                }
-                else if (mouse.x >= Screen.width / 2 && currentTestimonyLine < testimony.lines.Count - 1) //Click Right side
-                {
-                    for (int i = currentTestimonyLine + 1; i < testimony.lines.Count; i++)
-                    {
-                        if (testimony.lines[i].IsAvailable())
-                        {
-                            currentTestimonyLine = i;
-                            testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
-                            hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
-                            break;
-                        }
-                    }
-                }
+                newStatement = ChangeTestimonyStatement(testimony, mouse.x >= Screen.width / 2);
+            }
+            else if (ControlManager.instance.TestimonyNavigate())
+            {
+                newStatement = ChangeTestimonyStatement(testimony, ControlManager.instance.Navigate().x > 0);
             }
         }
 
@@ -434,6 +419,38 @@ public class DialogueManager : MonoBehaviour
             isPressing = true;
             ResponseManager.instance.ResponseResult(testimony.lines[currentTestimonyLine].pressResult);
         }
+    }
+
+    private bool ChangeTestimonyStatement(Testimony testimony, bool forward)
+    {
+        if (currentTestimonyLine > 0 && !forward) //Click Left side
+        {
+            for (int i = currentTestimonyLine - 1; i >= 0; i--)
+            {
+                if (testimony.lines[i].IsAvailable())
+                {
+                    currentTestimonyLine = i;
+                    testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
+                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+                    return true;
+                }
+            }
+        }
+        else if (currentTestimonyLine < testimony.lines.Count - 1 && forward) //Click Right side
+        {
+            for (int i = currentTestimonyLine + 1; i < testimony.lines.Count; i++)
+            {
+                if (testimony.lines[i].IsAvailable())
+                {
+                    currentTestimonyLine = i;
+                    testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
+                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public CharacterData GetCharacterData(Character character)
@@ -502,7 +519,8 @@ public class DialogueManager : MonoBehaviour
             textBox.SetActive(true);
         }
 
-        yield return RunTypingEffect(tempLine);
+        if (!isTestimony)
+            yield return RunTypingEffect(tempLine);
 
         nextIcon.SetActive(true && !isTestimony);
         dialogueText.text = TextEffectManager.instance.ConvertCommands(tempLine);
@@ -567,54 +585,20 @@ public class DialogueManager : MonoBehaviour
         {
             yield return null;
 
-            if (Progress())
+            if (Progress(false))
             {
                 Typewriter.instance.Stop();
             }
         }
-    } 
+    }
 
-    public bool Progress(bool drag = false)
+    public bool Progress(bool testimony)
     {
 #if (UNITY_EDITOR)
         if (Input.GetKey(KeyCode.Space) && isHovering)
             return true;
 #endif
-        if (drag)
-            return Input.GetMouseButton(0) && isHovering;
-        else
-            return Input.GetMouseButtonDown(0) && isHovering;
-    }
-
-    public bool TestimonyProgress(Testimony testimony)
-    {
-        bool isValid = false;
-        Vector2 mouse = new Vector2(Input.mousePosition.x, Screen.height - Input.mousePosition.y);
-
-        if (mouse.x < Screen.width / 2 && currentTestimonyLine > 0) //Click Left side
-        {
-            for (int i = currentTestimonyLine - 1; i >= 0; i--)
-            {
-                if (testimony.lines[i].IsAvailable())
-                {
-                    isValid = true;
-                    break;
-                }
-            }
-        }
-        else if (mouse.x >= Screen.width / 2 && currentTestimonyLine < testimony.lines.Count - 1) //Click Right side
-        {
-            for (int i = currentTestimonyLine + 1; i < testimony.lines.Count; i++)
-            {
-                if (testimony.lines[i].IsAvailable())
-                {
-                    isValid = true;
-                    break;
-                }
-            }
-        }
-
-        return Input.GetMouseButtonDown(0) && isHovering && isValid;
+        return (Input.GetMouseButtonDown(0) && isHovering) || (ControlManager.instance.Progress() && !testimony);
     }
 
     private void SetTestimonyArrows(Testimony testimony)

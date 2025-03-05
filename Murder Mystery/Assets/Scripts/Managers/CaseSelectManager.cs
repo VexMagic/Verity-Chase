@@ -13,8 +13,9 @@ public class CaseSelectManager : MonoBehaviour
     [SerializeField] private RectTransform slider;
     [SerializeField] private float slideAmount;
     [SerializeField] private float slideSpeed;
+    [SerializeField] private GameObject leftArrow;
+    [SerializeField] private GameObject rightArrow;
 
-    private List<CaseSelectorContinue> casesContinue = new List<CaseSelectorContinue>();
     private List<CaseSelectorNewGame> casesNewGame = new List<CaseSelectorNewGame>();
     private List<CaseChapterButton> chapters = new List<CaseChapterButton>();
     private List<CasePartButton> parts = new List<CasePartButton>();
@@ -27,6 +28,9 @@ public class CaseSelectManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        leftArrow.SetActive(currentCase > 1);
+        rightArrow.SetActive(currentCase < caseAmount);
     }
 
     public void SetNewGame(bool isNew)
@@ -36,23 +40,11 @@ public class CaseSelectManager : MonoBehaviour
             Invoke(nameof(SetCaseAndPartToDefault), 0.4f);
     }
 
-    public void ResetSelections()
-    {
-        CloseCases();
-        ClickCase(null);
-    }
-
     private void SetCaseAndPartToDefault()
     {
         ChapterManager.instance.SelectCase(0);
         ChapterManager.instance.SelectChapter(0);
         ChapterManager.instance.SelectPart(0);
-    }
-
-    public void AddCase(CaseSelectorContinue selector)
-    {
-        if (!casesContinue.Contains(selector))
-            casesContinue.Add(selector);
     }
 
     public void AddCase(CaseSelectorNewGame selector)
@@ -81,7 +73,7 @@ public class CaseSelectManager : MonoBehaviour
         if (coroutine != null)
             return;
 
-        AudioManager.instance.PlaySFX("Click");
+        //AudioManager.instance.PlaySFX("Click");
         AudioManager.instance.PlaySFX("Open Case");
 
         if (left)
@@ -89,15 +81,8 @@ public class CaseSelectManager : MonoBehaviour
         else 
             currentCase++;
 
-        if (newGame)
-        {
-            if (currentCase == 1)
-                ChapterManager.instance.SelectCase(currentCase - 1);
-            else
-                ChapterManager.instance.SelectCase(-1);
-        }
-        else
-            CloseCases();
+        leftArrow.SetActive(false);
+        rightArrow.SetActive(false);
 
         coroutine = StartCoroutine(Slide(slider.localPosition.x, GetCasePos(currentCase)));
     }
@@ -125,8 +110,11 @@ public class CaseSelectManager : MonoBehaviour
             slider.localPosition = Vector3.Lerp(new Vector3(start, 0), new Vector3(end, 0), t);
             yield return null;
         }
-        Debug.Log("end slide");
         coroutine = null;
+
+        leftArrow.SetActive(currentCase > 1);
+        rightArrow.SetActive(currentCase < caseAmount);
+        ChapterManager.instance.SelectCase(currentCase - 1);
     }
 
     float Evaluate(float x)
@@ -161,26 +149,9 @@ public class CaseSelectManager : MonoBehaviour
         }
     }
 
-    public void CloseCases()
-    {
-        Invoke(nameof(DeselectPartsAndChapters), 0.3f);
-        foreach (var item in casesContinue)
-        {
-            item.Close();
-        }
-    }
-
     public void DeselectPartsAndChapters()
     {
         ChapterManager.instance.SelectPart(-1);
         ChapterManager.instance.SelectChapter(-1);
-        foreach (var item in chapters)
-        {
-            item.Deselect();
-        }
-        foreach (var item in parts)
-        {
-            item.Deselect();
-        }
     }
 }

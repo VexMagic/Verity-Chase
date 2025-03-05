@@ -2,80 +2,89 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : UIManager
 {
-    [SerializeField] private RectTransform titleScreen;
+    public static MainMenuManager instance;
+
     [SerializeField] private Animator animator;
     [SerializeField] private float openSpeed;
 
+    [SerializeField] private GameObject[] menus;
+    [SerializeField] private UIButton[] defaultButton;
+
     private Coroutine coroutine;
     private bool isOpen;
+    private int menuIndex;
+
+    public int MenusIndex => menuIndex;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
-        titleScreen.localPosition = Vector3.zero;
+        menuIndex = 0;
+        ChangeMenu();
     }
 
-    //public override void OnScreenSizeChange()
-    //{
-    //    StopCoroutine(coroutine);
-    //    coroutine = null;
-    //    if (isOpen)
-    //        titleScreen.localPosition = new Vector3(0, 0);
-    //    else
-    //        titleScreen.localPosition = new Vector3(0, -Screen.height);
-    //}
-
-    public void OpenTitleScreen(bool open)
+    public void OpenMenu(int index)
     {
-        animator.SetBool("Open", open);
-        //if (coroutine != null)
-        //    return;
+        animator.SetBool("Open", true);
+        menuIndex = index;
+        ControlManager.instance.DeselectButton();
 
-        //isOpen = open;
+        Invoke(nameof(ChangeMenu), openSpeed);
+    }
 
-        //if (open)
-        //    coroutine = StartCoroutine(SmoothMovement(-Screen.height, 0));
-        //else
-        //    coroutine = StartCoroutine(SmoothMovement(0, -Screen.height));
-
-        if (open)
+    private void ChangeMenu()
+    {
+        for (int i = 0; i < menus.Length; i++)
         {
-            Invoke(nameof(ResetSlectors), 0.7f);
+            menus[i].SetActive(i == menuIndex);
+            if (i == menuIndex)
+            {
+                if (defaultButton[i] != null)
+                    ControlManager.instance.SetSelectedButton(defaultButton[i]);
+            }
         }
-    }
 
-    private IEnumerator SmoothMovement(float start, float end)
-    {
-        bool active = true;
-        float sinTime = 0;
-        while (active)
+        if (menuIndex == 0)
         {
-            sinTime += Time.deltaTime * Mathf.PI * openSpeed;
-            if (sinTime > Mathf.PI)
-                active = false;
-            sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
-            float t = Evaluate(sinTime);
-            titleScreen.localPosition = Vector3.Lerp(new Vector3(0, start), new Vector3(0, end), t);
-            yield return null;
+            TitleCharacterSpawner.instance.StartCharacterDisplay();
         }
-        coroutine = null;
-    }
+        else
+        {
+            TitleCharacterSpawner.instance.StopCharacterDisplay();
+        }
 
-    float Evaluate(float x)
-    {
-        return 0.5f * Mathf.Sin(x - Mathf.PI / 2f) + 0.5f;
-    }
+        if (menuIndex == 1)
+        {
+            ChapterManager.instance.SelectCase(0);
+            ChapterManager.instance.SelectChapter(0);
+            ChapterManager.instance.SelectPart(0);
+        }
+        
+        if (menuIndex == 2)
+        {
+            ChapterSelector.instance.SpawnObjects();
+            ChapterManager.instance.SelectChapter(-1);
+            ChapterManager.instance.SelectPart(-1);
+        }
+        else
+        {
+            ChapterSelector.instance.DestroyObjects();
+        }
 
-    private void ResetSlectors()
-    {
-        CaseSelectManager.instance.ResetSelections();
+        animator.SetBool("Open", false);
     }
 
     public void StartCase()
     {
-        SceneManager.LoadScene(ChapterManager.instance.caseNumber + 1);
+        SceneManager.LoadScene(ChapterManager.instance.currentCase + 1);
     }
 }

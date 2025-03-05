@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DeductionDisplay : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DeductionDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mainOption;
     [SerializeField] private TextMeshProUGUI bottomOption;
     [SerializeField] private DeductionOptions options;
+    [SerializeField] private GameObject highlight;
 
     [SerializeField] private int CurrentOption;
     public int currentOption => CurrentOption;
@@ -53,5 +55,15 @@ public class DeductionDisplay : MonoBehaviour
             CurrentOption = 0;
 
         UpdateDisplay();
+    }
+
+    public void Hover()
+    {
+        DeductionManager.instance.SetSelectedButton(this);
+    }
+
+    public void SetOutline(bool active)
+    {
+        highlight.SetActive(active);
     }
 }

@@ -12,14 +12,31 @@ public class ClueDisplay : MonoBehaviour
     [SerializeField] private GainProfile myProfile;
     [SerializeField] private Clue.Type myType;
 
+    public bool isSelected => selector.activeSelf;
+    public int Index => index;
 
     public void SetSelector(bool isSelected)
     {
         selector.SetActive(isSelected);
     }
 
+    public bool IsEmpty()
+    {
+        switch (myType)
+        {
+            case Clue.Type.Evidence:
+                return myEvidence == null;
+            case Clue.Type.Profile:
+                return myProfile == null;
+        }
+        return true;
+    }
+
     public void Click()
     {
+        if (ClueDisplaySpawner.instance.isScrolling)
+            return;
+
         if (ClueDisplaySpawner.instance.IsMainClueDisplay(index))
         {
             if ((myEvidence != null && myType == Clue.Type.Evidence) || (myProfile != null && myType == Clue.Type.Profile))

@@ -7,39 +7,41 @@ using UnityEngine.UI;
 
 public class CaseChapterButton : MonoBehaviour
 {
-    [SerializeField] private Image outline;
     [SerializeField] private GameObject casePartButton;
     [SerializeField] private RectTransform partParent;
     [SerializeField] private RectTransform mainObject;
+    [SerializeField] private GameObject dropdownButton;
+    [SerializeField] private GameObject dropupButton;
     [SerializeField] private float openSpeed;
+    [SerializeField] private float partButtonHeight;
+    [SerializeField] private UIButton button;
     public int index;
-    public CaseSelectorContinue source;
-    private bool selected;
-    private bool highlighted;
+    public ChapterSelector source;
     private bool droppedDown;
     private float extraSize;
     private Coroutine coroutine;
     private List<CasePartButton> partButtons = new List<CasePartButton>();
+    private List<UIButton> UIButtons = new List<UIButton>();
+    private UIButton storedButton;
+    private UIButton aboveStoredButton;
 
     private void Start()
     {
         CaseSelectManager.instance.AddChapter(this);
+        button.onKeyboardSelect.AddListener(() => ScrollViewSnap.instance.SnapTo(mainObject, droppedDown));
     }
 
     public void Click()
     {
-        CaseSelectManager.instance.DeselectPartsAndChapters();
         ChapterManager.instance.SelectChapter(index);
         ChapterManager.instance.SelectPart(0);
-        selected = true;
-        outline.gameObject.SetActive(true);
-        outline.color = CaseSelectManager.instance.selectedColor;
         AudioManager.instance.PlaySFX("Click");
+        MainMenuManager.instance.StartCase();
     }
     
     public void CreateParts(List<string> parts)
     {
-        extraSize = (parts.Count * 64) + ((parts.Count + 1) * 16);
+        extraSize = (parts.Count * 48) + ((parts.Count + 1) * 8);
 
         for (int i = 0; i < parts.Count; i++)
         {
@@ -51,6 +53,35 @@ public class CaseChapterButton : MonoBehaviour
 
             TextMeshProUGUI text = gameObject.GetComponentInChildren<TextMeshProUGUI>();
             text.text = parts[i];
+
+            UIButtons.Add(tempButton.GetComponent<UIButton>());
+        }
+    }
+
+    public void SetUIButtonValues(UIButton above, UIButton below)
+    {
+        if (UIButtons.Count == 1)
+        {
+            UIButtons[0].SetAdjacent(above, below, null, null);
+            return;
+        }
+
+        for (int i = 0; i < UIButtons.Count; i++)
+        {
+            UIButton tempAbove = null;
+            UIButton tempBelow = null;
+
+            if (i == 0)
+                tempAbove = above;
+            else
+                tempAbove = UIButtons[i - 1];
+
+            if (i == UIButtons.Count - 1)
+                tempBelow = below;
+            else
+                tempBelow = UIButtons[i + 1];
+
+            UIButtons[i].SetAdjacent(tempAbove, tempBelow, null, null);
         }
     }
 
@@ -58,9 +89,39 @@ public class CaseChapterButton : MonoBehaviour
     {
         droppedDown = !droppedDown;
 
+        dropdownButton.SetActive(!droppedDown);
+        dropupButton.SetActive(droppedDown);
+
+        if (droppedDown)
+        {
+            storedButton = button.GetButtonInDirection(Vector2Int.down);
+            button.SetButtonInDirection(UIButtons[0], Vector2Int.down);
+
+            SetBelowButtonAdjacent(UIButtons[^1]);
+        }
+        else
+        {
+            button.SetButtonInDirection(storedButton, Vector2Int.down);
+            SetBelowButtonAdjacent(button);
+        }
+
         if (coroutine != null)
             StopCoroutine(coroutine);
         coroutine = StartCoroutine(OpenParts());
+    }
+
+    private void SetBelowButtonAdjacent(UIButton upButton)
+    {
+        CaseChapterButton tempButton = storedButton.GetComponentInParent<CaseChapterButton>();
+        if (tempButton != null)
+            tempButton.SetAboveButton(upButton);
+        else
+            ChapterSelector.instance.backButton.SetButtonInDirection(upButton, Vector2Int.up);
+    }
+
+    public void SetAboveButton(UIButton upButton)
+    {
+        button.SetButtonInDirection(upButton, Vector2Int.up);
     }
 
     IEnumerator OpenParts()
@@ -81,7 +142,7 @@ public class CaseChapterButton : MonoBehaviour
             sinTime += Time.deltaTime * openSpeed;
             sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
             float t = Evaluate(sinTime);
-            mainObject.sizeDelta = Vector2.Lerp(new Vector2(mainObject.sizeDelta.x, 96 + start), new Vector2(mainObject.sizeDelta.x, 96 + end), t);
+            mainObject.sizeDelta = Vector2.Lerp(new Vector2(mainObject.sizeDelta.x, 64 + start), new Vector2(mainObject.sizeDelta.x, 64 + end), t);
             partParent.sizeDelta = Vector2.Lerp(new Vector2(partParent.sizeDelta.x, start), new Vector2(partParent.sizeDelta.x, end), t);
 
             LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform.parent);
@@ -101,38 +162,8 @@ public class CaseChapterButton : MonoBehaviour
         coroutine = null;
     }
 
-    //private IEnumerator FlipAnimation(float start, float end)
-    //{
-    //    AudioManager.instance.PlaySFX("Swoosh");
-    //    float sinTime = 0;
-    //    while (start != end)
-    //    {
-    //        sinTime += Time.deltaTime * openSpeed;
-    //        sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
-    //        float t = Evaluate(sinTime);
-    //        transform.localScale = Vector3.Lerp(new Vector3(start, 1), new Vector3(end, 1), t);
-    //        yield return null;
-    //    }
-    //}
-
     float Evaluate(float x)
     {
         return 0.5f * Mathf.Sin(x - Mathf.PI / 2f) + 0.5f;
-    }
-
-    public void Hover(bool hovering)
-    {
-        highlighted = hovering;
-        if (!selected)
-        {
-            outline.gameObject.SetActive(highlighted);
-        }
-    }
-
-    public void Deselect()
-    {
-        selected = false;
-        outline.gameObject.SetActive(highlighted);
-        outline.color = Color.white;
     }
 }

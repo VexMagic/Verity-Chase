@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Examinable : MonoBehaviour
 {
@@ -37,8 +38,16 @@ public class Examinable : MonoBehaviour
         }
     }
 
+    public bool IsPointInsideCollider(Vector2 point)
+    {
+        return collider.OverlapPoint(point);
+    }
+
     public bool HasBeenExamined()
     {
+        if (examineResult == null)
+            return true;
+
         return LogManager.instance.HasFinishedInteraction(examineResult);
     }
 

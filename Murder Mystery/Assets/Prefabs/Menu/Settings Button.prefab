@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 7237949194663022402}
   - component: {fileID: 5898258288049928009}
   - component: {fileID: 7565861152856368658}
+  - component: {fileID: 3797489173295538357}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -335,7 +336,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7565861152856368658}
         m_TargetAssemblyTypeName: SettingsButton, Assembly-CSharp
-        m_MethodName: Click
+        m_MethodName: PlayClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -362,10 +363,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6298216855399994227}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3797489173295538357}
+          m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
+          m_MethodName: SelectButton
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -373,22 +374,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6298216855399994227}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &7565861152856368658
 MonoBehaviour:
@@ -402,3 +387,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbe1452806c98c4dad0804f6a6418c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3797489173295538357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988316180859072612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff7678fb162a464995b60a2e286041d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 7237949194663022402}
+  outline: {fileID: 6298216855399994227}
+  upButton: {fileID: 0}
+  downButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}

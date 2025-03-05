@@ -15,6 +15,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private Vector2 worldMaxSize;
     [SerializeField] private AudioClip music;
     [SerializeField] private Animator fadeEffect;
+    [SerializeField] private float moveSpeed;
 
     public Memory currentMemory;
     private MemoryObject[] MemoryObjects;
@@ -67,14 +68,24 @@ public class MemoryManager : MonoBehaviour
         SetAimPosition(Vector2.zero);
         while (IsMemoryActive)
         {
-            if (Draging() && !ClueManager.instance.isOpen)
+            if ((Draging() || ControlManager.instance.Movement != Vector2.zero) && !ClueManager.instance.isOpen)
             {
                 clickPosition.SetActive(true);
-                Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);
-                Vector2 mousePos = (Vector2)Input.mousePosition - screenSize;
 
-                Vector2 posPercentage = mousePos / screenSize;
-                SetAimPosition(posPercentage * worldMaxSize);
+                if (Draging())
+                {
+                    Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);
+                    Vector2 mousePos = (Vector2)Input.mousePosition - screenSize;
+
+                    Vector2 posPercentage = mousePos / screenSize;
+                    SetAimPosition(posPercentage * worldMaxSize);
+                }
+                else
+                {
+                    Vector2 newPos = (Vector2)clickPosition.transform.position + (ControlManager.instance.Movement * moveSpeed);
+                    newPos = new Vector2(Mathf.Clamp(newPos.x, -worldMaxSize.x, worldMaxSize.x), Mathf.Clamp(newPos.y, -worldMaxSize.y, worldMaxSize.y));
+                    SetAimPosition(newPos);
+                }
             }
 
             if (DialogueManager.instance.HasPresented())
@@ -140,7 +151,7 @@ public class MemoryManager : MonoBehaviour
 
         foreach (var item in MemoryObjects)
         {
-            if (item.isHovering)
+            if (item.IsPointInsideCollider(position))
             {
                 selectedMemoryObjects.Add(item);
             }
@@ -154,6 +165,9 @@ public class MemoryManager : MonoBehaviour
 
     public void Exit()
     {
+        if (!currentMemory.exitable)
+            return;
+
         ResponseManager.instance.ResponseResult(currentMemory.giveUp);
         StopMemory();
     }

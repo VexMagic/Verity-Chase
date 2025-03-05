@@ -44,11 +44,14 @@ public class ClueManager : MonoBehaviour
     public int currentProfile = 0;
 
     public bool isOpen;
+    public bool canGoBack;
     public bool isTestimonyPresenting;
     public bool isMemoryDeduction;
     public Clue.Type currentMenuType;
+    public bool isEvidence;
 
     private bool isAnimationFinished;
+    public bool IsAnimationFinished => isAnimationFinished;
 
     private void Awake()
     {
@@ -268,6 +271,8 @@ public class ClueManager : MonoBehaviour
 
     public void OpenMenu(bool isPresenting, bool canGoBack)
     {
+        isOpen = true;
+        this.canGoBack = canGoBack;
         clueMenu.SetActive(true);
         openButton.SetActive(false);
         testimonyPresentButton.SetActive(false);
@@ -291,8 +296,14 @@ public class ClueManager : MonoBehaviour
         }
     }
 
+    public void SwapMenu()
+    {
+        SwapMenuButton(!isEvidence);
+    }
+
     public void SwapMenuButton(bool type)
     {
+        isEvidence = type;
         if (type)
         {
             currentMenuType = Clue.Type.Evidence;

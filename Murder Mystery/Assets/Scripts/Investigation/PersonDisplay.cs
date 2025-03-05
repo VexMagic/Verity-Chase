@@ -27,6 +27,11 @@ public class PersonDisplay : MonoBehaviour
         display.localPosition = new Vector3(0, basePos);
     }
 
+    public void SetSelectedPersonIndex()
+    {
+        LocationManager.instance.personSpawner.SetSelectedPersonIndex(this);
+    }
+
     public void StartHover()
     {
         if (movementCoroutine != null)

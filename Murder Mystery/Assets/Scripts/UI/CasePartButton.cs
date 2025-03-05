@@ -6,23 +6,19 @@ public class CasePartButton : MonoBehaviour
     [SerializeField] private Image outline;
     [SerializeField] private int chapter;
     [SerializeField] private int index;
-    private bool selected;
-    private bool highlighted;
 
     private void Start()
     {
         CaseSelectManager.instance.AddPart(this);
+        GetComponent<UIButton>().onKeyboardSelect.AddListener(() => ScrollViewSnap.instance.SnapTo(GetComponent<RectTransform>(), false));
     }
 
     public void Click()
     {
-        CaseSelectManager.instance.DeselectPartsAndChapters();
         ChapterManager.instance.SelectChapter(chapter);
         ChapterManager.instance.SelectPart(index);
-        selected = true;
-        outline.gameObject.SetActive(true);
-        outline.color = CaseSelectManager.instance.selectedColor;
         AudioManager.instance.PlaySFX("Click");
+        MainMenuManager.instance.StartCase();
     }
 
     public void SetValues(int chapter, int part)
@@ -31,29 +27,13 @@ public class CasePartButton : MonoBehaviour
         index = part;
     }
 
-    public void Hover(bool hovering)
-    {
-        highlighted = hovering;
-        if (!selected)
-        {
-            outline.gameObject.SetActive(highlighted);
-        }
-    }
-
     public void CloseDropdown()
     {
-        if (outline.color != Color.white)
+        if (outline.gameObject.activeSelf)
         {
-            Deselect();
+            ControlManager.instance.SetSelectedButton(transform.parent.GetComponent<UIButton>());
             ChapterManager.instance.SelectPart(-1);
             ChapterManager.instance.SelectChapter(-1);
         }
-    }
-
-    public void Deselect()
-    {
-        selected = false;
-        outline.gameObject.SetActive(highlighted);
-        outline.color = Color.white;
     }
 }

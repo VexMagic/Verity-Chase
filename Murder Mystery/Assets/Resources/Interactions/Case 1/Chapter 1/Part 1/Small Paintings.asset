@@ -48,7 +48,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "huh\u2026 it is."
+    Text: "Huh\u2026 it is."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

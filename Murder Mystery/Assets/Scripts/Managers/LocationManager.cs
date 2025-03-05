@@ -45,11 +45,17 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private int selectedLocation;
 
     private List<GameObject> buttonObjects = new List<GameObject>();
+    private List<UIButton> UIButtons = new List<UIButton>();
     private bool isMultiplePeople;
     private bool isAnimationFinished;
 
     public bool isExamining;
     public SpriteRenderer locationSprite;
+
+    private int lastLocationAction = 0;
+
+    public bool IsAnimationFinished => isAnimationFinished;
+    public bool IsButtonsActive => buttons.activeSelf;
 
     private void Awake()
     {
@@ -76,6 +82,7 @@ public class LocationManager : MonoBehaviour
 
     public void Talk()
     {
+        lastLocationAction = 1;
         SetBackActive(true);
         SetButtonsActive(false);
         LocationState tempPeople = unlockedLocations[currentLocation].CurrentLocationState();
@@ -92,23 +99,65 @@ public class LocationManager : MonoBehaviour
 
     public void Examine()
     {
+        lastLocationAction = 2;
         isExamining = true;
         DialogueManager.instance.SetClickDetectionActive(false);
         SetBackActive(true);
         SetButtonsActive(false);
         personSpawner.SetActive(false);
+        ControlManager.instance.DeselectButton();
+        ExamineManager.instance.SetAimPosition(Vector2.zero, false);
+        ExamineManager.instance.StartExamine();
     }
 
     public void Move()
     {
+        lastLocationAction = 3;
         SetBackActive(true);
+        UIButtons.Clear();
         for (int i = 0; i < buttonObjects.Count; i++)
         {
-            buttonObjects[i].SetActive((buttonObjects.Count - 1 - i) != currentLocation);
+            bool tempActive = (buttonObjects.Count - 1 - i) != currentLocation;
+            buttonObjects[i].SetActive(tempActive);
+            if (tempActive)
+            {
+                UIButtons.Add(buttonObjects[i].GetComponent<UIButton>());
+            }
         }
 
         SetButtonsActive(false);
         moveScreen.SetActive(true);
+        SetUIButtonValues();
+
+        confirmMoveButton.GetComponent<UIButton>().SetAdjacent(null, null, null, UIButtons[0]);
+        UIButtons[0].SelectButton();
+    }
+
+    private void SetUIButtonValues()
+    {
+        if (UIButtons.Count == 1)
+        {
+            UIButtons[0].SetAdjacent(null, null, confirmMoveButton.GetComponent<UIButton>(), null);
+            return;
+        }
+
+        for (int i = 0; i < UIButtons.Count; i++)
+        {
+            UIButton tempAbove = null;
+            UIButton tempBelow = null;
+
+            if (i == 0)
+                tempAbove = UIButtons[^1];
+            else
+                tempAbove = UIButtons[i - 1];
+
+            if (i == UIButtons.Count - 1)
+                tempBelow = UIButtons[0];
+            else
+                tempBelow = UIButtons[i + 1];
+
+            UIButtons[i].SetAdjacent(tempAbove, tempBelow, confirmMoveButton.GetComponent<UIButton>(), null);
+        }
     }
 
     public void SetMultiplePeople()
@@ -129,6 +178,7 @@ public class LocationManager : MonoBehaviour
         {
             SetCheckmarks();
             Invoke(nameof(StartMusic), 0.01f);
+            Invoke(nameof(SelectLocationAction), 0.01f);
         }
     }
 
@@ -140,12 +190,34 @@ public class LocationManager : MonoBehaviour
         }
     }
 
+    private void SelectLocationAction()
+    {
+        if ((!buttons.activeSelf && !backButton.activeSelf) || ResponseManager.instance.IsResponsesActive())
+            return;
+
+        UIButton tempAction = null;
+
+        if (lastLocationAction == 1)
+            tempAction = talkButton.gameObject.GetComponent<UIButton>();
+        else if (lastLocationAction == 3)
+            tempAction = moveButton.gameObject.GetComponent<UIButton>();
+        else
+            tempAction = examineButton.gameObject.GetComponent<UIButton>();
+
+        ControlManager.instance.SetSelectedButton(tempAction);
+    }
+
     public void SetBackActive(bool isActive)
     {
         backButton.SetActive(isActive);
 
         if (isActive)
             Invoke(nameof(StartMusic), 0.01f);
+    }
+
+    public bool GetBackButtonActive()
+    {
+        return backButton.activeSelf;
     }
 
     public void BackButton()
@@ -155,6 +227,8 @@ public class LocationManager : MonoBehaviour
         ResponseManager.instance.OnPickedResponse(new Response("", null));
         personSpawner.SetActive(true);
         moveScreen.SetActive(false);
+        ExamineManager.instance.DeselectExaminable();
+        ExamineManager.instance.StopExamine();
 
         if (isMultiplePeople)
         {
@@ -270,6 +344,7 @@ public class LocationManager : MonoBehaviour
         {
             location.gameObject.SetActive(false);
         }
+        ExamineManager.instance.ClearExaminables();
     }
 
     public void ChangeLocation(bool isStart)
@@ -303,6 +378,7 @@ public class LocationManager : MonoBehaviour
 
         locationSprite = tempLocation.GetComponent<SpriteRenderer>();
         tempLocation.gameObject.SetActive(true);
+        ExamineManager.instance.GetExaminables(tempLocation);
         foreach (var examinable in tempLocation.GetComponentsInChildren<Examinable>())
         {
             examinable.EndHover();
