@@ -26,10 +26,6 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
-    private void Start()
-    {
         CreateEffectsMap();
     }
 

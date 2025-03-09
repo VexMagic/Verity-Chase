@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class DeductionDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI topOption;
     [SerializeField] private TextMeshProUGUI mainOption;
     [SerializeField] private TextMeshProUGUI bottomOption;
-    [SerializeField] private DeductionOptions options;
     [SerializeField] private GameObject highlight;
+    [SerializeField] private DeductionOptions options;
 
     [SerializeField] private int CurrentOption;
     public int currentOption => CurrentOption;

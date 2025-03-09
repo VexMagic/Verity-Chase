@@ -34,19 +34,20 @@ public class ControlManager : MonoBehaviour
             selectedButton.SetOutline(true);
     }
 
-    public void SetSelectedButton(UIButton button, bool isKeyboard = false)
+    public bool SetSelectedButton(UIButton button, bool isKeyboard = false)
     {
         if (button == null)
-            return;
+            return false;
 
         if (selectedButton == button)
-            return;
+            return false;
 
         if (selectedButton != null)
             selectedButton.SetOutline(false, isKeyboard);
 
         selectedButton = button;
         selectedButton.SetOutline(true, isKeyboard);
+        return true;
     }
 
     public void DeselectButton()
@@ -78,7 +79,7 @@ public class ControlManager : MonoBehaviour
                 if (!ClueDisplaySpawner.instance.IsMainClueDisplay(tempDisplay.Index))
                 {
                     AudioManager.instance.PlaySFX("Clue Slide");
-                    ClueDisplaySpawner.instance.ScrollSection(tempDisplay.Index);
+                    ClueDisplaySpawner.instance.ScrollSection(tempDisplay.Index, true, movement.x < 0);
                 }
                 return;
             }
@@ -114,7 +115,8 @@ public class ControlManager : MonoBehaviour
 
         if (selectedButton != null && movementInt != Vector2Int.zero)
         {
-            SetSelectedButton(selectedButton.GetButtonInDirection(movementInt), true);
+            if (SetSelectedButton(selectedButton.GetButtonInDirection(movementInt), true))
+                AudioManager.instance.PlaySFX("Select Button");
             return;
         }
     }

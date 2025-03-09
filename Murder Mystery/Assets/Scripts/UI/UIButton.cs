@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,7 +8,10 @@ using UnityEngine.UI;
 public class UIButton : MonoBehaviour
 {
     [SerializeField] private Button button;
+    [SerializeField] private Image buttonImage;
     [SerializeField] private GameObject outline;
+    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private Color textHighlight;
 
     [SerializeField] private UIButton upButton;
     [SerializeField] private UIButton downButton;
@@ -30,8 +34,10 @@ public class UIButton : MonoBehaviour
         button.onClick.AddListener(() => AudioManager.instance.PlaySFX("Click"));
     }
 
-    public void SelectButton()
+    public void SelectButton(bool hoverSelect)
     {
+        if (hoverSelect && !outline.activeSelf)
+            AudioManager.instance.PlaySFX("Select Button");
         ControlManager.instance.SetSelectedButton(this);
     }
 
@@ -40,16 +46,40 @@ public class UIButton : MonoBehaviour
     public void SetOutline(bool active, bool isKeyboard = false)
     {
         outline.SetActive(active);
-        //Debug.Log(gameObject.name + " " + active);
+
+        if (buttonImage != null)
+            buttonImage.enabled = !active;
 
         if (active)
         {
             OnSelect.Invoke();
+
+            if (text != null)
+                text.color = textHighlight;
+
             if (isKeyboard)
                 OnKeyboardSelect.Invoke();
         }
-        else 
+        else
+        {
             OnDeselect.Invoke();
+
+            if (text != null)
+                text.color = Color.white;
+        }
+    }
+
+    public void SetOutlineInteractable()
+    {
+        if (button.interactable)
+            SetOutlineColor(button.colors.normalColor);
+        else
+            SetOutlineColor(button.colors.disabledColor);
+    }
+
+    public void SetOutlineColor(Color color)
+    {
+        outline.GetComponent<Image>().color = color;
     }
 
     public UIButton GetButtonInDirection(Vector2Int direction) 

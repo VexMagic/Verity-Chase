@@ -54,7 +54,7 @@ public class ResponseManager : MonoBehaviour
             buttonObject.GetComponent<Button>().onClick.AddListener(() => AudioManager.instance.PlaySFX("Click"));
 
             //set check mark to active if you have read the response and is part of interview
-            buttonObject.transform.GetChild(1).gameObject.SetActive(isInterview && LogManager.instance.HasFinishedInteraction(response.result));
+            buttonObject.transform.GetChild(2).gameObject.SetActive(isInterview && LogManager.instance.HasFinishedInteraction(response.result));
 
             UIButton tempButton = buttonObject.GetComponent<UIButton>();
 
@@ -65,7 +65,7 @@ public class ResponseManager : MonoBehaviour
         }
 
         SetUIButtonValues();
-        UIButtons[0].SelectButton();
+        UIButtons[0].SelectButton(false);
 
         responseBox.sizeDelta = new Vector2(responseBox.sizeDelta.x, boxHeight);
         responseBox.gameObject.SetActive(true);
@@ -178,7 +178,7 @@ public class ResponseManager : MonoBehaviour
             ChapterManager.instance.currentCase = (result as ChapterTransition).caseIndex;
             ChapterManager.instance.currentChapter = (result as ChapterTransition).chapterIndex;
             ChapterManager.instance.currentPart = 0;
-            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+            TransitionManager.instance.EnterScene(SceneManager.sceneCountInBuildSettings - 1);
         }
         else if (result is Memory)
         {

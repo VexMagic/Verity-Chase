@@ -57,9 +57,13 @@ public class SettingsMenu : MonoBehaviour
         IsOpen = open;
         transform.GetChild(0).gameObject.SetActive(open);
         if (open)
-            UIButtons[0].SelectButton();
+            UIButtons[0].SelectButton(false);
         else
+        {
             ControlManager.instance.DeselectButton();
+            if (KeyIconManager.instance != null)
+                KeyIconManager.instance.UpdateKeyIcons();
+        }
     }
 
     public void OpenSettings()

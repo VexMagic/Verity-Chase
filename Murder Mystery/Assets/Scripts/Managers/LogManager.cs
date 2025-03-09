@@ -7,10 +7,7 @@ public class LogManager : MonoBehaviour
 {
     public static LogManager instance;
 
-    [SerializeField] private GameObject logView;
-    [SerializeField] private Image backgroundColor;
-    [SerializeField] private GameObject logButton;
-    [SerializeField] private GameObject backButton;
+    [SerializeField] private GameObject logMenu;
 
     [SerializeField] private GameObject display;
     [SerializeField] private GameObject exitDialogueDivider;
@@ -32,7 +29,7 @@ public class LogManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            backgroundColor.gameObject.SetActive(true);
+            logMenu.gameObject.SetActive(false);
             OpenLog(false);
         }
     }
@@ -41,10 +38,7 @@ public class LogManager : MonoBehaviour
     {
         //bar.value = 0;
         isCheckingLogs = open;
-        logView.SetActive(open);
-        backgroundColor.enabled = open;
-        logButton.SetActive(!open);
-        backButton.SetActive(open);
+        logMenu.SetActive(open);
         StartCoroutine(WaitUntilNextFrame());
     }
 

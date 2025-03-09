@@ -82,9 +82,4 @@ public class MainMenuManager : UIManager
 
         animator.SetBool("Open", false);
     }
-
-    public void StartCase()
-    {
-        SceneManager.LoadScene(ChapterManager.instance.currentCase + 1);
-    }
 }

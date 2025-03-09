@@ -52,7 +52,7 @@ public class ClueDisplay : MonoBehaviour
             || (ClueManager.instance.currentMenuType == Clue.Type.Profile && ClueDisplaySpawner.instance.profileSectionAmount > 1))
         {
             AudioManager.instance.PlaySFX("Clue Slide");
-            ClueDisplaySpawner.instance.ScrollSection(index);
+            ClueDisplaySpawner.instance.ScrollSection(index, false);
         }
     }
 

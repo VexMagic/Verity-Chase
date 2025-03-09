@@ -346,11 +346,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 5100928519227724098}
+  buttonImage: {fileID: 0}
   outline: {fileID: 1119950787553663945}
+  text: {fileID: 0}
+  textHighlight: {r: 0, g: 0, b: 0, a: 0}
   upButton: {fileID: 0}
   downButton: {fileID: 0}
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnKeyboardSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMouseSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7074170916232261027
 MonoBehaviour:
   m_ObjectHideFlags: 0

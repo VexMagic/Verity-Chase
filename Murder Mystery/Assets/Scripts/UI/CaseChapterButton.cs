@@ -36,7 +36,7 @@ public class CaseChapterButton : MonoBehaviour
         ChapterManager.instance.SelectChapter(index);
         ChapterManager.instance.SelectPart(0);
         AudioManager.instance.PlaySFX("Click");
-        MainMenuManager.instance.StartCase();
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
     }
     
     public void CreateParts(List<string> parts)

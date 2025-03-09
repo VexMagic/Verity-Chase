@@ -130,7 +130,7 @@ public class LocationManager : MonoBehaviour
         SetUIButtonValues();
 
         confirmMoveButton.GetComponent<UIButton>().SetAdjacent(null, null, null, UIButtons[0]);
-        UIButtons[0].SelectButton();
+        UIButtons[0].SelectButton(false);
     }
 
     private void SetUIButtonValues()

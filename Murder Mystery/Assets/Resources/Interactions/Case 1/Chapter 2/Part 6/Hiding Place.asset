@@ -17,7 +17,7 @@ MonoBehaviour:
   UniqueWrongs: []
   Line:
     TalkingCharacter: 8
-    Text: The culprit simply used this!
+    Text: The culprit simply used this to remain unnoticed!
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -208,7 +208,7 @@ public class ClueDisplaySpawner : MonoBehaviour
         }
     }
 
-    public void ScrollSection(int index)
+    public void ScrollSection(int index, bool specificDirection, bool scrollLeft = false)
     {
         int sectionAmount = 0;
         switch (ClueManager.instance.currentMenuType)
@@ -225,7 +225,7 @@ public class ClueDisplaySpawner : MonoBehaviour
         {
             int currentSection = CurrentSection();
 
-            if (IsScrollForward(index))
+            if ((IsScrollForward(index) && !specificDirection) || (!scrollLeft && specificDirection))
             {
                 currentSection++;
                 if (currentSection >= Mathf.Clamp(sectionAmount, MinimumSections, 100))

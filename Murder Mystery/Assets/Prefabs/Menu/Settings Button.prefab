@@ -366,7 +366,7 @@ MonoBehaviour:
         - m_Target: {fileID: 3797489173295538357}
           m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
           m_MethodName: SelectButton
-          m_Mode: 1
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -400,8 +400,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7237949194663022402}
+  buttonImage: {fileID: 0}
   outline: {fileID: 6298216855399994227}
+  text: {fileID: 0}
+  textHighlight: {r: 0, g: 0, b: 0, a: 0}
   upButton: {fileID: 0}
   downButton: {fileID: 0}
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnKeyboardSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMouseSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUp:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRight:
+    m_PersistentCalls:
+      m_Calls: []

@@ -42,10 +42,16 @@ public class ChapterManager : MonoBehaviour
     private void UpdateStartButton()
     {
         if (startButton != null)
+        {
             startButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
+            startButton.GetComponent<UIButton>().SetOutlineInteractable();
+        }
 
         if (chapterButton != null)
+        {
             chapterButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
+            chapterButton.GetComponent<UIButton>().SetOutlineInteractable();
+        }
     }
 
     public void SelectCase(int Case)

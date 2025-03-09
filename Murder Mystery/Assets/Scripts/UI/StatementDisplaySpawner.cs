@@ -42,7 +42,7 @@ public class StatementDisplaySpawner : MonoBehaviour
         {
             displays[i].SetActive(testimony.lines[i].IsAvailable());
 
-            displayData[i].SetImage(i == currentStatement);
+            displayData[i].Highlight(i == currentStatement);
         }
     }
 }

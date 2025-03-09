@@ -139,6 +139,6 @@ public class PersonSelectorSpawner : MonoBehaviour
 
     public void SetSelectedButton()
     {
-        UIButtons[selectedPersonIndex].SelectButton();
+        UIButtons[selectedPersonIndex].SelectButton(false);
     }
 }
