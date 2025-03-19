@@ -344,6 +344,9 @@ MonoBehaviour:
   - Code: Select Button
     Sound: {fileID: 8300000, guid: baa67df8ed2e8004eb8b99f4b7b26a5e, type: 3}
     PitchShift: 1
+  - Code: Change Volume
+    Sound: {fileID: 8300000, guid: ce902a2644ce9204f8cec2edd85e4e79, type: 3}
+    PitchShift: 1
   currentBlipSound: 0
 --- !u!1 &6267790542634171810
 GameObject:

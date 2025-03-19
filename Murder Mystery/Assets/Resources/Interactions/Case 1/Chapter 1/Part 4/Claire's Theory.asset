@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: 31df9045517a1b048aac4dd19bcc06f2, type: 2}
   Lines:
   - TalkingCharacter: 4
-    Text: I... I think I know how they opened the display!
+    Text: "Ma\u2019am, I think I know how they opened the display!"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

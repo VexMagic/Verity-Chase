@@ -14,24 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 11400000, guid: f688d59ec6603084ca2a12e7002ae5e7, type: 2}
   WrongAnswer: {fileID: 11400000, guid: 1b873523b2d4ce54cb7021712e29c928, type: 2}
-  Question: Why was the vase removed from the display?
+  UniqueWrongs: []
+  Question: Why did the security guard remove the vase from the display?
   Options:
   - Options:
-    - It was stolen
-    - It was moved
-    - It was hidden
+    - They stole it because
+    - They moved it because
+    - They hid it because
   - Options:
-    - because the guard
-    - because Ramsey
-    - because the curator
+    - they wanted
+    - they were forced
+    - they were tricked
   - Options:
-    - wanted to
-    - was forced to
-    - was tricked to
-  - Options:
-    - sell it
-    - keep it safe
-    - play a prank
+    - to sell it
+    - to keep it safe
+    - to play a prank
   Answers:
-  - Answer: 00000000000000000000000000000000
-  - Answer: 01000000000000000000000000000000
+  - Answer: 000000000000000000000000
+  - Answer: 010000000000000000000000

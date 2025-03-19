@@ -65,7 +65,7 @@ MonoBehaviour:
       ContinueTestimony: 1
   - Line:
       TalkingCharacter: 12
-      Text: "I was quite stressed so I might have accidentally brought the defibrillator
+      Text: "I was stressed so I might have accidentally brought the defibrillator
         with me. I also didn\u2019t notice that Murphy had unplugged his monitor."
       Backgrounds: []
       GainedClues: []

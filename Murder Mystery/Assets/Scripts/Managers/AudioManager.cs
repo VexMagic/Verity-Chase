@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -19,14 +20,11 @@ public class AudioManager : MonoBehaviour
 
     public BlipSound currentBlipSound;
 
-    private float masterVolume;
-    private float musicVolume;
-    private float SFXVolume;
-
     private void Awake()
     {
         instance = this;
         CreateEffectsMap();
+        UpdateVolume();
     }
 
     private void CreateEffectsMap()
@@ -38,26 +36,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void ChangeVolume(float value, VolumeSlider.VolumeType type)
+    public void UpdateVolume()
     {
-        switch (type)
-        {
-            case VolumeSlider.VolumeType.Master:
-                masterVolume = value;
-                musicSource.volume = masterVolume * musicVolume;
-                sFXSource.volume = masterVolume * SFXVolume;
-                blipSource.volume = masterVolume * SFXVolume;
-                break;
-            case VolumeSlider.VolumeType.Music:
-                musicVolume = value;
-                musicSource.volume = masterVolume * musicVolume;
-                break;
-            case VolumeSlider.VolumeType.SFX:
-                SFXVolume = value;
-                sFXSource.volume = masterVolume * SFXVolume;
-                blipSource.volume = masterVolume * SFXVolume;
-                break;
-        }
+        musicSource.volume = SettingsManager.instance.masterVolume * SettingsManager.instance.musicVolume;
+        sFXSource.volume = SettingsManager.instance.masterVolume * SettingsManager.instance.sFXVolume;
+        blipSource.volume = SettingsManager.instance.masterVolume * SettingsManager.instance.sFXVolume;
     }
 
     public void PlayMusic(AudioClip clip)

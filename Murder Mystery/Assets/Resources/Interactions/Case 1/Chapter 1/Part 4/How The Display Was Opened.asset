@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 0}
   WrongAnswer: {fileID: 11400000, guid: 32bad4dc504df634a90a7a22d8a1dfea, type: 2}
+  UniqueWrongs: []
   PreviewInteraction: {fileID: 11400000, guid: 3bb55bd6be2c4fd4193e22da8680d99a, type: 2}
   Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
   Title: How The Display Was Opened.
@@ -21,13 +22,14 @@ MonoBehaviour:
   - Line:
       TalkingCharacter: 4
       Text: Ramsey and The Catalyst were going to steal stuff, so they would have
-        prepared before coming here, Right?
+        prepared before coming here, right?
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: a52dbcd230046fe478fdaca4c45afd91, type: 2}
     CorrectAnswers: []
   - Line:
@@ -40,6 +42,7 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 1ac258af72f876849a4dfdbece7ce84a, type: 2}
     CorrectAnswers: []
   - Line:
@@ -52,6 +55,7 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 84b54ba60eb902c46a3dc195c5be1d06, type: 2}
     CorrectAnswers: []
   - Line:
@@ -64,12 +68,14 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 11400000, guid: 84b54ba60eb902c46a3dc195c5be1d06, type: 2}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 96d5714ec4b87914f8f91c6f132d51bf, type: 2}
     CorrectAnswers:
     - CorrectClue:
         Version: 0
         GainedClue: {fileID: 11400000, guid: fc4ebab7d91fe934091de6bfc8e6cbc0, type: 2}
       Result: {fileID: 11400000, guid: 112bbf9145745984881bee48f2d83dc1, type: 2}
+      ContinueTestimony: 0
   - Line:
       TalkingCharacter: 4
       Text: "That\u2019s how they got the vase without needing the key or breaking
@@ -80,5 +86,6 @@ MonoBehaviour:
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: d5b983692a6f3a24481a0226f4d44a10, type: 2}
     CorrectAnswers: []

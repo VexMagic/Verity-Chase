@@ -964,6 +964,7 @@ MonoBehaviour:
   buttonImage: {fileID: 0}
   outline: {fileID: 3059050155323648831}
   text: {fileID: 1994096988314194182}
+  textNormal: {r: 1, g: 1, b: 1, a: 1}
   textHighlight: {r: 1, g: 0.95, b: 0.7, a: 1}
   upButton: {fileID: 0}
   downButton: {fileID: 0}

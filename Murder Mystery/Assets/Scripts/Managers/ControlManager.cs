@@ -13,6 +13,7 @@ public class ControlManager : MonoBehaviour
 
     [SerializeField] private UIButton selectedButton;
     [SerializeField] private GameObject examineAim;
+    [SerializeField] private GameObject UI;
 
     enum State { Normal, Examine, Deduction, ClueMenu, Testimony, Settings }
 
@@ -22,6 +23,7 @@ public class ControlManager : MonoBehaviour
     private Vector2 movement;
 
     public Vector2 Movement => movement;
+    public UIButton SelectedButton => selectedButton;
 
     private void Awake()
     {
@@ -104,14 +106,6 @@ public class ControlManager : MonoBehaviour
                 return;
             }
         }
-
-        //if (MainMenuManager.instance != null)
-        //{
-        //    if (MainMenuManager.instance.MenusIndex == 1 && movement.x != 0)
-        //    {
-        //        CaseSelectManager.instance.SlideCases(movement.x < 0);
-        //    }
-        //}
 
         if (selectedButton != null && movementInt != Vector2Int.zero)
         {
@@ -272,6 +266,34 @@ public class ControlManager : MonoBehaviour
         AudioManager.instance.PlaySFX("Click");
     }
 
+    public void OnCheck(InputAction.CallbackContext context)
+    {
+        if (!CanPressButton(context) || ClueManager.instance == null)
+            return;
+
+        if (ClueManager.instance.isOpen)
+        {
+            ClueManager.instance.CheckClue();
+        }
+
+        AudioManager.instance.PlaySFX("Click");
+    }
+
+    public void OnHideUI(InputAction.CallbackContext context)
+    {
+        if (UI == null)
+            return;
+
+        if (context.performed)
+        {
+            UI.SetActive(false);
+        }
+        else if (context.canceled)
+        { 
+            UI.SetActive(true); 
+        }
+    }
+
     private bool CanPressButton(InputAction.CallbackContext context, bool isLog = false, bool isSettings = false)
     {
         if (!context.performed)
@@ -294,7 +316,10 @@ public class ControlManager : MonoBehaviour
 
     public bool Progress()
     {
-        return progressButton.action.triggered && !SettingsMenu.instance.isOpen;
+        if (!UI.activeSelf)
+            return false;
+
+        return progressButton.action.triggered && !SettingsMenu.instance.isOpen && !ClueManager.instance.isOpen;
     }
 
     public Vector2 Navigate()

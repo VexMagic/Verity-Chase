@@ -31,8 +31,8 @@ public class TransitionManager : MonoBehaviour
         tempScene = scene;
         animator.SetBool("Open", true);
 
-        Invoke(nameof(StartLoading), openSpeed + 0.1f);
-        Invoke(nameof(LoadCaseScene), openSpeed);
+        Invoke(nameof(StartLoading), openSpeed);
+        Invoke(nameof(LoadCaseScene), openSpeed + 0.1f);
     }
 
     private void StartLoading()

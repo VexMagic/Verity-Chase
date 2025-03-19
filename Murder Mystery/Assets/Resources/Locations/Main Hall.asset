@@ -22,18 +22,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6927f383befa8694ea04a1d840e18167, type: 2}
     Conditions: []
   - LocationName: Main Hall
-    EnterInteraction: {fileID: 11400000, guid: 277fdacc0ed4deb45a48db65d0f2a7ed, type: 2}
-    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
-    People:
-    - {fileID: 11400000, guid: 6927f383befa8694ea04a1d840e18167, type: 2}
-    Conditions:
-    - {fileID: 11400000, guid: 62e74ebf6f935d248bc1169f43909d02, type: 2}
-    - {fileID: 11400000, guid: db2f337985e50f34492e8275506cd9e8, type: 2}
-    - {fileID: 11400000, guid: 19a1e2bd6af8be0448dbb2757cd07431, type: 2}
-    - {fileID: 11400000, guid: 0ca1855e4cd68b2489edd0aa37831533, type: 2}
-    - {fileID: 11400000, guid: fc53f3cdc9b741c47bc7817dcaa59753, type: 2}
-    - {fileID: 11400000, guid: 0c5f7fc7509a0fc4289192420d62d6ae, type: 2}
-  - LocationName: Main Hall
     EnterInteraction: {fileID: 11400000, guid: 5bf441e3e8e803043930a42edad2e47d, type: 2}
     AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
     People: []

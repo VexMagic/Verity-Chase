@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda572f69e70a224daacf5142231aa44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlight: {fileID: 4320373883506045146}
   buttonIcon: {fileID: 8489202981972656163}
   action: {fileID: 0}
 --- !u!114 &1084853593413806419

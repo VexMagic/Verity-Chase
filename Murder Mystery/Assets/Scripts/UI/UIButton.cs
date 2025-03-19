@@ -10,7 +10,8 @@ public class UIButton : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private Image buttonImage;
     [SerializeField] private GameObject outline;
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private MaskableGraphic text;
+    [SerializeField] private Color textNormal;
     [SerializeField] private Color textHighlight;
 
     [SerializeField] private UIButton upButton;
@@ -27,17 +28,25 @@ public class UIButton : MonoBehaviour
     [SerializeField] private UnityEvent OnLeft;
     [SerializeField] private UnityEvent OnRight;
 
+    public UnityEvent onSelect => OnSelect;
     public UnityEvent onKeyboardSelect => OnKeyboardSelect;
 
     private void Start()
     {
-        button.onClick.AddListener(() => AudioManager.instance.PlaySFX("Click"));
+        if (button != null) 
+            button.onClick.AddListener(() => AudioManager.instance.PlaySFX("Click"));
     }
 
     public void SelectButton(bool hoverSelect)
-    {
-        if (hoverSelect && !outline.activeSelf)
+    { 
+        if (outline != null)
+        {
+            if (hoverSelect && !outline.activeSelf)
+                AudioManager.instance.PlaySFX("Select Button");
+        }
+        else if (hoverSelect)
             AudioManager.instance.PlaySFX("Select Button");
+
         ControlManager.instance.SetSelectedButton(this);
     }
 
@@ -45,7 +54,8 @@ public class UIButton : MonoBehaviour
 
     public void SetOutline(bool active, bool isKeyboard = false)
     {
-        outline.SetActive(active);
+        if (outline != null)
+            outline.SetActive(active);
 
         if (buttonImage != null)
             buttonImage.enabled = !active;
@@ -65,7 +75,7 @@ public class UIButton : MonoBehaviour
             OnDeselect.Invoke();
 
             if (text != null)
-                text.color = Color.white;
+                text.color = textNormal;
         }
     }
 
@@ -79,7 +89,8 @@ public class UIButton : MonoBehaviour
 
     public void SetOutlineColor(Color color)
     {
-        outline.GetComponent<Image>().color = color;
+        if (outline != null)
+            outline.GetComponent<Image>().color = color;
     }
 
     public UIButton GetButtonInDirection(Vector2Int direction) 
@@ -137,7 +148,8 @@ public class UIButton : MonoBehaviour
 
     public void Click()
     {
-        button.onClick.Invoke();
+        if (button != null)
+            button.onClick.Invoke();
     }
 
     public void DelayedClick()

@@ -170,6 +170,7 @@ MonoBehaviour:
   buttonImage: {fileID: 0}
   outline: {fileID: 3522644753776660462}
   text: {fileID: 2634513843586248916}
+  textNormal: {r: 1, g: 1, b: 1, a: 1}
   textHighlight: {r: 1, g: 0.9490196, b: 0.69803923, a: 1}
   upButton: {fileID: 0}
   downButton: {fileID: 0}

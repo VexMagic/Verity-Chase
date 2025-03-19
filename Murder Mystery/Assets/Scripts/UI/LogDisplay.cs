@@ -8,6 +8,7 @@ public class LogDisplay : MonoBehaviour
 {
     [SerializeField] private RectTransform totalArea, textArea;
     [SerializeField] private TextMeshProUGUI title, line;
+    [SerializeField] private GameObject titleArea;
     [SerializeField] private TextEffect textEffect;
     [SerializeField] private float titleHeight, lineHeight;
 
@@ -32,7 +33,7 @@ public class LogDisplay : MonoBehaviour
 
         if (characterName == string.Empty || sameChar)
         {
-            title.gameObject.SetActive(false);
+            titleArea.SetActive(false);
 
             if (sameChar && characterName != string.Empty)
                 line.alignment = TextAlignmentOptions.TopLeft;
@@ -43,7 +44,7 @@ public class LogDisplay : MonoBehaviour
         }
         else
         {
-            title.gameObject.SetActive(true);
+            titleArea.SetActive(true);
             line.alignment = TextAlignmentOptions.TopLeft;
 
             height = (lineHeight * numberOfLines) + titleHeight;

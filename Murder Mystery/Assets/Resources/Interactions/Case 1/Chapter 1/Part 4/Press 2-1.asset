@@ -52,7 +52,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
-    Text: Excuse me Miss, I think I know what they used.
+    Text: "Excuse me ma\u2019am, I think I know what they used."
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -11,6 +11,7 @@ public class MainMenuManager : UIManager
 
     [SerializeField] private Animator animator;
     [SerializeField] private float openSpeed;
+    [SerializeField] private AudioClip titleMusic;
 
     [SerializeField] private GameObject[] menus;
     [SerializeField] private UIButton[] defaultButton;
@@ -30,6 +31,7 @@ public class MainMenuManager : UIManager
     {
         menuIndex = 0;
         ChangeMenu();
+        AudioManager.instance.PlayMusic(titleMusic);
     }
 
     public void OpenMenu(int index)
@@ -81,5 +83,10 @@ public class MainMenuManager : UIManager
         }
 
         animator.SetBool("Open", false);
+    }
+
+    public void StartCase()
+    {
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
     }
 }

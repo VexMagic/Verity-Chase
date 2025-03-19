@@ -16,9 +16,8 @@ public class Typewriter : MonoBehaviour
 
     private readonly List<Punctuation> punctuations = new List<Punctuation>()
     {
-        //new Punctuation(new HashSet<char>(){'…'}, 0.8f),
-        new Punctuation(new HashSet<char>(){'.', '!', '?'}, 0.4f),
-        new Punctuation(new HashSet<char>(){',', ';', ':'}, 0.2f),
+        new Punctuation(new HashSet<char>(){'.', '!', '?'}, 1f),
+        new Punctuation(new HashSet<char>(){',', ';', ':'}, 0.5f),
     };
 
     private readonly HashSet<char> vowels = new HashSet<char>{ 'a', 'e', 'i', 'o', 'u', 'y' };
@@ -63,7 +62,7 @@ public class Typewriter : MonoBehaviour
         {
             int lastCharIndex = charIndex;
 
-            t += Time.deltaTime * typewriterSpeed;
+            t += Time.deltaTime * SettingsManager.instance.GetTextSpeeds().typewriterSpeed;
             charIndex = Mathf.FloorToInt(t);
             currentChar = charIndex;
             charIndex = Mathf.Clamp(charIndex, 0, text.Length);
@@ -94,6 +93,7 @@ public class Typewriter : MonoBehaviour
 
                 if (IsPunctuation(text[i], out float waitTime) && !isLast && (text[i + 1] == ' ' || IsPunctuation(text[i + 1], out _)))
                 {
+                    waitTime *= SettingsManager.instance.GetTextSpeeds().punctuationDelay;
                     bool isAbbreviation = false;
                     if (i - 2 == 0 && abbreviations.Contains(textLabel.text.ToLower()))
                     {

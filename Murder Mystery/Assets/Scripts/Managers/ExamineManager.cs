@@ -9,8 +9,7 @@ public class ExamineManager : MonoBehaviour
     [SerializeField] private GameObject cameraObject;
     [SerializeField] private GameObject characterCanvas;
     [SerializeField] private float speed;
-    [SerializeField] private float verticalEdge;
-    [SerializeField] private float horizontalEdge;
+    [SerializeField] private Vector2 edgePercentage;
     [SerializeField] private Vector2 screenPixelSize;
     [SerializeField] private GameObject mouseObject;
     [SerializeField] private float moveSpeed;
@@ -38,8 +37,8 @@ public class ExamineManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!LocationManager.instance.isExamining || 
-            LogManager.instance.isCheckingLogs || 
+        if (!LocationManager.instance.isExamining ||
+            LogManager.instance.isCheckingLogs ||
             DialogueManager.instance.interactionActive ||
             ClueManager.instance.isOpen)
         {
@@ -47,14 +46,14 @@ public class ExamineManager : MonoBehaviour
             return;
         }
 
-        if (Input.mousePosition.x > Screen.width - horizontalEdge && cameraObject.transform.position.x < edgeDistance.x) //move camera right
+        if (mouseObject.transform.localPosition.x > screenMaxSize.x * (1 - (edgePercentage.x * 2)) && cameraObject.transform.position.x < edgeDistance.x) //move camera right
         {
             cameraObject.transform.position += Vector3.right * speed * Time.fixedDeltaTime;
 
             if (cameraObject.transform.position.x >= edgeDistance.x) //align with screen edge
                 cameraObject.transform.position = new Vector3(edgeDistance.x, cameraObject.transform.position.y, cameraObject.transform.position.z);
         }
-        else if (Input.mousePosition.x < horizontalEdge && cameraObject.transform.position.x > -edgeDistance.x) //move camera left
+        else if (mouseObject.transform.localPosition.x < -screenMaxSize.x * (1 - (edgePercentage.x * 2)) && cameraObject.transform.position.x > -edgeDistance.x) //move camera left
         {
             cameraObject.transform.position += Vector3.left * speed * Time.fixedDeltaTime;
 
@@ -62,14 +61,14 @@ public class ExamineManager : MonoBehaviour
                 cameraObject.transform.position = new Vector3(-edgeDistance.x, cameraObject.transform.position.y, cameraObject.transform.position.z);
         }
 
-        if (Input.mousePosition.y > Screen.height - verticalEdge && cameraObject.transform.position.y < edgeDistance.y) //move camera up
+        if (mouseObject.transform.localPosition.y > screenMaxSize.y * (1 - (edgePercentage.y * 2)) && cameraObject.transform.position.y < edgeDistance.y) //move camera up
         {
             cameraObject.transform.position += Vector3.up * speed * Time.fixedDeltaTime;
 
             if (cameraObject.transform.position.y >= edgeDistance.y) //align with screen edge
                 cameraObject.transform.position = new Vector3(cameraObject.transform.position.x, edgeDistance.y, cameraObject.transform.position.z);
         }
-        else if (Input.mousePosition.y < verticalEdge && cameraObject.transform.position.y > -edgeDistance.y) //move camera down
+        else if (mouseObject.transform.localPosition.y < -screenMaxSize.y * (1 - (edgePercentage.y * 2)) && cameraObject.transform.position.y > -edgeDistance.y) //move camera down
         {
             cameraObject.transform.position += Vector3.down * speed * Time.fixedDeltaTime;
 
@@ -78,7 +77,6 @@ public class ExamineManager : MonoBehaviour
         }
         characterCanvas.transform.position = new Vector3(characterCanvas.transform.position.x, cameraObject.transform.position.y);
 
-        mouseObject.SetActive(true);
         if (previousMousePos != (Vector2)Input.mousePosition)
         {
             previousMousePos = (Vector2)Input.mousePosition;
@@ -88,13 +86,21 @@ public class ExamineManager : MonoBehaviour
 
             Vector2 posPercentage = mousePos / screenSize;
             SetAimPosition(posPercentage * screenMaxSize, true);
+            mouseObject.SetActive(false);
         }
         else if (ControlManager.instance.Movement != Vector2.zero)
         {
             Vector2 newPos = (Vector2)mouseObject.transform.localPosition + (ControlManager.instance.Movement * moveSpeed);
             newPos = new Vector2(Mathf.Clamp(newPos.x, -screenMaxSize.x, screenMaxSize.x), Mathf.Clamp(newPos.y, -screenMaxSize.y, screenMaxSize.y));
             SetAimPosition(newPos, true);
+            mouseObject.SetActive(true);
         }
+    }
+
+    public void ResetMouseTracker()
+    {
+        previousMousePos = (Vector2)Input.mousePosition;
+        mouseObject.SetActive(true);
     }
 
     public void StartExamine()
@@ -104,11 +110,14 @@ public class ExamineManager : MonoBehaviour
 
     public void StopExamine()
     {
+        Debug.Log("stop");
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
             coroutine = null;
         }
+        cameraObject.transform.position = new Vector3(0, 0, cameraObject.transform.position.z);
+        characterCanvas.transform.position = new Vector3(characterCanvas.transform.position.x, cameraObject.transform.position.y);
     }
 
     private IEnumerator ExamineDetection()
@@ -152,7 +161,7 @@ public class ExamineManager : MonoBehaviour
         if (Examinables == null)
             return;
 
-        Vector2 tempPos = position / screenMaxSize * locationMaxSize;
+        Vector2 tempPos = (position / screenMaxSize * locationMaxSize) + (Vector2)cameraObject.transform.position;
 
         if (selectedExaminable != null)
         {

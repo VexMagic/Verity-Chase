@@ -194,7 +194,14 @@ public class ClueManager : MonoBehaviour
 
     public void CheckClue()
     {
-        CheckEvidence evidence = (GetSelectedClue(Clue.Type.Evidence) as GainEvidence).gainedEvidence.versions[GetSelectedClue(Clue.Type.Evidence).version].check[0];
+        if (currentMenuType != Clue.Type.Evidence)
+            return;
+
+        Evidence2 tempEvidence = (GetSelectedClue(Clue.Type.Evidence) as GainEvidence).gainedEvidence.versions[GetSelectedClue(Clue.Type.Evidence).version];
+        if (tempEvidence.check.Count == 0)
+            return;
+
+        CheckEvidence evidence = tempEvidence.check[0];
 
         switch (evidence.checkType)
         {
@@ -285,13 +292,13 @@ public class ClueManager : MonoBehaviour
         if (isPresenting)
         {
             presentButton.SetActive(true);
-            background.enabled = false;
+            background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
             background.transform.localPosition = new Vector3(presentingOffset.x, presentingOffset.y);
         }
         else
         {
             presentButton.SetActive(false);
-            background.enabled = true;
+            background.color = new Color(background.color.r, background.color.g, background.color.b, 0.5f);
             background.transform.localPosition = Vector3.zero;
         }
     }

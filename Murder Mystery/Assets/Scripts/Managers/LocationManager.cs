@@ -17,13 +17,12 @@ public class LocationManager : MonoBehaviour
     [SerializeField] private Button talkButton;
     [SerializeField] private Button examineButton;
     [SerializeField] private Button moveButton;
-    [SerializeField] private Button confirmMoveButton;
 
     [SerializeField] private GameObject talkCheckmark;
     [SerializeField] private GameObject examineCheckmark;
 
     [SerializeField] private Image preview;
-    [SerializeField] private Sprite unknownLocation;
+    [SerializeField] private GameObject unknownLocation;
 
     [SerializeField] private GameObject locationDisplayParent;
 
@@ -106,6 +105,7 @@ public class LocationManager : MonoBehaviour
         SetButtonsActive(false);
         personSpawner.SetActive(false);
         ControlManager.instance.DeselectButton();
+        ExamineManager.instance.ResetMouseTracker();
         ExamineManager.instance.SetAimPosition(Vector2.zero, false);
         ExamineManager.instance.StartExamine();
     }
@@ -129,17 +129,13 @@ public class LocationManager : MonoBehaviour
         moveScreen.SetActive(true);
         SetUIButtonValues();
 
-        confirmMoveButton.GetComponent<UIButton>().SetAdjacent(null, null, null, UIButtons[0]);
         UIButtons[0].SelectButton(false);
     }
 
     private void SetUIButtonValues()
     {
         if (UIButtons.Count == 1)
-        {
-            UIButtons[0].SetAdjacent(null, null, confirmMoveButton.GetComponent<UIButton>(), null);
             return;
-        }
 
         for (int i = 0; i < UIButtons.Count; i++)
         {
@@ -156,7 +152,7 @@ public class LocationManager : MonoBehaviour
             else
                 tempBelow = UIButtons[i + 1];
 
-            UIButtons[i].SetAdjacent(tempAbove, tempBelow, confirmMoveButton.GetComponent<UIButton>(), null);
+            UIButtons[i].SetAdjacent(tempAbove, tempBelow, null, null);
         }
     }
 
@@ -299,7 +295,8 @@ public class LocationManager : MonoBehaviour
         {
             GameObject buttonObject = Instantiate(locationButton, moveBox);
             buttonObject.GetComponentInChildren<TextMeshProUGUI>().text = location.title;
-            buttonObject.GetComponent<Button>().onClick.AddListener(() => SelectLocation(location));
+            buttonObject.GetComponent<UIButton>().onSelect.AddListener(() => SelectLocation(location));
+            buttonObject.GetComponent<Button>().onClick.AddListener(() => OnMove());
 
             buttonObjects.Add(buttonObject);
 
@@ -317,11 +314,13 @@ public class LocationManager : MonoBehaviour
             if (location == unlockedLocations[i])
             {
                 selectedLocation = i;
-                confirmMoveButton.interactable = true;
                 if (enteredLocations.Contains(unlockedLocations[selectedLocation]))
+                {
                     preview.sprite = location.preview;
+                    unknownLocation.SetActive(false);
+                }
                 else
-                    preview.sprite = unknownLocation;
+                    unknownLocation.SetActive(true);
                 return;
             }
         }
@@ -351,7 +350,6 @@ public class LocationManager : MonoBehaviour
     {
         preview.sprite = null;
         currentLocation = selectedLocation;
-        confirmMoveButton.interactable = false;
 
         if (!enteredLocations.Contains(unlockedLocations[currentLocation]))
             enteredLocations.Add(unlockedLocations[currentLocation]);
@@ -426,10 +424,13 @@ public class LocationManager : MonoBehaviour
         if (unlockedLocations[currentLocation].CurrentLocationState() == null)
         {
             talkButton.interactable = false;
+            talkButton.GetComponent<UIButton>().SetOutlineInteractable();
         }
         else
         {
             talkButton.interactable = unlockedLocations[currentLocation].CurrentLocationState().people.Length != 0;
+            talkButton.GetComponent<UIButton>().SetOutlineInteractable();
+
             personSpawner.SpawnPeople(unlockedLocations[currentLocation].CurrentLocationState());
 
             personSpawner.SetButtonActive(false);
@@ -437,6 +438,7 @@ public class LocationManager : MonoBehaviour
 
         SetCheckmarks();
         moveButton.interactable = unlockedLocations.Count > 1;
+        moveButton.GetComponent<UIButton>().SetOutlineInteractable();
     }
 
     private void SetCheckmarks()

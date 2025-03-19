@@ -50,6 +50,7 @@ MonoBehaviour:
   progressButton: {fileID: -320643703115792376, guid: 90e97c191c65ebf41a4c63bf65e6fdd2, type: 3}
   selectedButton: {fileID: 0}
   examineAim: {fileID: 0}
+  UI: {fileID: 0}
 --- !u!114 &6402854617687016273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,19 @@ MonoBehaviour:
     m_ActionId: db2c7c35-ba6f-4148-bd57-bc976b55fd76
     m_ActionName: UI/Log[/Keyboard/l]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2425582008244301229}
+        m_TargetAssemblyTypeName: ControlManager, Assembly-CSharp
+        m_MethodName: OnHideUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 384583a4-6bdd-4d60-89f8-247efaed1e9a
     m_ActionName: UI/Hide UI[/Keyboard/j]
   - m_PersistentCalls:
@@ -192,7 +205,19 @@ MonoBehaviour:
     m_ActionId: a738ea39-fe99-4fb1-ad6b-8de8cc51e6f7
     m_ActionName: UI/Close / Press[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2425582008244301229}
+        m_TargetAssemblyTypeName: ControlManager, Assembly-CSharp
+        m_MethodName: OnCheck
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b933435e-a02d-49ef-aa00-b28a208dde27
     m_ActionName: UI/Check[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0

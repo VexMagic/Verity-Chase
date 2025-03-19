@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI characterName;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject textBox;
+    [SerializeField] private Image textWindow;
     [SerializeField] private GameObject nameBox;
     [SerializeField] private GameObject progressDetection;
     [SerializeField] private GameObject nextIcon;
@@ -67,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         //backgroundImage.enabled = true;
         testimonyDisplay.gameObject.SetActive(false);
         EndDialogue();
+        SetTextWindowTransparency();
     }
 
     public void StartChapter()
@@ -525,6 +527,11 @@ public class DialogueManager : MonoBehaviour
         nextIcon.SetActive(true && !isTestimony);
         dialogueText.text = TextEffectManager.instance.ConvertCommands(tempLine);
 
+        if (dialogueText.textInfo.lineCount >= 3)
+        {
+            Debug.LogError(dialogueText.text);
+        }
+
         TextEffectManager.instance.ActivateEffects();
 
         foreach (var gainedClue in line.gainedClues)
@@ -595,10 +602,15 @@ public class DialogueManager : MonoBehaviour
     public bool Progress(bool testimony)
     {
 #if (UNITY_EDITOR)
-        if (Input.GetKey(KeyCode.Space) && isHovering)
+        if (Input.GetKey(KeyCode.Space))
             return true;
 #endif
         return (Input.GetMouseButtonDown(0) && isHovering) || (ControlManager.instance.Progress() && !testimony);
+    }
+
+    public void SetTextWindowTransparency()
+    {
+        textWindow.color = SettingsManager.instance.GetTextTransparency().transparency;
     }
 
     private void SetTestimonyArrows(Testimony testimony)

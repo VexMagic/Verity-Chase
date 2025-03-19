@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsButton : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+
     public void PlayClickSFX()
     {
         AudioManager.instance.PlaySFX("Click");
@@ -12,6 +14,16 @@ public class SettingsButton : MonoBehaviour
 
     public void RetutnToTitle()
     {
-        SceneManager.LoadScene(0);
+        TransitionManager.instance.EnterScene(0);
+    }
+
+    public void Hover(bool hovering)
+    {
+        animator.SetBool("Hover", hovering);
+    }
+
+    public void Select(bool selecting)
+    {
+        animator.SetBool("Select", selecting);
     }
 }

@@ -26,7 +26,14 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 8
     Text: "Exactly. We now know someone else could have done it instead of Ms. Infer.
-      So now we can focus our attention on who else could be the culprit.\r"
+      \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "So now we can focus our attention on who else could be the culprit.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -55,7 +62,14 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 10
     Text: "...someone went in, killed Matthew Murphy, extended the curtain, left
-      and waited for Infer to go in, then went in again and closed the curtain?\r"
+      and waited for Infer to go in, \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "then went in again and closed the curtain?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
