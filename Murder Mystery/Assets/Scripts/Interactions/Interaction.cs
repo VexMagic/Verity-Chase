@@ -12,13 +12,14 @@ public enum Character { None = -1, UnknownMale, UnknownFemale, Verity, Fayme, Cl
 [Serializable]
 public class DialogueLine
 {
-    [SerializeField] private Character TalkingCharacter;
-    [SerializeField] [TextArea] private string Text;
-    [SerializeField] private List<Background> Backgrounds;
-    [SerializeField] private List<GainAnyClueType> GainedClues;
-    [SerializeField] private List<Location> GainedLocations;
-    [SerializeField] private List<CharacterMovement> Movements;
-    [SerializeField] private AudioClip Music;
+    [SerializeField] protected Character TalkingCharacter;
+    [SerializeField] [TextArea] protected string Text;
+    [SerializeField] protected List<Background> Backgrounds;
+    [SerializeField] protected List<GainAnyClueType> GainedClues;
+    [SerializeField] protected List<Location> GainedLocations;
+    [SerializeField] protected List<CharacterMovement> Movements;
+    [SerializeField] protected AudioClip Music;
+
     public Character talkingCharacter => TalkingCharacter;
     public string text => Text;
     public List<Background> backgrounds => Backgrounds;
