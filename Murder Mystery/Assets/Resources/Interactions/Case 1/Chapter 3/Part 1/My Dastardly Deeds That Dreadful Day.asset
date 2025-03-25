@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: My Dastardly Deeds That Dreadful Day
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 8cb985e42c5378244b6d92b538147304, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: 5ba750efe53944d41ae3daf089f891f2, type: 2}
+  Music: {fileID: 8300000, guid: d7a9d9b698f157d429e92f12a49fda96, type: 3}
+  Title: My Dastardly Deeds That Dreadful Day
+  Lines:
+  - Line:
+      TalkingCharacter: 4
+      Text: "Last night I broke into the museum known as Arthur\u2019s Hall of Oddities.
+        I never entered the hospital."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 45414ed391bd6274a9a881ef206d94f8, type: 2}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      Result: {fileID: 11400000, guid: f3178154cce97d945b53e4630e69e89c, type: 2}
+      ContinueTestimony: 0

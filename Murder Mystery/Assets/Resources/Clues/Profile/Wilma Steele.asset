@@ -19,3 +19,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 0709fdc596224724e8759caac7a7659c, type: 3}
     Gender: Female
     Age: 25
+  - Description: 'A comatose patient that was in the same room as the Matthew Murphy
+      when he died. Her sister, Claire, visits her quite frequently. '
+    Sprite: {fileID: 21300000, guid: 0709fdc596224724e8759caac7a7659c, type: 3}
+    Gender: Female
+    Age: 25

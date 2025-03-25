@@ -2508,6 +2508,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 740da3293a01903439a1793abbe7c588, type: 2}
     - {fileID: 11400000, guid: 539e84727de424c4bb6f22e60ee9c9f4, type: 2}
     - {fileID: 11400000, guid: 69a0feee598e37e4da21fb5321ab7525, type: 2}
+  - Starts:
+    - {fileID: 11400000, guid: fbf8bd3749820f04283188bae297fb5d, type: 2}
+    - {fileID: 11400000, guid: 14a5b6a701a5bce479f72a4de687683f, type: 2}
   inTestimony: 0
   newInteractionFinished: 0
   interactionActive: 0
@@ -5223,8 +5226,8 @@ MonoBehaviour:
   startButton: {fileID: 0}
   chapterButton: {fileID: 0}
   currentCase: 0
-  currentChapter: 0
-  currentPart: 0
+  currentChapter: 2
+  currentPart: 1
 --- !u!1001 &663449558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7836,6 +7839,107 @@ MonoBehaviour:
         GainedProfile: {fileID: 11400000, guid: d95c28daf2c7a6343bade297a199bf64, type: 2}
       - Version: 0
         GainedProfile: {fileID: 11400000, guid: caf9e3fd9bb622940a99f97b18469c99, type: 2}
+  - PartClues:
+    - AllEvidence:
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: c70bc9889b20c594eac39710af04e819, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 375ad3adda3c8b84c99309165cd754de, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: fed79e74cd078ed489edcfdf93cc56dd, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 57fa879ade823494585ab651e54a877c, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: fc4ebab7d91fe934091de6bfc8e6cbc0, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: c0ff9cd77912e8b4d9897d184a68d7ac, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
+      - Version: 2
+        GainedEvidence: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: b86148c0c23dd3b48aba3413998b7d3d, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: f840b2f1bf480cd4b9378dcb7460d0cb, type: 2}
+      AllProfiles:
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 27daf9a0e988e9e47b69501dba56ecf6, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 550867161f69c9643bb2b08d81150688, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: e1e422b41782f84448c3236e2eb7a338, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 2f9253bba986f8e4da167e220577d1b6, type: 2}
+      - Version: 2
+        GainedProfile: {fileID: 11400000, guid: baf6bc5bd1495b548ae0fc3af1e5f6e5, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: 87634f6f5818f9d4f8e861af167ea9da, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: 26e30e6df51c19a43a92061954b1b01e, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 505ffc83aa31fdd4cb9389fd54f5b651, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 0681eb1f3a14dba4ca717e31f18d59c6, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: b44e16135a87a6b4ab9f8e4d84f7d0c4, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: d95c28daf2c7a6343bade297a199bf64, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: caf9e3fd9bb622940a99f97b18469c99, type: 2}
+    - AllEvidence:
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: c70bc9889b20c594eac39710af04e819, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 375ad3adda3c8b84c99309165cd754de, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: fed79e74cd078ed489edcfdf93cc56dd, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 57fa879ade823494585ab651e54a877c, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: fc4ebab7d91fe934091de6bfc8e6cbc0, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: c0ff9cd77912e8b4d9897d184a68d7ac, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
+      - Version: 2
+        GainedEvidence: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: b86148c0c23dd3b48aba3413998b7d3d, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      - Version: 1
+        GainedEvidence: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+      - Version: 0
+        GainedEvidence: {fileID: 11400000, guid: f840b2f1bf480cd4b9378dcb7460d0cb, type: 2}
+      AllProfiles:
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 27daf9a0e988e9e47b69501dba56ecf6, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 550867161f69c9643bb2b08d81150688, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: e1e422b41782f84448c3236e2eb7a338, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 2f9253bba986f8e4da167e220577d1b6, type: 2}
+      - Version: 2
+        GainedProfile: {fileID: 11400000, guid: baf6bc5bd1495b548ae0fc3af1e5f6e5, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: 87634f6f5818f9d4f8e861af167ea9da, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: 26e30e6df51c19a43a92061954b1b01e, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 505ffc83aa31fdd4cb9389fd54f5b651, type: 2}
+      - Version: 0
+        GainedProfile: {fileID: 11400000, guid: 0681eb1f3a14dba4ca717e31f18d59c6, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: b44e16135a87a6b4ab9f8e4d84f7d0c4, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: d95c28daf2c7a6343bade297a199bf64, type: 2}
+      - Version: 1
+        GainedProfile: {fileID: 11400000, guid: caf9e3fd9bb622940a99f97b18469c99, type: 2}
   currentEvidence: 0
   currentProfile: 0
   isOpen: 0
@@ -10060,6 +10164,15 @@ MonoBehaviour:
       - {fileID: 11400000, guid: cf47c402d4a1054458ecc5bcc3888feb, type: 2}
       - {fileID: 11400000, guid: 491746c4f2107814f92f969b7425b1fa, type: 2}
       CurrentLocation: 1
+    - Locations:
+      - {fileID: 11400000, guid: cf47c402d4a1054458ecc5bcc3888feb, type: 2}
+      - {fileID: 11400000, guid: 491746c4f2107814f92f969b7425b1fa, type: 2}
+      CurrentLocation: 1
+    - Locations:
+      - {fileID: 11400000, guid: cf47c402d4a1054458ecc5bcc3888feb, type: 2}
+      - {fileID: 11400000, guid: 491746c4f2107814f92f969b7425b1fa, type: 2}
+      CurrentLocation: 1
+  - PartLocations:
     - Locations:
       - {fileID: 11400000, guid: cf47c402d4a1054458ecc5bcc3888feb, type: 2}
       - {fileID: 11400000, guid: 491746c4f2107814f92f969b7425b1fa, type: 2}

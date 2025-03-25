@@ -15,7 +15,7 @@ MonoBehaviour:
   Title: Mari Infer
   Versions:
   - Description: "A nurse working for St. Morrigan\u2019s Hospital. She's very friendly
-      but maybe a bit unprofessional."
+      but quite unprofessional."
     Sprite: {fileID: 21300000, guid: 0232cbd814a80af4cbe5130eec817624, type: 3}
     Gender: Female
     Age: 26

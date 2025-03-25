@@ -186,6 +186,10 @@ public class ResponseManager : MonoBehaviour
             CharacterManager.instance.DeleteCharacters();
             DialogueManager.instance.StartMemory(result as Memory);
         }
+        else if (result is SplitPath)
+        {
+            DialogueManager.instance.StartSplitPath(result as SplitPath);
+        }
     }
 
     private void StartMusic()

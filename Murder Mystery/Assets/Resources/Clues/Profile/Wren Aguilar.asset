@@ -19,3 +19,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 34e758bd1244f6f42b4863696b147bd7, type: 3}
     Gender: Male
     Age: 18
+  - Description: "Apparently he is Rook\u2019s son. I don\u2019t know much about
+      him because Rook doesn\u2019t like talking about his personal life."
+    Sprite: {fileID: 21300000, guid: 34e758bd1244f6f42b4863696b147bd7, type: 3}
+    Gender: Male
+    Age: 18

@@ -41,7 +41,7 @@ public class MemoryManager : MonoBehaviour
             yield return new WaitForSeconds(0.16f);
             foreach (Transform memory in memoryDisplayParent.transform)
             {
-                if (memory.name == currentMemory.memoryName)
+                if (memory.name == currentMemory.minigameName)
                 {
                     memory.gameObject.SetActive(true);
                     MemoryObjects = memory.GetComponentsInChildren<MemoryObject>();

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Profile", menuName = "Clue/Profile2")]
+[CreateAssetMenu(fileName = "New Profile", menuName = "Clue/Profile")]
 public class ProfileData : ClueData
 {
-    [SerializeField] private Profile2[] Versions;
+    [SerializeField] private Profile[] Versions;
 
-    public Profile2[] versions => Versions;
+    public Profile[] versions => Versions;
 }
 
 [Serializable]

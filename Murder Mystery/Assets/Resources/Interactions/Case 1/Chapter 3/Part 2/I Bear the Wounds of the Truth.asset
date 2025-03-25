@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: I Bear the Wounds of the Truth
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 53b28576d7de0de4981beefb0814a4b1, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: b384f4f082553054b8d22f2383894c1c, type: 2}
+  Music: {fileID: 8300000, guid: 3760024119bec6c4397ed5cbe866cc4a, type: 3}
+  Title: I Bear the Wounds of the Truth
+  Lines:
+  - Line:
+      TalkingCharacter: 4
+      Text: My wounds prove nothing. I happened to cut myself on some glass during
+        my incredible museum break in.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 2dbb918ace3ebb74ca1144f231208966, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: "Even though I may have been in this room to visit Wilma yesterday, I
+        still hold onto the fact that it wasn\u2019t during the dead of night."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 7d15f1cad33a1c647b44090b8fa90128, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: I do not know how my blood appeared here. It must be some sort of illusion.
+        Some kind of smoke and mirror.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: a93c14afe905f1541ac918e99ded6a83, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: I had no reason to visit my sister that late. Let alone <shake>murder
+        someone I have no connection to!<>
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: f8077864511042d4487e246f55e8cb79, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: "You have to believe me. Killing isn\u2019t in the nature of the dashingly
+        enigmatic and enigmatically dashing Catalyst!"
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 9d13e3cef86e37c4198806ab7c75ebbd, type: 2}
+    CorrectAnswers: []

@@ -197,7 +197,7 @@ public class ClueManager : MonoBehaviour
         if (currentMenuType != Clue.Type.Evidence)
             return;
 
-        Evidence2 tempEvidence = (GetSelectedClue(Clue.Type.Evidence) as GainEvidence).gainedEvidence.versions[GetSelectedClue(Clue.Type.Evidence).version];
+        Evidence tempEvidence = (GetSelectedClue(Clue.Type.Evidence) as GainEvidence).gainedEvidence.versions[GetSelectedClue(Clue.Type.Evidence).version];
         if (tempEvidence.check.Count == 0)
             return;
 

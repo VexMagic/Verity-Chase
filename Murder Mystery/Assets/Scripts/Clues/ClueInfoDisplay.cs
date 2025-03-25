@@ -23,7 +23,7 @@ public class ClueInfoDisplay : MonoBehaviour
             var tempData = (clue as GainAnyClueType).gainedClue;
             if (tempData is EvidenceData)
             {
-                Evidence2 tempEvidence = (tempData as EvidenceData).versions[version];
+                Evidence tempEvidence = (tempData as EvidenceData).versions[version];
 
                 title.text = (tempData as EvidenceData).title;
                 image.sprite = tempEvidence.sprite;
@@ -33,7 +33,7 @@ public class ClueInfoDisplay : MonoBehaviour
             }
             else if (tempData is ProfileData)
             {
-                Profile2 tempProfile = (tempData as ProfileData).versions[version];
+                Profile tempProfile = (tempData as ProfileData).versions[version];
 
                 title.text = (tempData as ProfileData).title;
                 image.sprite = tempProfile.sprite;
@@ -46,7 +46,7 @@ public class ClueInfoDisplay : MonoBehaviour
         }
         else if (clue is GainEvidence)
         {
-            Evidence2 tempEvidence = (clue as GainEvidence).gainedEvidence.versions[(clue as GainEvidence).version];
+            Evidence tempEvidence = (clue as GainEvidence).gainedEvidence.versions[(clue as GainEvidence).version];
             
             title.text = (clue as GainEvidence).gainedEvidence.title;
             image.sprite = tempEvidence.sprite;
@@ -56,7 +56,7 @@ public class ClueInfoDisplay : MonoBehaviour
         }
         else if (clue is GainProfile)
         {
-            Profile2 tempProfile = (clue as GainProfile).gainedProfile.versions[(clue as GainProfile).version];
+            Profile tempProfile = (clue as GainProfile).gainedProfile.versions[(clue as GainProfile).version];
 
             title.text = (clue as GainProfile).gainedProfile.title;
             image.sprite = tempProfile.sprite;

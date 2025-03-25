@@ -19,3 +19,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: c0c48ea4c04b72c4495a38cfeb2b4ce3, type: 3}
     Gender: Male
     Age: 32
+  - Description: "Was killed at St. Morrigan\u2019s Hospital. Known to be extraordinarily
+      unlucky. Also, he is a lawyer and the owner of Murphy\u2019s Law Offices."
+    Sprite: {fileID: 21300000, guid: c0c48ea4c04b72c4495a38cfeb2b4ce3, type: 3}
+    Gender: Male
+    Age: 32

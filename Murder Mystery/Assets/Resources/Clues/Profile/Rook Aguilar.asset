@@ -18,3 +18,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: bd61aeb520f642a49b73771f01a25432, type: 3}
     Gender: Male
     Age: 42
+  - Description: He is my mentor and I would not be the person I am today if it wasn't
+      because of him.
+    Sprite: {fileID: 21300000, guid: bd61aeb520f642a49b73771f01a25432, type: 3}
+    Gender: Male
+    Age: 42

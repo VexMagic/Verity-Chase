@@ -131,6 +131,23 @@ public class DialogueManager : MonoBehaviour
         MemoryManager.instance.SetCurrentMemory(memory);
     }
 
+    public void StartSplitPath(SplitPath split)
+    {
+        StartCoroutine(SplitPath(split));
+    }
+
+    private IEnumerator SplitPath(SplitPath split)
+    {
+        if (split.GetPathResult().screenFade)
+        {
+            testimonyAnimatior.SetTrigger("End");
+            textBox.SetActive(false);
+            inTestimony = false;
+            yield return new WaitForSeconds(1f);
+        }
+        ResponseManager.instance.ResponseResult(split.GetPathResult().result);
+    }
+
     private IEnumerator StepThroughDialogue(Dialogue dialogue)
     {
         dialogueText.text = string.Empty;

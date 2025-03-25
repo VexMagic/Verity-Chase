@@ -1,8 +1,34 @@
-Rook - If you went to check up on Ms. Steele, why didn’t you do the same for the victim?
-Mari - I didn’t realize he was there.
-Wren - What?
-Mari - I only heard the sound of one heart rate monitor so I thought there only was one patient in here. I really didn’t see anything!
-Rook - Are you sure you didn’t see anything?
-Mari - Well, now I’m not so sure myself...
-Rook - <think>(That’s all it takes to shake her confidence?)
-Rook - <think>(I should watch what I say around her.) 
+Verity - I can’t find any fault in her statement.
+Claire - <shake>FINALLY!!!<>
+Claire - You finally admit that there is no reason to suspect me!
+Verity - Well... my entire case hinges on you <float>not<> being here.
+Claire - Then we agree!
+Amara - Aguilar was the one who accused Steele of being the culprit in this case.
+Verity - Then my intuition must have been wrong, I guess?
+Ace - That’s all it takes for your “unwavering” determination to waver? You were so sure a few minutes ago.
+Rook - If your gut is telling you she is behind the museum case, then run with that. 
+Rook - It doesn’t mean she couldn’t be behind both.
+Claire - In all my years of existence, I have not killed a single person, <shake>let alone two!<>
+Rook - That’s still up for debate.
+Claire - It shouldn’t be!
+Rook - I think we are lacking in information at the moment.
+Amara - You’ve already exhausted all the information you could get from everyone who was here.
+Rook - Not <float>everyone.<> There is one person involved in this case that we haven’t gotten any information from.
+Wren - Who? The victim?
+Rook - Exactly!
+Wren - No, I... I was joking.
+Amara - How do you expect to learn more about him? He’s dead.
+Ace - You have heard the saying “dead men tell no tales”, I presume?
+Rook - We can head to his office. There is bound to be a clue or two to be found there.
+Verity - You know where his office is?
+Rook - Yes, I’ve visited it a few times. I can show you the way.
+Wren - Aguilar family adventure!
+Ace - You guys have fun!
+Verity - You aren’t coming with?
+Ace - No, sadly. I’d love to spend some time with my honorary protege but I have a few things I need to discuss with my official protege.
+Verity - I’m not your “protege”!
+Ace - Whatever you say honorary protege.
+Amara - See you later Ve...
+Amara - Goodbye Chase.
+Verity - ......
+Verity - Bye Amara...

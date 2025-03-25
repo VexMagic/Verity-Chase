@@ -4,16 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Evidence2 : Clue2
-{
-    [SerializeField] private List<CheckEvidence> Check;
-
-    public List<CheckEvidence> check => Check;
-
-    public bool hasCheck() => Check.Count != 0;
-}
-
-[CreateAssetMenu(fileName = "New Evidence", menuName = "Clue/Evidence")]
 public class Evidence : Clue
 {
     [SerializeField] private List<CheckEvidence> Check;

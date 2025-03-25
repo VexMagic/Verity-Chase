@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd5af8f7e2118b4f93704f2261185ea, type: 3}
   m_Name: New Conspiracy Board
   m_EditorClassIdentifier: 
-  MemoryName: 
+  MinigameName: Test
   Exitable: 0
   Complete: {fileID: 0}
   GiveUp: {fileID: 0}
   WrongAnswer: {fileID: 0}
   Conditions: []
+  Connections: []

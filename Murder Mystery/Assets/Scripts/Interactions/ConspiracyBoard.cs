@@ -7,30 +7,18 @@ using UnityEngine.UIElements;
 [CreateAssetMenu(fileName = "New Conspiracy Board", menuName = "Interaction/Conspiracy Board")]
 public class ConspiracyBoard : MinigameInteraction
 {
-    [SerializeField] private ConspiracyLine[] Lines;
-    public ConspiracyLine[] lines => Lines;
+    [SerializeField] private ConspiracyLogic[] Connections;
+    public ConspiracyLogic[] connections => Connections;
 }
 
 [Serializable]
-public class ConspiracyLine : DialogueLine
+public class ConspiracyLogic
 {
-    [SerializeField] private List<ConspiracyNote> GainedNotes;
+    [SerializeField] private ConspiracyNote Note1;
+    [SerializeField] private ConspiracyNote Note2;
+    [SerializeField] private Interaction Result;
 
-    public ConspiracyLine(Character talkingCharacter, string text) : base(talkingCharacter, text)
-    {
-        TalkingCharacter = talkingCharacter;
-        Text = text;
-        Backgrounds = new List<Background>();
-        GainedClues = new List<GainAnyClueType>();
-        GainedLocations = new List<Location>();
-        GainedNotes = new List<ConspiracyNote>();
-        Movements = new List<CharacterMovement>();
-        Music = null;
-    }
-}
-
-[CreateAssetMenu(fileName = "New Conspiracy Note", menuName = "Clue/Conspiracy Note")]
-public class ConspiracyNote : ScriptableObject
-{
-
+    public ConspiracyNote note1 => Note1;
+    public ConspiracyNote note2 => Note2;
+    public Interaction result => Result;
 }
