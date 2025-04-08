@@ -124,7 +124,10 @@ public class MemoryManager : MonoBehaviour
                     ResponseManager.instance.ResponseResult(tempObject.result);
                 }
                 else
+                {
+                    AudioManager.instance.PlaySFX("Wrong");
                     ResponseManager.instance.ResponseResult(currentMemory.wrongAnswer);
+                }
             }
 
             yield return new WaitForEndOfFrame();

@@ -198,7 +198,13 @@ MonoBehaviour:
     GainedClues: []
     GainedLocations: []
     GainedNotes: []
-    Movements: []
+    Movements:
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 550
+      FacingLeft: 0
+      Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 6
     Text: "She is invested in solving the museum murder and I am invested in seeing
@@ -231,7 +237,13 @@ MonoBehaviour:
     GainedClues: []
     GainedLocations: []
     GainedNotes: []
-    Movements: []
+    Movements:
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 550
+      FacingLeft: 1
+      Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "......\r"
@@ -281,14 +293,6 @@ MonoBehaviour:
     GainedNotes: []
     Movements: []
     Music: {fileID: 0}
-  - TalkingCharacter: 10
-    Text: "!\r"
-    Backgrounds: []
-    GainedClues: []
-    GainedLocations: []
-    GainedNotes: []
-    Movements: []
-    Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "I'm sorry for what happened between us. I never meant for any of this
       to have happened the way it did.\r"
@@ -299,7 +303,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "......\r"
+    Text: "!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -357,14 +361,6 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "<shake>Just tell me then!<>\r"
-    Backgrounds: []
-    GainedClues: []
-    GainedLocations: []
-    GainedNotes: []
-    Movements: []
-    Music: {fileID: 0}
-  - TalkingCharacter: 10
-    Text: "I refuse to believe you don't know, even if it is just subconsciously.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -434,7 +430,19 @@ MonoBehaviour:
     GainedClues: []
     GainedLocations: []
     GainedNotes: []
-    Movements: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
+      XPos: 250
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
+      XPos: 250
+      FacingLeft: 1
+      Delay: 10
     Music: {fileID: 0}
   - TalkingCharacter: 4
     Text: "......\r"
@@ -485,7 +493,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "Great job amiga.\r"
+    Text: "Great job, amiga.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -556,7 +564,7 @@ MonoBehaviour:
     GainedNotes: []
     Movements: []
     Music: {fileID: 0}
-  - TalkingCharacter: 6
+  - TalkingCharacter: 10
     Text: "Then please tell us what you were doing here last night.\r"
     Backgrounds: []
     GainedClues: []

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5c850aa41c7164e87dd33d24e56f0c, type: 3}
+  m_Name: Catalyst Sightings
+  m_EditorClassIdentifier: 
+  Title: Catalyst Sightings
+  Versions:
+  - Description: "A piece of paper labeled \u201CCatalyst Sightings\u201D with a
+      bunch of dates and locations. The last one is highlighted."
+    Sprite: {fileID: 0}
+    Check: []

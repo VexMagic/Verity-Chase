@@ -23,7 +23,7 @@ MonoBehaviour:
     GainedLocations: []
     GainedNotes: []
     Movements: []
-    Music: {fileID: 0}
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
   - TalkingCharacter: 4
     Text: "Please elaborate. \r"
     Backgrounds: []
@@ -48,7 +48,7 @@ MonoBehaviour:
     GainedLocations: []
     GainedNotes: []
     Movements: []
-    Music: {fileID: 0}
+    Music: {fileID: 8300000, guid: e7f425f91dd54a84687d3f473a92ef59, type: 3}
   - TalkingCharacter: 4
     Text: "I was here yesterday during the day so it might have-\r"
     Backgrounds: []
@@ -83,7 +83,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Wait... damn it! I take what I said back. There is no contradiction.\r"
+    Text: "Wait... damn it! I take back what I said. There is no contradiction.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -116,8 +116,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(Ace has been hiding stuff from me all day. It's obvious he knew
-      everything before I arrived at the museum.)<>\r"
+    Text: "<think>(Now that you mention it... Ace has been hiding stuff from me all
+      day. It's obvious he knew everything before I arrived at the museum.)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -125,7 +125,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "You did prove her wrong quite well. Good job, Verity. I'm proud.\r"
+    Text: "You did quite well in proving her wrong. Good job, Verity. I'm proud.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

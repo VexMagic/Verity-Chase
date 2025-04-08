@@ -22,7 +22,7 @@ MonoBehaviour:
   - Line:
       TalkingCharacter: 4
       Text: "Last night I broke into the museum known as Arthur\u2019s Hall of Oddities.
-        I never entered the hospital."
+        I never entered the hospital. You have no proof!"
       Backgrounds: []
       GainedClues: []
       GainedLocations: []

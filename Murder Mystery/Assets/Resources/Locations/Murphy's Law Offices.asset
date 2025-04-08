@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2640b0f533d9c6e40a3bccbebfe95f6e, type: 3}
+  m_Name: Murphy's Law Offices
+  m_EditorClassIdentifier: 
+  Title: Murphy's Law Offices
+  Preview: {fileID: 21300000, guid: 0d26fc91f258aba4792ea7d0379b720b, type: 3}
+  PeopleAtLocations:
+  - LocationName: Murphy's Law Offices
+    EnterInteraction: {fileID: 11400000, guid: e2b52964df7ff3646b72a57587981aa5, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People:
+    - {fileID: 11400000, guid: f77c40b8bbb1ab6418100c2ad2354412, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions: []
+  - LocationName: Murphy's Law Offices
+    EnterInteraction: {fileID: 11400000, guid: 186ef6ceb19928d4994f662ba148a532, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    People:
+    - {fileID: 11400000, guid: f77c40b8bbb1ab6418100c2ad2354412, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: ab775b81783365e41bc1d29584b61e3d, type: 2}
+    - {fileID: 11400000, guid: b35c673b2d3150c4b92c3c4fb66660d6, type: 2}
+    - {fileID: 11400000, guid: 1575c2e4e700a044daf351cd8f74cd39, type: 2}
+    - {fileID: 11400000, guid: e477726f0cc74a04387bde010bb3da08, type: 2}
+    - {fileID: 11400000, guid: 835e969ebe6f0944ea79f34c415c38e5, type: 2}

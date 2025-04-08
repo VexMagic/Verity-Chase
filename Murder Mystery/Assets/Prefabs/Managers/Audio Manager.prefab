@@ -347,6 +347,9 @@ MonoBehaviour:
   - Code: Change Volume
     Sound: {fileID: 8300000, guid: ce902a2644ce9204f8cec2edd85e4e79, type: 3}
     PitchShift: 1
+  - Code: Note Spin
+    Sound: {fileID: 8300000, guid: cf101bb021784544aa0e98dc94aac168, type: 3}
+    PitchShift: 0
   currentBlipSound: 0
 --- !u!1 &6267790542634171810
 GameObject:

@@ -1,16 +1,19 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
     public static CameraManager instance;
 
-    [SerializeField] private Transform camera;
+    [SerializeField] private Transform cameraPos;
+    [SerializeField] private Camera cameraObject;
     [SerializeField] private float maxOffset;
     [SerializeField] private float maxRotation;
     [SerializeField] private float moveSpeed;
     private Character tempCharacter;
-    private Coroutine coroutine;
+    private Coroutine rotateCoroutine;
+    private Coroutine zoomCoroutine;
 
     private void Awake()
     {
@@ -38,17 +41,50 @@ public class CameraManager : MonoBehaviour
     {
         float percentage = endPos / maxOffset;
 
-        if (coroutine != null)
+        if (rotateCoroutine != null)
         {
-            StopCoroutine(coroutine);
-            coroutine = null;
+            StopCoroutine(rotateCoroutine);
+            rotateCoroutine = null;
         }
-        coroutine = StartCoroutine(Rotation(percentage * maxRotation));
+        rotateCoroutine = StartCoroutine(Rotation(percentage * maxRotation));
+    }
+
+    public void StartZoom(CameraZoom cameraZoom)
+    {
+        if (zoomCoroutine != null)
+        {
+            StopCoroutine(zoomCoroutine);
+            zoomCoroutine = null;
+        }
+        zoomCoroutine = StartCoroutine(ZoomCamera(cameraZoom));
+    }
+
+    IEnumerator ZoomCamera(CameraZoom cameraZoom)
+    {
+        float startSize = cameraObject.orthographicSize;
+        Vector3 startOffset = cameraObject.transform.position;
+        Vector3 endOffset = new Vector3(cameraZoom.cameraOffset.x, cameraZoom.cameraOffset.y, cameraObject.transform.position.z);
+
+        float timer = 0;
+        while (timer < cameraZoom.transitionDuration)
+        {
+            timer += Time.fixedDeltaTime;
+            timer = Mathf.Clamp(timer, 0, cameraZoom.transitionDuration);
+
+            float percentage = timer / cameraZoom.transitionDuration;
+
+
+            cameraObject.orthographicSize = Mathf.Lerp(startSize, cameraZoom.cameraSize, percentage);
+            cameraObject.transform.position = Vector3.Lerp(startOffset, endOffset, percentage);
+
+            yield return new WaitForFixedUpdate();
+        }
+        zoomCoroutine = null;
     }
 
     IEnumerator Rotation(float endPos)
     {
-        float start = camera.eulerAngles.y;
+        float start = cameraPos.eulerAngles.y;
         if (start > 180)
             start -= 360;
 
@@ -61,10 +97,10 @@ public class CameraManager : MonoBehaviour
                 active = false;
             sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
             float t = Evaluate(sinTime);
-            camera.eulerAngles = Vector3.Lerp(new Vector3(0, start), new Vector3(0, endPos), t);
+            cameraPos.eulerAngles = Vector3.Lerp(new Vector3(0, start), new Vector3(0, endPos), t);
             yield return null;
         }
-        coroutine = null;
+        rotateCoroutine = null;
     }
 
     float Evaluate(float x)

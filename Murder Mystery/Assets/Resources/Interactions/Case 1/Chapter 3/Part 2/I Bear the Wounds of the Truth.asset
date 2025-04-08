@@ -35,7 +35,7 @@ MonoBehaviour:
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 4
-      Text: "Even though I may have been in this room to visit Wilma yesterday, I
+      Text: "Even though I may have been in this room yesterday to visit Wilma, I
         still hold onto the fact that it wasn\u2019t during the dead of night."
       Backgrounds: []
       GainedClues: []

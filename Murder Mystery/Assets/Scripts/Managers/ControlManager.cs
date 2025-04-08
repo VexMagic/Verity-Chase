@@ -129,10 +129,16 @@ public class ControlManager : MonoBehaviour
         if (!CanPressButton(context))
             return;
 
-        if (ClueManager.instance != null)
+        if (LocationManager.instance != null)
         {
             if (!LocationManager.instance.IsAnimationFinished)
                 LocationManager.instance.CloseGainLocationDisplay();
+        }
+
+        if (ConspiracyManager.instance != null)
+        {
+            if (!ConspiracyManager.instance.IsAnimationFinished)
+                ConspiracyManager.instance.CloseGainNoteDisplay();
         }
 
         if (ClueManager.instance != null)
@@ -192,6 +198,9 @@ public class ControlManager : MonoBehaviour
         }
         else
         {
+            if (ClueManager.instance.isChecking)
+                return;
+
             ClueManager.instance.SwapMenu();
         }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9807de7585e31419e23fadd13e21d3, type: 3}
   m_Name: Memory of Murder
   m_EditorClassIdentifier: 
-  MemoryName: Mari
+  MinigameName: Mari
   Exitable: 0
   Complete: {fileID: 11400000, guid: 928483ef059929a42af5d585d2791ad4, type: 2}
   GiveUp: {fileID: 0}

@@ -136,6 +136,12 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(SplitPath(split));
     }
 
+    public void StartConspiracyBoard(ConspiracyBoard conspiracy)
+    {
+        textBox.SetActive(false);
+        ConspiracyManager.instance.StartConspiracy(conspiracy);
+    }
+
     private IEnumerator SplitPath(SplitPath split)
     {
         if (split.GetPathResult().screenFade)
@@ -223,7 +229,10 @@ public class DialogueManager : MonoBehaviour
             LogManager.instance.FinishInteraction(present);
         }
         else
+        {
+            AudioManager.instance.PlaySFX("Wrong");
             ResponseManager.instance.ResponseResult(present.GetWrongAnswerResult(selectedClue));
+        }
     }
 
     public IEnumerator RunDeduction(Deduction deduction)
@@ -246,6 +255,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySFX("Wrong");
             ResponseManager.instance.ResponseResult(deduction.wrongAnswer);
             DeductionManager.instance.SetButtonActive(false);
         }
@@ -320,6 +330,26 @@ public class DialogueManager : MonoBehaviour
         else
         {
             topTestimonyText.text = "Memory";
+            bottomTestimonyText.text = "Complete";
+        }
+        testimonyAnimatior.SetTrigger("Start");
+        yield return new WaitForSeconds(2.5f);
+
+    }
+
+    public IEnumerator ConspiracyAnimation(bool isStart)
+    {
+        textBox.SetActive(false);
+        AudioManager.instance.PlayMusic(null);
+        AudioManager.instance.PlaySFX("Testimony");
+        if (isStart)
+        {
+            topTestimonyText.text = "Begin";
+            bottomTestimonyText.text = "Conspiracy";
+        }
+        else
+        {
+            topTestimonyText.text = "Conspiracy";
             bottomTestimonyText.text = "Complete";
         }
         testimonyAnimatior.SetTrigger("Start");
@@ -430,7 +460,10 @@ public class DialogueManager : MonoBehaviour
                     isPressing = true;
             }
             else
+            {
+                AudioManager.instance.PlaySFX("Wrong");
                 ResponseManager.instance.ResponseResult(testimony.wrongAnswer);
+            }
         }
         else
         {
@@ -559,6 +592,11 @@ public class DialogueManager : MonoBehaviour
         foreach (Location gainedLocation in line.gainedLocations)
         {
             yield return LocationManager.instance.GainLocation(gainedLocation);
+        }
+
+        foreach (ConspiracyNote gainedNote in line.gainedNotes)
+        {
+            yield return ConspiracyManager.instance.GainNote(gainedNote);
         }
 
         lineCoroutine = null;

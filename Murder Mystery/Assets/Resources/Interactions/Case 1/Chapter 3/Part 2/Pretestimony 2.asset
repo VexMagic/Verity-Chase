@@ -41,7 +41,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "With all due respect' <think>(which is none.)<>\r"
+    Text: "With all due respect... <think>(which is none.)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

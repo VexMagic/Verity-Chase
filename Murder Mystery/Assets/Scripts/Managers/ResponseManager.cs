@@ -190,6 +190,24 @@ public class ResponseManager : MonoBehaviour
         {
             DialogueManager.instance.StartSplitPath(result as SplitPath);
         }
+        else if (result is ConspiracyBoard)
+        {
+            DialogueManager.instance.StartConspiracyBoard(result as ConspiracyBoard);
+        }
+        else if (result is CameraZoom)
+        {
+            CameraManager.instance.StartZoom(result as CameraZoom);
+
+            if ((result as CameraZoom).HasResponses())
+            {
+                instance.IgnoreNextResponse = false;
+                instance.ShowResponses((result as CameraZoom).responses);
+            }
+            else if ((result as CameraZoom).AutoPickResponse())
+            {
+                OnPickedResponse((result as CameraZoom).responses[0]);
+            }
+        }
     }
 
     private void StartMusic()

@@ -20,6 +20,8 @@ public class ClueManager : MonoBehaviour
     [SerializeField] private GameObject deduceMemoryButton;
     [SerializeField] private GameObject checkButton;
     [SerializeField] private Image background;
+    [SerializeField] private GameObject checkTextScreen;
+    [SerializeField] private TextMeshProUGUI checkTextBox;
     [SerializeField] private Vector2 presentingOffset;
 
     [SerializeField] private ClueInfoDisplay menuInfoDisplay;
@@ -49,6 +51,7 @@ public class ClueManager : MonoBehaviour
     public bool isMemoryDeduction;
     public Clue.Type currentMenuType;
     public bool isEvidence;
+    public bool isChecking;
 
     private bool isAnimationFinished;
     public bool IsAnimationFinished => isAnimationFinished;
@@ -63,6 +66,7 @@ public class ClueManager : MonoBehaviour
             CloseMenu();
             UpdateDisplay(allEvidence[0]);
             scrollArrows.SetActive(false);
+            checkTextScreen.SetActive(false);
         }
     }
 
@@ -146,6 +150,14 @@ public class ClueManager : MonoBehaviour
 
     public void CloseMenu()
     {
+        if (isChecking)
+        {
+            checkTextScreen.SetActive(false);
+            isChecking = false;
+            SwapMenuButton(isEvidence);
+            return;
+        }
+
         isOpen = false;
         clueMenu.SetActive(false);
         foreach (var button in swapButtons)
@@ -206,15 +218,27 @@ public class ClueManager : MonoBehaviour
         switch (evidence.checkType)
         {
             default:
-                Debug.LogWarning("Check Type Doesn't exist");
+                Debug.LogError("Check Type Doesn't exist");
                 break;
             case CheckType.Text:
+                SetTextCheckValues(evidence);
                 break;
             case CheckType.Image:
                 break;
             case CheckType.Cutscene:
                 CutsceneManager.instance.StartCutscene(evidence.clip);
                 break;
+        }
+    }
+
+    private void SetTextCheckValues(CheckEvidence evidence)
+    {
+        checkTextScreen.SetActive(true);
+        checkTextBox.text = evidence.description;
+        isChecking = true;
+        foreach (var button in swapButtons)
+        {
+            button.SetActive(false);
         }
     }
 

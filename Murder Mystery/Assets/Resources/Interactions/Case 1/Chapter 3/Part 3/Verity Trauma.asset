@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd5af8f7e2118b4f93704f2261185ea, type: 3}
-  m_Name: New Conspiracy Board
+  m_Script: {fileID: 11500000, guid: 0c6d1ebab079115479a572aa572a0d70, type: 3}
+  m_Name: Verity Trauma
   m_EditorClassIdentifier: 
-  MinigameName: Test
-  Exitable: 0
-  Complete: {fileID: 0}
-  GiveUp: {fileID: 0}
-  WrongAnswer: {fileID: 0}
-  Conditions: []
-  Connections: []
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 4d4ec297ef8f52447a440e43383914cb, type: 2}
+  CameraSize: 1.4
+  CameraOffset: {x: -0.2, y: 0.25}
+  TransitionDuration: 10

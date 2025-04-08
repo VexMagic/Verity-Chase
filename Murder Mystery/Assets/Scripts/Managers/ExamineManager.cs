@@ -110,7 +110,6 @@ public class ExamineManager : MonoBehaviour
 
     public void StopExamine()
     {
-        Debug.Log("stop");
         if (coroutine != null)
         {
             StopCoroutine(coroutine);

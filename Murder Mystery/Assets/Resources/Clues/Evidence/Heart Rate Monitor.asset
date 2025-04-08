@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Heart Rate Monitor
   Versions:
-  - Description: Monitor used to check the victims heart rate. It seems to have been
-      unplugged at some point during the night.
+  - Description: Monitor used to check the victim's heart rate. It seems to have
+      been unplugged at some point during the night.
     Sprite: {fileID: 21300000, guid: 665ab5fe566c47b4f90d2c979dbb7761, type: 3}
     Check: []
-  - Description: Monitor used to check the victims heart rate. It seems to have been
-      unplugged at some point during the night.
+  - Description: Monitor used to check the victim's heart rate. It seems to have
+      been unplugged at some point during the night.
     Sprite: {fileID: 21300000, guid: 665ab5fe566c47b4f90d2c979dbb7761, type: 3}
     Check:
     - CheckType: 2

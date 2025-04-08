@@ -20,7 +20,7 @@ MonoBehaviour:
     Gender: Female
     Age: 22
   - Description: "She is an old friend of mine. We used to be very close but... things
-      got in the way. It has been 2 years since I saw her.\r"
+      got in the way. It has been 2 years since I saw her last.\r"
     Sprite: {fileID: 21300000, guid: 6aaf02facff4da542855f8654048b8a3, type: 3}
     Gender: Female
     Age: 22

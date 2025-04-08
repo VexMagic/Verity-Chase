@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class ClueDisplaySpawner : MonoBehaviour
@@ -9,7 +11,7 @@ public class ClueDisplaySpawner : MonoBehaviour
     [SerializeField] private GameObject displayPrefab;
     [SerializeField] private GameObject[] displayParents;
     [SerializeField] private float displayWidth;
-    [SerializeField] private float displaySpacing;
+    [SerializeField] private float selectionAreaWidth;
     [SerializeField] private int DisplaysPerSection;
     [SerializeField] private int MinimumSections;
     public int displaysPerSection => DisplaysPerSection;
@@ -18,6 +20,7 @@ public class ClueDisplaySpawner : MonoBehaviour
     private List<ClueDisplay> evidenceDisplays = new List<ClueDisplay>();
     private List<ClueDisplay> profileDisplays = new List<ClueDisplay>();
 
+    private float displaySpacing;
     public int evidenceSectionAmount = 0;
     public int profileSectionAmount = 0;
     public int currentEvidenceSection = 0;
@@ -40,6 +43,8 @@ public class ClueDisplaySpawner : MonoBehaviour
 
     public void CreateClueDisplays()
     {
+        displaySpacing = (selectionAreaWidth - (displayWidth * displaysPerSection)) / displaysPerSection;
+
         foreach (var item in displayObjects)
         {
             Destroy(item);
@@ -284,13 +289,17 @@ public class ClueDisplaySpawner : MonoBehaviour
 
     public float SectionSize()
     {
-        return (displayWidth + displaySpacing) * DisplaysPerSection;
+        return selectionAreaWidth;
+    }
+
+    public float MoveSectionDistance()
+    {
+        return GetIndexPosition(displaysPerSection) - GetIndexPosition(0);
     }
 
     public float GetIndexPosition(int index)
     {
-        int offset = Mathf.FloorToInt((float)displaysPerSection / 2);
-
+        float offset = ((float)displaysPerSection / 2) - 0.5f;
         return (displayWidth + displaySpacing) * (index - offset);
     }
 

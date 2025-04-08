@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Autopsy Report
   Versions:
-  - Description: "Cause: Blunt force trauma to the back of the head.\r\nTime: June
-      2nd. 2:00-3:00 am\r.\nNotes: Glass shards were found on top of and around the
+  - Description: "\rCause: Blunt force trauma to the back of the head.\r\nTime: June
+      2nd. 2:00-3:00 am.\r\nNotes: Glass shards were found on top of and around the
       body.\r"
     Sprite: {fileID: 21300000, guid: f54ec96733be91241a19b66394395266, type: 3}
     Check: []

@@ -55,7 +55,7 @@ MonoBehaviour:
     GainedLocations: []
     GainedNotes: []
     Movements: []
-    Music: {fileID: 0}
+    Music: {fileID: 8300000, guid: 769386b7c16776845b22b9ae02fed312, type: 3}
   - TalkingCharacter: 4
     Text: "It... it happened 4 months ago...\r"
     Backgrounds: []

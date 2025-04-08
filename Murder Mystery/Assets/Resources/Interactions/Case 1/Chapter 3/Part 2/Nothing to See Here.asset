@@ -21,7 +21,7 @@ MonoBehaviour:
     GainedLocations: []
     GainedNotes: []
     Movements: []
-    Music: {fileID: 0}
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
   - TalkingCharacter: 4
     Text: "<shake>FINALLY!!!<>\r"
     Backgrounds: []
@@ -146,7 +146,7 @@ MonoBehaviour:
     GainedLocations: []
     GainedNotes: []
     Movements: []
-    Music: {fileID: 0}
+    Music: {fileID: 8300000, guid: ad79679cdfaea3345b2103d42fbaaefb, type: 3}
   - TalkingCharacter: 9
     Text: "Who? The victim?\r"
     Backgrounds: []
@@ -208,7 +208,8 @@ MonoBehaviour:
     Text: "Yes, I've visited it a few times. I can show you the way.\r"
     Backgrounds: []
     GainedClues: []
-    GainedLocations: []
+    GainedLocations:
+    - {fileID: 11400000, guid: eb653c1f3def4534797d10af78366be5, type: 2}
     GainedNotes: []
     Movements: []
     Music: {fileID: 0}
@@ -237,8 +238,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "No, sadly. I'd love to spend some time with my honorary protege but I
-      have a few things I need to discuss with my official protege.\r"
+    Text: "No, sadly. I'd love to spend some time with my honorary prot\xE9g\xE9
+      but I have a few things I need to discuss with my official prot\xE9g\xE9.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -246,7 +247,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "I'm not your 'protege'!\r"
+    Text: "I'm not your 'prot\xE9g\xE9'!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -254,7 +255,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "Whatever you say honorary protege.\r"
+    Text: "Whatever you say honorary prot\xE9g\xE9.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -270,7 +271,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "Goodbye Chase.\r"
+    Text: "...Goodbye Chase.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

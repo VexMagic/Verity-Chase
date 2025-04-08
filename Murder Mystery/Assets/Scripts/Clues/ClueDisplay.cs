@@ -106,7 +106,7 @@ public class ClueDisplay : MonoBehaviour
         float timeSinceLast = 0;
         float totalTime = 0;
 
-        while (totalTime < moveTime)
+        while (totalTime <= moveTime)
         {
             totalTime += Time.deltaTime;
             timeSinceLast = Time.deltaTime;
@@ -116,7 +116,7 @@ public class ClueDisplay : MonoBehaviour
                 totalTime = moveTime;
             }
 
-            float movement = ClueDisplaySpawner.instance.SectionSize() * (timeSinceLast / moveTime);
+            float movement = ClueDisplaySpawner.instance.MoveSectionDistance() * (timeSinceLast / moveTime);
             if (moveForward)
                 movement *= -1;
 

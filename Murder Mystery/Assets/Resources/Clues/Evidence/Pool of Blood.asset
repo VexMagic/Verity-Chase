@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Pool of Blood
   Versions:
-  - Description: A large pool of blood. Too large to for just one person. The killers
+  - Description: A large pool of blood. Too large for just one person. The killers
       blood must be mixed in.
     Sprite: {fileID: 21300000, guid: c75b8c6383807524093f339c5bdfcf2d, type: 3}
     Check: []

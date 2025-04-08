@@ -6739,7 +6739,7 @@ MonoBehaviour:
     Chapters:
     - Title: Chapter 1
       Parts:
-      - Museum Investigation
+      - Arthur's Hall of Oddities Investigation
       - Deductions - Display Case
       - Claire Testimony - What She Saw
       - Claire Testimony - Opening The Display
@@ -6755,6 +6755,12 @@ MonoBehaviour:
       - Minerva Testimony - Before the Crime
       - Mari Memory - Entering Room 204
       - Deductions - The Culprits Actions
+    - Title: Chapter 3
+      Parts:
+      - Claire Testimony - My Dastardly Deeds That Dreadful Day
+      - Claire Testimony - I Bear the Wounds of the Truth
+      - Murphy's Law Office Investigation
+      - Conspiracy - Murphy's Law Office
 --- !u!114 &7621536824389161186
 MonoBehaviour:
   m_ObjectHideFlags: 0
