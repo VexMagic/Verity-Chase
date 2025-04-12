@@ -122,7 +122,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "We should look through it more in depth. There is a lot of information
+    Text: "We should <important>check through it<>. There is a lot of information
       here that might be useful.\r"
     Backgrounds: []
     GainedClues: []

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
-  m_Name: I Bear the Wounds of the Truth
+  m_Name: I Bear the Wounds of the Truth (Again)
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 0}
-  WrongAnswer: {fileID: 11400000, guid: 53b28576d7de0de4981beefb0814a4b1, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 90b90b6b40443c344805b4b09ddd98ff, type: 2}
   UniqueWrongs: []
-  PreviewInteraction: {fileID: 11400000, guid: b384f4f082553054b8d22f2383894c1c, type: 2}
-  Music: {fileID: 8300000, guid: 3760024119bec6c4397ed5cbe866cc4a, type: 3}
-  Title: I Bear the Wounds of the Truth
+  PreviewInteraction: {fileID: 11400000, guid: eefa454b5810b614aae71cadd942da72, type: 2}
+  Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
+  Title: I Bear the Wounds of the Truth (Again)
   Lines:
   - Line:
       TalkingCharacter: 4
@@ -74,7 +74,12 @@ MonoBehaviour:
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: f8077864511042d4487e246f55e8cb79, type: 2}
-    CorrectAnswers: []
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 67cfa5ba7a3d6a84b993ed3bfe5fcf2d, type: 2}
+      Result: {fileID: 11400000, guid: 0c5a445be7a2469488abb4a6f237c8af, type: 2}
+      ContinueTestimony: 0
   - Line:
       TalkingCharacter: 4
       Text: "You have to believe me. Killing isn\u2019t in the nature of the dashingly

@@ -17,9 +17,7 @@ MonoBehaviour:
   - TalkingCharacter: 8
     Text: "Huh. Seems like Mr. Murphy is looking for The Catalyst, just like me.\r"
     Backgrounds: []
-    GainedClues:
-    - Version: 2
-      GainedClue: {fileID: 11400000, guid: b44e16135a87a6b4ab9f8e4d84f7d0c4, type: 2}
+    GainedClues: []
     GainedLocations: []
     GainedNotes: []
     Movements:
@@ -282,8 +280,8 @@ MonoBehaviour:
     Text: "Ramsey is at least partially responsible for Wilma being comatose!\r"
     Backgrounds: []
     GainedClues:
-    - Version: 2
-      GainedClue: {fileID: 11400000, guid: 2f9253bba986f8e4da167e220577d1b6, type: 2}
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: 67cfa5ba7a3d6a84b993ed3bfe5fcf2d, type: 2}
     GainedLocations: []
     GainedNotes: []
     Movements: []

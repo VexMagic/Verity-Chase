@@ -67,7 +67,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Not it is not like that. I just... trust his judgement.\r"
+    Text: "No, it is not like that. I just... trust his judgement.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

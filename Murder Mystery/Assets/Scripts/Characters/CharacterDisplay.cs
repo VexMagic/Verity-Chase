@@ -57,7 +57,7 @@ public class CharacterDisplay : MonoBehaviour
         if (values.delay > 0)
         {
             //wait until textbox is reset
-            yield return new WaitUntil(() => Typewriter.instance.currentChar <= 1);
+            //yield return new WaitUntil(() => Typewriter.instance.currentChar <= 1);
 
             //wait until the delay has been reached
             yield return new WaitUntil(() => Typewriter.instance.currentChar >= values.delay || !Typewriter.instance.isRunning);
@@ -73,6 +73,8 @@ public class CharacterDisplay : MonoBehaviour
 
             moveCoroutine = StartCoroutine(SmoothMovement(transform.localPosition.x, values.xPos));
         }
+        else
+            moveCoroutine = null;
 
         //flip character
         if (spawn)
@@ -92,10 +94,13 @@ public class CharacterDisplay : MonoBehaviour
             else
                 flipCoroutine = StartCoroutine(FlipAnimation(transform.localScale.x, -1));
         }
+        else
+            flipCoroutine = null;
 
         yield return new WaitUntil(() => flipCoroutine == null);
         yield return new WaitUntil(() => moveCoroutine == null);
         animateCoroutine = null;
+        Debug.Log("animation done");
     }
 
     private IEnumerator SmoothMovement(float start, float end)
@@ -118,10 +123,13 @@ public class CharacterDisplay : MonoBehaviour
     private IEnumerator FlipAnimation(float start, float end)
     {
         AudioManager.instance.PlaySFX("Swoosh");
+        bool active = true;
         float sinTime = 0;
-        while (sinTime != Mathf.PI)
+        while (active)
         {
             sinTime += Time.deltaTime * flipSpeed;
+            if (sinTime > Mathf.PI)
+                active = false;
             sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
             float t = Evaluate(sinTime);
             transform.localScale = Vector3.Lerp(new Vector3(start, 1), new Vector3(end, 1), t);

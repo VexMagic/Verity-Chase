@@ -7,6 +7,7 @@ using System;
 using System.IO;
 using UnityEditor;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -541,7 +542,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //move character displays
-        foreach (CharacterMovement movement in line.movements)
+        foreach (CharacterMovement movement in line.movements.OrderBy(w => w.delay).ToList())
         {
             CharacterManager.instance.MoveCharacter(movement);
         }

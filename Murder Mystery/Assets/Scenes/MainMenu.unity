@@ -516,9 +516,12 @@ MonoBehaviour:
   animationName: {fileID: 7400000, guid: 2469f26a98a899447a5b9a1833b08cbd, type: 2}
   characters:
   - {fileID: 21300000, guid: e436b2aac30543f42b375025facdf9ec, type: 3}
+  - {fileID: 21300000, guid: 0e55e4663fd08964ca02e94b82e25aa7, type: 3}
   - {fileID: 21300000, guid: 04be715d2d806704db154da8cc70c0e6, type: 3}
   - {fileID: 21300000, guid: 04685453b573e3a4cbf772499536f81d, type: 3}
+  - {fileID: 21300000, guid: 9b0533473a69f6d44af72c0891123ea5, type: 3}
   - {fileID: 21300000, guid: b93900b51852e2843aa4aede55488ea2, type: 3}
+  - {fileID: 21300000, guid: e00c0798d2d84884a8fdf5f86c7b9616, type: 3}
   - {fileID: 21300000, guid: 300a657e0c5f0d042a278158b86a4c32, type: 3}
   - {fileID: 21300000, guid: 1e896ba5b73d20948a326449b3909063, type: 3}
   - {fileID: 21300000, guid: 0c77168ebce4ea34a9d379a7595513f3, type: 3}
@@ -1643,15 +1646,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2439141177000459292, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2439141177000459292, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439141177000459292, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2802273578823146403, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1899,15 +1902,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934493108474499115, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6934493108474499115, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6934493108474499115, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7203044797186277274, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2079,15 +2082,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022299805697561729, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8022299805697561729, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8022299805697561729, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8199558544284966059, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_Pivot.x
@@ -5045,7 +5048,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1605262839383248448, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: m_text
-      value: Turnabout Gambit
+      value: Luck Be A Turnabout
       objectReference: {fileID: 0}
     - target: {fileID: 1605262839550838228, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: m_text
@@ -6761,6 +6764,7 @@ MonoBehaviour:
       - Claire Testimony - I Bear the Wounds of the Truth
       - Murphy's Law Office Investigation
       - Conspiracy - Murphy's Law Office
+      - Claire Testimony - I Bear the Wounds of the Truth (Again)
 --- !u!114 &7621536824389161186
 MonoBehaviour:
   m_ObjectHideFlags: 0

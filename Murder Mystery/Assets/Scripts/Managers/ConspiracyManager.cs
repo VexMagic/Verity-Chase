@@ -1,11 +1,7 @@
+using CodeMonkey.Utils;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using CodeMonkey.Utils;
-using static UnityEditor.PlayerSettings;
-using UnityEngine.UIElements;
 
 public class ConspiracyManager : MonoBehaviour
 {
@@ -17,6 +13,7 @@ public class ConspiracyManager : MonoBehaviour
     [SerializeField] private GameObject board;
     [SerializeField] private Transform noteArea;
     [SerializeField] private GameObject darken;
+    [SerializeField] private Transform notePlacements;
 
     [SerializeField] private RectTransform rope;
     [SerializeField] private GameObject pin1;
@@ -43,13 +40,25 @@ public class ConspiracyManager : MonoBehaviour
 
     [SerializeField] private List<ConspiracyNote> notes = new List<ConspiracyNote>();
     private List<GameObject> noteObjects = new List<GameObject>();
+    private List<NoteDisplay> noteDisplays = new List<NoteDisplay>();
     private bool isAnimationFinished = true;
-    private bool isConfirming;
+    public bool isConfirming;
     private Coroutine ropeCoroutine;
 
     private ConspiracyBoard currentBoard;
     private NoteDisplay firstNote;
     private NoteDisplay secondNote;
+
+    public bool isConspiracyActive;
+    private Vector2 previousMousePos;
+    [SerializeField] private GameObject mouseObject;
+    [SerializeField] private float moveSpeed;
+    private Vector2 screenMaxSize = new Vector2(960, 540);
+    private Coroutine mouseCoroutine;
+    private Coroutine clickCoroutine;
+    private NoteDisplay hoverNote;
+    private bool showMouse;
+    private bool keyMovedMouseLast;
 
     public bool IsAnimationFinished => isAnimationFinished;
 
@@ -114,79 +123,129 @@ public class ConspiracyManager : MonoBehaviour
             Destroy(item);
         }
         noteObjects.Clear();
+        noteDisplays.Clear();
 
         board.SetActive(true);
 
-        Vector2 tempOffset = new Vector2((Screen.width - noteSize.x) / 2, (Screen.height - noteSize.y) / 2) - edgeDistance;
-        Debug.Log(tempOffset);
+        Vector2 flipModifier = new Vector2(Random.Range(0, 2) == 0 ? 1 : -1, Random.Range(0, 2) == 0 ? 1 : -1);
+        Debug.Log("Flip " + flipModifier);
 
-        bool abandone = false;
+        List<Vector3> placements = new List<Vector3>();
+        foreach (Transform item in notePlacements.GetChild(notes.Count - 1))
+        {
+            placements.Add(item.localPosition * flipModifier);
+        }
 
         foreach (var item in notes)
         {
             GameObject tempObject = Instantiate(noteObject, noteArea);
-            tempObject.GetComponent<NoteDisplay>().SetValues(item);
+            NoteDisplay tempDisplay = tempObject.GetComponent<NoteDisplay>();
+            tempDisplay.SetValues(item);
 
-            bool tempValid;
-            int attempts = 0;
-            do
-            {
-                tempValid = true;
-                tempObject.GetComponent<RectTransform>().localPosition = new Vector2(Random.Range(tempOffset.x, -tempOffset.x), Random.Range(tempOffset.y, -tempOffset.y));
+            int placementIndex = Random.Range(0, placements.Count);
 
-                foreach (var objects in noteObjects)
-                {
-                    if (WithinDistace(tempObject.GetComponent<RectTransform>().localPosition, objects.GetComponent<RectTransform>().localPosition))
-                    {
-                        tempValid = false;
-                    }
-                }
-                attempts++;
-
-            } while (!tempValid && attempts < 20);
-
+            tempObject.GetComponent<RectTransform>().localPosition = placements[placementIndex];
+            placements.RemoveAt(placementIndex);
 
             noteObjects.Add(tempObject);
-
-            if (attempts >= 20)
-            {
-                abandone = true;
-                break;
-            }
+            noteDisplays.Add(tempDisplay);
         }
 
-        if (abandone)
-        {
-            StartConspiracy(conspiracy);
-            return;
-        }
+        mouseObject.transform.SetAsLastSibling();
+        isConspiracyActive = true;
+        showMouse = true;
 
-        Vector2 middleOffset = Vector2.zero;
-
-        foreach (var item in noteObjects)
-            middleOffset += (Vector2)item.transform.localPosition;
-
-        middleOffset = new Vector2(middleOffset.x / noteObjects.Count, middleOffset.y / noteObjects.Count);
-
-        foreach (var item in noteObjects)
-        {
-            item.transform.localPosition -= (Vector3)middleOffset;
-            if (Mathf.Abs(item.transform.localPosition.x) > tempOffset.x || Mathf.Abs(item.transform.localPosition.y) > tempOffset.y)
-            {
-                abandone = true;
-            }
-        }
-
-        if (abandone)
-        {
-            StartConspiracy(conspiracy);
-            return;
-        }
+        if (mouseCoroutine == null)
+            mouseCoroutine = StartCoroutine(Conspiracy());
+        if (clickCoroutine == null)
+            clickCoroutine = StartCoroutine(ClickDetection());
     }
 
     private IEnumerator Conspiracy()
     {
-        yield return DialogueManager.instance.ConspiracyAnimation(true);
+        //yield return DialogueManager.instance.ConspiracyAnimation(true);
+        while (isConspiracyActive)
+        {
+            if (previousMousePos != (Vector2)Input.mousePosition)
+            {
+                previousMousePos = (Vector2)Input.mousePosition;
+
+                Vector2 screenSize = new Vector2(Screen.width / 2, Screen.height / 2);
+                Vector2 mousePos = (Vector2)Input.mousePosition - screenSize;
+
+                Vector2 posPercentage = mousePos / screenSize;
+                SetAimPosition(posPercentage * screenMaxSize, true);
+                mouseObject.SetActive(false);
+                keyMovedMouseLast = false;
+            }
+            else if (ControlManager.instance.Movement != Vector2.zero)
+            {
+                Vector2 newPos = (Vector2)mouseObject.transform.localPosition + (ControlManager.instance.Movement * moveSpeed);
+                newPos = new Vector2(Mathf.Clamp(newPos.x, -screenMaxSize.x, screenMaxSize.x), Mathf.Clamp(newPos.y, -screenMaxSize.y, screenMaxSize.y));
+                SetAimPosition(newPos, true);
+                mouseObject.SetActive(showMouse);
+                keyMovedMouseLast = true;
+            }
+
+            yield return new WaitForFixedUpdate();
+        }
+        mouseCoroutine = null;
+    }
+
+
+    private IEnumerator ClickDetection()
+    {
+        while (isConspiracyActive)
+        {
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0) || ControlManager.instance.Progress());
+
+            if (hoverNote != null)
+            {
+                SelectNote(hoverNote);
+            }
+            yield return new WaitForFixedUpdate();
+        }
+        clickCoroutine = null;
+    }
+
+    public void SetAimPosition(Vector2 position, bool select)
+    {
+        ControlManager.instance.DeselectButton();
+        mouseObject.transform.localPosition = position;
+        if (noteDisplays.Count == 0)
+            return;
+
+        Vector2 tempPos = (position / screenMaxSize * screenMaxSize);
+
+        if (hoverNote != null)
+        {
+            if (!hoverNote.IsPointInside(tempPos))
+            {
+                hoverNote = null;
+            }
+        }
+
+        if (hoverNote == null && select)
+        {
+            if (isConfirming)
+            {
+                if (firstNote.IsPointInside(tempPos))
+                    hoverNote = firstNote;
+                else if (secondNote.IsPointInside(tempPos))
+                    hoverNote = secondNote;
+            }
+            else
+            {
+                foreach (var item in noteDisplays)
+                {
+                    if (item.IsPointInside(tempPos))
+                    {
+                        hoverNote = item;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     public void SelectNote(NoteDisplay note)
@@ -229,6 +288,7 @@ public class ConspiracyManager : MonoBehaviour
             darken.transform.SetAsLastSibling();
             firstNote.transform.SetAsLastSibling();
             secondNote.transform.SetAsLastSibling();
+            mouseObject.transform.SetAsLastSibling();
 
             isConfirming = true;
 
@@ -243,6 +303,10 @@ public class ConspiracyManager : MonoBehaviour
                 secondNote.MoveToMiddle(new Vector3(confirmNoteDistance, 0));
             }
         }
+
+        showMouse = ((firstNote != null) == (secondNote != null));
+        if (keyMovedMouseLast) 
+            mouseObject.SetActive(showMouse);
     }
 
     private IEnumerator RopeSimulation()
@@ -260,11 +324,11 @@ public class ConspiracyManager : MonoBehaviour
             }
             else if (firstNote != null && secondNote == null)
             {
-                SetRope(firstNote.transform.position + new Vector3(0, 140), Input.mousePosition);
+                SetRope(firstNote.transform.position + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition + screenMaxSize);
             }
             else if (firstNote == null && secondNote != null)
             {
-                SetRope(secondNote.transform.position + new Vector3(0, 140), Input.mousePosition);
+                SetRope(secondNote.transform.position + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition + screenMaxSize);
             }
 
             yield return new WaitForFixedUpdate();
@@ -282,6 +346,7 @@ public class ConspiracyManager : MonoBehaviour
 
     public void CombineNotes()
     {
+        confirmButton.SetActive(false);
         StartCoroutine(CombineAnimation());
     }
 
@@ -293,6 +358,8 @@ public class ConspiracyManager : MonoBehaviour
         bool firstOnRight = firstNote.transform.position.x > secondNote.transform.position.x;
         float tempDistance = confirmNoteDistance;
         float time = Time.time;
+
+        isConspiracyActive = false;
 
         AudioManager.instance.PlaySFX("Note Spin");
 

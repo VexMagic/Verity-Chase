@@ -29,9 +29,14 @@ public class NoteDisplay : MonoBehaviour
         CurrentNote = note;
     }
 
+    public bool IsPointInside(Vector2 pos)
+    {
+        return Mathf.Abs(transform.localPosition.x - pos.x) <= 160 && Mathf.Abs(transform.localPosition.y - pos.y) <= 160;
+    }
+
     public void Click()
     {
-        ConspiracyManager.instance.SelectNote(this);
+        //ConspiracyManager.instance.SelectNote(this);
     }
 
     public void Select(bool select)

@@ -209,12 +209,19 @@ public class ControlManager : MonoBehaviour
 
     public void OnPresent(InputAction.CallbackContext context)
     {
-        if (!CanPressButton(context) || ClueManager.instance == null)
+        if (!CanPressButton(context))
             return;
 
-        if (ClueManager.instance.isOpen)
+        if (ClueManager.instance != null)
         {
-            DialogueManager.instance.Present(true);
+            if (ClueManager.instance.isOpen)
+                DialogueManager.instance.Present(true);
+        }
+
+        if (ConspiracyManager.instance != null)
+        {
+            if (ConspiracyManager.instance.isConspiracyActive && ConspiracyManager.instance.isConfirming)
+                ConspiracyManager.instance.CombineNotes();
         }
 
         AudioManager.instance.PlaySFX("Click");

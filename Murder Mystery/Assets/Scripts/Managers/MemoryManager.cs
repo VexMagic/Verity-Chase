@@ -130,10 +130,11 @@ public class MemoryManager : MonoBehaviour
                 }
             }
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
         }
 
         yield return DialogueManager.instance.MemoryAnimation(false);
+
 
         fadeEffect.SetTrigger("Start");
         yield return new WaitForSeconds(0.16f);

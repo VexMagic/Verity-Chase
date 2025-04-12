@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec5c850aa41c7164e87dd33d24e56f0c, type: 3}
-  m_Name: Catalyst Sightings
+  m_Name: Conspiracy Board
   m_EditorClassIdentifier: 
-  Title: Catalyst Sightings
+  Title: Murphy's Conspiracy Board
   Versions:
-  - Description: "A piece of paper labeled \u201CCatalyst Sightings\u201D with a
-      bunch of dates and locations. The last one \"March 16th, 2013. Cognition Research
-      Center\" is highlighted."
-    Sprite: {fileID: 21300000, guid: a487bb4ff43f9cd4b8c01d399077b840, type: 3}
+  - Description: "Matthew Murphy was in pursuit of The Catalyst\u2019s true identity.
+      He suspects Ramsey might be The Catalyst. Ramsey also caused Wilma to be comatose. "
+    Sprite: {fileID: 21300000, guid: 37b59a3f488c6454c8633906b92019e6, type: 3}
     Check: []

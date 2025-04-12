@@ -24,3 +24,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f8077864511042d4487e246f55e8cb79, type: 2}
     - {fileID: 11400000, guid: 9d13e3cef86e37c4198806ab7c75ebbd, type: 2}
     ScreenFade: 1
+  - Result: {fileID: 11400000, guid: bd321e4403e44464c966535f25c371f5, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 818be7fc20b7ca441add270c45b39f46, type: 2}
+    ScreenFade: 0

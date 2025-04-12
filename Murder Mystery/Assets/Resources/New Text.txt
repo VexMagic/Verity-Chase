@@ -1,21 +1,64 @@
-Verity - Wait a minute! Let me check something...
-Wren - What are you checkin’?
-Verity - If the case file from the safe has a corresponding trial record.
-Rook - And?
-Verity - It’s not here...
-Verity - So this must be a backup of the trial record that was stolen!
-Wren - Why would someone steal that specific one?
-Rook - Maybe there was some information in it that the thief didn’t want to get out.
-Wren - But why now and not 5 years ago?
-Verity - No idea...
-Rook - In any case I think I have narrowed down the suspect list for the break in down to two.
-Verity - You have?
-Rook - It had to be someone related to the case. Someone with information about them that they’d like to keep hidden.
-Rook - In addition, it has to be someone who has been gone for the past 5 years.
-Verity - I think I know who you’re thinking of.
-Verity - It’s The Catalyst and Ramsey, right?
-Rook - You’re exactly right. 
-Rook - Both of them are mentioned in this file and both have been gone for 5 years, explaining why they didn’t steal the files earlier.
-Wren - What does this mean exactly?
-Rook - This means we need to have another chat with our eccentric vigilante once more.
-Verity - Alright! Let’s go.
+Verity - If you didn’t have a connection to him, like you say, I would believe you. 
+Verity - It wouldn’t make sense for you to kill Matthew Murphy.
+Claire - Thank you for your encouraging words. I knew I could trust you to see things my way.
+Verity - But you do have a connection with him, don’t you?
+Claire - ......
+Claire - No? I already said I don’t.
+Verity - Maybe Claire Steele didn’t...
+Verity - ...but The Catalyst definitely does!
+Claire - What! That’s crazy! I-I mean... That’s preposterous! 
+Verity - Mr. Murphy was looking for the true identity of The Catalyst.
+Verity - This means that you had a motive to kill him, you had to stop him from revealing your identity!
+Claire - B-but I... I had no idea he was doing that. I promise!
+Verity - <think>(Is she playing dumb or did she really not know?)<>
+Ace - Care to fill me in on what he knew about The Catalyst?
+Verity - He had a few suspects. The one that’s most important to us at this moment is Ramsey Paige.
+Ace - Now that you mention it... that makes a whole lot of sense.
+Ace - Both have a criminal background and haven’t been seen for 5 years. 
+Wren - Actually, Ramsey was seen 4 months ago.
+Amara - He was?
+Wren - He was the one who caused the crash that put Wilma in a coma.
+Claire - <shake>WHAAAAAAAAAAAT!!!<>
+Verity - <think>(She didn’t know that either?)<>
+Rook - I was hoping to use that as a trump card later on, but oh well. 
+Claire - Ramsey was the one in that car!?
+Rook - He was. Which gives you a motive to kill him too.
+Claire - <shake>But I had no idea it was him!<>
+Wren - You didn’t?
+Ace - She did mention that the person in the other car ran away before she could see them.
+Rook - I don’t believe that for a second.
+Verity - <think>(She really didn’t know...)<>
+Claire - But I didn’t know! I would never kill anyone!
+Rook - All the evidence suggests otherwise.
+Claire - Th-then maybe you missed something! Something clue I-I forgot to get rid of. Some blood I forgot to clean up. 
+Verity - We searched all of the main room of Arthur’s Hall of Oddities. We found nothing of the sort.
+Claire - <shake>That’s it!<> There could be stuff in the other rooms that you missed. Proof I didn’t kill anyone!
+Amara - The other rooms? You mean the Hall family residence?
+Claire - Exactly!
+Verity - Hall family? As in Dr. Minerva Hall?
+Ace - Yes. She’s married to the museum's curator, Arthur Hall.
+Verity - <think>(I hate how interconnected these two cases are. It’s making my head hurt.)<>
+Wren - Does that mean another Aguilar family adventure?
+Rook - Seems like it.
+Verity - Wren, we’re still not related.
+Wren - A guy can dream.
+Ace - Before you go, I’d like to have a word with you, Mr. Aguilar.
+Rook - Can this wait?
+Ace - Sadly, no.
+Wren - So we’re just down to two?
+Amara - I can’t let two civilians wander around a crime scene unsupervised. I’ll come along to keep an eye on you.
+Verity - <think>(This will either be an amazing or terrible experience and that terrifies me.)<>
+Ace - Let’s leave them to it Mr. Aguilar. 
+Rook - Alright.
+Rook - Pssst, Verity.
+Verity - Why are we whispering?
+Rook - Hold onto this for me.
+[gain The Device]
+Verity - Is this...?
+Rook - Wren will tell you how to use it.
+Ace - Are you coming or not?
+Rook - Right behind you.
+Verity - <think>(Why did he give me his secret weapon?)<>
+Verity - <think>(He usually keeps it on him at all times. Why not now?)<>
+Amara - We should head out too.
+Wren - This will be interesting. 
