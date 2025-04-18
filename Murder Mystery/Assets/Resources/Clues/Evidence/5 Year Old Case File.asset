@@ -20,11 +20,11 @@ MonoBehaviour:
     Check:
     - CheckType: 0
       Description: "Summary\r\nOn March 16, 2013, an explosion at Cognition Research
-        Center took the life of an employee and injured two guests who only survived
+        Center took the life of an intern and injured two guests who only survived
         due to someone known as The Catalyst. One employee\u2019s whereabouts are
         still unknown.\r\n\r\nVictims\r\nAmara Phoenix (Severely Injured)\r\nJoyce
         Beacon (Dead)\r\nRamsey Paige (Missing)\r\nVerity Chase (Injured)\r\n\r\nTrial
-        Data\r\nDate: March 18, 2013\r\n\r\nProsecutor: Valery Sawyer\r\nDefence:
+        Data\r\nDate: March 18, 2013\r\n\r\nProsecutor: Valerie Sawyer\r\nDefence:
         Matthew Murphy\r\n\r\nDefendant: Sarah Bellum\r\nCrime: Gross negligence\r\nSentence:
         $250 million in fines divided amongst the families of the victims.\r\n"
       Image: {fileID: 0}

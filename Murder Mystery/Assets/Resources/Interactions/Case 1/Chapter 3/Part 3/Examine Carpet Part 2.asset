@@ -33,7 +33,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(C-can't... breathe')<>\r"
+    Text: "<think>(C-can't... breathe...)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

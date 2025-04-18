@@ -42,7 +42,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Is stealing priceless vases for money also a new thing.\r"
+    Text: "Is stealing priceless vases for money also a new thing?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

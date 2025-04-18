@@ -99,7 +99,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: I get it now. The hall family is under witness protection.
+    Text: I get it now. The Hall family is under witness protection.
     Backgrounds: []
     GainedClues:
     - Version: 0

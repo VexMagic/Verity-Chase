@@ -133,13 +133,13 @@ public class ClueDisplay : MonoBehaviour
 
     public void FixPosition()
     {
-        if (transform.localPosition.x > ClueDisplaySpawner.instance.MaxDispayDistance())
+        if (transform.localPosition.x > ClueDisplaySpawner.instance.MaxDispayDistance(myType))
         {
-            transform.localPosition -= new Vector3(ClueDisplaySpawner.instance.MaxDispayDistance() * 2, 0);
+            transform.localPosition -= new Vector3(ClueDisplaySpawner.instance.MaxDispayDistance(myType) * 2, 0);
         }
-        else if (transform.localPosition.x < -ClueDisplaySpawner.instance.MaxDispayDistance())
+        else if (transform.localPosition.x < -ClueDisplaySpawner.instance.MaxDispayDistance(myType))
         {
-            transform.localPosition += new Vector3(ClueDisplaySpawner.instance.MaxDispayDistance() * 2, 0);
+            transform.localPosition += new Vector3(ClueDisplaySpawner.instance.MaxDispayDistance(myType) * 2, 0);
         }
     }
 }

@@ -254,7 +254,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "I've tried reaching out to you but you always ignore me!\r"
+    Text: "I've tried reaching out to you, but you always ignore me!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -477,7 +477,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Oh, I almost forgot to tell you Rook! I found the Catalyst. \r"
+    Text: "Oh, I almost forgot to tell you, Rook! I found the Catalyst. \r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -533,7 +533,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
-    Text: "Passing the river styx 5 years ago has affected me greatly.\r"
+    Text: "Passing the River Styx 5 years ago has affected me greatly.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

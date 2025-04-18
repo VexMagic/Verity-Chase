@@ -213,7 +213,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(Wait! I didn't even agree to the bet. Why am I entertaining it.)<>\r"
+    Text: "<think>(Wait! I didn't even agree to the bet. Why am I entertaining it?)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

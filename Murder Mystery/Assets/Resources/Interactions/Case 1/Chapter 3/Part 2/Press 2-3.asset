@@ -25,7 +25,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
-    Text: "Some kind of smoke and mirror, exactly!\r"
+    Text: "Some kind of smoke and mirrors, exactly!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -75,7 +75,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(Is there a reason behind it or just part of the Catalyst persona.)<>\r"
+    Text: "<think>(Is there a reason behind it or just part of the Catalyst persona?)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

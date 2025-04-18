@@ -154,7 +154,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "Finally, there is the piece of paper we found under the carpet with all
-      of the Catalysts appearances with the most recent one highlighted. \r"
+      of the Catalyst's appearances with the most recent one highlighted. \r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

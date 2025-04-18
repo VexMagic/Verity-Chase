@@ -41,7 +41,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "Amara and I made a background check on Claire and we found no connections
+    Text: "Amara and I did a background check on Claire and we found no connections
       to Matthew Murphy. \r"
     Backgrounds: []
     GainedClues: []

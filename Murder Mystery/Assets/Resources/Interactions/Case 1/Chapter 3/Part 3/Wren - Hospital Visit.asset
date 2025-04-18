@@ -185,7 +185,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "What is it like... always being in pain.\r"
+    Text: "What is it like... always being in pain?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

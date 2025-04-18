@@ -31,7 +31,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 10
     Text: "Need I remind you that there are glass shards from the break in on top
-      of his body.\r"
+      of his body?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

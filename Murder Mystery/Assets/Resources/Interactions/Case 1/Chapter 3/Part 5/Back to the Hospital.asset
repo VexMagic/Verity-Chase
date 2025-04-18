@@ -55,7 +55,7 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
   - TalkingCharacter: 6
-    Text: "Ah, smaller Rook! Did you have any <float>luck<> with your investigation.\r"
+    Text: "Ah, smaller Rook! Did you have any <float>luck<> with your investigation?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -198,8 +198,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "That was before we examined the victims office. We just so happen to find
-      some quite compelling pieces of information.\r"
+    Text: "That was before we examined the victim's office. We just so happened to
+      find some quite compelling pieces of information.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

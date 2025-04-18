@@ -42,7 +42,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "You must have been here because your blood was found here mixed into that
-      of the victims!\r"
+      of the victim's!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

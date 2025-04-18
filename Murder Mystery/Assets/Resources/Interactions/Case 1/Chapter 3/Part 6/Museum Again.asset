@@ -124,7 +124,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(The name Arthur's hall of Oddities makes a lot more sense now.)<>\r"
+    Text: "<think>(The name Arthur's Hall of Oddities makes a lot more sense now.)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -328,8 +328,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "He took my best friend at time away from me. That's not something you
-      can forget easily.\r"
+    Text: "He took my best friend at the time away from me. That's not something
+      you can forget easily.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -337,7 +337,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(She's talking about me, isn't she.)<>\r"
+    Text: "<think>(She's talking about me, isn't she?)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: e95c9efdba928244c8ba230e8d16e291, type: 2}
   Lines:
   - TalkingCharacter: 2
-    Text: "In the case file we found in Matthews safe, it mentions both The Catalyst
+    Text: "In the case file we found in Matthew's safe, it mentions both The Catalyst
       and Ramsey. \r"
     Backgrounds: []
     GainedClues: []
@@ -45,7 +45,9 @@ MonoBehaviour:
   - TalkingCharacter: 2
     Text: "Exactly.\r"
     Backgrounds: []
-    GainedClues: []
+    GainedClues:
+    - Version: 1
+      GainedClue: {fileID: 11400000, guid: 19a446c76ca56a34eb002f954d2c1bcd, type: 2}
     GainedLocations: []
     GainedNotes: []
     Movements: []

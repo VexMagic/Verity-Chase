@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: a439e09a6b406f849bd8a88ea9d205bc, type: 2}
   Lines:
   - TalkingCharacter: 9
-    Text: "What does that have to do with the acronym.\r"
+    Text: "What does that have to do with the acronym?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

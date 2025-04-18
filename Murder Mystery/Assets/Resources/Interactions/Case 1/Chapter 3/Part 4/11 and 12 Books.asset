@@ -100,7 +100,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 9
     Text: "Why would someone steal a trial record that happened in spring, 5 years
-      ago.\r"
+      ago?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

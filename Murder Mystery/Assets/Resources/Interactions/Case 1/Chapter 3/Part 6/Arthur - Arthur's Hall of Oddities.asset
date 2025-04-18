@@ -58,7 +58,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "What is the most expensive thing you got?\r"
+    Text: "What's the most expensive thing you got?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -15,7 +15,7 @@ MonoBehaviour:
   Responses: []
   Lines:
   - TalkingCharacter: 10
-    Text: "That's... quite a lot of pillows,\r"
+    Text: "That's... quite a lot of pillows.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

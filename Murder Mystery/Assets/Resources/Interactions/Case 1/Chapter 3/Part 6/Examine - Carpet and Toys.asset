@@ -82,7 +82,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(What's with all these carpets having stuff hidden under them.)<>\r"
+    Text: "<think>(What's with all these carpets having stuff hidden under them?)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -90,7 +90,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Is there more toys underneath?\r"
+    Text: "Are there more toys underneath?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -172,7 +172,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Who's blood is it?\r"
+    Text: "Whose blood is it?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

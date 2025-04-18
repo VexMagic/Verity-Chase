@@ -50,7 +50,7 @@ MonoBehaviour:
   - Line:
       TalkingCharacter: 4
       Text: I do not know how my blood appeared here. It must be some sort of illusion.
-        Some kind of smoke and mirror.
+        Some kind of smoke and mirrors.
       Backgrounds: []
       GainedClues: []
       GainedLocations: []

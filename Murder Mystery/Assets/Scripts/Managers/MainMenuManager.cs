@@ -12,6 +12,7 @@ public class MainMenuManager : UIManager
     [SerializeField] private Animator animator;
     [SerializeField] private float openSpeed;
     [SerializeField] private AudioClip titleMusic;
+    [SerializeField] private GameObject fullscreenIndicator;
 
     [SerializeField] private GameObject[] menus;
     [SerializeField] private UIButton[] defaultButton;
@@ -32,6 +33,11 @@ public class MainMenuManager : UIManager
         menuIndex = 0;
         ChangeMenu();
         AudioManager.instance.PlayMusic(titleMusic);
+
+        fullscreenIndicator.SetActive(false);
+#if !UNITY_EDITOR && UNITY_WEBGL
+        fullscreenIndicator.SetActive(true);
+#endif
     }
 
     public void OpenMenu(int index)

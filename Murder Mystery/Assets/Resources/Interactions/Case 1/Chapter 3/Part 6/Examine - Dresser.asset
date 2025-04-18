@@ -106,7 +106,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 9
     Text: "See! Looking through someone else's stuff is always good and appropriate
-      everytime because you might find a clue.\r"
+      every time because you might find a clue.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -115,7 +115,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "Is it alright if we speak with Feyme for a bit.\r"
+    Text: "Is it alright if we speak with Feyme for a bit?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

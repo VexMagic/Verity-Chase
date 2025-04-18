@@ -49,7 +49,7 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 3
-    Text: "That's the Demon's sword!\r"
+    Text: "That's the Demon's Sword!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -65,7 +65,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 3
-    Text: "No! <shake>THE<> Demon's sword.\r"
+    Text: "No! <shake>THE<> Demon's Sword.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -16,11 +16,30 @@ MonoBehaviour:
   - Text: 
     Result: {fileID: 11400000, guid: d83e00aad53422a4f9bee27f8f2f0811, type: 2}
   Lines:
+  - TalkingCharacter: 8
+    Text: Both of the hospital staff that were in here nor the victim could have
+      moved it.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: Which means the only one who would have any reason to move it would be
+      the culprit.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
   - TalkingCharacter: 10
     Text: "The culprit?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
@@ -28,5 +47,6 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

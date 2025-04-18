@@ -59,7 +59,9 @@ MonoBehaviour:
   - TalkingCharacter: 2
     Text: "Well, we just kind of found it randomly.\r"
     Backgrounds: []
-    GainedClues: []
+    GainedClues:
+    - Version: 3
+      GainedClue: {fileID: 11400000, guid: d28fc7d2759a3f14eb87c023243836f9, type: 2}
     GainedLocations: []
     GainedNotes: []
     Movements: []

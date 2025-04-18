@@ -180,7 +180,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "You have heard the saying 'dead men tell no tales', I presume?\r"
+    Text: "You <float>have<> heard the saying \u201Cdead men tell no tales\u201D,
+      I presume?"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

@@ -59,7 +59,7 @@ public class ClueDisplaySpawner : MonoBehaviour
         profileSectionAmount = profileSections;
 
         evidenceSections = Mathf.Clamp(evidenceSections, MinimumSections, 100);
-        profileSections = Mathf.Clamp(evidenceSections, MinimumSections, 100);
+        profileSections = Mathf.Clamp(profileSections, MinimumSections, 100);
 
         for (int i = 0; i < evidenceSections * displaysPerSection; i++)
         {
@@ -95,7 +95,6 @@ public class ClueDisplaySpawner : MonoBehaviour
         ClueDisplay clueDisplay = displayObject.GetComponent<ClueDisplay>();
 
         displayObject.transform.localPosition = new Vector3(GetIndexPosition(index), displayObject.transform.localPosition.y);
-        clueDisplay.FixPosition();
 
         switch (type)
         {
@@ -118,6 +117,7 @@ public class ClueDisplaySpawner : MonoBehaviour
 
         clueDisplay.SetValues(index, tempEvidence, tempProfile, type);
         clueDisplay.UpdateShownClue(type);
+        clueDisplay.FixPosition();
 
         displayObjects.Add(displayObject);
         switch (type)
@@ -281,9 +281,12 @@ public class ClueDisplaySpawner : MonoBehaviour
         isScrolling = false;
     }
 
-    public float MaxDispayDistance()
+    public float MaxDispayDistance(Clue.Type type)
     {
-        return SectionSize() / 2 * Mathf.Clamp(evidenceSectionAmount, MinimumSections, 100);
+        if (type == Clue.Type.Evidence)
+            return SectionSize() / 2 * Mathf.Clamp(evidenceSectionAmount, MinimumSections, 100);
+        else
+            return SectionSize() / 2 * Mathf.Clamp(profileSectionAmount, MinimumSections, 100);
     }
 
     public float SectionSize()

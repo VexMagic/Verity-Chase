@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: 3582b9a24a5149346aea2975ae3e3ba4, type: 2}
   Lines:
   - TalkingCharacter: 6
-    Text: "Quick question Ms. Steele...\r"
+    Text: "Quick question, Ms. Steele...\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

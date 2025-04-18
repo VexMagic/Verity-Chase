@@ -97,7 +97,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "This means that you had a motive to kill him, you had to stop him from
+    Text: "This means that you had a motive to kill him. You had to stop him from
       revealing your identity!\r"
     Backgrounds: []
     GainedClues: []

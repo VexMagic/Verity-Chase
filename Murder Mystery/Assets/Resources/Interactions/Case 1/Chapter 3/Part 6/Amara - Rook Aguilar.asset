@@ -37,7 +37,7 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 10
-    Text: "Isn't that exactly what happened.\r"
+    Text: "Isn't that exactly what happened?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

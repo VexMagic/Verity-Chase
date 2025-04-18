@@ -111,8 +111,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: "The Catalyst and the place he was last seen is mentioned in here so it
-      seems pretty clear that this is the case document for that incident.\r"
+    Text: "The Catalyst and the place they were last seen is mentioned in here so
+      it seems pretty clear that this is the case document for that incident.\r"
     Backgrounds: []
     GainedClues:
     - Version: 0

@@ -76,7 +76,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "She would have to move the body to the main exhibition.\r"
+    Text: "She would have to move the body to the main exhibit.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -100,7 +100,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "What if she moved the glass shard to be on top of the body in order for
+    Text: "What if she moved the glass shards to be on top of the body in order for
       us to think she couldn't have killed him?\r"
     Backgrounds: []
     GainedClues: []
@@ -274,7 +274,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 3
-    Text: "The butterfly angel. He saved me from the Demon.\r"
+    Text: "The Butterfly Angel. He saved me from the Demon.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

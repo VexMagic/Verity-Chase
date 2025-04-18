@@ -91,7 +91,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "'Catalyst Sightings'! Then it is just a bunch of dates and locations listed.\r"
+    Text: "'Catalyst Sightings'! It is just a bunch of dates and locations listed.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

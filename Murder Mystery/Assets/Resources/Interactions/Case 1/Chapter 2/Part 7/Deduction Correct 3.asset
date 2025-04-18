@@ -16,10 +16,20 @@ MonoBehaviour:
   - Text: 
     Result: {fileID: 11400000, guid: b2514e068f7a2c54e86a1d175540e1b6, type: 2}
   Lines:
+  - TalkingCharacter: 8
+    Text: "The culprit didn\u2019t want the body to be found so they extended the
+      curtain to cover it from anyone who would walk past."
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
   - TalkingCharacter: 10
     Text: Well... if that is the case...
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

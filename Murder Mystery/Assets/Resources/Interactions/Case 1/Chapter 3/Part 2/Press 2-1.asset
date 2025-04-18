@@ -57,7 +57,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "Isn't there something that can be used to detect blood? Luminal, I think
+    Text: "Isn't there something that can be used to detect blood? Luminol, I think
       it's called.\r"
     Backgrounds: []
     GainedClues: []
@@ -66,8 +66,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "No, sorry. Luminal messes with the DNA so we find some blood using it,
-      we can't figure out who it belongs to. \r"
+    Text: "No, sorry. Luminol messes with the DNA so if we find some blood using
+      it, we can't figure out who it belongs to. \r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

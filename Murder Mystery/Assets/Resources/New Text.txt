@@ -1,77 +1,36 @@
-Verity - Well...
-Verity - I’m more confused than ever now.
-Amara - Same here.
-Wren - We did learn that neither Claire nor Ramsey could be The Catalyst from 5 years ago.
-Verity - Which means Claire has been lying to us all this time. <think>(Not that I’m surprised.)<>
-Amara - We did also learn that Steele was most likely here 
-
-Amara - I don’t want to keep Ace waiting. Let’s head back to St. Morrigans.
-Verity - Yeah.
-Wren - Psst! Ve... You should talk to her.
-Verity - About?
-Wren - Whatever it is you’ve decided not to talk about.
-Verity - But... I don’t think I can.
-Wren - You know what I told you about how chronic pain is like?
-Verity - Yes...? How is that...?
-Wren - That is what's happening to you right now, but emotionally. Trust me.
-Verity - How are you so sure?
-Wren - The thing you’re keeping quiet about is clearly causing you pain. 
-Wren - If you aren’t gonna be honest with Ams about whatever is going on, the pain won’t go away.
-Verity - But... I’m scared of what will happen.
-Wren - Then do it scared, because you can’t keep this bottled up. 
-Amara - Are you two coming or not?
-Wren - I’m coming. Now’s your chance!
-Verity - Amara! Wait a second.
-Amara - What is it?
-Verity - We... we need to talk. I can’t keep this in anymore.
-Amara - What is this about?
-Verity - This is about the apology I made earlier.
-Amara - The one about how you work too much?
-Verity - Yes, I... I knew that wasn’t what you’re upset with me about. I just... didn’t want to admit it.
-Amara - !
-Verity - I’ve tried to repress the memories of what for years now but I can’t keep doing this or I think I might actually die.
-Amara - If you aren’t feeling up to it then we can do this another time.
-Verity - No! I... I need to tell you now.
-Verity - This has been eating me alive for the past 5 years...
-Verity - I’m so incredibly sorry for what I did and I don’t expect you to forgive me. 
-Verity - I know I blamed you for what happened to Joyce but it was entirely my fault. If I hadn’t... she...
-Verity - I know how much you must hate me for that.
-Amara - I... never hated you.
-Verity - <shake>Why not!?<> After what I did to you! After what happened with Joyce!
-Verity - How could you not hate someone like me?
-Amara - Because that’s not who you are!
-Verity - !
-Amara - I know you and I know what we went through was awful. But what we do in our lowest moments shouldn’t define us.
-Amara - I never let it define how I see you. So please, don’t let it define how you see yourself.
-Verity - I’ve made so many mistakes. Especially how I treated you. 
-Verity - You were going through the same stuff as me after Joyce died.
-Verity - How did you do it? How did you get over her death?
-Amara - I never did. 
-Amara - And I doubt I ever will.
-Verity - That just makes me feel worse.
-Amara - That’s just the cards we’ve been dealt. Not much else we can do about it.
-Verity - So that’s it, huh?
-Verity - We’ll just have to live with this... for the rest of our lives.
-Amara - We do...
-Amara - But we don’t have to do it alone.
-Verity - ... *sob*
-Amara - It’s alright. Come here.
-Amara - Just cry for as long as you need to. I’ll still be here.
-Verity - *sob* I’d like to... *sob* I’d like to visit Joyce’s grave once this is over. 
-Amara - I’d like that too. 
-Verity - ......
-Amara - ......
-Verity - ......
-Amara - Come on, let’s not keep the others waiting.
-Verity - Y-yeah... Let’s go.
-Verity - <shake>WREN!?<> 
-Amara - Were you watching us the entire time?
-Wren - You were having a moment. I didn’t want to ruin it.
-Wren - And I forgot the way back to St. Morrigans so I had to wait for you two but that’s not important.
-Wren - I’m just glad you two could talk your feelings out.
-Amara - I’m glad too.
-Amara - We’ve spent enough time here. Let’s head back.
-Wren - For real this time.
-Verity - Thanks for the push, Wren. I really needed it.
-Verity - You really have everything figured out, don’t you?
-Wren - ...... <float>yeeeeeah...<>
+Wren - We’re back! Again...
+Ace - Did you three have a good time?
+Verity - ...Yeah! We did.
+Rook - Did you also find any clues?
+Amara - Steele’s blood was found in one of the Hall family’s rooms. We believe that is the real crime scene.
+Ace - Excellent work everyone! I knew I could count on you to find it.
+Verity - <think>(Did he know about that too?!)<>
+Wren - Turns out that both Claire and Ramsey couldn’t be The Catalyst.
+Ace - I already knew Ms. Steele wasn’t The Catalyst.
+Verity - Really?
+Ace - You expected me to believe that The Catalyst who has been evading law enforcement and Interpol for 4 years before going into hiding for 5 was the 20 year old Claire Steele. 
+Ace - She would have been 11 years old when she donned the suit.
+Verity - Well I didn’t know all the stuff you just told me.
+Ace - And yet your mission was to capture the Catalyst.
+Verity - <think>(I got too excited about my first solo case that I forgot to do any research.)<>
+Rook - We should probably confront Ms. Steele about this revelation. 
+Verity - We did find evidence of you being in the museum during the time of the murder.
+Claire - <shake>Yes!!!<> Thank you!
+Verity - But that doesn’t make it impossible for you to have committed the one here too.
+Claire - Oh, come <shake>ON!!!<> 
+Wren - We also found out you aren’t the same Catalyst from 5 years ago.
+Claire - I-I-I... Y-you have no proof...?
+Amara - No need for all that. Just admit it.
+Claire - B-but...
+Rook - I <float>highly<> doubt you were 11 years old when you started your vigilante career.
+Claire - *sigh* <float>Fiiiiiiine.<> I’m... not the real Catalyst. I just made a copy of the outfit based on public photos I could find.
+Verity - <think>(Explains why the mask looked different.)<>
+Claire - Now that you’ve found me out, I guess we’re done here.
+Rook - Not so fast.
+Rook - Just because you’re not the real Catalyst, doesn’t mean you aren’t the real culprit.
+Claire - Are we still on that? I wasn’t even here last night!
+Rook - You keep saying that and I keep not believing you.
+???F - Please don’t be mean to her. She doesn’t deserve this. 
+Verity - Who said that?
+Wilma - That was me.
+Claire - <shake>Wilma!?<> Y-you’re awake…!

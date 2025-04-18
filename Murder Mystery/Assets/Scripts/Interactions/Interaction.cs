@@ -7,7 +7,7 @@ public class Interaction : ScriptableObject
 {
 }
 
-public enum Character { None = -1, UnknownMale, UnknownFemale, Verity, Feyme, Claire, Arthur, Ace, Ramsey, Rook, Wren, Amara, Mari, Minerva }
+public enum Character { None = -1, UnknownMale, UnknownFemale, Verity, Feyme, Claire, Arthur, Ace, Ramsey, Rook, Wren, Amara, Mari, Minerva, Wilma }
 
 [Serializable]
 public class DialogueLine

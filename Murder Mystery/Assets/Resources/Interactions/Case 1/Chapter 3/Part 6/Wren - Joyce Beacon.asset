@@ -17,7 +17,7 @@ MonoBehaviour:
     Result: {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
   Lines:
   - TalkingCharacter: 9
-    Text: "So who was this Joyce person I keep hearing about.\r"
+    Text: "So who was this Joyce person I keep hearing about?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -78,8 +78,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "Judging by the case file we found, she died at Cognition Research Center.
-      How did that happen?\r"
+    Text: "Judging by the case file we found, she died at the Cognition Research
+      Center. How did that happen?\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -146,7 +146,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "Because that's exactly what I used to, and still sometimes do today. \r"
+    Text: "Because that's exactly what I used to do, and still sometimes do today.
+      \r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
