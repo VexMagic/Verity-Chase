@@ -53,6 +53,7 @@ public class ClueManager : MonoBehaviour
     public Clue.Type currentMenuType;
     public bool isEvidence;
     public bool isChecking;
+    private bool isUpdating;
 
     private bool isAnimationFinished;
     public bool IsAnimationFinished => isAnimationFinished;
@@ -147,10 +148,6 @@ public class ClueManager : MonoBehaviour
                 SetGainClueDisplay(clue);
             else
                 SetUpdateClueDisplay(clue, oldVersion);
-        }
-        else
-        {
-            Debug.Log("uh oh");
         }
 
         if (!isAnimationFinished)
@@ -278,15 +275,21 @@ public class ClueManager : MonoBehaviour
 
     private IEnumerator UpdateAnimation(GainClue newClue)
     {
-        yield return new WaitForSeconds(0.5f);
+        isUpdating = true;
+        yield return new WaitForSeconds(0.7f);
         updateAnimator.SetBool("Active", true);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.25f);
         gainInfoDisplay.SetValues(newClue);
         updateAnimator.SetBool("Active", false);
+        yield return new WaitForSeconds(0.1f);
+        isUpdating = false;
     }
 
     public void CloseGainClueDisplay()
     {
+        if (isUpdating)
+            return;
+
         gainClueAnimator.SetBool("Open", false);
         isAnimationFinished = true;
     }
