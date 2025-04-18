@@ -1,64 +1,77 @@
-Verity - If you didn’t have a connection to him, like you say, I would believe you. 
-Verity - It wouldn’t make sense for you to kill Matthew Murphy.
-Claire - Thank you for your encouraging words. I knew I could trust you to see things my way.
-Verity - But you do have a connection with him, don’t you?
-Claire - ......
-Claire - No? I already said I don’t.
-Verity - Maybe Claire Steele didn’t...
-Verity - ...but The Catalyst definitely does!
-Claire - What! That’s crazy! I-I mean... That’s preposterous! 
-Verity - Mr. Murphy was looking for the true identity of The Catalyst.
-Verity - This means that you had a motive to kill him, you had to stop him from revealing your identity!
-Claire - B-but I... I had no idea he was doing that. I promise!
-Verity - <think>(Is she playing dumb or did she really not know?)<>
-Ace - Care to fill me in on what he knew about The Catalyst?
-Verity - He had a few suspects. The one that’s most important to us at this moment is Ramsey Paige.
-Ace - Now that you mention it... that makes a whole lot of sense.
-Ace - Both have a criminal background and haven’t been seen for 5 years. 
-Wren - Actually, Ramsey was seen 4 months ago.
-Amara - He was?
-Wren - He was the one who caused the crash that put Wilma in a coma.
-Claire - <shake>WHAAAAAAAAAAAT!!!<>
-Verity - <think>(She didn’t know that either?)<>
-Rook - I was hoping to use that as a trump card later on, but oh well. 
-Claire - Ramsey was the one in that car!?
-Rook - He was. Which gives you a motive to kill him too.
-Claire - <shake>But I had no idea it was him!<>
-Wren - You didn’t?
-Ace - She did mention that the person in the other car ran away before she could see them.
-Rook - I don’t believe that for a second.
-Verity - <think>(She really didn’t know...)<>
-Claire - But I didn’t know! I would never kill anyone!
-Rook - All the evidence suggests otherwise.
-Claire - Th-then maybe you missed something! Something clue I-I forgot to get rid of. Some blood I forgot to clean up. 
-Verity - We searched all of the main room of Arthur’s Hall of Oddities. We found nothing of the sort.
-Claire - <shake>That’s it!<> There could be stuff in the other rooms that you missed. Proof I didn’t kill anyone!
-Amara - The other rooms? You mean the Hall family residence?
-Claire - Exactly!
-Verity - Hall family? As in Dr. Minerva Hall?
-Ace - Yes. She’s married to the museum's curator, Arthur Hall.
-Verity - <think>(I hate how interconnected these two cases are. It’s making my head hurt.)<>
-Wren - Does that mean another Aguilar family adventure?
-Rook - Seems like it.
-Verity - Wren, we’re still not related.
-Wren - A guy can dream.
-Ace - Before you go, I’d like to have a word with you, Mr. Aguilar.
-Rook - Can this wait?
-Ace - Sadly, no.
-Wren - So we’re just down to two?
-Amara - I can’t let two civilians wander around a crime scene unsupervised. I’ll come along to keep an eye on you.
-Verity - <think>(This will either be an amazing or terrible experience and that terrifies me.)<>
-Ace - Let’s leave them to it Mr. Aguilar. 
-Rook - Alright.
-Rook - Pssst, Verity.
-Verity - Why are we whispering?
-Rook - Hold onto this for me.
-[gain The Device]
-Verity - Is this...?
-Rook - Wren will tell you how to use it.
-Ace - Are you coming or not?
-Rook - Right behind you.
-Verity - <think>(Why did he give me his secret weapon?)<>
-Verity - <think>(He usually keeps it on him at all times. Why not now?)<>
-Amara - We should head out too.
-Wren - This will be interesting. 
+Verity - Well...
+Verity - I’m more confused than ever now.
+Amara - Same here.
+Wren - We did learn that neither Claire nor Ramsey could be The Catalyst from 5 years ago.
+Verity - Which means Claire has been lying to us all this time. <think>(Not that I’m surprised.)<>
+Amara - We did also learn that Steele was most likely here 
+
+Amara - I don’t want to keep Ace waiting. Let’s head back to St. Morrigans.
+Verity - Yeah.
+Wren - Psst! Ve... You should talk to her.
+Verity - About?
+Wren - Whatever it is you’ve decided not to talk about.
+Verity - But... I don’t think I can.
+Wren - You know what I told you about how chronic pain is like?
+Verity - Yes...? How is that...?
+Wren - That is what's happening to you right now, but emotionally. Trust me.
+Verity - How are you so sure?
+Wren - The thing you’re keeping quiet about is clearly causing you pain. 
+Wren - If you aren’t gonna be honest with Ams about whatever is going on, the pain won’t go away.
+Verity - But... I’m scared of what will happen.
+Wren - Then do it scared, because you can’t keep this bottled up. 
+Amara - Are you two coming or not?
+Wren - I’m coming. Now’s your chance!
+Verity - Amara! Wait a second.
+Amara - What is it?
+Verity - We... we need to talk. I can’t keep this in anymore.
+Amara - What is this about?
+Verity - This is about the apology I made earlier.
+Amara - The one about how you work too much?
+Verity - Yes, I... I knew that wasn’t what you’re upset with me about. I just... didn’t want to admit it.
+Amara - !
+Verity - I’ve tried to repress the memories of what for years now but I can’t keep doing this or I think I might actually die.
+Amara - If you aren’t feeling up to it then we can do this another time.
+Verity - No! I... I need to tell you now.
+Verity - This has been eating me alive for the past 5 years...
+Verity - I’m so incredibly sorry for what I did and I don’t expect you to forgive me. 
+Verity - I know I blamed you for what happened to Joyce but it was entirely my fault. If I hadn’t... she...
+Verity - I know how much you must hate me for that.
+Amara - I... never hated you.
+Verity - <shake>Why not!?<> After what I did to you! After what happened with Joyce!
+Verity - How could you not hate someone like me?
+Amara - Because that’s not who you are!
+Verity - !
+Amara - I know you and I know what we went through was awful. But what we do in our lowest moments shouldn’t define us.
+Amara - I never let it define how I see you. So please, don’t let it define how you see yourself.
+Verity - I’ve made so many mistakes. Especially how I treated you. 
+Verity - You were going through the same stuff as me after Joyce died.
+Verity - How did you do it? How did you get over her death?
+Amara - I never did. 
+Amara - And I doubt I ever will.
+Verity - That just makes me feel worse.
+Amara - That’s just the cards we’ve been dealt. Not much else we can do about it.
+Verity - So that’s it, huh?
+Verity - We’ll just have to live with this... for the rest of our lives.
+Amara - We do...
+Amara - But we don’t have to do it alone.
+Verity - ... *sob*
+Amara - It’s alright. Come here.
+Amara - Just cry for as long as you need to. I’ll still be here.
+Verity - *sob* I’d like to... *sob* I’d like to visit Joyce’s grave once this is over. 
+Amara - I’d like that too. 
+Verity - ......
+Amara - ......
+Verity - ......
+Amara - Come on, let’s not keep the others waiting.
+Verity - Y-yeah... Let’s go.
+Verity - <shake>WREN!?<> 
+Amara - Were you watching us the entire time?
+Wren - You were having a moment. I didn’t want to ruin it.
+Wren - And I forgot the way back to St. Morrigans so I had to wait for you two but that’s not important.
+Wren - I’m just glad you two could talk your feelings out.
+Amara - I’m glad too.
+Amara - We’ve spent enough time here. Let’s head back.
+Wren - For real this time.
+Verity - Thanks for the push, Wren. I really needed it.
+Verity - You really have everything figured out, don’t you?
+Wren - ...... <float>yeeeeeah...<>

@@ -25,3 +25,7 @@ MonoBehaviour:
       Text: Nicknames
       Result: {fileID: 11400000, guid: 3c9de55d3b19b8b48a87aa1e87ece8ff, type: 2}
     Condition: {fileID: 0}
+  - Response:
+      Text: Joyce Beacon
+      Result: {fileID: 11400000, guid: 7d5e5b56865376144acf966c97862ed1, type: 2}
+    Condition: {fileID: 11400000, guid: c8e74ee938ab0444480c6f93b934fceb, type: 2}

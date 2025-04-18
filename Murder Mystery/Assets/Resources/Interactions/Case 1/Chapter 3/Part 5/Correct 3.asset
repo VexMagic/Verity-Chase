@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
   m_Name: Correct 3
   m_EditorClassIdentifier: 
-  Responses:
-  - Text: 
-    Result: {fileID: 11400000, guid: 8c98ececbdec80a47a66d4162f8ca289, type: 2}
+  Responses: []
   Lines:
   - TalkingCharacter: 2
     Text: "If you didn't have a connection to him, like you say, I would believe
@@ -339,6 +337,14 @@ MonoBehaviour:
   - TalkingCharacter: 2
     Text: "<think>(I hate how interconnected these two cases are. It's making my
       head hurt.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Can't hurt to look around a bit.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

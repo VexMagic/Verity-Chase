@@ -100,7 +100,6 @@ public class CharacterDisplay : MonoBehaviour
         yield return new WaitUntil(() => flipCoroutine == null);
         yield return new WaitUntil(() => moveCoroutine == null);
         animateCoroutine = null;
-        Debug.Log("animation done");
     }
 
     private IEnumerator SmoothMovement(float start, float end)

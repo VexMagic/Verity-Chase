@@ -35,6 +35,7 @@ public class ClueManager : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI gainDescription;
     //[SerializeField] private Image gainImage;
     [SerializeField] private Animator gainClueAnimator;
+    [SerializeField] private Animator updateAnimator;
     [SerializeField] private GameObject scrollArrows;
 
     public List<GainEvidence> allEvidence = new List<GainEvidence>();
@@ -77,6 +78,7 @@ public class ClueManager : MonoBehaviour
         bool exists = false;
 
         var tempData = (clue as GainAnyClueType).gainedClue;
+        int oldVersion = 0;
         if (tempData is EvidenceData)
         {
             GainEvidence tempEvidence = new GainEvidence(tempData as EvidenceData, clue.version);
@@ -88,6 +90,7 @@ public class ClueManager : MonoBehaviour
                     exists = true;
                     if (item.version < tempEvidence.version)
                     {
+                        oldVersion = item.version;
                         item.version = tempEvidence.version;
                         isUpdated = true;
                         break;
@@ -112,8 +115,10 @@ public class ClueManager : MonoBehaviour
                     exists = true;
                     if (item.version < tempProfile.version)
                     {
+                        oldVersion = item.version;
                         item.version = tempProfile.version;
                         isUpdated = true;
+                        Debug.Log("update");
                         break;
                     }
                 }
@@ -138,13 +143,20 @@ public class ClueManager : MonoBehaviour
         {
             isAnimationFinished = false;
             ClueDisplaySpawner.instance.CreateClueDisplays();
-            UpdateGainClueDisplay(clue);
+            if (isNew)
+                SetGainClueDisplay(clue);
+            else
+                SetUpdateClueDisplay(clue, oldVersion);
+        }
+        else
+        {
+            Debug.Log("uh oh");
         }
 
         if (!isAnimationFinished)
         {
             yield return new WaitUntil(() => isAnimationFinished);
-            yield return new WaitForSeconds(0.4f); 
+            yield return new WaitForSeconds(0.4f);
         }
     }
 
@@ -155,6 +167,7 @@ public class ClueManager : MonoBehaviour
             checkTextScreen.SetActive(false);
             isChecking = false;
             SwapMenuButton(isEvidence);
+            closeButton.SetActive(canGoBack);
             return;
         }
 
@@ -236,19 +249,40 @@ public class ClueManager : MonoBehaviour
         checkTextScreen.SetActive(true);
         checkTextBox.text = evidence.description;
         isChecking = true;
+        closeButton.SetActive(true);
         foreach (var button in swapButtons)
         {
             button.SetActive(false);
         }
     }
 
-    private void UpdateGainClueDisplay(GainClue clue)
+    private void SetGainClueDisplay(GainClue clue)
     {
         if (clue != null)
         {
             gainInfoDisplay.SetValues(clue);
             gainClueAnimator.SetBool("Open", true);
         }
+    }
+
+    private void SetUpdateClueDisplay(GainClue newClue, int oldVersion)
+    {
+        Debug.Log("update");
+        if (newClue != null)
+        {
+            gainInfoDisplay.SetValues(newClue, oldVersion);
+            gainClueAnimator.SetBool("Open", true);
+            StartCoroutine(UpdateAnimation(newClue));
+        }
+    }
+
+    private IEnumerator UpdateAnimation(GainClue newClue)
+    {
+        yield return new WaitForSeconds(0.5f);
+        updateAnimator.SetBool("Active", true);
+        yield return new WaitForSeconds(0.2f);
+        gainInfoDisplay.SetValues(newClue);
+        updateAnimator.SetBool("Active", false);
     }
 
     public void CloseGainClueDisplay()

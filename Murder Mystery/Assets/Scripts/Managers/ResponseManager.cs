@@ -140,6 +140,9 @@ public class ResponseManager : MonoBehaviour
 
     public void ResponseResult(Interaction result)
     {
+        if (result == null)
+            return;
+
         DialogueManager.instance.SetClickDetectionActive(true);
         ExitResponseMenu();
 

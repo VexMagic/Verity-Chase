@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5925155aa1b0f4ab43cbc6dc83e3a7, type: 3}
+  m_Name: False Assumption
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 7b1b3366b5337224fb6b975b51f38bb8, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 0537071334de6374fbdd9ef94565c6f0, type: 2}
+  UniqueWrongs: []
+  Question: What is the false assumption we made?
+  Options:
+  - Options:
+    - Claire broke in
+    - Ramsey died
+    - Feyme hid
+  - Options:
+    - before
+    - after
+    - the same time
+  - Options:
+    - Claire broke in
+    - Ramsey died
+    - Feyme hid
+  Answers:
+  - Answer: 000000000000000001000000
+  - Answer: 010000000100000000000000

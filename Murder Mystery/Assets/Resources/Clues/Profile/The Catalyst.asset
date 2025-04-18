@@ -27,6 +27,11 @@ MonoBehaviour:
   - Description: "Claire Steele claims to be The Catalyst but maybe Ramsey Paige
       was the one really behind the mask. I\u2019m honestly not sure what to believe
       anymore."
+    Sprite: {fileID: 21300000, guid: c119d9bef1ccb634eaa8af666302659e, type: 3}
+    Gender: Female
+    Age: 20
+  - Description: "Neither Claire Steele nor Ramsey Paige can be The Catalyst. I\u2019m
+      now more in the dark about their true identity than ever."
     Sprite: {fileID: 21300000, guid: b16963d867e9da64888cec98d4dca2e3, type: 3}
     Gender: Unknown
     Age: Unknown

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2640b0f533d9c6e40a3bccbebfe95f6e, type: 3}
+  m_Name: Feyme's Room
+  m_EditorClassIdentifier: 
+  Title: Feyme's Room
+  Preview: {fileID: 21300000, guid: 1a7acaef485782c4ebff9bc0f6d940d8, type: 3}
+  PeopleAtLocations:
+  - LocationName: Feyme's Room
+    EnterInteraction: {fileID: 11400000, guid: 18abcac62c0acc7478f7cde687a915a4, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 1
+    People:
+    - {fileID: 11400000, guid: df48332a60220c14d86f0e33089fe10a, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions: []
+  - LocationName: Feyme's Room
+    EnterInteraction: {fileID: 11400000, guid: 18786182049a1124cb491a800bdb5fa9, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 1
+    People:
+    - {fileID: 11400000, guid: 2b205f8a627886e4b93c4bbba30a9957, type: 2}
+    - {fileID: 11400000, guid: df48332a60220c14d86f0e33089fe10a, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: e1371d18104b4bd4792909189887d324, type: 2}
+  - LocationName: Feyme's Room
+    EnterInteraction: {fileID: 11400000, guid: 3ba2e39ec6222d240803a58c64d6c3cf, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 1
+    People:
+    - {fileID: 11400000, guid: 2b205f8a627886e4b93c4bbba30a9957, type: 2}
+    - {fileID: 11400000, guid: df48332a60220c14d86f0e33089fe10a, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 7d5e5b56865376144acf966c97862ed1, type: 2}
+    - {fileID: 11400000, guid: 3c9de55d3b19b8b48a87aa1e87ece8ff, type: 2}
+    - {fileID: 11400000, guid: 0752a769d03c83f4b9aef7cec0941e0a, type: 2}
+    - {fileID: 11400000, guid: 662d84b50ceeb4748a4374f9686257db, type: 2}
+    - {fileID: 11400000, guid: 651c8dcb2f24ec348a7dd334a504a420, type: 2}
+    - {fileID: 11400000, guid: f821e36647b40a6488a4e2ce6c572838, type: 2}
+    - {fileID: 11400000, guid: 62b7b533f9b01e740815886e0d94dfae, type: 2}
+    - {fileID: 11400000, guid: 03a52473dd6b8144eb134ad49fbba740, type: 2}

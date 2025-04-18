@@ -36,13 +36,15 @@ public class LocationState
 {
     [SerializeField] private string LocationName;
     [SerializeField] private Interaction EnterInteraction;
-    [SerializeField] private AudioClip AreaMusic; 
+    [SerializeField] private AudioClip AreaMusic;
+    [SerializeField] private bool Examinable = true;
     [SerializeField] private Interview[] People;
     [SerializeField] private Interaction[] Conditions;
 
     public string locationName => LocationName;
     public Interaction enterInteraction => EnterInteraction;
     public AudioClip areaMusic => AreaMusic;
+    public bool examinable => Examinable;
     public Interview[] people => People;
     public Interaction[] condition => Conditions;
 

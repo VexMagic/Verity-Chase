@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f860335bdcb37f4cb344c04a4989ea7, type: 3}
+  m_Name: Who is the Demon
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 1dec9d12a90e0f247a0fee9932d5e27e, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: e6ed1e2310dcb4946814f7b0103de6a9, type: 2}
+  UniqueWrongs: []
+  Line:
+    TalkingCharacter: 2
+    Text: Is this the Demon you are talking about?
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  CorrectAnswers:
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: 2f9253bba986f8e4da167e220577d1b6, type: 2}

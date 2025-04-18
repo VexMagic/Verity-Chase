@@ -15,11 +15,16 @@ public class ClueInfoDisplay : MonoBehaviour
     [SerializeField] private GameObject profile;
     [SerializeField] private Image image;
 
+
     public void SetValues(GainClue clue)
+    {
+        SetValues(clue, clue.version);
+    }
+
+    public void SetValues(GainClue clue, int version)
     {
         if (clue is GainAnyClueType)
         {
-            int version = clue.version;
             var tempData = (clue as GainAnyClueType).gainedClue;
             if (tempData is EvidenceData)
             {

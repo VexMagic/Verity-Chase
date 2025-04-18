@@ -436,6 +436,9 @@ public class LocationManager : MonoBehaviour
             personSpawner.SetButtonActive(false);
         }
 
+        examineButton.interactable = unlockedLocations[currentLocation].CurrentLocationState().examinable;
+        examineButton.GetComponent<UIButton>().SetOutlineInteractable();
+
         SetCheckmarks();
         moveButton.interactable = unlockedLocations.Count > 1;
         moveButton.GetComponent<UIButton>().SetOutlineInteractable();

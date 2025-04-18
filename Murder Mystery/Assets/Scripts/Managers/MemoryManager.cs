@@ -60,6 +60,9 @@ public class MemoryManager : MonoBehaviour
             IsMemoryActive = true;
         }
 
+        if (!LogManager.instance.HasFinishedInteraction(currentMemory.intro) && currentMemory.intro != null)
+            ResponseManager.instance.ResponseResult(currentMemory.intro);
+
         AudioManager.instance.PlayMusic(music);
         exitButton.SetActive(currentMemory.exitable);
 

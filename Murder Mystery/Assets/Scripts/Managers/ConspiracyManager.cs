@@ -319,16 +319,16 @@ public class ConspiracyManager : MonoBehaviour
 
             if (firstNote != null && secondNote != null)
             {
-                SetRope(firstNote.transform.position + new Vector3(0, 140), secondNote.transform.position + new Vector3(0, 140));
+                SetRope(firstNote.transform.localPosition + new Vector3(0, 140), secondNote.transform.localPosition + new Vector3(0, 140));
                 pin2.SetActive(true);
             }
             else if (firstNote != null && secondNote == null)
             {
-                SetRope(firstNote.transform.position + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition + screenMaxSize);
+                SetRope(firstNote.transform.localPosition + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition);
             }
             else if (firstNote == null && secondNote != null)
             {
-                SetRope(secondNote.transform.position + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition + screenMaxSize);
+                SetRope(secondNote.transform.localPosition + new Vector3(0, 140), (Vector2)mouseObject.transform.localPosition);
             }
 
             yield return new WaitForFixedUpdate();
@@ -337,7 +337,10 @@ public class ConspiracyManager : MonoBehaviour
 
     private void SetRope(Vector2 from, Vector2 to)
     {
-        rope.position = from;
+        //from += screenMaxSize;
+        //to += screenMaxSize;
+
+        rope.localPosition = from;
         float angle = UtilsClass.GetAngleFromVectorFloat(from - to);
         rope.eulerAngles = new Vector3(0, 0, angle + 90);
         float dist = Vector3.Distance(from, to);

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46384ce4766904b46acc66394979c2a5, type: 3}
+  m_Name: Feyme
+  m_EditorClassIdentifier: 
+  CharacterName: 3
+  Character: {fileID: 9100000, guid: 793bec750e2340849ab80af41cd8a64e, type: 2}
+  Animation: {fileID: 7400000, guid: 401e877fb25fa9b4db1c97b5be3f56bc, type: 2}
+  Music: {fileID: 8300000, guid: 769386b7c16776845b22b9ae02fed312, type: 3}
+  Questions:
+  - Response:
+      Text: The Angel and the Demon
+      Result: {fileID: 11400000, guid: 03a52473dd6b8144eb134ad49fbba740, type: 2}
+    Condition: {fileID: 0}
+  - Response:
+      Text: Knife Under the Carpet
+      Result: {fileID: 11400000, guid: 62b7b533f9b01e740815886e0d94dfae, type: 2}
+    Condition: {fileID: 11400000, guid: 651c8dcb2f24ec348a7dd334a504a420, type: 2}

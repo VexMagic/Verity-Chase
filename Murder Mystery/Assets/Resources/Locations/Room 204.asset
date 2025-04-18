@@ -18,6 +18,7 @@ MonoBehaviour:
   - LocationName: Room 204
     EnterInteraction: {fileID: 11400000, guid: a56f6d23878e75148aeb1456632a5254, type: 2}
     AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 1
     People:
     - {fileID: 11400000, guid: 101f5368d30422a44b08aadf5d39765e, type: 2}
     - {fileID: 11400000, guid: 4adb83f13a7eb044484d45ac80205ba6, type: 2}
@@ -26,6 +27,7 @@ MonoBehaviour:
   - LocationName: Room 204
     EnterInteraction: {fileID: 11400000, guid: b254309f368f3834781b53d60c51ca50, type: 2}
     AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 1
     People:
     - {fileID: 11400000, guid: bbf641a85ce250f459c44b259fcb4f56, type: 2}
     Conditions:
@@ -40,6 +42,7 @@ MonoBehaviour:
   - LocationName: Room 204
     EnterInteraction: {fileID: 11400000, guid: 69a0feee598e37e4da21fb5321ab7525, type: 2}
     AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 1
     People:
     - {fileID: 11400000, guid: bbf641a85ce250f459c44b259fcb4f56, type: 2}
     Conditions:
@@ -47,12 +50,14 @@ MonoBehaviour:
   - LocationName: Room 204
     EnterInteraction: {fileID: 0}
     AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 0
     People: []
     Conditions:
     - {fileID: 11400000, guid: fbf8bd3749820f04283188bae297fb5d, type: 2}
   - LocationName: Room 204
     EnterInteraction: {fileID: 11400000, guid: 0b3b8a1b85cfadb47a29889203cb60c3, type: 2}
     AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 0
     People: []
     Conditions:
     - {fileID: 11400000, guid: 818be7fc20b7ca441add270c45b39f46, type: 2}

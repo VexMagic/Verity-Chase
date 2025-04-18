@@ -1399,7 +1399,7 @@ MonoBehaviour:
   continueButton: {fileID: 1499083815}
   mainMenuButton: {fileID: 1436519236}
   chapterDisplay: {fileID: 999716970}
-  caseChapters: 02000000
+  caseChapters: 03000000
 --- !u!1001 &1952613130
 PrefabInstance:
   m_ObjectHideFlags: 0

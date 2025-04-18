@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: Main Hall
   m_EditorClassIdentifier: 
   Title: "Arthur\u2019s Hall of Oddities"
-  Preview: {fileID: 21300000, guid: 57c1b994cf99cae45abae43b3b50469d, type: 3}
+  Preview: {fileID: 21300000, guid: 280daab5ffc199a4aa52258d68ed3735, type: 3}
   PeopleAtLocations:
   - LocationName: Main Hall
     EnterInteraction: {fileID: 0}
     AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 1
     People:
     - {fileID: 11400000, guid: 6927f383befa8694ea04a1d840e18167, type: 2}
     Conditions: []
   - LocationName: Main Hall
     EnterInteraction: {fileID: 11400000, guid: 5bf441e3e8e803043930a42edad2e47d, type: 2}
     AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 1
     People: []
     Conditions:
     - {fileID: 11400000, guid: 61d6cfc8210327a49951ceee2db8975a, type: 2}
@@ -32,3 +34,20 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 19a1e2bd6af8be0448dbb2757cd07431, type: 2}
     - {fileID: 11400000, guid: ffddcae6f8ba79042beac86bc66eef23, type: 2}
     - {fileID: 11400000, guid: 0c5f7fc7509a0fc4289192420d62d6ae, type: 2}
+  - LocationName: Main Hall
+    EnterInteraction: {fileID: 0}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 0
+    People: []
+    Conditions:
+    - {fileID: 11400000, guid: fbf8bd3749820f04283188bae297fb5d, type: 2}
+  - LocationName: Main Hall
+    EnterInteraction: {fileID: 11400000, guid: c8e74ee938ab0444480c6f93b934fceb, type: 2}
+    AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
+    Examinable: 0
+    People:
+    - {fileID: 11400000, guid: a58ff7824aae4234b80eed55fdb67b97, type: 2}
+    - {fileID: 11400000, guid: df48332a60220c14d86f0e33089fe10a, type: 2}
+    - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 0c5a445be7a2469488abb4a6f237c8af, type: 2}

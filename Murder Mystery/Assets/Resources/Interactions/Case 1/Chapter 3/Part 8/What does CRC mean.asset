@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f860335bdcb37f4cb344c04a4989ea7, type: 3}
+  m_Name: What does CRC mean
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: d50706374fafbc34d84e17e17b6a80a9, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 75a35271e59def4479c3fa2174ec1aeb, type: 2}
+  UniqueWrongs: []
+  Line:
+    TalkingCharacter: 2
+    Text: This piece of evidence shows what CRC stands for.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  CorrectAnswers:
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: 48e0294e74a49f24fa7dd7659d871dd3, type: 2}
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: a8af4019a95bbb541909ad93649e9874, type: 2}
