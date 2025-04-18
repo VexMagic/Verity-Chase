@@ -128,9 +128,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "You expected me to believe that The Catalyst who has been evading law
-      enforcement and Interpol for 4 years before going into hiding for 5 was the
-      20 year old Claire Steele. \r"
+    Text: You expected me to believe that The Catalyst who has been evading law enforcement
+      and Interpol for 4 years...
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -138,7 +137,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "She would have been 11 years old when she donned the suit.\r"
+    Text: "...before going into hiding for another 5 was the 20 year old Claire Steele.
+      She would have been 11 years old when she donned the suit.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

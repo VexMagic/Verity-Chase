@@ -7283,7 +7283,7 @@ MonoBehaviour:
   chapterButton: {fileID: 0}
   currentCase: 0
   currentChapter: 2
-  currentPart: 7
+  currentPart: 8
 --- !u!1001 &663449558
 PrefabInstance:
   m_ObjectHideFlags: 0

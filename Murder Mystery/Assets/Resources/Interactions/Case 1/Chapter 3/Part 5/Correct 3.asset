@@ -451,7 +451,13 @@ MonoBehaviour:
     - DisplayID: 5
       Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
       Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
-      XPos: -2000
+      XPos: -1500
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
+      XPos: -1500
       FacingLeft: 1
       Delay: 0
     Music: {fileID: 0}
@@ -513,7 +519,13 @@ MonoBehaviour:
     - DisplayID: 5
       Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
       Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
-      XPos: 1000
+      XPos: -800
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -1000
       FacingLeft: 0
       Delay: 0
     Music: {fileID: 0}
@@ -541,14 +553,20 @@ MonoBehaviour:
     - DisplayID: 5
       Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
       Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
-      XPos: -2000
+      XPos: -1500
       FacingLeft: 1
       Delay: 0
     - DisplayID: 1
       Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
       Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
-      XPos: -2000
+      XPos: -1500
       FacingLeft: 1
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -550
+      FacingLeft: 0
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -565,7 +583,19 @@ MonoBehaviour:
     GainedClues: []
     GainedLocations: []
     GainedNotes: []
-    Movements: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -250
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: 250
+      FacingLeft: 1
+      Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 9
     Text: 'This will be interesting. '
