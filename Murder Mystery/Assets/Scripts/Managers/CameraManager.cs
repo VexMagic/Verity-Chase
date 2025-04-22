@@ -8,12 +8,15 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] private Transform cameraPos;
     [SerializeField] private Camera cameraObject;
-    [SerializeField] private float maxOffset;
-    [SerializeField] private float maxRotation;
+    [SerializeField] private float offsetIgnore;
+    [SerializeField] private Vector2 sizeConversions;
     [SerializeField] private float moveSpeed;
     private Character tempCharacter;
     private Coroutine rotateCoroutine;
     private Coroutine zoomCoroutine;
+
+    private float CameraOffset;
+    public float cameraOffset => CameraOffset;
 
     private void Awake()
     {
@@ -39,14 +42,20 @@ public class CameraManager : MonoBehaviour
 
     private void SetCameraPos(float endPos)
     {
-        float percentage = endPos / maxOffset;
+        float offset = Mathf.Clamp(Mathf.Abs(endPos) - offsetIgnore, 0, 10000);
+
+        if (endPos < 0)
+            offset *= -1;
 
         if (rotateCoroutine != null)
         {
             StopCoroutine(rotateCoroutine);
             rotateCoroutine = null;
         }
-        rotateCoroutine = StartCoroutine(Rotation(percentage * maxRotation));
+
+        CameraOffset = offset;
+
+        rotateCoroutine = StartCoroutine(SmoothMovement(cameraPos.position.x, offset / sizeConversions.x * sizeConversions.y));
     }
 
     public void StartZoom(CameraZoom cameraZoom)
@@ -98,6 +107,24 @@ public class CameraManager : MonoBehaviour
             sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
             float t = Evaluate(sinTime);
             cameraPos.eulerAngles = Vector3.Lerp(new Vector3(0, start), new Vector3(0, endPos), t);
+            yield return null;
+        }
+        rotateCoroutine = null;
+    }
+
+    private IEnumerator SmoothMovement(float start, float end)
+    {
+        bool active = true;
+        float sinTime = 0;
+        while (active)
+        {
+            sinTime += Time.deltaTime * moveSpeed;
+            if (sinTime > Mathf.PI)
+                active = false;
+            sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
+            float t = Evaluate(sinTime);
+            cameraPos.localPosition = Vector3.Lerp(new Vector3(start, cameraPos.localPosition.y, cameraPos.localPosition.z), 
+                new Vector3(end, cameraPos.localPosition.y, cameraPos.localPosition.z), t);
             yield return null;
         }
         rotateCoroutine = null;

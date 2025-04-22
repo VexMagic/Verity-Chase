@@ -137,7 +137,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: "...before going into hiding for another 5 was the 20 year old Claire Steele.
+    Text: "...before going into hiding for another 5 was the 20 year old Claire Steele?
       She would have been 11 years old when she donned the suit.\r"
     Backgrounds: []
     GainedClues: []
@@ -351,25 +351,7 @@ MonoBehaviour:
     GainedClues: []
     GainedLocations: []
     GainedNotes: []
-    Movements:
-    - DisplayID: 4
-      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
-      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
-      XPos: 650
-      FacingLeft: 1
-      Delay: 0
-    - DisplayID: 5
-      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
-      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
-      XPos: 950
-      FacingLeft: 1
-      Delay: 0
-    - DisplayID: 6
-      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
-      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
-      XPos: 350
-      FacingLeft: 1
-      Delay: 0
+    Movements: []
     Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
   - TalkingCharacter: 2
     Text: "Who said that?\r"
@@ -430,7 +412,7 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 4
-    Text: <shake>Wilma!?<> Y-you're awake'!
+    Text: <shake>Wilma!?<> Y-you're awake!
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

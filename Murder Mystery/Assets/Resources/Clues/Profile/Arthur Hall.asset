@@ -15,7 +15,7 @@ MonoBehaviour:
   Title: Arthur Hall
   Versions:
   - Description: The eccentric curator of the museum, Arthur's Hall of Oddities.
-      He's married to Dr. Minerva Hall.
+      He's married to Dr. Minerva Hall. He prefers to go by Arti.
     Sprite: {fileID: 21300000, guid: e31ef8ac87a439b469fd40c6582b0022, type: 3}
     Gender: Male
     Age: 47

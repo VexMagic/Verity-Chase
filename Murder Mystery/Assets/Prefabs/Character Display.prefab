@@ -94,6 +94,12 @@ MonoBehaviour:
   moveSpeed: 5
   flipSpeed: 5
   DelayDialogue: 0
+  sprite: {fileID: 6904783595617616036}
+  notSpeaking: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  colorSpeed: 20
+  bounceSpeed: 7
+  bounceSize: {x: 25, y: -25}
+  rect: {fileID: 6904783595617616041}
 --- !u!95 &6904783595617616038
 Animator:
   serializedVersion: 5

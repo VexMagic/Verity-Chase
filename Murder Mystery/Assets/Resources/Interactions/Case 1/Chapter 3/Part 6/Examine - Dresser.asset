@@ -67,7 +67,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
-    Text: "It's a... shard? From some sort of poetry maybe.\r"
+    Text: "It's a... shard? From some sort of pottery maybe.\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

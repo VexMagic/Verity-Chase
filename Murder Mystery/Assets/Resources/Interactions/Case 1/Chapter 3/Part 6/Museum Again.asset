@@ -126,7 +126,9 @@ MonoBehaviour:
   - TalkingCharacter: 2
     Text: "<think>(The name Arthur's Hall of Oddities makes a lot more sense now.)<>\r"
     Backgrounds: []
-    GainedClues: []
+    GainedClues:
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: fa57f3e33d2a8da4fa0be31e68a7bdf4, type: 2}
     GainedLocations: []
     GainedNotes: []
     Movements: []

@@ -534,6 +534,7 @@ public class DialogueManager : MonoBehaviour
             characterName.text = GetCharacterData(line.talkingCharacter).title;
             dialogueText.alignment = TextAlignmentOptions.TopLeft;
             AudioManager.instance.currentBlipSound = GetCharacterData(line.talkingCharacter).sound;
+
         }
         else
         {
@@ -546,6 +547,9 @@ public class DialogueManager : MonoBehaviour
         {
             CharacterManager.instance.MoveCharacter(movement);
         }
+
+        CameraManager.instance.NewLine(line.talkingCharacter);
+        CharacterManager.instance.SetSpeaking(line.talkingCharacter);
 
         foreach (var item in line.backgrounds)
         {
@@ -564,7 +568,6 @@ public class DialogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        CameraManager.instance.NewLine(line.talkingCharacter);
         if (CharacterManager.instance.GetAnimationDelayActive())
         {
             textBox.SetActive(false);

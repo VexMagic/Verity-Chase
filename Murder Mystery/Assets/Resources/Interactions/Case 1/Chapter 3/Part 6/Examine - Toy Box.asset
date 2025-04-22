@@ -157,7 +157,9 @@ MonoBehaviour:
   - TalkingCharacter: 2
     Text: "<think>(This kid has an active imagination.)<>\r"
     Backgrounds: []
-    GainedClues: []
+    GainedClues:
+    - Version: 0
+      GainedClue: {fileID: 11400000, guid: c87fe051690ec0f46b46db2d2b9828d2, type: 2}
     GainedLocations: []
     GainedNotes: []
     Movements: []

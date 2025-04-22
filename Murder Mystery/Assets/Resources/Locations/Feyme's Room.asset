@@ -38,7 +38,6 @@ MonoBehaviour:
     AreaMusic: {fileID: 8300000, guid: 90da4fd4fdcdd8848a2b6214e1bd1cb9, type: 3}
     Examinable: 1
     People:
-    - {fileID: 11400000, guid: 2b205f8a627886e4b93c4bbba30a9957, type: 2}
     - {fileID: 11400000, guid: df48332a60220c14d86f0e33089fe10a, type: 2}
     - {fileID: 11400000, guid: 20abac8c07fcea3428499b0c85410b07, type: 2}
     Conditions:

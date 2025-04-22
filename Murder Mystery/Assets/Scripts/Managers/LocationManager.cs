@@ -129,7 +129,7 @@ public class LocationManager : MonoBehaviour
         moveScreen.SetActive(true);
         SetUIButtonValues();
 
-        UIButtons[0].SelectButton(false);
+        UIButtons[^1].SelectButton(false);
     }
 
     private void SetUIButtonValues()
@@ -139,18 +139,18 @@ public class LocationManager : MonoBehaviour
 
         for (int i = 0; i < UIButtons.Count; i++)
         {
-            UIButton tempAbove = null;
             UIButton tempBelow = null;
+            UIButton tempAbove = null;
 
             if (i == 0)
-                tempAbove = UIButtons[^1];
+                tempBelow = UIButtons[^1];
             else
-                tempAbove = UIButtons[i - 1];
+                tempBelow = UIButtons[i - 1];
 
             if (i == UIButtons.Count - 1)
-                tempBelow = UIButtons[0];
+                tempAbove = UIButtons[0];
             else
-                tempBelow = UIButtons[i + 1];
+                tempAbove = UIButtons[i + 1];
 
             UIButtons[i].SetAdjacent(tempAbove, tempBelow, null, null);
         }

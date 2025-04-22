@@ -26,6 +26,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
@@ -52,11 +54,12 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
-    PressResult: {fileID: 11400000, guid: f899e0df8a27db64989d6c337cc0297a, type: 2}
+    PressResult: {fileID: 11400000, guid: 2f8aa9531d2085d489294b0045f6f587, type: 2}
     CorrectAnswers:
     - CorrectClue:
         Version: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Feyme Hall
   Versions:
-  - Description: 
+  - Description: A scared young girl with an active imagination. She keeps talking
+      about the Butterfly Angel and the Demon. The daughter of Arthur and Minerva.
     Sprite: {fileID: 21300000, guid: 762810beeb0628846b22ccd223327897, type: 3}
     Gender: Female
     Age: 13
