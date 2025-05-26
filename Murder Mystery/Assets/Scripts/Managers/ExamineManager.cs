@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class ExamineManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ExamineManager : MonoBehaviour
     private Vector2 previousMousePos;
     private Vector2 screenMaxSize = new Vector2(960, 540);
     private Vector2 locationMaxSize = new Vector2(3.2f, 1.8f);
+    private Vector2 resolution;
     private Examinable[] Examinables;
     private Examinable selectedExaminable;
     private Coroutine coroutine;
@@ -44,6 +46,11 @@ public class ExamineManager : MonoBehaviour
         {
             mouseObject.SetActive(false);
             return;
+        }
+
+        if (resolution.x != Screen.width || resolution.y != Screen.height)
+        {
+            CalculateEdgeDistance();
         }
 
         if (mouseObject.transform.localPosition.x > screenMaxSize.x * (1 - (edgePercentage.x * 2)) && cameraObject.transform.position.x < edgeDistance.x) //move camera right
@@ -188,8 +195,15 @@ public class ExamineManager : MonoBehaviour
     public void CalculateEdgeDistance()
     {
         Rect spriteSize = LocationManager.instance.locationSprite.sprite.rect;
+        resolution = new Vector2(Screen.width, Screen.height);
 
-        edgeDistance = new Vector2(((spriteSize.width - screenPixelSize.x) / 2) * 0.01f, ((spriteSize.height - screenPixelSize.y) / 2) * 0.01f);
+        float size = (float)Screen.width / (float)Screen.height;
+        Vector2 currentScreenPixelSize = new Vector2(size * screenPixelSize.y, screenPixelSize.y);
+        locationMaxSize = new Vector2(size * locationMaxSize.y, locationMaxSize.y);
+        screenMaxSize = new Vector2(size * screenMaxSize.y, screenMaxSize.y);
+
+        edgeDistance = new Vector2(((spriteSize.width - currentScreenPixelSize.x) / 2) * 0.01f, ((spriteSize.height - currentScreenPixelSize.y) / 2) * 0.01f);
+        cameraObject.transform.position = new Vector3(0, 0, cameraObject.transform.position.z);
     }
 
     public void ResetCameraPosition()

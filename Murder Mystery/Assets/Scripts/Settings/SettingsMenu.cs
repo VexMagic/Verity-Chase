@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
@@ -13,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Transform subMenuButtonArea;
     [SerializeField] private TextMeshProUGUI textSpeedDisplay;
     [SerializeField] private TextMeshProUGUI textTransparencyDisplay;
+    [SerializeField] private Animator animator;
 
     private UIButton[] UIButtons;
     private List<SettingsButton> settingsButtons = new List<SettingsButton>();
@@ -31,6 +33,7 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         OpenSettings(false);
+        SetAnimator(false);
         textSpeedDisplay.text = SettingsManager.instance.GetTextSpeeds().displayName;
         textTransparencyDisplay.text = SettingsManager.instance.GetTextTransparency().displayName;
     }
@@ -94,6 +97,11 @@ public class SettingsMenu : MonoBehaviour
                 previousButton = null;
             }
         }
+    }
+
+    public void SetAnimator(bool submenu)
+    {
+        animator.SetBool("Sub Menu", submenu);
     }
 
     public void OpenSettings()

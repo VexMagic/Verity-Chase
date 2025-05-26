@@ -144,9 +144,7 @@ public class Typewriter : MonoBehaviour
         string tempLine = string.Empty;
         string tempSegment = string.Empty;
 
-        float size = textLabel.GetComponentInParent<Canvas>().GetComponent<RectTransform>().sizeDelta.x;
-
-        float textBoxSize = /*textLabel.GetComponent<RectTransform>().sizeDelta.x*/ size - 440;
+        float textBoxSize = textLabel.GetComponent<RectTransform>().sizeDelta.x;
 
         foreach (var item in textToType.Split(' '))
         {
