@@ -12,13 +12,15 @@ public class ClueManager : MonoBehaviour
     [SerializeField] private GameObject clueMenu;
     [SerializeField] private GameObject[] swapButtons;
     [SerializeField] private GameObject presentButton;
+    [SerializeField] private KeyDisplay hintButton;
+    [SerializeField] private GameObject noPresentDisplay;
     [SerializeField] private GameObject openButton;
     [SerializeField] private GameObject closeButton;
     [SerializeField] private GameObject testimonyPresentButton;
     [SerializeField] private GameObject pressButton;
     [SerializeField] private GameObject exitMemoryButton;
     [SerializeField] private GameObject deduceMemoryButton;
-    [SerializeField] private GameObject checkButton;
+    [SerializeField] private GameObject connectConspiracyButton;
     [SerializeField] private Image background;
     [SerializeField] private GameObject checkTextScreen;
     [SerializeField] private TextMeshProUGUI checkTextBox;
@@ -50,12 +52,14 @@ public class ClueManager : MonoBehaviour
     public bool canGoBack;
     public bool isTestimonyPresenting;
     public bool isMemoryDeduction;
+    public bool isConspiracyConnection;
     public Clue.Type currentMenuType;
     public bool isEvidence;
     public bool isChecking;
     private bool isUpdating;
 
-    private bool isAnimationFinished;
+    private bool isAnimationFinished = true;
+    private bool presentActive;
     public bool IsAnimationFinished => isAnimationFinished;
 
     private void Awake()
@@ -63,12 +67,13 @@ public class ClueManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            allEvidence = chapters[ChapterManager.instance.currentChapter].partClues[ChapterManager.instance.currentPart].allEvidence;
-            allProfiles = chapters[ChapterManager.instance.currentChapter].partClues[ChapterManager.instance.currentPart].allProfiles;
+            allEvidence = chapters[ChapterManager.instance.currentChapter - 1].partClues[ChapterManager.instance.currentPart - 1].allEvidence;
+            allProfiles = chapters[ChapterManager.instance.currentChapter - 1].partClues[ChapterManager.instance.currentPart - 1].allProfiles;
             CloseMenu();
-            UpdateDisplay(allEvidence[0]);
+            UpdateDisplay(allEvidence[0], false);
             scrollArrows.SetActive(false);
             checkTextScreen.SetActive(false);
+            noPresentDisplay.SetActive(false);
         }
     }
 
@@ -157,6 +162,76 @@ public class ClueManager : MonoBehaviour
         }
     }
 
+    public int GetClueIndex(GainAnyClueType clue)
+    {
+        var tempData = clue.gainedClue;
+        if (tempData is EvidenceData)
+        {
+            GainEvidence tempEvidence = new GainEvidence(tempData as EvidenceData, clue.version);
+
+            for (int i = 0; i < allEvidence.Count; i++)
+            {
+                if (allEvidence[i].gainedEvidence == tempEvidence.gainedEvidence)
+                {
+                    return i;
+                }
+            }
+        }
+        else if (tempData is ProfileData)
+        {
+            GainProfile tempProfile = new GainProfile(tempData as ProfileData, clue.version);
+
+            for (int i = 0; i < allProfiles.Count; i++)
+            {
+                if (allProfiles[i].gainedProfile == tempProfile.gainedProfile)
+                {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public GainClue GetStoredClue(GainAnyClueType clue)
+    {
+        var tempData = clue.gainedClue;
+        if (tempData is EvidenceData)
+        {
+            GainEvidence tempEvidence = new GainEvidence(tempData as EvidenceData, clue.version);
+
+            for (int i = 0; i < allEvidence.Count; i++)
+            {
+                if (allEvidence[i].gainedEvidence == tempEvidence.gainedEvidence)
+                {
+                    return allEvidence[i];
+                }
+            }
+        }
+        else if (tempData is ProfileData)
+        {
+            GainProfile tempProfile = new GainProfile(tempData as ProfileData, clue.version);
+
+            for (int i = 0; i < allProfiles.Count; i++)
+            {
+                if (allProfiles[i].gainedProfile == tempProfile.gainedProfile)
+                {
+                    return allProfiles[i];
+                }
+            }
+        }
+        return null;
+    }
+
+    public void ShowHintButton(bool show)
+    {
+        hintButton.SetActive(show);
+    }
+
+    public void ShowNoPresentDisplay(bool show)
+    {
+        noPresentDisplay.SetActive(show);
+    }
+
     public void CloseMenu()
     {
         if (isChecking)
@@ -175,7 +250,7 @@ public class ClueManager : MonoBehaviour
             button.SetActive(false);
         }
 
-        openButton.SetActive(!isTestimonyPresenting && !isMemoryDeduction);
+        openButton.SetActive(!isTestimonyPresenting && !isMemoryDeduction && !isConspiracyConnection);
         testimonyPresentButton.SetActive(isTestimonyPresenting);
         pressButton.SetActive(isTestimonyPresenting);
         DialogueManager.instance.TestimonyArrowsActive(isTestimonyPresenting);
@@ -183,11 +258,17 @@ public class ClueManager : MonoBehaviour
         deduceMemoryButton.SetActive(isMemoryDeduction);
         exitMemoryButton.SetActive(isMemoryDeduction && MemoryManager.instance.currentMemory.exitable);
 
+        connectConspiracyButton.SetActive(isConspiracyConnection);
+        exitMemoryButton.SetActive(isConspiracyConnection && ConspiracyManager.instance.currentBoard.exitable);
+
         isTestimonyPresenting = false;
         isMemoryDeduction = false;
+        isConspiracyConnection = false;
 
         closeButton.SetActive(false);
         presentButton.SetActive(false);
+        hintButton.SetActive(false);
+        presentActive = false;
     }
 
     public void SetTestimony(bool isTestimony)
@@ -197,20 +278,13 @@ public class ClueManager : MonoBehaviour
         pressButton.SetActive(isTestimony);
     }
 
-    private void UpdateDisplay(GainClue clue)
+    public void UpdateDisplay(GainClue clue, bool locked)
     {
         if (clue != null)
         {
-            menuInfoDisplay.SetValues(clue);
-        }
-
-        if (clue is GainEvidence)
-        {
-            checkButton.SetActive((clue as GainEvidence).gainedEvidence.versions[clue.version].hasCheck());
-        }
-        else
-        {
-            checkButton.SetActive(false);
+            menuInfoDisplay.SetValues(clue, locked);
+            if (presentActive) 
+                presentButton.SetActive(!locked);
         }
     }
 
@@ -225,6 +299,11 @@ public class ClueManager : MonoBehaviour
 
         CheckEvidence evidence = tempEvidence.check[0];
 
+        OpenCheckMenu(evidence);
+    }
+
+    public void OpenCheckMenu(CheckEvidence evidence)
+    {
         switch (evidence.checkType)
         {
             default:
@@ -257,7 +336,7 @@ public class ClueManager : MonoBehaviour
     {
         if (clue != null)
         {
-            gainInfoDisplay.SetValues(clue);
+            gainInfoDisplay.SetValues(clue, false);
             gainClueAnimator.SetBool("Open", true);
         }
     }
@@ -267,7 +346,7 @@ public class ClueManager : MonoBehaviour
         Debug.Log("update");
         if (newClue != null)
         {
-            gainInfoDisplay.SetValues(newClue, oldVersion);
+            gainInfoDisplay.SetValues(newClue, oldVersion, false);
             gainClueAnimator.SetBool("Open", true);
             StartCoroutine(UpdateAnimation(newClue));
         }
@@ -279,7 +358,7 @@ public class ClueManager : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         updateAnimator.SetBool("Active", true);
         yield return new WaitForSeconds(0.25f);
-        gainInfoDisplay.SetValues(newClue);
+        gainInfoDisplay.SetValues(newClue, false);
         updateAnimator.SetBool("Active", false);
         yield return new WaitForSeconds(0.1f);
         isUpdating = false;
@@ -337,6 +416,21 @@ public class ClueManager : MonoBehaviour
         }
     }
 
+    public void ConnectButton()
+    {
+        isOpen = !isOpen;
+        if (isOpen)
+        {
+            exitMemoryButton.SetActive(false);
+            isConspiracyConnection = true;
+            OpenMenu(true, true);
+        }
+        else
+        {
+            CloseMenu();
+        }
+    }
+
     public void OpenMenu(bool isPresenting, bool canGoBack)
     {
         isOpen = true;
@@ -347,18 +441,31 @@ public class ClueManager : MonoBehaviour
         pressButton.SetActive(false);
         deduceMemoryButton.SetActive(false);
         exitMemoryButton.SetActive(false);
+        connectConspiracyButton.SetActive(false);
         SwapMenuButton(currentMenuType == Clue.Type.Evidence);
         closeButton.SetActive(canGoBack);
 
         if (isPresenting)
         {
             presentButton.SetActive(true);
-            background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
-            background.transform.localPosition = new Vector3(presentingOffset.x, presentingOffset.y);
+            hintButton.SetActive(true);
+            presentActive = true;
+            if (isConspiracyConnection)
+            {
+                background.color = new Color(background.color.r, background.color.g, background.color.b, 0.5f);
+                background.transform.localPosition = Vector3.zero;
+            }
+            else
+            {
+                background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
+                background.transform.localPosition = new Vector3(presentingOffset.x, presentingOffset.y);
+            }
         }
         else
         {
             presentButton.SetActive(false);
+            hintButton.SetActive(false);
+            presentActive = false;
             background.color = new Color(background.color.r, background.color.g, background.color.b, 0.5f);
             background.transform.localPosition = Vector3.zero;
         }
@@ -375,12 +482,12 @@ public class ClueManager : MonoBehaviour
         if (type)
         {
             currentMenuType = Clue.Type.Evidence;
-            scrollArrows.SetActive(allEvidence.Count > 5);
+            scrollArrows.SetActive(allEvidence.Count > ClueDisplaySpawner.instance.displaysPerSection);
         }
         else
         {
             currentMenuType = Clue.Type.Profile;
-            scrollArrows.SetActive(allProfiles.Count > 5);
+            scrollArrows.SetActive(allProfiles.Count > ClueDisplaySpawner.instance.displaysPerSection);
         }
 
         for (int i = 0; i < swapButtons.Length; i++)
@@ -388,7 +495,7 @@ public class ClueManager : MonoBehaviour
             swapButtons[i].SetActive((i == 0) == type);
         }
 
-        UpdateDisplay(GetSelectedClue(currentMenuType));
+        UpdateDisplay(GetSelectedClue(currentMenuType), LockedClueSelected(currentMenuType));
         ClueDisplaySpawner.instance.SetCurrentMenu(type);
     }
 
@@ -404,7 +511,12 @@ public class ClueManager : MonoBehaviour
                 break;
         }
 
-        UpdateDisplay(GetSelectedClue(currentMenuType));
+        UpdateDisplay(GetSelectedClue(currentMenuType), LockedClueSelected(currentMenuType));
+    }
+
+    public bool LockedClueSelected(Clue.Type menuType)
+    {
+        return ClueDisplaySpawner.instance.GetLock(GetSelectedClue(menuType));
     }
 
     public GainClue GetSelectedClue(Clue.Type menuType)
@@ -436,6 +548,7 @@ public class ClueManager : MonoBehaviour
 
         return null;
     }
+
     public List<GainClue> GetClueList(Clue.Type type)
     {
         switch (type)

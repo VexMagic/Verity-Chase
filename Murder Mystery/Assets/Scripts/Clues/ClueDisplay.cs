@@ -7,6 +7,7 @@ public class ClueDisplay : MonoBehaviour
 {
     [SerializeField] private Image image;
     [SerializeField] private GameObject selector;
+    [SerializeField] private GameObject lockIcon;
     [SerializeField] private int index;
     [SerializeField] private GainEvidence myEvidence;
     [SerializeField] private GainProfile myProfile;
@@ -15,9 +16,19 @@ public class ClueDisplay : MonoBehaviour
     public bool isSelected => selector.activeSelf;
     public int Index => index;
 
+    private bool evidenceLock;
+    private bool profileLock;
+
     public void SetSelector(bool isSelected)
     {
         selector.SetActive(isSelected);
+    }
+
+    public void SetLock(bool evidenceLocked, bool profileLocked)
+    {
+        evidenceLock = evidenceLocked;
+        profileLock = profileLocked;
+        UpdateShownClue(myType);
     }
 
     public bool IsEmpty()
@@ -64,6 +75,30 @@ public class ClueDisplay : MonoBehaviour
         myType = type;
     }
 
+    public GainClue GetClue(Clue.Type type)
+    {
+        switch (type)
+        {
+            case Clue.Type.Evidence: 
+                return myEvidence;
+            case Clue.Type.Profile: 
+                return myProfile;
+        }
+        return null;
+    }
+
+    public bool GetLock(Clue.Type type)
+    {
+        switch (type)
+        {
+            case Clue.Type.Evidence:
+                return evidenceLock;
+            case Clue.Type.Profile:
+                return profileLock;
+        }
+        return false;
+    }
+
     public void UpdateShownClue(Clue.Type type)
     {
         switch (type)
@@ -84,16 +119,24 @@ public class ClueDisplay : MonoBehaviour
         if (clue != null)
         {
             if (clue is GainEvidence)
+            {
                 image.sprite = (clue as GainEvidence).gainedEvidence.versions[clue.version].sprite;
+                lockIcon.SetActive(evidenceLock);
+            }
             else if (clue is GainProfile)
+            {
                 image.sprite = (clue as GainProfile).gainedProfile.versions[clue.version].sprite;
+                lockIcon.SetActive(profileLock);
+            }
             else
                 Debug.LogError("Clue Type Not Found");
+
             image.enabled = true;
         }
         else
         {
             image.enabled = false;
+            lockIcon.SetActive(false);
         }
     }
 

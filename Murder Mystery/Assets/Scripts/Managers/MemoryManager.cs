@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class MemoryManager : MonoBehaviour
 {
@@ -18,11 +20,16 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private float moveSpeed;
 
     public Memory currentMemory;
+    private int currentVersion;
     private MemoryObject[] MemoryObjects;
     private Coroutine coroutine;
     private List<MemoryObject> selectedMemoryObjects = new List<MemoryObject>();
     private bool IsMemoryActive;
     private bool isHovering;
+    private Transform versionArea;
+    private Transform hintsArea;
+    private SpriteRenderer memoryVisual;
+    private bool isIntroAnimationActive;
 
     public bool isMemoryActive => IsMemoryActive;
 
@@ -37,6 +44,7 @@ public class MemoryManager : MonoBehaviour
         deduceButton.SetActive(true);
         if (!IsMemoryActive)
         {
+            currentVersion = 0;
             fadeEffect.SetTrigger("Start");
             yield return new WaitForSeconds(0.16f);
             foreach (Transform memory in memoryDisplayParent.transform)
@@ -44,14 +52,18 @@ public class MemoryManager : MonoBehaviour
                 if (memory.name == currentMemory.minigameName)
                 {
                     memory.gameObject.SetActive(true);
-                    MemoryObjects = memory.GetComponentsInChildren<MemoryObject>();
+
+                    versionArea = memory;
+                    SetMemoryVersion();
                 }
                 else if (memory.gameObject == clickPosition)
                 {
                     memory.gameObject.SetActive(true);
                 }
                 else
+                {
                     memory.gameObject.SetActive(false);
+                }
             }
             fadeEffect.SetTrigger("End");
             yield return new WaitForSeconds(0.16f);
@@ -62,6 +74,28 @@ public class MemoryManager : MonoBehaviour
 
         if (!LogManager.instance.HasFinishedInteraction(currentMemory.intro) && currentMemory.intro != null)
             ResponseManager.instance.ResponseResult(currentMemory.intro);
+
+        if (memoryVisual != null && currentMemory.GetVersion() != currentVersion)
+        {
+            currentVersion = currentMemory.GetVersion();
+            MemoryChange tempChange = currentMemory.GetChange();
+
+            if (tempChange.newVisual != memoryVisual.sprite)
+            {
+                fadeEffect.SetTrigger("Start");
+                yield return new WaitForSeconds(0.16f);
+
+                Debug.Log("change memory");
+                SetMemoryVersion();
+                //memoryVisual.sprite = tempChange.newVisual;
+
+                fadeEffect.SetTrigger("End");
+                yield return new WaitForSeconds(0.16f);
+
+                if (!LogManager.instance.HasFinishedInteraction(tempChange.startInteraction) && tempChange.startInteraction != null)
+                    ResponseManager.instance.ResponseResult(tempChange.startInteraction);
+            }
+        }
 
         AudioManager.instance.PlayMusic(music);
         exitButton.SetActive(currentMemory.exitable);
@@ -149,6 +183,42 @@ public class MemoryManager : MonoBehaviour
         yield return new WaitForSeconds(0.16f);
     }
 
+    private void SetMemoryVersion()
+    {
+        foreach (Transform item in versionArea)
+        {
+            item.gameObject.SetActive(false);
+        }
+
+        Transform tempVersion = versionArea.GetChild(currentVersion);
+
+        tempVersion.gameObject.SetActive(true);
+        memoryVisual = tempVersion.GetComponent<SpriteRenderer>();
+        Debug.Log(memoryVisual != null);
+        MemoryObjects = tempVersion.GetComponentsInChildren<MemoryObject>();
+
+        foreach (Transform item in tempVersion.transform)
+        {
+            if (item.gameObject.name.ToLower() == "hints")
+            {
+                hintsArea = item.transform;
+                SetHintIndicator("");
+                break;
+            }
+        }
+    }
+
+    public void SetHintIndicator(string indicator)
+    {
+        if (hintsArea == null)
+            return;
+
+        foreach (Transform hint in hintsArea)
+        {
+            hint.gameObject.SetActive(hint.gameObject.name == indicator);
+        }
+    }
+
     private void SetAimPosition(Vector2 position)
     {
         clickPosition.transform.localPosition = position;
@@ -162,6 +232,15 @@ public class MemoryManager : MonoBehaviour
             {
                 selectedMemoryObjects.Add(item);
             }
+        }
+
+        if (selectedMemoryObjects.Count != 0)
+        {
+            HintManager.instance.SetPresentAnswer(selectedMemoryObjects[0].correctClues[0], false);
+        }
+        else
+        {
+            HintManager.instance.SetPresentAnswer(null, true);
         }
     }
 

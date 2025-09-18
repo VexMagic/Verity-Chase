@@ -68,3 +68,10 @@ MonoBehaviour:
     People: []
     Conditions:
     - {fileID: 11400000, guid: 4f854dce5ef0cfa45a09747fd3883aa4, type: 2}
+  - LocationName: Room 204
+    EnterInteraction: {fileID: 0}
+    AreaMusic: {fileID: 8300000, guid: 8b46c8ce807f41b48897fb14fbe58f56, type: 3}
+    Examinable: 0
+    People: []
+    Conditions:
+    - {fileID: 11400000, guid: a7a9d85d3af69a944b02771c341a1e43, type: 2}

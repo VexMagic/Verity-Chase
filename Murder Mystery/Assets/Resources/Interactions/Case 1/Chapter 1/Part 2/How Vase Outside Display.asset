@@ -35,3 +35,10 @@ MonoBehaviour:
     - using the glass
   Answers:
   - Answer: 00000000000000000000000000000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 0
+      Option: 0
+    - Slider: 2
+      Option: 0

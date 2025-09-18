@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 11400000, guid: 94036c7e5b6b8574ea7751da30bbea23, type: 2}
   WrongAnswer: {fileID: 11400000, guid: 78746fb874f34c24f842a82add8f642d, type: 2}
+  UniqueWrongs: []
   Question: When was the vase removed from the display?
   Options:
   - Options:
@@ -22,3 +23,8 @@ MonoBehaviour:
     - During the murder
   Answers:
   - Answer: 00000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 0
+      Option: 0

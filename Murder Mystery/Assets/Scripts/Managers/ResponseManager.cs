@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Diagnostics;
 
 public class ResponseManager : MonoBehaviour
 {
@@ -100,7 +101,18 @@ public class ResponseManager : MonoBehaviour
         ExitResponseMenu();
 
         if (response.result != null)
+        {
             ResponseResult(response.result);
+            switch (response.sFX)
+            {
+                case ResponseSFX.Correct:
+                    AudioManager.instance.PlaySFX("Correct");
+                    break;
+                case ResponseSFX.Wrong:
+                    AudioManager.instance.PlaySFX("Wrong");
+                    break;
+            }
+        }
         else
             DialogueManager.instance.EndDialogue();
     }
@@ -143,6 +155,7 @@ public class ResponseManager : MonoBehaviour
         if (result == null)
             return;
 
+        HintManager.instance.SetPresentAnswer(null, true);
         DialogueManager.instance.SetClickDetectionActive(true);
         ExitResponseMenu();
 
@@ -211,6 +224,8 @@ public class ResponseManager : MonoBehaviour
                 OnPickedResponse((result as CameraZoom).responses[0]);
             }
         }
+
+        HintManager.instance.SetInteraction(result);
     }
 
     private void StartMusic()

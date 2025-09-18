@@ -31,3 +31,8 @@ MonoBehaviour:
     - the defibrillator
   Answers:
   - Answer: 000000000000000000000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 1
+      Option: 0

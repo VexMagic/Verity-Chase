@@ -32,3 +32,10 @@ MonoBehaviour:
   Answers:
   - Answer: 000000000000000000000000
   - Answer: 010000000000000000000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 1
+      Option: 0
+    - Slider: 2
+      Option: 0

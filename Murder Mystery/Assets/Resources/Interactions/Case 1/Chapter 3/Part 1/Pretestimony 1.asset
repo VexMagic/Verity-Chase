@@ -107,7 +107,7 @@ MonoBehaviour:
     Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "<think>(What makes this situation so different that she felt the need
-      to be so vague.)<>\r"
+      to be so vague?)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
@@ -124,7 +124,7 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "You got it boss!\r"
+    Text: "You got it, boss!\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

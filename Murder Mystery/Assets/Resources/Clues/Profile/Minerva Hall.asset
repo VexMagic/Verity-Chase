@@ -19,3 +19,8 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: 2ccdcec0663079447b099dbe475147e9, type: 3}
     Gender: Female
     Age: 49
+  - Description: "A doctor at St. Morrigan\u2019s Hospital. She is quite rude but
+      highly professional. Previously known as Dr. Amy Igdala."
+    Sprite: {fileID: 21300000, guid: 2ccdcec0663079447b099dbe475147e9, type: 3}
+    Gender: Female
+    Age: 49

@@ -38,3 +38,8 @@ MonoBehaviour:
         GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
       Result: {fileID: 11400000, guid: f3178154cce97d945b53e4630e69e89c, type: 2}
       ContinueTestimony: 0
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 1
+      Statement: 0

@@ -20,8 +20,15 @@ MonoBehaviour:
   - Response:
       Text: The Angel and the Demon
       Result: {fileID: 11400000, guid: 03a52473dd6b8144eb134ad49fbba740, type: 2}
+      SFX: 0
+    Condition: {fileID: 0}
+  - Response:
+      Text: Butterfly Decor
+      Result: {fileID: 11400000, guid: ae0e2216509bf0a46adced5279169410, type: 2}
+      SFX: 0
     Condition: {fileID: 0}
   - Response:
       Text: Knife Under the Carpet
       Result: {fileID: 11400000, guid: 62b7b533f9b01e740815886e0d94dfae, type: 2}
+      SFX: 0
     Condition: {fileID: 11400000, guid: 651c8dcb2f24ec348a7dd334a504a420, type: 2}

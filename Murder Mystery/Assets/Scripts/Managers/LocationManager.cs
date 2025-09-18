@@ -68,8 +68,8 @@ public class LocationManager : MonoBehaviour
 
     private void Start()
     {
-        unlockedLocations = chapterLocations[ChapterManager.instance.currentChapter].partLocations[ChapterManager.instance.currentPart].locations;
-        selectedLocation = chapterLocations[ChapterManager.instance.currentChapter].partLocations[ChapterManager.instance.currentPart].currentLocation;
+        unlockedLocations = chapterLocations[ChapterManager.instance.currentChapter - 1].partLocations[ChapterManager.instance.currentPart - 1].locations;
+        selectedLocation = chapterLocations[ChapterManager.instance.currentChapter - 1].partLocations[ChapterManager.instance.currentPart - 1].currentLocation;
 
         foreach (var item in unlockedLocations)
             enteredLocations.Add(item);

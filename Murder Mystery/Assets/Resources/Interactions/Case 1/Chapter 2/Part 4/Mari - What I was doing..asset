@@ -71,3 +71,8 @@ MonoBehaviour:
         GainedClue: {fileID: 11400000, guid: f840b2f1bf480cd4b9378dcb7460d0cb, type: 2}
       Result: {fileID: 11400000, guid: a217a098cb4b55740a2c0dfb04caf807, type: 2}
       ContinueTestimony: 0
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 1
+      Statement: 2

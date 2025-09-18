@@ -21,7 +21,7 @@ public class Typewriter : MonoBehaviour
     };
 
     private readonly HashSet<char> vowels = new HashSet<char>{ 'a', 'e', 'i', 'o', 'u', 'y' };
-    private readonly HashSet<string> abbreviations = new HashSet<string>{ "st.", "mr.", "ms.", "dr.", " j." };
+    private readonly HashSet<string> abbreviations = new HashSet<string>{ "st.", "mr.", "ms.", "dr.", " c." };
 
     private readonly HashSet<char> commandStart = new HashSet<char>{ '<' };
     private readonly HashSet<char> commandEnd = new HashSet<char>{ '>' };

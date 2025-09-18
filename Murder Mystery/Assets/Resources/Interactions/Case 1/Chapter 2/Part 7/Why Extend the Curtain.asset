@@ -27,3 +27,8 @@ MonoBehaviour:
     - the tool cart
   Answers:
   - Answer: 0000000000000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 0
+      Option: 0

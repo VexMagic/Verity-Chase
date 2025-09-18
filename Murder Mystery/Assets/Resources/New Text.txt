@@ -1,36 +1,8 @@
-Wren - We’re back! Again...
-Ace - Did you three have a good time?
-Verity - ...Yeah! We did.
-Rook - Did you also find any clues?
-Amara - Steele’s blood was found in one of the Hall family’s rooms. We believe that is the real crime scene.
-Ace - Excellent work everyone! I knew I could count on you to find it.
-Verity - <think>(Did he know about that too?!)<>
-Wren - Turns out that both Claire and Ramsey couldn’t be The Catalyst.
-Ace - I already knew Ms. Steele wasn’t The Catalyst.
-Verity - Really?
-Ace - You expected me to believe that The Catalyst who has been evading law enforcement and Interpol for 4 years before going into hiding for 5 was the 20 year old Claire Steele. 
-Ace - She would have been 11 years old when she donned the suit.
-Verity - Well I didn’t know all the stuff you just told me.
-Ace - And yet your mission was to capture the Catalyst.
-Verity - <think>(I got too excited about my first solo case that I forgot to do any research.)<>
-Rook - We should probably confront Ms. Steele about this revelation. 
-Verity - We did find evidence of you being in the museum during the time of the murder.
-Claire - <shake>Yes!!!<> Thank you!
-Verity - But that doesn’t make it impossible for you to have committed the one here too.
-Claire - Oh, come <shake>ON!!!<> 
-Wren - We also found out you aren’t the same Catalyst from 5 years ago.
-Claire - I-I-I... Y-you have no proof...?
-Amara - No need for all that. Just admit it.
-Claire - B-but...
-Rook - I <float>highly<> doubt you were 11 years old when you started your vigilante career.
-Claire - *sigh* <float>Fiiiiiiine.<> I’m... not the real Catalyst. I just made a copy of the outfit based on public photos I could find.
-Verity - <think>(Explains why the mask looked different.)<>
-Claire - Now that you’ve found me out, I guess we’re done here.
-Rook - Not so fast.
-Rook - Just because you’re not the real Catalyst, doesn’t mean you aren’t the real culprit.
-Claire - Are we still on that? I wasn’t even here last night!
-Rook - You keep saying that and I keep not believing you.
-???F - Please don’t be mean to her. She doesn’t deserve this. 
-Verity - Who said that?
-Wilma - That was me.
-Claire - <shake>Wilma!?<> Y-you’re awake…!
+Amara - You have a lot of butterfly themed stuff in your room.
+Feyme - They are my favorite.
+Verity - Where did you get them? I don’t think I’ve ever seen any store sell them.
+Feyme - I got papa to get people to make them for me. 
+Wren - So they were custom made.
+Feyme - They don’t look how I wanted them to look but it is okay. I didn’t want to tell them to make it again.
+Amara - You seemed to have a clear vision of what you wanted the butterflies to look like.
+Feyme - Yeah, I wanted them to be perfect but this is okay I guess.

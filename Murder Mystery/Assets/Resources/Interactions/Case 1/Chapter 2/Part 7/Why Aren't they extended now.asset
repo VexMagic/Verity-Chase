@@ -35,3 +35,10 @@ MonoBehaviour:
     - died
   Answers:
   - Answer: 00000000000000000000000000000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 1
+      Option: 0
+    - Slider: 2
+      Option: 0

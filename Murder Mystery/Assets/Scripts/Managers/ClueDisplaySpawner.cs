@@ -131,6 +131,114 @@ public class ClueDisplaySpawner : MonoBehaviour
         }
     }
 
+    public void EnablePartialHintLocks(GainAnyClueType clueType)
+    {
+        ClueManager.instance.ShowHintButton(false);
+
+        int clueIndex = ClueManager.instance.GetClueIndex(clueType);
+        bool answerHasEvenIndex = clueIndex % 2 == 0; 
+
+        List<ClueDisplay> lockedDisplays;
+        List<ClueDisplay> halfLockedDisplays;
+        if (clueType.gainedClue is EvidenceData)
+        {
+            lockedDisplays = profileDisplays;
+            halfLockedDisplays = evidenceDisplays;
+            ClueManager.instance.SwapMenuButton(true);
+        }
+        else
+        {
+            lockedDisplays = evidenceDisplays;
+            halfLockedDisplays = profileDisplays;
+            ClueManager.instance.SwapMenuButton(false);
+        }
+
+        foreach (var item in lockedDisplays)
+        {
+            item.SetLock(true, true);
+        }
+
+        for (int i = 0; i < halfLockedDisplays.Count; i++)
+        {
+            bool tempLock = (i % 2 == 0) != answerHasEvenIndex;
+            halfLockedDisplays[i].SetLock(tempLock, tempLock);
+        }
+
+        bool isLocked = GetLock(ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType));
+        ClueManager.instance.UpdateDisplay(ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType), isLocked);
+    }
+
+    public void EnableFullHintLocks()
+    {
+        ClueManager.instance.ShowHintButton(false);
+        ClueManager.instance.ShowNoPresentDisplay(true);
+
+        foreach (var item in evidenceDisplays)
+        {
+            item.SetLock(true, true);
+        }
+
+        foreach (var item in profileDisplays)
+        {
+            item.SetLock(true, true);
+        }
+
+        bool isLocked = GetLock(ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType));
+        ClueManager.instance.UpdateDisplay(ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType), isLocked);
+    }
+
+    public void DisableHintLocks()
+    {
+        ClueManager.instance.ShowNoPresentDisplay(false);
+
+        foreach (var item in evidenceDisplays)
+        {
+            item.SetLock(false, false);
+        }
+
+        foreach (var item in profileDisplays)
+        {
+            item.SetLock(false, false);
+        }
+    }
+
+    public bool GetLock(GainClue clue)
+    {
+        ClueDisplay display = GetDisplay(clue);
+
+        if (clue is GainEvidence)
+            return display.GetLock(Clue.Type.Evidence);
+        else if (clue is GainProfile)
+            return display.GetLock(Clue.Type.Profile);
+        else 
+            return false;
+    }
+
+    private ClueDisplay GetDisplay(GainClue clue)
+    {
+        if (clue is GainEvidence)
+        {
+            foreach (var item in evidenceDisplays)
+            {
+                if (item.GetClue(Clue.Type.Evidence) == clue)
+                {
+                    return item;
+                }
+            }
+        }
+        else if (clue is GainProfile)
+        {
+            foreach (var item in profileDisplays)
+            {
+                if (item.GetClue(Clue.Type.Profile) == clue)
+                {
+                    return item;
+                }
+            }
+        }
+        return null;
+    }
+
     public ClueDisplay GetAdjacentDisplay(int index, Clue.Type type, bool left)
     {
         int tempIndex = index;

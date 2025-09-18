@@ -15,10 +15,11 @@ MonoBehaviour:
   Responses: []
   Lines:
   - TalkingCharacter: 6
-    Text: "Hey, look over here! It\u2019s a <float>pain-brush<>!"
+    Text: Hey, look over here! It's a paintbrush sword. A <float>pain-brush<>!
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 1
       Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
@@ -38,6 +39,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -45,6 +47,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -52,6 +55,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -60,20 +64,47 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: Seems like the artist's name is J. Marshall. No contact information so
-      you probably need to ask the curator.
+    Text: 'Seems like the artist''s name is C. Action. '
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(That has to be some sort of pen name. No way their real last name
+      is \u201CAction\u201D.)<>"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: Great idea!
+    Text: C. Action, huh...
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: No contact information so you probably need to ask the curator.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: I might just do that. Great idea!
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

@@ -42,9 +42,9 @@ public class CaseSelectManager : MonoBehaviour
 
     private void SetCaseAndPartToDefault()
     {
-        ChapterManager.instance.SelectCase(0);
-        ChapterManager.instance.SelectChapter(0);
-        ChapterManager.instance.SelectPart(0);
+        ChapterManager.instance.SelectCase(1);
+        ChapterManager.instance.SelectChapter(1);
+        ChapterManager.instance.SelectPart(1);
     }
 
     public void AddCase(CaseSelectorNewGame selector)
@@ -114,7 +114,7 @@ public class CaseSelectManager : MonoBehaviour
 
         leftArrow.SetActive(currentCase > 1);
         rightArrow.SetActive(currentCase < caseAmount);
-        ChapterManager.instance.SelectCase(currentCase - 1);
+        ChapterManager.instance.SelectCase(currentCase);
     }
 
     float Evaluate(float x)
@@ -135,7 +135,7 @@ public class CaseSelectManager : MonoBehaviour
 
     public void ClickCase(CaseSelectorNewGame selector)
     {
-        ChapterManager.instance.SelectCase(-1);
+        ChapterManager.instance.SelectCase(0);
         foreach (var item in casesNewGame)
         {
             if (item != selector)
@@ -151,7 +151,7 @@ public class CaseSelectManager : MonoBehaviour
 
     public void DeselectPartsAndChapters()
     {
-        ChapterManager.instance.SelectPart(-1);
-        ChapterManager.instance.SelectChapter(-1);
+        ChapterManager.instance.SelectPart(0);
+        ChapterManager.instance.SelectChapter(0);
     }
 }

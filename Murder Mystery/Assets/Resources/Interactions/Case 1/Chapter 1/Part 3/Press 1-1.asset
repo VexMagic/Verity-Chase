@@ -21,6 +21,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -28,6 +29,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -36,6 +38,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -44,6 +47,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -51,6 +55,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -59,6 +64,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -67,6 +73,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -74,6 +81,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -81,5 +89,6 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

@@ -15,14 +15,21 @@ MonoBehaviour:
   Title: Curtain
   Versions:
   - Description: A curtain that is used to give patients some privacy. You hold down
-      the button and it slowly moves.
+      the button and it slowly moves while making a mechanical noise.
     Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
     Check: []
   - Description: A curtain that is used to give patients some privacy. You hold down
-      the button and it slowly moves. Was closed both before and after the crime.
+      the button and it slowly moves while making a mechanical noise. Was closed
+      both before and after the crime.
     Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
     Check: []
   - Description: A curtain that is used to give patients some privacy. You hold down
-      the button and it slowly moves. Was only open around the time Ms. Infer entered.
+      the button and it slowly moves while making a mechanical noise. Was only open
+      when Ms. Infer was there.
+    Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
+    Check: []
+  - Description: A curtain that is used to give patients some privacy. You hold down
+      the button and it slowly moves while making a mechanical noise. It was never
+      extended last night.
     Sprite: {fileID: 21300000, guid: f8890e4e6cd1f8e408ef021438d22c68, type: 3}
     Check: []

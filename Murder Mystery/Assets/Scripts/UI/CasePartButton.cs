@@ -18,7 +18,7 @@ public class CasePartButton : MonoBehaviour
         ChapterManager.instance.SelectChapter(chapter);
         ChapterManager.instance.SelectPart(index);
         AudioManager.instance.PlaySFX("Click");
-        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase);
     }
 
     public void SetValues(int chapter, int part)
@@ -32,8 +32,8 @@ public class CasePartButton : MonoBehaviour
         if (outline.gameObject.activeSelf)
         {
             ControlManager.instance.SetSelectedButton(transform.parent.GetComponent<UIButton>());
-            ChapterManager.instance.SelectPart(-1);
-            ChapterManager.instance.SelectChapter(-1);
+            ChapterManager.instance.SelectPart(0);
+            ChapterManager.instance.SelectChapter(0);
         }
     }
 }

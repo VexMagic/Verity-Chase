@@ -15,15 +15,19 @@ MonoBehaviour:
   Responses:
   - Text: She teleported in
     Result: {fileID: 11400000, guid: 434fe222b160ae5488a2539191d01c55, type: 2}
+    SFX: 2
   - Text: Through the entrance
     Result: {fileID: 11400000, guid: 9e8bbd1b2f817304e8e43fbd7a1f755a, type: 2}
+    SFX: 2
   - Text: Through the ceiling
     Result: {fileID: 11400000, guid: fe61f18093284854e855aa1f88fc4630, type: 2}
+    SFX: 1
   Lines:
   - TalkingCharacter: 2
     Text: Which means there is only one other way she could have entered.
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

@@ -18,8 +18,10 @@ public class Response
 {
     [SerializeField] private string Text;
     [SerializeField] private Interaction Result;
+    [SerializeField] private ResponseSFX SFX;
     public string text => Text;
     public Interaction result => Result;
+    public ResponseSFX sFX => SFX;
 
     public Response(string text, Interaction result)
     {
@@ -27,3 +29,5 @@ public class Response
         Result = result;
     }
 }
+
+public enum ResponseSFX { None, Correct, Wrong }

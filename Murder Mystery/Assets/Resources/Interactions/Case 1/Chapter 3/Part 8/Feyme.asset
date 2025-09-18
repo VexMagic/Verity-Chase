@@ -22,3 +22,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0442167ca9866a645a59f921b4ce183f, type: 2}
   - {fileID: 11400000, guid: 7e3f7fd81ada78244aba8d5d9c803ee8, type: 2}
   - {fileID: 11400000, guid: bb56215ca04457f4ca6054167ec31add, type: 2}
+  Hints:
+  - Conditions: []
+    IndicatorName: Knife
+  - Conditions:
+    - {fileID: 11400000, guid: bb56215ca04457f4ca6054167ec31add, type: 2}
+    IndicatorName: Device
+  - Conditions:
+    - {fileID: 11400000, guid: bb56215ca04457f4ca6054167ec31add, type: 2}
+    - {fileID: 11400000, guid: 7e3f7fd81ada78244aba8d5d9c803ee8, type: 2}
+    IndicatorName: Catalyst

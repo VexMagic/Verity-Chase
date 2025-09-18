@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Ancient Pottery
   Versions:
-  - Description: An old cracked vase with some blood on it. This could be the murder
-      weapon.
+  - Description: An old priceless vase with cracks and some blood on it. This could
+      be the murder weapon.
     Sprite: {fileID: 21300000, guid: fc6382df5ec8a484588f3d6c189a17d3, type: 3}
     Check: []
-  - Description: An old cracked vase with some blood on it. This could be the murder
-      weapon. A piece of it was found in Feyme's room.
+  - Description: An old priceless vase with cracks and some blood on it. This could
+      be the murder weapon. A piece of it was found in Feyme's room.
     Sprite: {fileID: 21300000, guid: 982291a511b8afe4e96c95ecbf49af32, type: 3}
     Check: []

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42e63b977dbcd45b0c12d160fc5f51, type: 3}
   m_Name: Finish 1-3
   m_EditorClassIdentifier: 
-  CaseIndex: 0
-  ChapterIndex: 3
+  CaseIndex: 1
+  ChapterIndex: 4

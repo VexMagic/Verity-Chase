@@ -24,3 +24,8 @@ MonoBehaviour:
     - Minerva
   Answers:
   - Answer: 00000000
+  Hint:
+    Conditions: []
+    Hints:
+    - Slider: 0
+      Option: 0

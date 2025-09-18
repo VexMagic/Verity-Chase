@@ -37,7 +37,7 @@ public class BreakManager : MonoBehaviour
 
     private bool HasNextChapter()
     {
-        return caseChapters[ChapterManager.instance.currentCase] >= ChapterManager.instance.currentChapter + 1;
+        return caseChapters[ChapterManager.instance.currentCase - 1] >= ChapterManager.instance.currentChapter;
     }
 
     private void ShowButtons()
@@ -47,7 +47,7 @@ public class BreakManager : MonoBehaviour
 
     public void Continue()
     {
-        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase);
     }
 
     public void Menu()

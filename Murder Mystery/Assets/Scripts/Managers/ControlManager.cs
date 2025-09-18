@@ -97,7 +97,7 @@ public class ControlManager : MonoBehaviour
 
         if (DeductionManager.instance != null)
         {
-            if (DeductionManager.instance.deductionMenuActive)
+            if (DeductionManager.instance.deductionMenuActive && !DialogueManager.instance.IsDialogueBoxOpen())
             {
                 if (movement.x != 0)
                     DeductionManager.instance.GoToAdjacentDisplay();
@@ -143,7 +143,7 @@ public class ControlManager : MonoBehaviour
 
         if (ClueManager.instance != null)
         {
-            if (!ClueManager.instance.IsAnimationFinished)
+            if (!ClueManager.instance.IsAnimationFinished && !ClueManager.instance.isOpen)
                 ClueManager.instance.CloseGainClueDisplay();
         }
 
@@ -181,6 +181,9 @@ public class ControlManager : MonoBehaviour
         if (!CanPressButton(context) || ClueManager.instance == null)
             return;
 
+        //if (!ClueManager.instance.IsAnimationFinished)
+        //    return;
+
         if (!ClueManager.instance.isOpen)
         {
             if (MemoryManager.instance.isMemoryActive)
@@ -190,6 +193,10 @@ public class ControlManager : MonoBehaviour
             else if (DialogueManager.instance.inTestimony)
             {
                 ClueManager.instance.TestimonyPresentButton();
+            }
+            else if (ConspiracyManager.instance.isConspiracyActive)
+            {
+                ClueManager.instance.ConnectButton();
             }
             else
             {
@@ -214,7 +221,7 @@ public class ControlManager : MonoBehaviour
 
         if (ClueManager.instance != null)
         {
-            if (ClueManager.instance.isOpen)
+            if (ClueManager.instance.isOpen && !ClueManager.instance.LockedClueSelected(ClueManager.instance.currentMenuType))
                 DialogueManager.instance.Present(true);
         }
 
@@ -308,6 +315,23 @@ public class ControlManager : MonoBehaviour
         { 
             UI.SetActive(true); 
         }
+    }
+
+    public void OnHint(InputAction.CallbackContext context)
+    {
+        if (!CanPressButton(context) || ClueManager.instance == null)
+            return;
+
+        if (ClueManager.instance.isOpen)
+        {
+            HintManager.instance.ActivateClueHint();
+        }
+        else
+        {
+            HintManager.instance.ActivateHint();
+        }
+
+        AudioManager.instance.PlaySFX("Click");
     }
 
     private bool CanPressButton(InputAction.CallbackContext context, bool isLog = false, bool isSettings = false)

@@ -38,11 +38,26 @@ public class StatementDisplaySpawner : MonoBehaviour
 
     public void UpdateDisplays(Testimony testimony, int currentStatement)
     {
+        HintManager.instance.HideTestimonyHintDisplay();
         for (int i = 0; i < displayData.Count; i++)
         {
             displays[i].SetActive(testimony.lines[i].IsAvailable());
 
             displayData[i].Highlight(i == currentStatement);
+        }
+    }
+
+    public void ShowHint(int statement, TestimonyHintType hintType)
+    {
+        Debug.Log("show hint " + statement + " - " + hintType.ToString());
+        displayData[statement].ShowHint(hintType);
+    }
+
+    public void HideHint()
+    {
+        foreach (var item in displayData)
+        {
+            item.HideHint();
         }
     }
 }

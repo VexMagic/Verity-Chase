@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Igdala was here
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 39d932e94b5d44c48b64c2924c0e4a07, type: 2}
+    SFX: 0
+  Lines:
+  - TalkingCharacter: 2
+    Text: "Hang on. I recognize this name.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "Oh yeah! From the case file.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Doctor Amy Igdala is mentioned here as the defendant of this case.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "Are you sure this isn't just a coincidence?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Considering that Mr. Murphy is the victim and the defense attorney of
+      the case...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "...and this was the only case file in his safe?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "It's safe to say that it's the same person... no pun intended.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "At least intend your puns. No need for you to be a coward.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "But what does this all mean?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "It means that Dr. Igdala must have been here during the time of the murder!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: 157e5f264ee2d2e4db7635e6e53c85a0, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "This crime scene was almost as crowded as it is now.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: <think>(What was she even doing here?)<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

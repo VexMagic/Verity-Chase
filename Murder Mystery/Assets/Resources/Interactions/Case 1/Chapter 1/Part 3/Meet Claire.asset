@@ -15,12 +15,14 @@ MonoBehaviour:
   Responses:
   - Text: 
     Result: {fileID: 11400000, guid: 2945f609344a8f04ab67bb7a93a568d9, type: 2}
+    SFX: 0
   Lines:
   - TalkingCharacter: 1
-    Text: You wanted to talk to me sir?
+    Text: You wanted to talk to me, sir?
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 2
       Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
@@ -47,6 +49,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -55,6 +58,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -64,6 +68,7 @@ MonoBehaviour:
     - Version: 0
       GainedClue: {fileID: 11400000, guid: baf6bc5bd1495b548ae0fc3af1e5f6e5, type: 2}
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -71,6 +76,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -78,6 +84,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -85,6 +92,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -92,6 +100,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -99,6 +108,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -106,6 +116,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -113,6 +124,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 4
@@ -120,5 +132,6 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

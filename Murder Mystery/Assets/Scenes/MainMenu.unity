@@ -1905,6 +1905,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420760165692583118, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5463781852812764553, guid: 4d847ac4e57cbcb49bdb425d64ed49ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2368,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: index
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: comingSoon
@@ -3209,9 +3233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1779756652}
   chapterButton: {fileID: 1321158417}
-  currentCase: -1
-  currentChapter: -1
-  currentPart: -1
+  currentCase: 0
+  currentChapter: 0
+  currentPart: 0
 --- !u!1 &1128659541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,7 +5398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: index
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: comingSoon
@@ -6569,6 +6593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 638098075}
     m_Modifications:
+    - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5237602497549037102, guid: b22ce66db15da9e4d99fc89c71a48569, type: 3}
       propertyPath: outline
       value: 

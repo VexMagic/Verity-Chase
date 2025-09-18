@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Heart rate stopped
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 39d932e94b5d44c48b64c2924c0e4a07, type: 2}
+    SFX: 0
+  Lines:
+  - TalkingCharacter: 2
+    Text: "Are you sure you heard Murphy's heart rate monitor stop?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "Mine and his have been desynchronized since he arrived which has bothered
+      me highly. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I was relieved it stopped but I am saddened by the implications.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: I ask because everything else makes it sound like what you heard was the
+      moment of the murder...
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "But we know for fact that the monitor was unplugged at around 1:30. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Which means that Wilma must be mistaken. She could have just remembered
+      incorrectly.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<shake>That\u2019s why I asked her if she was sure!<>"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Alright, no need to raise your voice.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(That came out a lot more aggressive than intended.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "So you're saying what she heard <float>wasn't<> the moment of the murder?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "No, I believe that what she heard was indeed the moment of the crime.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "So Mr. Murphy was actually killed earlier than we expected?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "That is my current theory.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "But Dr. Hall was here at that point so she would've seen the cul- Oooooh,
+      Dr. Hall <float>is<> the culprit. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Because she would have mentioned it if she saw someone else in there killing
+      Murphy.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: 9f4c73d1cbc8dba4f836b6cd0f608140, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Additionally, she would have to have been in the room when Murphy was
+      killed...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "...because if she entered after he would already be dead...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "...and she couldn't have entered before because he died almost immediately
+      after the monitor was unplugged.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "An interesting deduction. She was also the one to perform the autopsy
+      so she could easily have altered it to give herself an alibi.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "All this does point towards Dr. Hall being the culprit!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "I'll have some people make an updated autopsy report to verify that Dr.
+      Hall did everything correctly.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: <think>(We're close to the truth, I can feel it.)<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

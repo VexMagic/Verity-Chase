@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI title;
+    [SerializeField] protected TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private GameObject selected;
+    [SerializeField] private Outline hintOutline;
+    [SerializeField] private Animator animator;
+    [SerializeField] private TextMeshProUGUI connectionType;
     [SerializeField] private float moveSpeed;
 
     private ConspiracyNote CurrentNote;
@@ -17,7 +21,7 @@ public class NoteDisplay : MonoBehaviour
 
     public ConspiracyNote currentNote => CurrentNote;
 
-    private void Start()
+    public void SetLocalPos()
     {
         localPos = transform.localPosition;
     }
@@ -29,14 +33,29 @@ public class NoteDisplay : MonoBehaviour
         CurrentNote = note;
     }
 
-    public bool IsPointInside(Vector2 pos)
+    public void HideHint()
     {
-        return Mathf.Abs(transform.localPosition.x - pos.x) <= 160 && Mathf.Abs(transform.localPosition.y - pos.y) <= 160;
+        hintOutline.enabled = false;
+        animator.SetBool("Active", false);
     }
 
-    public void Click()
+    public void ShowHint(ConspiracyHintType type)
     {
-        //ConspiracyManager.instance.SelectNote(this);
+        hintOutline.enabled = true;
+        if (ConspiracyManager.instance.currentBoard.canPresent)
+        {
+            animator.SetBool("Active", true);
+            connectionType.text = "+ " + type.ToString();
+        }
+        else
+        {
+            animator.SetBool("Active", false);
+        }
+    }
+
+    public virtual bool IsPointInside(Vector2 pos)
+    {
+        return Mathf.Abs(transform.localPosition.x - pos.x) <= 160 && Mathf.Abs(transform.localPosition.y - pos.y) <= 160;
     }
 
     public void Select(bool select)

@@ -1,0 +1,374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Hi Wilma
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 39d932e94b5d44c48b64c2924c0e4a07, type: 2}
+    SFX: 0
+  Lines:
+  - TalkingCharacter: 4
+    Text: "<shake>Wilma!?<> Y-you're awake!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -350
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: -650
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -950
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: 650
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: 950
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 5
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: 8a3b0cf5213a17246bf8d91eeac1ebfa, type: 2}
+      XPos: 350
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 6
+      Character: {fileID: 9100000, guid: a206a56528fa1c74184c9bd7d8032ab1, type: 2}
+      Animation: {fileID: 7400000, guid: 509e8b1873a6bdd498495a32bcbeac6b, type: 2}
+      XPos: 0
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 8300000, guid: 8e36be8eecad9464cabae0f6541c9ece, type: 3}
+  - TalkingCharacter: 13
+    Text: "Indeed I am. These people are being quite rude to you.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "How... much did you hear?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I have heard everything.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "When you say 'everything', how much is that exactly?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I've retained the ability to hear ever since I fell into my comatose state.
+      I heard <float>everything.<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "You could hear this whole time?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "That seems... convenient.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "There have been multiple cases of similar things happening to others.
+      No need to be so distrustful. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "Before I forget. My darling Claire, I appreciate you visiting me so frequently.
+      Made the past months... substantially more delightful.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(I think I know where Claire's Catalyst persona got their vocabulary
+      from.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 4
+    Text: "I'm so glad you're awake again!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "As am I.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "And I finally get to see this 'Catalyst' costume you constructed. Splendid
+      craftsmanship.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 4
+    Text: "It's not <float>that<> good. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "Nonsense, you did a marvelous job.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 4
+    Text: "Th-thank you.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I hate to interrupt... but you said you could hear everything while comatose?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "That is indeed what I said.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Then you must have heard something from the time of the murder, right?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I believe I did.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Then please fill us in on what you heard the moment Mr. Murphy died.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "I don't think we need to tell you what we already know, considering you
+      have been an active listener this whole time.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I shall regale you with what I heard.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(I should note this all down. Should be a lot of important info
+      here.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: e822d0a1861e0d54196f67b9685caf20, type: 3}
+  - TalkingCharacter: 13
+    Text: "I heard the doorway open followed by footsteps moving briskly towards
+      the other patient.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "Then, I heard a mechanical hum before a grunt of pain from a man followed
+      by silence.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: be6161ca805d94646b75fe892089611c, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "What came next was the other heart rate monitor stopping completely.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: 039b11631c975f84986d7cbc0432a38c, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "I heard more footsteps, but calmer this time, before the other patient
+      shifted in his bed. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "Then I heard a strained male voice exclaiming 'Dr. Igdala?!' continued
+      by another groan of pain and thus more silence.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: 1a18255128e1bf248b44c98d0862f017, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 13
+    Text: "That was everything I heard. No other sounds were made during that altercation.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes:
+    - {fileID: 11400000, guid: a2634bb68231d6a4888bb83a1e7a9a0d, type: 2}
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "That... sure was a lot.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Hmmmmmm...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Something on your mind?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "I tried doing the same thing we did back at Murphy's Law Office but I
+      don't see how any of them connect.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Hmmmm... Maybe try connecting them to pieces of evidence we've collected?
+      Could lead to some interesting revelations.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: Good idea! Let's give it a shot!
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

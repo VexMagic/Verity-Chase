@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: {fileID: 0}
   WrongAnswer: {fileID: 11400000, guid: b71f8a49c9ab87644a7d7243e4ef3fb7, type: 2}
+  UniqueWrongs: []
   PreviewInteraction: {fileID: 11400000, guid: 622e65fbd759ecb4b9e9e379651f4eba, type: 2}
   Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
   Title: What Claire Saw.
@@ -25,27 +26,32 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 857e93354bad45749b0ee3df3d5c0d7f, type: 2}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 4
-      Text: They broke the display case and grabbed the vase that was on display.
-        I should have tried to stop them.
+      Text: They broke the glass of the display case and grabbed the vase that was
+        on display. I should have tried to stop them.
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 83614c22034f79744854763b118ec149, type: 2}
     CorrectAnswers:
     - CorrectClue:
         Version: 0
         GainedClue: {fileID: 11400000, guid: fed79e74cd078ed489edcfdf93cc56dd, type: 2}
       Result: {fileID: 11400000, guid: 748062effc3c7b6479d7532d99de0d38, type: 2}
+      ContinueTestimony: 0
   - Line:
       TalkingCharacter: 4
       Text: "I saw them talking but I don\u2019t know what they were saying. They
@@ -53,9 +59,11 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: cbe856e281a8403449b49ea777e0d9f8, type: 2}
     CorrectAnswers: []
   - Line:
@@ -65,8 +73,15 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: febe401113ec09b4f9c7da0199df929e, type: 2}
     CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 1
+      Statement: 1

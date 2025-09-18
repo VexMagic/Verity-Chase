@@ -72,16 +72,16 @@ public class MainMenuManager : UIManager
 
         if (menuIndex == 1)
         {
-            ChapterManager.instance.SelectCase(0);
-            ChapterManager.instance.SelectChapter(0);
-            ChapterManager.instance.SelectPart(0);
+            ChapterManager.instance.SelectCase(1);
+            ChapterManager.instance.SelectChapter(1);
+            ChapterManager.instance.SelectPart(1);
         }
         
         if (menuIndex == 2)
         {
             ChapterSelector.instance.SpawnObjects();
-            ChapterManager.instance.SelectChapter(-1);
-            ChapterManager.instance.SelectPart(-1);
+            ChapterManager.instance.SelectChapter(0);
+            ChapterManager.instance.SelectPart(0);
         }
         else
         {
@@ -93,6 +93,6 @@ public class MainMenuManager : UIManager
 
     public void StartCase()
     {
-        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase);
     }
 }

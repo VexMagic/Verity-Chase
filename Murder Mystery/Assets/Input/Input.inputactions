@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Hint",
+                    "type": "Button",
+                    "id": "3394b023-7bf0-4b60-8864-7171c4fd9129",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -228,6 +237,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Check",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23a5fb4d-37a2-4241-998a-b5d5cfc75b2c",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

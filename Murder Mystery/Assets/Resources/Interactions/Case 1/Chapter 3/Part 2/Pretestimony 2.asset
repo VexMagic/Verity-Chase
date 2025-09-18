@@ -99,8 +99,8 @@ MonoBehaviour:
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: "<think>(No pressure Verity. Only the two people whose opinion of you you
-      care about the most are watching.)<>\r"
+    Text: "<think>(No pressure Verity. Only the two people whose opinion of you that
+      you care about the most are watching.)<>\r"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []

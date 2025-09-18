@@ -19,6 +19,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
@@ -32,6 +33,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
@@ -45,6 +47,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
@@ -58,6 +61,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 1
       Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
@@ -67,11 +71,12 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 2
-    Text: 'I found something. It looks like an antique vase with a bunch of cracks
-      all over. '
+    Text: 'I found something. It looks like a pricey antique vase with a bunch of
+      cracks all over. '
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 0}
@@ -81,11 +86,12 @@ MonoBehaviour:
       Delay: 0
     Music: {fileID: 0}
   - TalkingCharacter: 6
-    Text: '10 minutes on the crime scene and you''ve already <float>cracked<> the
-      case. '
+    Text: 'The priceless vase! 10 minutes on the crime scene and you''ve already
+      <float>cracked<> the case. '
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -93,6 +99,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -101,6 +108,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -109,6 +117,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -119,6 +128,7 @@ MonoBehaviour:
     - Version: 0
       GainedClue: {fileID: 11400000, guid: 375ad3adda3c8b84c99309165cd754de, type: 2}
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -126,6 +136,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -133,5 +144,6 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

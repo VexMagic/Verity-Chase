@@ -1,0 +1,299 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Mari time
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 5f654b24400e9014896c6b2b476af00f, type: 2}
+    SFX: 0
+  Lines:
+  - TalkingCharacter: 11
+    Text: "You wanted to talk to me? Oh goodness, there are a lot of people here.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: 950
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 6
+      Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
+      Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: 50
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -350
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: -650
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -950
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: 650
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 5
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 350
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 8300000, guid: d7a9d9b698f157d429e92f12a49fda96, type: 3}
+  - TalkingCharacter: 11
+    Text: "Oh and Wilma is awake again! How lovely.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Some information came up that indicates that the curtain wasn't extended
+      last night.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Really? I remember it being opened when I entered.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "We saw it too on the device.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: Wait.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
+  - TalkingCharacter: 2
+    Text: "You mean this one?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "<shake>WAIT!<> DON'T-\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: 20b1f87951a6cbe48928840eede0dd05, type: 3}
+  - TalkingCharacter: 12
+    Text: "<shake>How do you have that?!<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "...show it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "So my suspicions were correct. Once this is all over, I'd like to have
+      a nice long chat with you. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(I feel like I may have messed things up for Rook.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Tell me how you got it! <shake>NOW!<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "We... I found it outside the research center on the ground. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "It doesn't belong to you. Give it here.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "It doesn't belong to you either. Unless you really are Amy Igdala, you
+      have no reason to have it either.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: <shake>You little...<>
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "I, on the other hand, have a reason to confiscate it. Hand it over.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Fine...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "Agent Decker, let us use it for a bit. I think it'll help a lot with the
+      investigation.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "I'm sorry. This goes beyond one simple investigation. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: "Please, Ace. I think Wren is right, it could lead to a breakthrough. You
+      can confiscate it once we are done. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "*sigh* Alright. You can keep it... for now.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: 0ee7ce7ad8af848499c19bd26519c23a, type: 3}
+  - TalkingCharacter: 2
+    Text: "Great! Thank you.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "This is ridiculous. They shouldn't have it in the first place.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Alright, Ms. Infer. Just imagine what you saw when you entered this room
+      last night...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "...and we will point out contradictions with the new information we have.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Oh, okay.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

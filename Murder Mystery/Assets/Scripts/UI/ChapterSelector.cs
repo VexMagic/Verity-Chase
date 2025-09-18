@@ -31,10 +31,10 @@ public class ChapterSelector : MonoBehaviour
 
     public void SpawnObjects()
     {
-        List<ChapterData> chapters = cases[ChapterManager.instance.currentCase].chapters;
+        List<ChapterData> chapters = cases[ChapterManager.instance.currentCase - 1].chapters;
 
-        caseTitle.text = cases[ChapterManager.instance.currentCase].title;
-        caseNumber.text = "Case " + (ChapterManager.instance.currentCase + 1);
+        caseTitle.text = cases[ChapterManager.instance.currentCase - 1].title;
+        caseNumber.text = "Case " + ChapterManager.instance.currentCase;
 
         for (int i = 0; i < chapters.Count; i++)
         {
@@ -43,7 +43,7 @@ public class ChapterSelector : MonoBehaviour
             chapterButtons.Add(gameObject.GetComponent<RectTransform>());
 
             CaseChapterButton tempButton = gameObject.GetComponent<CaseChapterButton>();
-            tempButton.index = i;
+            tempButton.index = i + 1;
             tempButton.source = this;
             tempButton.CreateParts(chapters[i].parts);
 
@@ -113,7 +113,7 @@ public class ChapterSelector : MonoBehaviour
             buttonAreaHeight += item.sizeDelta.y + 16;
         }
 
-        if (workInProgress && cases[ChapterManager.instance.currentCase].chapters.Count > 0)
+        if (workInProgress && cases[ChapterManager.instance.currentCase - 1].chapters.Count > 0)
             buttonAreaHeight += 112;
 
         if (buttonAreaHeight < 692)

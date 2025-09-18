@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinigameName: Mari
   Exitable: 0
+  Intro: {fileID: 0}
   Complete: {fileID: 11400000, guid: 928483ef059929a42af5d585d2791ad4, type: 2}
   GiveUp: {fileID: 0}
   WrongAnswer: {fileID: 11400000, guid: aecd410ed04b6394ba47601dbcdee5d7, type: 2}
@@ -21,3 +22,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b104993893c4d884b82f1f5975775773, type: 2}
   - {fileID: 11400000, guid: e1c7a2a158626ab4aa4bb65b9499e812, type: 2}
   - {fileID: 11400000, guid: ae715f97a50d20446b1b402b84f04a33, type: 2}
+  Hints:
+  - Conditions: []
+    IndicatorName: Window
+  - Conditions:
+    - {fileID: 11400000, guid: b104993893c4d884b82f1f5975775773, type: 2}
+    IndicatorName: Curtain
+  - Conditions:
+    - {fileID: 11400000, guid: b104993893c4d884b82f1f5975775773, type: 2}
+    - {fileID: 11400000, guid: ae715f97a50d20446b1b402b84f04a33, type: 2}
+    IndicatorName: No Tool Cart

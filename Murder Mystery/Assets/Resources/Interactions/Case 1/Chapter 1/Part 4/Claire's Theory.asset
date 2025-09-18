@@ -15,12 +15,14 @@ MonoBehaviour:
   Responses:
   - Text: 
     Result: {fileID: 11400000, guid: 31df9045517a1b048aac4dd19bcc06f2, type: 2}
+    SFX: 0
   Lines:
   - TalkingCharacter: 4
     Text: "Ma\u2019am, I think I know how they opened the display!"
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 2
       Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}

@@ -89,3 +89,16 @@ MonoBehaviour:
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 9d13e3cef86e37c4198806ab7c75ebbd, type: 2}
     CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 0
+      Statement: 0
+    - HintType: 0
+      Statement: 1
+    - HintType: 0
+      Statement: 2
+    - HintType: 0
+      Statement: 3
+    - HintType: 0
+      Statement: 4

@@ -34,9 +34,9 @@ public class CaseChapterButton : MonoBehaviour
     public void Click()
     {
         ChapterManager.instance.SelectChapter(index);
-        ChapterManager.instance.SelectPart(0);
+        ChapterManager.instance.SelectPart(1);
         AudioManager.instance.PlaySFX("Click");
-        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase + 1);
+        TransitionManager.instance.EnterScene(ChapterManager.instance.currentCase);
     }
     
     public void CreateParts(List<string> parts)
@@ -48,7 +48,7 @@ public class CaseChapterButton : MonoBehaviour
             GameObject gameObject = Instantiate(casePartButton, partParent);
 
             CasePartButton tempButton = gameObject.GetComponent<CasePartButton>();
-            tempButton.SetValues(index, i);
+            tempButton.SetValues(index, i + 1);
             partButtons.Add(tempButton);
 
             TextMeshProUGUI text = gameObject.GetComponentInChildren<TextMeshProUGUI>();

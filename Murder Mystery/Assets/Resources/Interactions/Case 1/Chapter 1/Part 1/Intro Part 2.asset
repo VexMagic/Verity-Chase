@@ -15,8 +15,10 @@ MonoBehaviour:
   Responses:
   - Text: Heads
     Result: {fileID: 11400000, guid: 7a771635e5076084db65b49265b9ee2b, type: 2}
+    SFX: 1
   - Text: Tails
     Result: {fileID: 11400000, guid: b8c0cc64c2e47184c9259d345f05b0e0, type: 2}
+    SFX: 1
   Lines:
   - TalkingCharacter: 2
     Text: "A vigilante known as <important>\u201CThe Catalyst\u201D was seen on the
@@ -26,6 +28,7 @@ MonoBehaviour:
     - Version: 0
       GainedClue: {fileID: 11400000, guid: e1e422b41782f84448c3236e2eb7a338, type: 2}
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 8300000, guid: e822d0a1861e0d54196f67b9685caf20, type: 3}
   - TalkingCharacter: 6
@@ -34,6 +37,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 6
@@ -41,6 +45,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 2
@@ -48,5 +53,6 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}

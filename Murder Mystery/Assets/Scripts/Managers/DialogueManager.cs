@@ -4,9 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using System.IO;
-using UnityEditor;
-using UnityEngine.InputSystem;
 using System.Linq;
 
 public class DialogueManager : MonoBehaviour
@@ -21,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject nameBox;
     [SerializeField] private GameObject progressDetection;
     [SerializeField] private GameObject nextIcon;
-    [SerializeField] private StatementDisplaySpawner testimonyDisplay;
+    public StatementDisplaySpawner testimonyDisplay;
     [SerializeField] private GameObject hasPressedCheckmark;
     [SerializeField] private GameObject testimonyArrows;
     [SerializeField] private GameObject leftTestimony;
@@ -41,6 +38,8 @@ public class DialogueManager : MonoBehaviour
     private bool hasPressed;
     public bool inTestimony;
     private bool isPressing;
+    private bool isAnimationActive;
+    private bool isInPreview;
 
     public bool newInteractionFinished;
     public bool interactionActive;
@@ -74,7 +73,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartChapter()
     {
-        DialogueLine line = ResponseManager.instance.GetDialogueLine(chapterStart[ChapterManager.instance.currentChapter].starts[ChapterManager.instance.currentPart]);
+        DialogueLine line = ResponseManager.instance.GetDialogueLine(chapterStart[ChapterManager.instance.currentChapter - 1].starts[ChapterManager.instance.currentPart - 1]);
         if (line != null)
         {
             if (line.backgrounds.Count > 0)
@@ -84,7 +83,7 @@ public class DialogueManager : MonoBehaviour
                 backgroundImage.enabled = true;
             }
         }
-        ResponseManager.instance.ResponseResult(chapterStart[ChapterManager.instance.currentChapter].starts[ChapterManager.instance.currentPart]);
+        ResponseManager.instance.ResponseResult(chapterStart[ChapterManager.instance.currentChapter - 1].starts[ChapterManager.instance.currentPart - 1]);
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -147,6 +146,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (split.GetPathResult().screenFade)
         {
+            currentTestimonyLine = 0;
             testimonyAnimatior.SetTrigger("End");
             textBox.SetActive(false);
             inTestimony = false;
@@ -197,6 +197,7 @@ public class DialogueManager : MonoBehaviour
 
         yield return null;
         ClueManager.instance.OpenMenu(true, false);
+        HintManager.instance.SetPresentAnswer(present.correctAnswers[0]);
 
         yield return new WaitUntil(() => HasPresented());
         hasPresented = false;
@@ -264,6 +265,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator RunTestimonyPreview(Testimony testimony)
     {
+        isInPreview = true;
         yield return TestimonyAnimation(true, testimony.title);
 
         testimonyAnimatior.SetBool("Active", true);
@@ -290,10 +292,12 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         ResponseManager.instance.ResponseResult(testimony.previewInteraction);
+        isInPreview = false;
     }
 
     private IEnumerator TestimonyAnimation(bool isPreview, string testimonyTitle)
     {
+        isAnimationActive = true;
         textBox.SetActive(false);
         AudioManager.instance.PlayMusic(null);
         AudioManager.instance.PlaySFX("Testimony");
@@ -316,10 +320,12 @@ public class DialogueManager : MonoBehaviour
             yield return null;
             yield return new WaitUntil(() => Progress(false));
         }
+        isAnimationActive = false;
     }
 
     public IEnumerator MemoryAnimation(bool isStart)
     {
+        isAnimationActive = true;
         textBox.SetActive(false);
         AudioManager.instance.PlayMusic(null);
         AudioManager.instance.PlaySFX("Testimony");
@@ -335,7 +341,7 @@ public class DialogueManager : MonoBehaviour
         }
         testimonyAnimatior.SetTrigger("Start");
         yield return new WaitForSeconds(2.5f);
-
+        isAnimationActive = false;
     }
 
     public IEnumerator ConspiracyAnimation(bool isStart)
@@ -374,7 +380,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     currentTestimonyLine = i;
                     testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
-                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].finishPressCondition()));
                     break;
                 }
             }
@@ -385,7 +391,7 @@ public class DialogueManager : MonoBehaviour
         AudioManager.instance.PlayMusic(testimony.music);
         ClueManager.instance.SetTestimony(true);
         testimonyDisplay.gameObject.SetActive(true);
-        hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+        hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].finishPressCondition()));
 
         bool newStatement = true;
 
@@ -397,6 +403,13 @@ public class DialogueManager : MonoBehaviour
                 yield return RunDialogueLine(testimony.lines[currentTestimonyLine].line, true);
                 SetTestimonyArrows(testimony);
                 TestimonyArrowsActive(true);
+                if (testimony.lines[currentTestimonyLine].correctAnswers.Count != 0)
+                    HintManager.instance.SetPresentAnswer(testimony.lines[currentTestimonyLine].correctAnswers[0].correctClue);
+                else
+                {
+                    HintManager.instance.SetPresentAnswer(new GainAnyClueType(), true);
+                    Debug.Log("nothing to present");
+                }
             }
             yield return null;
             yield return new WaitUntil(() => Progress(true) || ControlManager.instance.TestimonyNavigate() || HasPresented() || HasPressed());
@@ -426,6 +439,12 @@ public class DialogueManager : MonoBehaviour
             foreach (var answer in testimony.lines[currentTestimonyLine].correctAnswers)
             {
                 var selectedClue = ClueManager.instance.GetSelectedClue(ClueManager.instance.currentMenuType);
+
+                if (selectedClue.version < answer.correctClue.version)
+                {
+                    continue;
+                }
+
                 if (selectedClue is GainEvidence)
                 {
                     if ((selectedClue as GainEvidence).gainedEvidence == answer.correctClue.gainedClue)
@@ -484,7 +503,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     currentTestimonyLine = i;
                     testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
-                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].finishPressCondition()));
                     return true;
                 }
             }
@@ -497,7 +516,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     currentTestimonyLine = i;
                     testimonyDisplay.UpdateDisplays(testimony, currentTestimonyLine);
-                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].pressResult));
+                    hasPressedCheckmark.SetActive(LogManager.instance.HasFinishedInteraction(testimony.lines[currentTestimonyLine].finishPressCondition()));
                     return true;
                 }
             }
@@ -734,6 +753,11 @@ public class DialogueManager : MonoBehaviour
         textBox.SetActive(open);
     }
 
+    public bool IsDialogueBoxOpen()
+    {
+        return textBox.activeSelf;
+    }
+
     public void SetClickDetectionActive(bool active)
     {
         progressDetection.SetActive(active);
@@ -752,6 +776,16 @@ public class DialogueManager : MonoBehaviour
     public bool HasPressed()
     {
         return hasPressed;
+    }
+
+    public bool IsAnimationActive()
+    {
+        return isAnimationActive;
+    }
+
+    public bool IsInPreview()
+    {
+        return isInPreview;
     }
 
     public void Enter() { isHovering = true; }

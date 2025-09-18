@@ -15,10 +15,13 @@ MonoBehaviour:
   Responses:
   - Text: Claire entered another way
     Result: {fileID: 11400000, guid: 32fbda4db9f49d54ba58e0c96afa5edb, type: 2}
+    SFX: 2
   - Text: The glass was tampered with
     Result: {fileID: 11400000, guid: a373512c7af4597479f5658c6e98006d, type: 2}
+    SFX: 1
   - Text: The blood on the knife is forged
     Result: {fileID: 11400000, guid: cdbc6aa73cd25834a9b9ba93f37f81dc, type: 2}
+    SFX: 2
   Lines:
   - TalkingCharacter: 2
     Text: "If Claire broke into the museum before Ramsey died, then that would explain

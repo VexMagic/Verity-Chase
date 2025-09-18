@@ -67,6 +67,11 @@ public class DeductionManager : MonoBehaviour
         SetSelectedButton(displays[index]);
     }
 
+    public void LockDisplay(int slider, int option)
+    {
+        displays[slider].Lock(option);
+    }
+
     public void ChangeDisplay()
     {
         if (ControlManager.instance.Navigate().y > 0)

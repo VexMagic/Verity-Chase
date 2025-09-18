@@ -19,6 +19,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
@@ -38,15 +39,18 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
-    Text: Huh. It is mechanical. You just hold this button and it moves on its own.
+    Text: "Huh. It is mechanical. You just hold this button and it moves on its own.
+      The mechanical noise it makes is quite loud...\r"
     Backgrounds: []
     GainedClues:
     - Version: 0
       GainedClue: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
@@ -54,6 +58,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
@@ -61,6 +66,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 9
@@ -68,6 +74,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements: []
     Music: {fileID: 0}
   - TalkingCharacter: 8
@@ -75,6 +82,7 @@ MonoBehaviour:
     Backgrounds: []
     GainedClues: []
     GainedLocations: []
+    GainedNotes: []
     Movements:
     - DisplayID: 0
       Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}

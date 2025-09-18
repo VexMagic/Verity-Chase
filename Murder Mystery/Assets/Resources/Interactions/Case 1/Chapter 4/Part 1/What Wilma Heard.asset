@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd5af8f7e2118b4f93704f2261185ea, type: 3}
+  m_Name: What Wilma Heard
+  m_EditorClassIdentifier: 
+  MinigameName: What Wilma Heard
+  Exitable: 0
+  Intro: {fileID: 0}
+  Complete: {fileID: 11400000, guid: 81802aa59d414e04189a6bc860fe1df6, type: 2}
+  GiveUp: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 9838d32e589d393468c2f1cc0b4461a9, type: 2}
+  Conditions:
+  - {fileID: 11400000, guid: 9a732299397228e49b633235d3bd85a2, type: 2}
+  - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+  - {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+  NoteConnections:
+  - Note1: {fileID: 11400000, guid: 157e5f264ee2d2e4db7635e6e53c85a0, type: 2}
+    Note2: {fileID: 11400000, guid: 9f4c73d1cbc8dba4f836b6cd0f608140, type: 2}
+    Result: {fileID: 11400000, guid: f3af3538c1c19b546b4a220fe2475ece, type: 2}
+  CanPresent: 1
+  ClueConnections:
+  - Note: {fileID: 11400000, guid: a2634bb68231d6a4888bb83a1e7a9a0d, type: 2}
+    Clue:
+      Version: 0
+      GainedClue: {fileID: 11400000, guid: 625855b95e1c7904390a27c7f08f28b9, type: 2}
+    Result: {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+  - Note: {fileID: 11400000, guid: be6161ca805d94646b75fe892089611c, type: 2}
+    Clue:
+      Version: 0
+      GainedClue: {fileID: 11400000, guid: b4de43e31b467c74db1e4852e281b6f9, type: 2}
+    Result: {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+  - Note: {fileID: 11400000, guid: 1a18255128e1bf248b44c98d0862f017, type: 2}
+    Clue:
+      Version: 0
+      GainedClue: {fileID: 11400000, guid: 48e0294e74a49f24fa7dd7659d871dd3, type: 2}
+    Result: {fileID: 11400000, guid: 9d79179351a902542b36797c5e4286f6, type: 2}
+  - Note: {fileID: 11400000, guid: 039b11631c975f84986d7cbc0432a38c, type: 2}
+    Clue:
+      Version: 0
+      GainedClue: {fileID: 11400000, guid: b86148c0c23dd3b48aba3413998b7d3d, type: 2}
+    Result: {fileID: 11400000, guid: 5dac64120eba58443b2e71594e0ed9a2, type: 2}
+  - Note: {fileID: 11400000, guid: 2b5ff8004c85fe7409207622599dcda3, type: 2}
+    Clue:
+      Version: 0
+      GainedClue: {fileID: 11400000, guid: 4ab78a6cd832cd9409dec6f8541ee846, type: 2}
+    Result: {fileID: 11400000, guid: 9a732299397228e49b633235d3bd85a2, type: 2}
+  Hints:
+  - Conditions: []
+    HintType: 1
+    Note: {fileID: 11400000, guid: a2634bb68231d6a4888bb83a1e7a9a0d, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+    HintType: 1
+    Note: {fileID: 11400000, guid: be6161ca805d94646b75fe892089611c, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+    - {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+    HintType: 1
+    Note: {fileID: 11400000, guid: 1a18255128e1bf248b44c98d0862f017, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+    - {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+    - {fileID: 11400000, guid: 9d79179351a902542b36797c5e4286f6, type: 2}
+    HintType: 1
+    Note: {fileID: 11400000, guid: 039b11631c975f84986d7cbc0432a38c, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+    - {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+    - {fileID: 11400000, guid: 9d79179351a902542b36797c5e4286f6, type: 2}
+    - {fileID: 11400000, guid: 5dac64120eba58443b2e71594e0ed9a2, type: 2}
+    HintType: 0
+    Note: {fileID: 11400000, guid: 157e5f264ee2d2e4db7635e6e53c85a0, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 2c98061603a109648b4805fd764da67d, type: 2}
+    - {fileID: 11400000, guid: 98b0a465b3d4a7142b6501af2efe5fdc, type: 2}
+    - {fileID: 11400000, guid: 9d79179351a902542b36797c5e4286f6, type: 2}
+    - {fileID: 11400000, guid: 5dac64120eba58443b2e71594e0ed9a2, type: 2}
+    - {fileID: 11400000, guid: f3af3538c1c19b546b4a220fe2475ece, type: 2}
+    HintType: 1
+    Note: {fileID: 11400000, guid: 2b5ff8004c85fe7409207622599dcda3, type: 2}

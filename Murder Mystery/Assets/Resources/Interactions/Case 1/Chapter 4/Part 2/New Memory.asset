@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9807de7585e31419e23fadd13e21d3, type: 3}
+  m_Name: New Memory
+  m_EditorClassIdentifier: 
+  MinigameName: Mari 2
+  Exitable: 0
+  Intro: {fileID: 0}
+  Complete: {fileID: 0}
+  GiveUp: {fileID: 0}
+  WrongAnswer: {fileID: 0}
+  Conditions:
+  - {fileID: 11400000, guid: ff4cfbae96450844cb1e576c1df0ddfd, type: 2}
+  Hints: []
+  MemoryChanges:
+  - NewVisual: {fileID: 21300000, guid: 982291a511b8afe4e96c95ecbf49af32, type: 3}
+    StartInteraction: {fileID: 11400000, guid: 0bd6aa9e86d446e47b9b44a40b5c5190, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 57fa2943bd676be4cbb4695368b027cf, type: 2}

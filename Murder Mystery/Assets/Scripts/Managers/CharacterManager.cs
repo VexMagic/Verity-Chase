@@ -65,7 +65,7 @@ public class CharacterManager : MonoBehaviour
         bool speakerOnScreen = false;
         foreach (var character in characterDisplays)
         {
-            if (GetCharacterDisplay(GetCharacterController(speaker)) == character)
+            if (GetCharacterController(speaker) == character.Animator.runtimeAnimatorController)
             {
                 character.SetSpeaking(true);
                 speakerOnScreen = true;

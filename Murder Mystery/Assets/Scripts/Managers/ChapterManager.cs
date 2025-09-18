@@ -9,9 +9,9 @@ public class ChapterManager : MonoBehaviour
 
     public Button startButton;
     public Button chapterButton;
-    public int currentCase = -1;
-    public int currentChapter = -1;
-    public int currentPart = -1;
+    public int currentCase = 0;
+    public int currentChapter = 0;
+    public int currentPart = 0;
 
     private void Awake()
     {
@@ -43,13 +43,13 @@ public class ChapterManager : MonoBehaviour
     {
         if (startButton != null)
         {
-            startButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
+            startButton.interactable = currentCase == 1 && currentChapter > 0 && currentPart > 0;
             startButton.GetComponent<UIButton>().SetOutlineInteractable();
         }
 
         if (chapterButton != null)
         {
-            chapterButton.interactable = currentCase == 0 && currentChapter != -1 && currentPart != -1;
+            chapterButton.interactable = currentCase == 1 && currentChapter > 0 && currentPart > 0;
             chapterButton.GetComponent<UIButton>().SetOutlineInteractable();
         }
     }
@@ -74,12 +74,36 @@ public class ChapterManager : MonoBehaviour
 
     public void ReadInteractions()
     {
-        if (currentCase == -1 || LogManager.instance == null)
+        if (currentCase == 0 || LogManager.instance == null)
             return;
-        
-        for (int i = 1; i <= currentPart; i++)
+
+        for (int i = 1; i < currentChapter; i++)
         {
-            Interaction[] interactions = Resources.LoadAll<Interaction>("Interactions/Case " + (currentCase + 1) + "/Chapter " + (currentChapter + 1) + "/Part " + i);
+            int counter = 1;
+            while (true)
+            {
+                Interaction[] interactions = Resources.LoadAll<Interaction>("Interactions/Case " + currentCase + "/Chapter " + i + "/Part " + counter);
+                if (interactions != null)
+                {
+                    if (interactions.Length > 0)
+                    {
+                        foreach (Interaction interaction in interactions)
+                        {
+                            LogManager.instance.FinishInteraction(interaction);
+                        }
+                        counter++;
+                    }
+                    else
+                        break;
+                }
+                else
+                    break;
+            }
+        }
+
+        for (int i = 1; i < currentPart; i++)
+        {
+            Interaction[] interactions = Resources.LoadAll<Interaction>("Interactions/Case " + currentCase + "/Chapter " + currentChapter + "/Part " + i);
             foreach (Interaction interaction in interactions)
             {
                 LogManager.instance.FinishInteraction(interaction);

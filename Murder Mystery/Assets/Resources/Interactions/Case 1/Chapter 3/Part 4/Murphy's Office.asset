@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinigameName: Murphy's Law Office
   Exitable: 0
+  Intro: {fileID: 0}
   Complete: {fileID: 0}
   GiveUp: {fileID: 0}
   WrongAnswer: {fileID: 11400000, guid: 983bff7499eacf14782697bc2c80051a, type: 2}
@@ -21,13 +22,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 818be7fc20b7ca441add270c45b39f46, type: 2}
   - {fileID: 11400000, guid: d418e90fee960024cb49c920dff043fb, type: 2}
   - {fileID: 11400000, guid: 7965765213e5b3349b61de0b9dd572fc, type: 2}
-  Connections:
-  - Note1: {fileID: 11400000, guid: 66c61b2f60cdacc43ab940cbb3c37564, type: 2}
-    Note2: {fileID: 11400000, guid: 56d9087c993bafa44bf27fb6203d3a65, type: 2}
-    Result: {fileID: 11400000, guid: 7965765213e5b3349b61de0b9dd572fc, type: 2}
+  NoteConnections:
   - Note1: {fileID: 11400000, guid: a7387e1cf15e28549888e9b6a0f1466c, type: 2}
     Note2: {fileID: 11400000, guid: abf9f7525b6890f4d98c44a1b3eaaae0, type: 2}
     Result: {fileID: 11400000, guid: d418e90fee960024cb49c920dff043fb, type: 2}
-  - Note1: {fileID: 11400000, guid: 4942a1bd643dd994282b039bd30b7f8e, type: 2}
-    Note2: {fileID: 11400000, guid: af6252256c99130429989f9ea86bb00a, type: 2}
+  - Note1: {fileID: 11400000, guid: 66c61b2f60cdacc43ab940cbb3c37564, type: 2}
+    Note2: {fileID: 11400000, guid: 56d9087c993bafa44bf27fb6203d3a65, type: 2}
+    Result: {fileID: 11400000, guid: 7965765213e5b3349b61de0b9dd572fc, type: 2}
+  - Note1: {fileID: 11400000, guid: af6252256c99130429989f9ea86bb00a, type: 2}
+    Note2: {fileID: 11400000, guid: 4942a1bd643dd994282b039bd30b7f8e, type: 2}
     Result: {fileID: 11400000, guid: 818be7fc20b7ca441add270c45b39f46, type: 2}
+  CanPresent: 0
+  ClueConnections: []
+  Hints:
+  - Conditions: []
+    HintType: 0
+    Note: {fileID: 11400000, guid: 56d9087c993bafa44bf27fb6203d3a65, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 7965765213e5b3349b61de0b9dd572fc, type: 2}
+    HintType: 0
+    Note: {fileID: 11400000, guid: a7387e1cf15e28549888e9b6a0f1466c, type: 2}
+  - Conditions:
+    - {fileID: 11400000, guid: 7965765213e5b3349b61de0b9dd572fc, type: 2}
+    - {fileID: 11400000, guid: d418e90fee960024cb49c920dff043fb, type: 2}
+    HintType: 0
+    Note: {fileID: 11400000, guid: 4942a1bd643dd994282b039bd30b7f8e, type: 2}

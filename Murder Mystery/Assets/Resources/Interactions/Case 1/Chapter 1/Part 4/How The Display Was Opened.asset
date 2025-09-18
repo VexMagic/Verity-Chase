@@ -26,11 +26,13 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: a52dbcd230046fe478fdaca4c45afd91, type: 2}
+    FinishPressCondition: {fileID: 0}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 4
@@ -39,11 +41,13 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 1ac258af72f876849a4dfdbece7ce84a, type: 2}
+    FinishPressCondition: {fileID: 0}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 4
@@ -52,11 +56,13 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 84b54ba60eb902c46a3dc195c5be1d06, type: 2}
+    FinishPressCondition: {fileID: 0}
     CorrectAnswers: []
   - Line:
       TalkingCharacter: 4
@@ -65,11 +71,13 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 11400000, guid: 84b54ba60eb902c46a3dc195c5be1d06, type: 2}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: 96d5714ec4b87914f8f91c6f132d51bf, type: 2}
+    FinishPressCondition: {fileID: 0}
     CorrectAnswers:
     - CorrectClue:
         Version: 0
@@ -83,9 +91,21 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: d5b983692a6f3a24481a0226f4d44a10, type: 2}
+    FinishPressCondition: {fileID: 0}
     CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 0
+      Statement: 2
+  - Conditions:
+    - {fileID: 11400000, guid: 84b54ba60eb902c46a3dc195c5be1d06, type: 2}
+    Hints:
+    - HintType: 1
+      Statement: 3

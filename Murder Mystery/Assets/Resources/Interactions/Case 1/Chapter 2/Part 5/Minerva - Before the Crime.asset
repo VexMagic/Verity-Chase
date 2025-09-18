@@ -26,6 +26,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
@@ -52,6 +54,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 11400000, guid: bc0d8ac97908889459354a4851661847, type: 2}
@@ -70,6 +73,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 11400000, guid: 9355daede1f011342976019b9d8b6a45, type: 2}
@@ -83,6 +87,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 11400000, guid: 0831b4fcabfaea348963c3edb37e4fa7, type: 2}
@@ -101,6 +106,7 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
@@ -114,9 +120,30 @@ MonoBehaviour:
       Backgrounds: []
       GainedClues: []
       GainedLocations: []
+      GainedNotes: []
       Movements: []
       Music: {fileID: 0}
     Condition: {fileID: 0}
     RemoveCondition: {fileID: 0}
     PressResult: {fileID: 11400000, guid: ac96e9c6010ec9742b181cbea3c77de8, type: 2}
     CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 0
+      Statement: 1
+  - Conditions:
+    - {fileID: 11400000, guid: bc0d8ac97908889459354a4851661847, type: 2}
+    Hints:
+    - HintType: 1
+      Statement: 2
+  - Conditions:
+    - {fileID: 11400000, guid: 9355daede1f011342976019b9d8b6a45, type: 2}
+    Hints:
+    - HintType: 0
+      Statement: 3
+  - Conditions:
+    - {fileID: 11400000, guid: 0831b4fcabfaea348963c3edb37e4fa7, type: 2}
+    Hints:
+    - HintType: 1
+      Statement: 4

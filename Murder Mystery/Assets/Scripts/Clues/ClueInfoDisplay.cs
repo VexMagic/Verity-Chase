@@ -14,15 +14,21 @@ public class ClueInfoDisplay : MonoBehaviour
     [SerializeField] private GameObject evidence;
     [SerializeField] private GameObject profile;
     [SerializeField] private Image image;
+    [SerializeField] private GameObject lockIcon;
+    [SerializeField] private GameObject checkButton;
 
+    private Evidence currentEvidence;
 
-    public void SetValues(GainClue clue)
+    public void SetValues(GainClue clue, bool locked)
     {
-        SetValues(clue, clue.version);
+        SetValues(clue, clue.version, locked);
     }
 
-    public void SetValues(GainClue clue, int version)
+    public void SetValues(GainClue clue, int version, bool locked)
     {
+        lockIcon.SetActive(locked);
+        currentEvidence = null;
+
         if (clue is GainAnyClueType)
         {
             var tempData = (clue as GainAnyClueType).gainedClue;
@@ -35,6 +41,8 @@ public class ClueInfoDisplay : MonoBehaviour
                 evidenceDescription.text = tempEvidence.description;
                 evidence.SetActive(true);
                 profile.SetActive(false);
+                checkButton.SetActive(tempEvidence.hasCheck());
+                currentEvidence = tempEvidence;
             }
             else if (tempData is ProfileData)
             {
@@ -47,6 +55,7 @@ public class ClueInfoDisplay : MonoBehaviour
                 gender.text = tempProfile.gender;
                 evidence.SetActive(false);
                 profile.SetActive(true);
+                checkButton.SetActive(false);
             }
         }
         else if (clue is GainEvidence)
@@ -58,6 +67,8 @@ public class ClueInfoDisplay : MonoBehaviour
             evidenceDescription.text = tempEvidence.description;
             evidence.SetActive(true);
             profile.SetActive(false);
+            checkButton.SetActive(tempEvidence.hasCheck());
+            currentEvidence = tempEvidence;
         }
         else if (clue is GainProfile)
         {
@@ -70,6 +81,13 @@ public class ClueInfoDisplay : MonoBehaviour
             gender.text = tempProfile.gender;
             evidence.SetActive(false);
             profile.SetActive(true);
+            checkButton.SetActive(false);
         }
+    }
+
+    public void CheckDisplayClue()
+    {
+        CheckEvidence evidence = currentEvidence.check[0];
+        ClueManager.instance.OpenCheckMenu(evidence);
     }
 }

@@ -11,16 +11,31 @@ public class DeductionDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mainOption;
     [SerializeField] private TextMeshProUGUI bottomOption;
     [SerializeField] private GameObject highlight;
+    [SerializeField] private GameObject arrows;
+    [SerializeField] private GameObject lockIcon;
     [SerializeField] private DeductionOptions options;
 
     [SerializeField] private int CurrentOption;
     public int currentOption => CurrentOption;
+
+    private bool locked;
 
     public void SetOptions(DeductionOptions options)
     {
         this.options = options;
         CurrentOption = Random.Range(0, options.options.Count);
         UpdateDisplay();
+        arrows.SetActive(true);
+        lockIcon.SetActive(false);
+    }
+
+    public void Lock(int option)
+    {
+        locked = true;
+        CurrentOption = option;
+        UpdateDisplay();
+        arrows.SetActive(false);
+        lockIcon.SetActive(true);
     }
 
     private void UpdateDisplay()
@@ -40,6 +55,8 @@ public class DeductionDisplay : MonoBehaviour
 
     public void ClickUp()
     {
+        if (locked) return;
+
         AudioManager.instance.PlaySFX("Clue Click");
         CurrentOption--;
         if (CurrentOption < 0)
@@ -50,6 +67,8 @@ public class DeductionDisplay : MonoBehaviour
 
     public void ClickDown()
     {
+        if (locked) return;
+
         AudioManager.instance.PlaySFX("Clue Click");
         CurrentOption++;
         if (CurrentOption >= options.options.Count)
