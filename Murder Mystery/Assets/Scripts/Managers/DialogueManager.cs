@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using System.Linq;
+using static UnityEditor.Progress;
+using UnityEditor;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -24,14 +26,15 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject leftTestimony;
     [SerializeField] private GameObject rightTestimony;
     [SerializeField] private Image backgroundImage;
+    [SerializeField] private Image foregroundImage;
     [SerializeField] private Animator testimonyAnimatior;
     [SerializeField] private TextMeshProUGUI topTestimonyText;
     [SerializeField] private TextMeshProUGUI bottomTestimonyText;
     [SerializeField] private List<PartStartData> chapterStart;
     //[SerializeField] private bool debugActive;
 
-    private Dialogue currentDialogue;
-    private int currentLine;
+    //private Dialogue currentDialogue;
+    //private int currentLine;
     private int currentTestimonyLine;
     private bool isHovering;
     private bool hasPresented;
@@ -43,8 +46,10 @@ public class DialogueManager : MonoBehaviour
 
     public bool newInteractionFinished;
     public bool interactionActive;
+    public bool moveNameBoxInstantly;
 
     private Coroutine lineCoroutine;
+    public DialogueLine currentLine;
 
     [Serializable]
     public class CharacterData
@@ -76,11 +81,20 @@ public class DialogueManager : MonoBehaviour
         DialogueLine line = ResponseManager.instance.GetDialogueLine(chapterStart[ChapterManager.instance.currentChapter - 1].starts[ChapterManager.instance.currentPart - 1]);
         if (line != null)
         {
-            if (line.backgrounds.Count > 0)
+            foreach (var item in line.backgrounds)
             {
-                backgroundImage.sprite = line.backgrounds[^1].image;
-                backgroundImage.color = new Color(1, 1, 1, 1);
-                backgroundImage.enabled = true;
+                if (item.isBackground)
+                {
+                    backgroundImage.sprite = item.image;
+                    backgroundImage.color = new Color(1, 1, 1, 1);
+                    backgroundImage.enabled = true;
+                }
+                else
+                {
+                    foregroundImage.sprite = item.image;
+                    foregroundImage.color = new Color(1, 1, 1, 1);
+                    foregroundImage.enabled = true;
+                }
             }
         }
         ResponseManager.instance.ResponseResult(chapterStart[ChapterManager.instance.currentChapter - 1].starts[ChapterManager.instance.currentPart - 1]);
@@ -89,7 +103,16 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         interactionActive = true;
+
         StartCoroutine(StepThroughDialogue(dialogue));
+
+#if (UNITY_EDITOR)
+        if (EditCharacterManager.instance.hasMadeChanges == true)
+        {
+            AssetDatabase.SaveAssets();
+            EditCharacterManager.instance.hasMadeChanges = false;
+        }
+#endif
     }
 
     public void StartPresent(PresentClue present)
@@ -142,6 +165,58 @@ public class DialogueManager : MonoBehaviour
         ConspiracyManager.instance.StartConspiracy(conspiracy);
     }
 
+    public void StartFadeToBlack(FadeToBlack fadeToBlack)
+    {
+        textBox.SetActive(false);
+        FadeEffect.instance.StartFadeEffect(fadeToBlack);
+    }
+
+    public void StartBadEnding(BadEnding badEnding)
+    {
+        textBox.SetActive(false);
+        StartCoroutine(BadEnding(badEnding));
+    }
+
+    private IEnumerator BadEnding(BadEnding badEnding)
+    {
+        foreach (CharacterMovement movement in badEnding.movements.OrderBy(w => w.delay).ToList())
+        {
+            CharacterManager.instance.MoveCharacter(movement);
+        }
+
+        bool hasPlayedSFX = false;
+        bool hasScreenEffectActivated = false;
+        float timer = 0f;
+        while (timer < badEnding.startDialogueDelay)
+        {
+            yield return new WaitForFixedUpdate();
+            timer += Time.fixedDeltaTime;
+
+            if (timer > badEnding.soundEffectDelay && hasPlayedSFX == false)
+            {
+                hasPlayedSFX = true;
+                AudioManager.instance.PlaySFX(badEnding.soundEffect);
+            }
+
+            if (timer > badEnding.screenEffectDelay && hasScreenEffectActivated == false)
+            {
+                hasScreenEffectActivated = true;
+                StartCoroutine(BackgroundEffect(badEnding.background));
+            }
+        }
+
+        if (badEnding.HasResponses())
+        {
+            Debug.Log("show response");
+            ResponseManager.instance.IgnoreNextResponse = false;
+            ResponseManager.instance.ShowResponses(badEnding.responses);
+        }
+        else if (badEnding.AutoPickResponse())
+        {
+            ResponseManager.instance.OnPickedResponse(badEnding.responses[0]);
+        }
+    }
+
     private IEnumerator SplitPath(SplitPath split)
     {
         if (split.GetPathResult().screenFade)
@@ -163,7 +238,7 @@ public class DialogueManager : MonoBehaviour
         {
             yield return RunDialogueLine(dialogue.lines[i]);
 
-            if (i == dialogue.lines.Length - 1 && dialogue.HasResponses())
+            if (i == dialogue.lines.Length - 1 && dialogue.HasResponses() && dialogue.showResponsesAfterDialogue == false)
             {
                 Debug.Log("has response");
                 break;
@@ -171,9 +246,23 @@ public class DialogueManager : MonoBehaviour
 
             yield return null;
             yield return new WaitUntil(() => Progress(false));
+
+#if (UNITY_EDITOR)
+            if (Input.GetMouseButtonDown(1))
+            {
+                i -= 2;
+                if (i < -1)
+                    i = -1;
+            }
+#endif
         }
 
         LogManager.instance.FinishInteraction(dialogue);
+
+        if (dialogue.showResponsesAfterDialogue == true)
+        {
+            textBox.SetActive(false);
+        }
 
         if (dialogue.HasResponses())
         {
@@ -540,6 +629,11 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartDialogueLine(DialogueLine line, bool isTestimony)
     {
+        currentLine = line;
+        if (EditCharacterManager.instance != null)
+            EditCharacterManager.instance.UpdateDeleteMenu();
+
+        moveNameBoxInstantly = textBox.activeSelf == false;
         LogManager.instance.ReadLine(line);
         TextEffectManager.instance.DeactivateEffects(true);
         LocationManager.instance.personSpawner.SetActive(false);
@@ -635,30 +729,68 @@ public class DialogueManager : MonoBehaviour
 
         if (background.fadeIn)
         {
-            backgroundImage.sprite = background.image;
-            backgroundImage.color = new Color(1, 1, 1, 0);
-            backgroundImage.enabled = true;
+            if (background.isBackground)
+            {
+                backgroundImage.sprite = background.image;
+                backgroundImage.color = new Color(1, 1, 1, 0);
+                backgroundImage.enabled = true;
+            }
+            else
+            {
+                foregroundImage.sprite = background.image;
+                foregroundImage.color = new Color(1, 1, 1, 0);
+                foregroundImage.enabled = true;
+            }
+
         }
         else
         {
-            backgroundImage.color = new Color(1, 1, 1, 1);
+            if (background.isBackground)
+            {
+                backgroundImage.color = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                foregroundImage.color = new Color(1, 1, 1, 1);
+            }
         }
 
         float startTime = Time.time;
         while (Time.time - startTime < background.fadeSpeed)
         {
             float progress = (Time.time - startTime) / background.fadeSpeed;
-            backgroundImage.color = new Color(1, 1, 1, background.fadeIn ? progress : 1 - progress);
+            if (background.isBackground)
+            {
+                backgroundImage.color = new Color(1, 1, 1, background.fadeIn ? progress : 1 - progress);
+            }
+            else
+            {
+                foregroundImage.color = new Color(1, 1, 1, background.fadeIn ? progress : 1 - progress);
+            }
             yield return null;
         }
 
         if (!background.fadeIn)
         {
-            backgroundImage.enabled = false;
+            if (background.isBackground)
+            {
+                backgroundImage.enabled = false;
+            }
+            else
+            {
+                foregroundImage.enabled = false;
+            }
         }
         else
         {
-            backgroundImage.color = new Color(1, 1, 1, 1);
+            if (background.isBackground)
+            {
+                backgroundImage.color = new Color(1, 1, 1, 1);
+            }
+            else
+            {
+                foregroundImage.color = new Color(1, 1, 1, 1);
+            }
         }
     }
 
@@ -681,6 +813,8 @@ public class DialogueManager : MonoBehaviour
     {
 #if (UNITY_EDITOR)
         if (Input.GetKey(KeyCode.Space))
+            return true;
+        if (Input.GetMouseButtonDown(1))
             return true;
 #endif
         return (Input.GetMouseButtonDown(0) && isHovering) || (ControlManager.instance.Progress() && !testimony);

@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: How Minerva did it
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: 3e8c510bfd89ef248b14838a7f17526d, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: b51f48c93403ea747ab6e286886303ca, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: 4f200ac3c6b71eb4890dd02d7b0b1bf9, type: 2}
+  Music: {fileID: 8300000, guid: ae5d60026e90cef41a10502037f91c78, type: 3}
+  Title: "Dr. Hall Did It And Here\u2019s How"
+  Lines:
+  - Line:
+      TalkingCharacter: 13
+      Text: "Dr. Hall entered the room with murderous intent. She tried to end Murphy\u2019s
+        life somehow using whatever made the mechanical sound."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: f3757c3f961f7ad458c92d4e6baae9d2, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: That sound must have been some sort of magic spell. What else could have
+        made a sound like that?
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 9d082361730687441b3894ff25aa2d12, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 3115e1218aaceb1468fc959a2411deca, type: 2}
+      Result: {fileID: 11400000, guid: 3e8c510bfd89ef248b14838a7f17526d, type: 2}
+      ContinueTestimony: 0
+  - Line:
+      TalkingCharacter: 13
+      Text: Murphy was asleep but what she did woke him up and he flailed around
+        for dear life, pulling the cord out by accident.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: b472ba490d4a289458dcca1d2587b2d0, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: She thought she killed him and went to leave. <shake>BUT THEN<> he yelled
+        her name.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 8b6d6cee0bf969c4786481208f847fa8, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 13
+      Text: In a fit of panic, she stabbed him with the scalpel to prevent him from
+        alerting anyone to the attempt on his life.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 4e06f69146f8cc944af2499a76819600, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 1
+      Statement: 1

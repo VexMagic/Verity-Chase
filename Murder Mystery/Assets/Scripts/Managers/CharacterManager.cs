@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -43,21 +45,76 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    public void CreateCharacter(CharacterMovement values)
+    private int GetLowestFreeID()
+    {
+        int id = 0;
+        bool isFree = true;
+        while (true)
+        {
+            isFree = true;
+            foreach (var item in characterDisplays)
+            {
+                if (item.iD == id)
+                {
+                    isFree = false;
+                }
+            }
+
+            if (isFree)
+            {
+                return id;
+            }
+            else 
+            {
+                id++;
+            }
+        }
+    }
+
+    public void CreateEditorCharacter()
     {
         GameObject tempDisplay = Instantiate(characterDisplay, basePosition);
         CharacterDisplay displayData = tempDisplay.GetComponent<CharacterDisplay>();
 
-        if (values.facingLeft)
-            tempDisplay.transform.localPosition = new Vector3(1310, YOffset);
-        else
-            tempDisplay.transform.localPosition = new Vector3(-1310, YOffset);
+        tempDisplay.transform.localPosition = new Vector3(0, 0);
 
-        displayData.SetID(values.displayID);
-        displayData.SetValues(values, true);
+        int id = GetLowestFreeID();
+        displayData.SetID(id);
+        DialogueManager.instance.currentLine.movements.Add(new CharacterMovement(id));
 
         characters.Add(tempDisplay);
         characterDisplays.Add(displayData);
+
+        EditCharacterManager.instance.SelectCharacter(displayData);
+    }
+
+    public void CreateCharacter(CharacterMovement values, bool instant)
+    {
+        if (Mathf.Abs(values.xPos) >= 1500)
+            return;
+
+        GameObject tempDisplay = Instantiate(characterDisplay, basePosition);
+        CharacterDisplay displayData = tempDisplay.GetComponent<CharacterDisplay>();
+
+        if (instant)
+            tempDisplay.transform.localPosition = new Vector3(values.xPos, 0);
+        else if (values.facingLeft)
+            tempDisplay.transform.localPosition = new Vector3(1500, YOffset);
+        else
+            tempDisplay.transform.localPosition = new Vector3(-1500, YOffset);
+
+        displayData.SetID(values.displayID);
+        displayData.SetValues(values, true, instant);
+
+        characters.Add(tempDisplay);
+        characterDisplays.Add(displayData);
+    }
+
+    public void RemoveCharacter(CharacterDisplay display)
+    {
+        characters.Remove(display.gameObject);
+        characterDisplays.Remove(display);
+        Destroy(display.gameObject);
     }
 
     public void SetSpeaking(Character speaker)
@@ -91,7 +148,10 @@ public class CharacterManager : MonoBehaviour
             coroutine = null;
         }
 
-        coroutine = StartCoroutine(SmoothMovement(nameArea.localPosition.x, characterPos - offset - (CameraManager.instance.cameraOffset / 2)));
+        if (DialogueManager.instance.moveNameBoxInstantly)
+            nameArea.localPosition = new Vector3(characterPos - offset - (CameraManager.instance.cameraOffset / 2), nameArea.localPosition.y);
+        else
+            coroutine = StartCoroutine(SmoothMovement(nameArea.localPosition.x, characterPos - offset - (CameraManager.instance.cameraOffset / 2)));
     }
 
     private IEnumerator SmoothMovement(float start, float end)
@@ -160,7 +220,17 @@ public class CharacterManager : MonoBehaviour
         return null;
     }
 
-    private CharacterData GetCharacterData(RuntimeAnimatorController controller)
+    public int GetDisplayAmount()
+    {
+        return characterDisplays.Count;
+    }
+
+    public CharacterDisplay GetDisplayFromIndex(int index)
+    {
+        return characterDisplays[index];
+    }
+
+    public CharacterData GetCharacterData(RuntimeAnimatorController controller)
     {
         foreach (var item in characterDatas)
         {
@@ -172,18 +242,18 @@ public class CharacterManager : MonoBehaviour
         return null;
     }
 
-    public void MoveCharacter(CharacterMovement values)
+    public void MoveCharacter(CharacterMovement values, bool instant = false)
     {
         foreach (var display in characterDisplays)
         {
             if (display.iD == values.displayID)
             {
-                display.SetValues(values, false);
+                display.SetValues(values, false, instant);
                 return;
             }
         }
 
-        CreateCharacter(values);
+        CreateCharacter(values, instant);
     }
 
     public bool GetAnimationDelayActive()

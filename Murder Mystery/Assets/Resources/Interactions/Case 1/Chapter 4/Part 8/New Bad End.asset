@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3344057575752b499459f1ce6b7c4e7, type: 3}
+  m_Name: New Bad End
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: e99e4add62b2cba4685eaaada78f1109, type: 2}
+    SFX: 0
+  Movements:
+  - DisplayID: 0
+    Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+    Animation: {fileID: 0}
+    XPos: 500
+    FacingLeft: 0
+    Delay: 0
+  SoundEffect: {fileID: 8300000, guid: 5f5492ac16e9f9f4e8ebfb54ae3910bc, type: 3}
+  ScreenEffectDelay: 0.3
+  SoundEffectDelay: 0.5
+  StartDialogueDelay: 4.5
+  Background:
+    Image: {fileID: 21300000, guid: 1e62f8e8ca0249b4497e47d7d9404588, type: 3}
+    IsBackground: 0
+    FadeSpeed: 0.05
+    FadeIn: 1
+    Delay: 0

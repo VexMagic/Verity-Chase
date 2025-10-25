@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: correct Testimony 2
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: ee0b3b936ffd81648908a4e80c74dca7, type: 2}
+    SFX: 0
+  ShowResponsesAfterDialogue: 0
+  Lines:
+  - TalkingCharacter: 2
+    Text: "But is it really true that there was nothing that could have been used
+      as a murder weapon?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
+  - TalkingCharacter: 4
+    Text: "I hope so.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Because we did find something that could be used to stab someone to death.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "In fact... I think I know what the actual murder weapon is!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: e7f425f91dd54a84687d3f473a92ef59, type: 3}
+  - TalkingCharacter: 10
+    Text: "What is?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: -900
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -150
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -400
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -650
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "The scalpel from the tool cart that was originally here! \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Think about it, the stab wound was super thin, <shake>just like the blade
+      of a scalpel!<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "Is this the first time we've actually brought up the murder weapon that
+      killed Murphy?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I... think it is... \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "That can <shake>not<> be true.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "I guess it just slipped my mind.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 6
+    Text: "I need some fresh air. You're giving me a headache.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "I already have one. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: 1500
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 6
+      Character: {fileID: 9100000, guid: a9c40cba51933a243806f8bfb0b72952, type: 2}
+      Animation: {fileID: 7400000, guid: e12f1a350e3aae74b9941bfbbc9d682d, type: 2}
+      XPos: 400
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 7
+      Character: {fileID: 9100000, guid: a206a56528fa1c74184c9bd7d8032ab1, type: 2}
+      Animation: {fileID: 7400000, guid: 509e8b1873a6bdd498495a32bcbeac6b, type: 2}
+      XPos: 650
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -50
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -300
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -550
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 9bd6fc203ddcc154db90862d8a6d3335, type: 2}
+      Animation: {fileID: 7400000, guid: a025dba0322b3b84a91b6d9dfedc3514, type: 2}
+      XPos: -800
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "A headache I mean. I don't need fresh air.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(It's the headache you don't need!)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Let's try not to focus on that and instead focus on the murder weapon.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Are there any fingerprints on it?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 10
+    Text: Forensics says no. Which lines up with what we know. Claire <float>is<>
+      wearing gloves.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

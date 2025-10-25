@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: Visiting Wilma
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: cf5afd4eff9c78d4fa67ba579b6fd443, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: 705295b08821932408c1776172eb7c11, type: 2}
+  Music: {fileID: 8300000, guid: 36464ed0086937e4e9497ebd8116b42d, type: 3}
+  Title: Visiting Wilma
+  Lines:
+  - Line:
+      TalkingCharacter: 4
+      Text: I did my normal morning routine and then right after I headed off to
+        the hospital to visit Wilma.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 5195345f33935b741955f3c8e4b0b129, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: "A few of the doctors and nurses said \u201CHi\u201D to me. A lot of
+        the staff here recognise me because of how often I show up."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 87ba103889b90f747808f1d88fbd44c4, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: I stood next to Wilma as I just talked about what I did since the last
+        time we talked. Did that for a bit more than an hour.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 4b76e371a5275c74db4616281b9ad6d4, type: 2}
+    FinishPressCondition: {fileID: 11400000, guid: add03264ac131c04ca06003f10cfb78e, type: 2}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 4
+      Text: "There isn\u2019t even anything in this room that I could have used as
+        a murder weapon. "
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 11400000, guid: add03264ac131c04ca06003f10cfb78e, type: 2}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 060818ab34e74994c97f78b993372ba0, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 3115e1218aaceb1468fc959a2411deca, type: 2}
+      Result: {fileID: 11400000, guid: 9446b6da316acc24fa5557a6d5c727e2, type: 2}
+      ContinueTestimony: 0
+  - Line:
+      TalkingCharacter: 4
+      Text: 'After we talked, I went home to finish up The Catalyst outfit I was
+        working on. '
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 2f7205e4f6a33f84d9de3785f12a3aaf, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 0
+      Statement: 2
+  - Conditions:
+    - {fileID: 11400000, guid: add03264ac131c04ca06003f10cfb78e, type: 2}
+    Hints:
+    - HintType: 1
+      Statement: 3

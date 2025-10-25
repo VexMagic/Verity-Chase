@@ -1,0 +1,445 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Dr. Hall did it for sure
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 124730c396dc90647b15ed5dd1f3e2d0, type: 2}
+    SFX: 0
+  ShowResponsesAfterDialogue: 0
+  Lines:
+  - TalkingCharacter: 12
+    Text: "You're back to blaming me are you?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -250
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -500
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -800
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 8300000, guid: 8e36be8eecad9464cabae0f6541c9ece, type: 3}
+  - TalkingCharacter: 8
+    Text: "You're the only person that makes sense.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Did you forget that I was the one who saved his life?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "He was going into cardiac arrest and I used the defibrillator to save
+      him. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "<float>You<> were the ones that proved it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Besides, I had no reason to kill him in the first place.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Your precious culprit is somewhere else. It's not me.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "But you forged the autopsy and swapped the tool carts.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "All because the real killer threatened me to.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "We already proved it couldn't have been Claire, meaning it had to be you!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Look, as much as I want to help you. I need to protect my daughter at
+      all costs.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "I can't tell you who was behind this and even if you find a drop of a
+      third person's blood in here...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Actually figuring out who that person is will be next to impossible. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "You've gotten all your new friends off the hook so there is no need to
+      continue.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Haven't you done enough already?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: ...
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 1500
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -250
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
+  - TalkingCharacter: 8
+    Text: "Are you really giving up?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "We have no more leads and none of the suspects make sense.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: 250
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -250
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -550
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Then make them make sense.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: ad79679cdfaea3345b2103d42fbaaefb, type: 3}
+  - TalkingCharacter: 2
+    Text: "What?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Everyone has something to hide and the only way for us to get to the truth
+      is to get the information out of them.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "In order to put an event like this behind you, you need to know all the
+      facts.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "All you have to do is find the people who are hiding stuff from you and
+      drag it out of them.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "So since Minerva is claiming to know who did it but won't tell us, we
+      should drag that information out of her?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "You're getting it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Now, why would she keep something like this from us?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Because revealing it would put Feyme in danger?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "She was in absolutely no danger when you talked to her and since there
+      are cops at the museum, she is at no risk whatsoever.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Which means that Minerva is hiding who did it because <float>she<> did
+      it!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Exactly.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Assume she did it and do everything you can to get the proof out of her.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "And if she isn't the culprit, the information she gives us will get us
+      closer to the truth!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Right!\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(Alright Verity. Do this the way Rook would do it.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(You can't look back now. Just move forward.)<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Dr. Hall. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 0
+      Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+      Animation: {fileID: 7400000, guid: ae5fc5cc95fcee642aeb80f9fe8271e1, type: 2}
+      XPos: -250
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 2
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: -500
+      FacingLeft: 0
+      Delay: 0
+    - DisplayID: 1
+      Character: {fileID: 9100000, guid: 177a26104795c1a4eaaac25db6d97c5b, type: 2}
+      Animation: {fileID: 7400000, guid: b2577ee7c53664346a75953b89607e47, type: 2}
+      XPos: -800
+      FacingLeft: 0
+      Delay: 0
+    Music: {fileID: 8300000, guid: 1fb1dc1d620c9554392f868815ab72b5, type: 3}
+  - TalkingCharacter: 12
+    Text: "What?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 300
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "I believe you're the one who killed Mr. Murphy.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 8300000, guid: e7f425f91dd54a84687d3f473a92ef59, type: 3}
+  - TalkingCharacter: 12
+    Text: "How idiotic. I saved his life, I had no reason to kill him. \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "You must have had a reason.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "I <float>must<> have? \r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: You are just throwing random accusations around until something sticks.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

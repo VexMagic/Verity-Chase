@@ -330,6 +330,23 @@ MonoBehaviour:
     GainedNotes: []
     Movements: []
     Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: 'The heart rate monitor was unplugged while this was happening. '
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: He probably flailed around when he was being attacked and accidentally
+      pulled the plug out.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
   - TalkingCharacter: 2
     Text: "Hmmmmmm...\r"
     Backgrounds: []

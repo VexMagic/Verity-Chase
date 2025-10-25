@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Press 1-3
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 2a29769596187ff4491002fab4c3d505, type: 2}
+    SFX: 0
+  Lines:
+  - TalkingCharacter: 2
+    Text: "Would the cart really cover the body?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "The cart is quite tall and Mari is quite short. It would be pretty easy
+      to hide the body behind it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "I'm still not fully convinced.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "This was <float>your<> theory. Do you have that little self confidence?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "We can just move it in front of the body again so we can check.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "Don't tamper with the crime scene! You'll mess up the pool of blood.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "It's all dried now so moving the cart through it now wouldn't get any
+      more blood on the wheels.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "I still don't think it's a good idea to disturb it.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 9
+    Text: "What are they gonna do? Arrest me on felony tomfoolery charges?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "They'll arrest you for tampering with the crime scene.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Did you know that blood takes about 30-60 minutes to dry up?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 6
+      Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
+      Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: 0
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: 850
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: 500
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 5
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 250
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Of course it depends on the temperature of the area around it, how much
+      there is, and all that but-\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Now is <shake>not<> the time for your <float>fun facts.<>\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 11
+    Text: "Right... sorry.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Since the blood is only on one side of the wheels...\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements:
+    - DisplayID: 6
+      Character: {fileID: 9100000, guid: 8dba8c2f04d603540bd4297c1edfbbcf, type: 2}
+      Animation: {fileID: 7400000, guid: 83425337815823847afdef713659e9fc, type: 2}
+      XPos: 1500
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 4
+      Character: {fileID: 9100000, guid: 4adb73a6a7bf9314185959161a880b27, type: 2}
+      Animation: {fileID: 7400000, guid: 1b9e09f770f91464a8cbe9d0beb3f61b, type: 2}
+      XPos: 750
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 5
+      Character: {fileID: 9100000, guid: 41e7e9fb6d3eab343acdbe34c744b252, type: 2}
+      Animation: {fileID: 7400000, guid: 35e00fce2843d2245a6052dbff240248, type: 2}
+      XPos: 100
+      FacingLeft: 1
+      Delay: 0
+    - DisplayID: 3
+      Character: {fileID: 9100000, guid: 261fb08c1081187488a93b0b009e4893, type: 2}
+      Animation: {fileID: 7400000, guid: 02462bf1a5e599c44a98fd3fe5b19679, type: 2}
+      XPos: 400
+      FacingLeft: 1
+      Delay: 0
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "...that means the cart was in the pool of blood before it dried and was
+      then moved after it dried.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 8
+    Text: "Meaning it was moved out of the blood at least half an hour after it dried.\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: "<think>(Interesting, interesting. I'll make a note of that.)\r"
+    Backgrounds: []
+    GainedClues:
+    - Version: 2
+      GainedClue: {fileID: 11400000, guid: 5e4d700cbeb3aa8478c3d7f00a9701c6, type: 2}
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 12
+    Text: "Anyway, can I please continue with my theory?\r"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  - TalkingCharacter: 2
+    Text: Sure, go right ahead.
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

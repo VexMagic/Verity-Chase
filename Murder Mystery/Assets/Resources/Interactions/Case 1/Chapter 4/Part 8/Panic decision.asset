@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad91409c37e2d7409b870a56976ac42, type: 3}
+  m_Name: Panic decision
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: Let her escape
+    Result: {fileID: 11400000, guid: 088a381ac52e4ef4ca7cc83f37ead162, type: 2}
+    SFX: 0
+  - Text: Calm her down
+    Result: {fileID: 11400000, guid: 5d1052d771b5878498a363971eaed319, type: 2}
+    SFX: 0
+  - Text: Apprehend her
+    Result: {fileID: 11400000, guid: dbbba974b4b27084caa15f2b7d096587, type: 2}
+    SFX: 0
+  ShowResponsesAfterDialogue: 0
+  Lines:
+  - TalkingCharacter: 2
+    Text: <think>(What do I do?)<>
+    Backgrounds:
+    - Image: {fileID: 0}
+      IsBackground: 0
+      FadeSpeed: 0
+      FadeIn: 0
+      Delay: 0
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}

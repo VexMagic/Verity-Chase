@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f704e99e918468c4f9e1eea33535d3f2, type: 3}
+  m_Name: "What \u201CReally\u201D Happened"
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: c544b237a51e57842ab28c228b4918d7, type: 2}
+  UniqueWrongs: []
+  PreviewInteraction: {fileID: 11400000, guid: 3a9e8ea410e20d140a0cdb82199dc4ac, type: 2}
+  Music: {fileID: 8300000, guid: ae5d60026e90cef41a10502037f91c78, type: 3}
+  Title: "What \u201CReally\u201D Happened"
+  Lines:
+  - Line:
+      TalkingCharacter: 12
+      Text: I was alerted that Murphy was going into cardiac arrest and so I used
+        the defibrillator to resuscitate him.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 54406b6987411554594dfd3d21d9ed91, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: As I went to leave, I heard someone climbing up the outside wall towards
+        the window. I hid in the hallway to avoid being seen.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 632a53223b7d37040bd0df8af9e46065, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: 'I then saw Steele climb in and murder Murphy with the scalpel. '
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 35b75628eb3cc814cb2994117e133c5b, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: "That\u2019s when she spotted me and recognized me as her boss\u2019s
+        wife and threatened our daughter to keep me silent."
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 33b5ce5a7c8cc0142952917e356d7189, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  - Line:
+      TalkingCharacter: 12
+      Text: 'She forced me to pin the crime on someone else while she cleaned up
+        any evidence of her involvement before escaping the way she came. '
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 93cce1855526e2f47bc758b62bb4e7ad, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers:
+    - CorrectClue:
+        Version: 0
+        GainedClue: {fileID: 11400000, guid: 19fa26c4ab715af498b42be535fb1d4f, type: 2}
+      Result: {fileID: 11400000, guid: dc863f8ee7bdf454f8fcd947a6ff4cfa, type: 2}
+      ContinueTestimony: 0
+  - Line:
+      TalkingCharacter: 12
+      Text: I ended up swapping the tool carts and forged the time of death on the
+        autopsy in order to make Infer the prime suspect.
+      Backgrounds: []
+      GainedClues: []
+      GainedLocations: []
+      GainedNotes: []
+      Movements: []
+      Music: {fileID: 0}
+    Condition: {fileID: 0}
+    RemoveCondition: {fileID: 0}
+    PressResult: {fileID: 11400000, guid: 365bc59e52b358d4eb6fc491fb5bf6c7, type: 2}
+    FinishPressCondition: {fileID: 0}
+    CorrectAnswers: []
+  Hints:
+  - Conditions: []
+    Hints:
+    - HintType: 1
+      Statement: 4

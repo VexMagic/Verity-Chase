@@ -52,6 +52,37 @@ public class CharacterDisplay : MonoBehaviour
             backlogCoroutine = StartCoroutine(Backlog());
     }
 
+    public void SetValues(CharacterMovement values, bool spawn, bool instant)
+    {
+        if (instant == false)
+        {
+            SetValues(values, spawn);
+            return;
+        }
+
+        if (Mathf.Abs(values.xPos) >= 1500)
+        {
+            CharacterManager.instance.RemoveCharacter(this);
+            return;
+        }
+
+        SetCharacter(values.character, values.animation);
+
+        if (spawn == false)
+        {
+            transform.localPosition = new Vector3(values.xPos, transform.localPosition.y);
+        }
+        else
+        {
+            sprite.color = notSpeaking;
+        }
+
+        if (values.facingLeft)
+            transform.localScale = new Vector3(1, 1);
+        else
+            transform.localScale = new Vector3(-1, 1);
+    }
+
     public void SetSpeaking(bool speaking, bool start = false)
     {
         if (speaking && moveCoroutine == null)
@@ -75,6 +106,17 @@ public class CharacterDisplay : MonoBehaviour
             darkenCoroutine = StartCoroutine(Darken(sprite.color, Color.white));
         else
             darkenCoroutine = StartCoroutine(Darken(sprite.color, notSpeaking));
+    }
+
+    public void MovePosition(int xOffset)
+    {
+        SetPosition((int)transform.localPosition.x + xOffset);
+    }
+
+    public void SetPosition(int xPos)
+    {
+        endPos = xPos;
+        transform.localPosition = new Vector3(xPos, 0);
     }
 
     private IEnumerator Darken(Color start, Color end)
@@ -220,6 +262,10 @@ public class CharacterDisplay : MonoBehaviour
             yield return null;
         }
         moveCoroutine = null;
+        if (Mathf.Abs(end) >= 1500)
+        {
+            CharacterManager.instance.RemoveCharacter(this);
+        }
     }
 
     private IEnumerator FlipAnimation(float start, float end)

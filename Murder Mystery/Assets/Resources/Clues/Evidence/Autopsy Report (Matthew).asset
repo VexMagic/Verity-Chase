@@ -18,3 +18,7 @@ MonoBehaviour:
       heart.\r\nTime: June 2nd. 2:00-3:00 am.\r"
     Sprite: {fileID: 21300000, guid: f54ec96733be91241a19b66394395266, type: 3}
     Check: []
+  - Description: "Cause: Blood loss due to a 14mm wide stab wound straight to the
+      heart.\r\nTime: June 2nd. roughly 1:30 am.\r"
+    Sprite: {fileID: 21300000, guid: f54ec96733be91241a19b66394395266, type: 3}
+    Check: []

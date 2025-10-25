@@ -168,9 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 0}
   chapterButton: {fileID: 0}
-  currentCase: 0
-  currentChapter: 1
-  currentPart: 0
+  currentCase: 1
+  currentChapter: 4
+  currentPart: 1
 --- !u!1 &222201156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   continueButton: {fileID: 1499083815}
   mainMenuButton: {fileID: 1436519236}
   chapterDisplay: {fileID: 999716970}
-  caseChapters: 03000000
+  caseChapters: 04000000
 --- !u!1001 &1952613130
 PrefabInstance:
   m_ObjectHideFlags: 0

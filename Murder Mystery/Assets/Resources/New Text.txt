@@ -1,8 +1,46 @@
-Amara - You have a lot of butterfly themed stuff in your room.
-Feyme - They are my favorite.
-Verity - Where did you get them? I don’t think I’ve ever seen any store sell them.
-Feyme - I got papa to get people to make them for me. 
-Wren - So they were custom made.
-Feyme - They don’t look how I wanted them to look but it is okay. I didn’t want to tell them to make it again.
-Amara - You seemed to have a clear vision of what you wanted the butterflies to look like.
-Feyme - Yeah, I wanted them to be perfect but this is okay I guess.
+Verity - Alright, you win.
+Verity - Let her go and we won’t follow you.
+Minerva - Smart choice.
+Minerva - Aguilar. 
+Rook - Yes?
+Minerva - I’ll be back for my device.
+[minerva escapes]
+Mari - *pant* *pant* *pant*
+Mari - <shake>I COULD HAVE DIED!!!<>
+Ace - What’s going on? We heard a commotion and got here as fast as we could.
+Rook - Good news is that we found the culprit behind Mr. Murphy’s death.
+Ace - I’m assuming there is bad news too?
+Rook - She... escaped.
+Ace - <shake>WHAT!<>
+Verity - Dr. Hall escaped through the window after confessing to everything.
+Ace - You let the culprit get away again? I can’t trust you with anything can I?
+Ace - Dispatch as many officers you can get. Blockade all major exits and chokepoints. 
+Ace - <shake>Don’t let her get away!<>
+Amara - Verity, you seem a bit shaken. Are you okay?
+Verity - Yeah. Thanks for checking up on me. 
+Amara - That’s what friends are for.
+Ace - So Dr. Hall was behind this whole thing, huh?
+Verity - Yeah, I guess Claire really wasn’t the true culprit.
+Rook - Seems like I was right between the two of us. Seems like your intuition isn’t as good as it’s cracked up to be.
+Verity - Y-yeah... <think>(He’s right. It doesn’t matter how much I improve. He’ll always be better than me.)<>
+Rook - Our job’s not done yet. We still have another murder to solve.
+Amara - Right, lead the way.
+Ace - I’ll stay here for a bit to wrap things up and get everyone's statements. Hold down the fort for me Ms. Phoenix.
+Amara - Of course. 
+Verity - Before we go. Wren, what happened back there? 
+Verity - You just shouted out in pain the moment Dr. Hall took Mari hostage.
+Wren - I had another vision.
+Verity - I’m sorry, what?
+Wren - I’ve never been this close to the actual thing.
+Wren - I could see myself.
+Wren - It was weird.
+Verity - This isn’t another joke, right?
+Wren - No, I promise it isn’t.
+Wren - I dunno how I’m able to have these visions or even why I have them in the first place.
+Wren - My mom had them too but she won’t talk to me and dad doesn’t like when I bring her up.
+Verity - ...
+Wren - Sorry... I just need a minute.
+Verity - Alright. I believe you. 
+Wren - ...
+Wren - I just wish I could see things <important>before they happen...<>
+Wren - Then maybe I could’ve stopped all this from happening.

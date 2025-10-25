@@ -17,6 +17,7 @@ public class MemoryManager : MonoBehaviour
     [SerializeField] private Vector2 worldMaxSize;
     [SerializeField] private AudioClip music;
     [SerializeField] private Animator fadeEffect;
+    [SerializeField] private SpriteRenderer discordEffect;
     [SerializeField] private float moveSpeed;
 
     public Memory currentMemory;
@@ -46,7 +47,7 @@ public class MemoryManager : MonoBehaviour
         {
             currentVersion = 0;
             fadeEffect.SetTrigger("Start");
-            yield return new WaitForSeconds(0.16f);
+            yield return new WaitForSeconds(0.33f);
             foreach (Transform memory in memoryDisplayParent.transform)
             {
                 if (memory.name == currentMemory.minigameName)
@@ -65,8 +66,9 @@ public class MemoryManager : MonoBehaviour
                     memory.gameObject.SetActive(false);
                 }
             }
+            discordEffect.enabled = true;
             fadeEffect.SetTrigger("End");
-            yield return new WaitForSeconds(0.16f);
+            yield return new WaitForSeconds(0.33f);
 
             yield return DialogueManager.instance.MemoryAnimation(true);
             IsMemoryActive = true;
@@ -83,14 +85,14 @@ public class MemoryManager : MonoBehaviour
             if (tempChange.newVisual != memoryVisual.sprite)
             {
                 fadeEffect.SetTrigger("Start");
-                yield return new WaitForSeconds(0.16f);
+                yield return new WaitForSeconds(0.33f);
 
                 Debug.Log("change memory");
                 SetMemoryVersion();
                 //memoryVisual.sprite = tempChange.newVisual;
 
                 fadeEffect.SetTrigger("End");
-                yield return new WaitForSeconds(0.16f);
+                yield return new WaitForSeconds(0.33f);
 
                 if (!LogManager.instance.HasFinishedInteraction(tempChange.startInteraction) && tempChange.startInteraction != null)
                     ResponseManager.instance.ResponseResult(tempChange.startInteraction);
@@ -174,13 +176,13 @@ public class MemoryManager : MonoBehaviour
 
 
         fadeEffect.SetTrigger("Start");
-        yield return new WaitForSeconds(0.16f);
+        yield return new WaitForSeconds(0.33f);
 
         ResponseManager.instance.ResponseResult(currentMemory.complete);
         EndMemorySequence(false);
 
         fadeEffect.SetTrigger("End");
-        yield return new WaitForSeconds(0.16f);
+        yield return new WaitForSeconds(0.33f);
     }
 
     private void SetMemoryVersion()
@@ -307,6 +309,7 @@ public class MemoryManager : MonoBehaviour
         {
             LocationManager.instance.SetCurrentLocationDisplay();
         }
+        discordEffect.enabled = false;
     }
 
     public bool Draging()

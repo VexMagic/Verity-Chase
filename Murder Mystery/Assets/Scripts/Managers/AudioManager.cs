@@ -113,6 +113,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySFX(AudioClip clip)
+    {
+        sFXSource.PlayOneShot(clip);
+    }
+
     public void PlayBlip()
     {
         switch (currentBlipSound)

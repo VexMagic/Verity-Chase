@@ -16,7 +16,7 @@ public class BreakManager : MonoBehaviour
 
     private void Start()
     {
-        chapterDisplay.text = "Chapter " + ChapterManager.instance.currentChapter + " Complete";
+        chapterDisplay.text = "Chapter " + (ChapterManager.instance.currentChapter - 1) + " Complete";
         if (HasNextChapter())
         {
             continueButton.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";

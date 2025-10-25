@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9807de7585e31419e23fadd13e21d3, type: 3}
+  m_Name: Revisit Old Memory
+  m_EditorClassIdentifier: 
+  MinigameName: Mari 2
+  Exitable: 0
+  Intro: {fileID: 0}
+  Complete: {fileID: 11400000, guid: b3ba5efb423467740bc07d213049d157, type: 2}
+  GiveUp: {fileID: 0}
+  WrongAnswer: {fileID: 11400000, guid: 28ac708cc12143a4899748d2b90302d7, type: 2}
+  Conditions:
+  - {fileID: 11400000, guid: 22b40d69f22be37468c70849cb40225b, type: 2}
+  Hints:
+  - Conditions: []
+    IndicatorName: Curtain
+  - Conditions:
+    - {fileID: 11400000, guid: 91ec7a48cce7cef40b72d8f9b922e1ab, type: 2}
+    IndicatorName: Bed
+  MemoryChanges:
+  - NewVisual: {fileID: 21300000, guid: 695d53915c3f9cb4bb5d340714ba140d, type: 3}
+    StartInteraction: {fileID: 11400000, guid: 91ec7a48cce7cef40b72d8f9b922e1ab, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 254cfc2c6ba0b2949a6761a900ed2ad6, type: 2}
+  - NewVisual: {fileID: 21300000, guid: 75e4857f63ed3e247893f986e0fac630, type: 3}
+    StartInteraction: {fileID: 11400000, guid: 22b40d69f22be37468c70849cb40225b, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: aa0961ecec685fa49b28fe7342423faf, type: 2}
+  - NewVisual: {fileID: 21300000, guid: 21d44af6fce555946aed067ac05e07c4, type: 3}
+    StartInteraction: {fileID: 0}
+    Conditions:
+    - {fileID: 11400000, guid: 02d89b5db3149744fa8cf9e36b744751, type: 2}
+  - NewVisual: {fileID: 21300000, guid: c2a12aa7c7827ef48ab98f6acad663d6, type: 3}
+    StartInteraction: {fileID: 11400000, guid: 91ec7a48cce7cef40b72d8f9b922e1ab, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: 254cfc2c6ba0b2949a6761a900ed2ad6, type: 2}
+    - {fileID: 11400000, guid: 02d89b5db3149744fa8cf9e36b744751, type: 2}
+  - NewVisual: {fileID: 21300000, guid: 864c3a61620d29940a500989b45478c9, type: 3}
+    StartInteraction: {fileID: 11400000, guid: 22b40d69f22be37468c70849cb40225b, type: 2}
+    Conditions:
+    - {fileID: 11400000, guid: aa0961ecec685fa49b28fe7342423faf, type: 2}
+    - {fileID: 11400000, guid: 02d89b5db3149744fa8cf9e36b744751, type: 2}

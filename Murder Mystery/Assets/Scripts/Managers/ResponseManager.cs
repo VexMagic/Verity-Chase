@@ -14,6 +14,7 @@ public class ResponseManager : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup layoutGroup;
     [SerializeField] private GameObject responseButton;
     [SerializeField] private Vector2 responsePos;
+    [SerializeField] private Vector2 fullScreenResponsePos;
     [SerializeField] private Vector2 interviewPos;
 
     private List<GameObject> buttonObjects = new List<GameObject>();
@@ -42,6 +43,8 @@ public class ResponseManager : MonoBehaviour
 
         if (isInterview)
             responseBox.localPosition = interviewPos;
+        else if (DialogueManager.instance.IsDialogueBoxOpen() == false)
+            responseBox.localPosition = fullScreenResponsePos;
         else
             responseBox.localPosition = responsePos;
 
@@ -193,7 +196,7 @@ public class ResponseManager : MonoBehaviour
         {
             ChapterManager.instance.currentCase = (result as ChapterTransition).caseIndex;
             ChapterManager.instance.currentChapter = (result as ChapterTransition).chapterIndex;
-            ChapterManager.instance.currentPart = 0;
+            ChapterManager.instance.currentPart = 1;
             TransitionManager.instance.EnterScene(SceneManager.sceneCountInBuildSettings - 1);
         }
         else if (result is Memory)
@@ -223,6 +226,14 @@ public class ResponseManager : MonoBehaviour
             {
                 OnPickedResponse((result as CameraZoom).responses[0]);
             }
+        }
+        else if (result is FadeToBlack)
+        {
+            DialogueManager.instance.StartFadeToBlack(result as FadeToBlack);
+        }
+        else if (result is BadEnding)
+        {
+            DialogueManager.instance.StartBadEnding(result as BadEnding);
         }
 
         HintManager.instance.SetInteraction(result);

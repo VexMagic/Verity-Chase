@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eabdba0df26019409f8d33f15eb82e1, type: 3}
+  m_Name: Choose another path
+  m_EditorClassIdentifier: 
+  Responses:
+  - Text: 
+    Result: {fileID: 11400000, guid: 73daf36c14eb95748804e125bb3a1201, type: 2}
+    SFX: 0
+  FadeInSpeed: 0
+  FadeOutSpeed: 0
+  FadeOutDelay: 0
+  FadeColor: {r: 0, g: 0, b: 0, a: 0}
+  Movements:
+  - DisplayID: 0
+    Character: {fileID: 9100000, guid: f824eeebd0c30ee4c8cf0d1267fdf71b, type: 2}
+    Animation: {fileID: 0}
+    XPos: -250
+    FacingLeft: 0
+    Delay: 0

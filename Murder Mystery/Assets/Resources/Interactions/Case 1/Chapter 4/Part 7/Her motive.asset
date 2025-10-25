@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f860335bdcb37f4cb344c04a4989ea7, type: 3}
+  m_Name: Her motive
+  m_EditorClassIdentifier: 
+  CorrectAnswer: {fileID: 11400000, guid: deb32516e474dfb4fbf2c216a639e112, type: 2}
+  WrongAnswer: {fileID: 11400000, guid: 731bdd314dab0154babda88fdf6f3f3d, type: 2}
+  UniqueWrongs: []
+  Line:
+    TalkingCharacter: 2
+    Text: "Maybe, but I\u2019ve got your motive right here!"
+    Backgrounds: []
+    GainedClues: []
+    GainedLocations: []
+    GainedNotes: []
+    Movements: []
+    Music: {fileID: 0}
+  CorrectAnswers:
+  - Version: 0
+    GainedClue: {fileID: 11400000, guid: 48e0294e74a49f24fa7dd7659d871dd3, type: 2}
